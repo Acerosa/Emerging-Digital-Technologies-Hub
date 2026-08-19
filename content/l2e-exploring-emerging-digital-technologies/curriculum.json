@@ -1,0 +1,23 @@
+{
+  "schema": "lp.content.curriculum",
+  "schemaVersion": "0.1.0",
+  "id": "l2e-exploring-emerging-digital-technologies-curriculum",
+  "version": "0.1.0",
+  "metadata": {
+    "title": "Exploring New and Emerging Digital Technologies",
+    "course": "gateway-level-2-digital-it-skills"
+  },
+  "relationships": {
+    "learningOutcomes": [
+      "lo1"
+    ],
+    "assignments": [
+      "formative-practice"
+    ],
+    "weeks": [
+      "week-1",
+      "week-2",
+      "week-3"
+    ]
+  }
+}

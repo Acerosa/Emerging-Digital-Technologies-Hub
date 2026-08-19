@@ -1,0 +1,46 @@
+{
+  "manifestVersion": "1.0.0",
+  "hubId": "l2e-exploring-emerging-digital-technologies",
+  "name": "Exploring New and Emerging Digital Technologies",
+  "description": "Learner hub for Gateway Qualifications Level 2 Certificate in Digital and IT Skills (603/6502/X), unit Exploring New and Emerging Digital Technologies (M/618/3683). Formative teaching for L2 E Computing. Draft scaffold; not a certified production hub.",
+  "version": "0.1.0",
+  "repositoryUrl": "https://github.com/Acerosa/Emerging-Digital-Technologies-Hub",
+  "deploymentUrl": "https://acerosa.github.io/Emerging-Digital-Technologies-Hub",
+  "courses": [
+    "gateway-level-2-digital-it-skills"
+  ],
+  "compatibility": {
+    "required": {
+      "coreVersion": "0.2.0",
+      "learnerApiContractVersion": "0.1.0",
+      "submissionContractVersion": "0.1.0"
+    },
+    "testedCombinations": [
+      {
+        "coreVersion": "0.2.0",
+        "learnerApiContractVersion": "0.1.0",
+        "submissionContractVersion": "0.1.0"
+      }
+    ]
+  },
+  "capabilities": {
+    "evidence": [
+      "question-level"
+    ],
+    "activities": [
+      "classification",
+      "reflection",
+      "retrieval"
+    ]
+  },
+  "featureFlags": {
+    "authentication": true,
+    "onboarding": true,
+    "progress": true
+  },
+  "certification": {
+    "standard": "LHDS",
+    "version": "1.0.0",
+    "status": "not-certified"
+  }
+}

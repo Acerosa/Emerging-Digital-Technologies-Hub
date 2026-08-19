@@ -1,0 +1,20 @@
+{
+  "schema": "lp.content.package",
+  "schemaVersion": "0.1.0",
+  "id": "l2e-exploring-emerging-digital-technologies-content",
+  "version": "0.1.0",
+  "metadata": {
+    "title": "Exploring New and Emerging Digital Technologies"
+  },
+  "relationships": {
+    "hub": "hub.json",
+    "curriculum": "curriculum.json",
+    "learningOutcomes": "learning-outcomes.json",
+    "assignments": "assignments.json",
+    "weeks": "weeks.json",
+    "sessions": "sessions.json",
+    "activities": "activities.json",
+    "questions": [],
+    "assets": []
+  }
+}

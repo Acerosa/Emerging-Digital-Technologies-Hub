@@ -1,0 +1,1494 @@
+[
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-1-outline",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Current and emerging technology, including mobile",
+      "status": "available",
+      "summary": "Distinguish current technology from emerging technology, then outline how mobile devices are used by people and organisations.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 25,
+      "activityType": "Guided learning",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-outline-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Current and emerging technology, including mobile",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-outline-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Distinguish current technology from emerging technology, then outline how mobile devices are used by people and organisations."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-outline-h-0",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Current and emerging",
+          "level": 3
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-outline-p-0",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Current technology is already in common use. Emerging technology is still developing, is not yet widely adopted, or is starting to change how people live or work. The same product can be current in one sector and emerging in another."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-outline-h-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Mobile technology",
+          "level": 3
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-outline-p-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Mobile technology includes smartphones, tablets and the apps, networks and cloud services that make them useful away from a desk. Learners should outline everyday personal uses and typical business uses such as field work, payments and secure access."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-1-retrieval",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 1 retrieval",
+      "status": "available",
+      "summary": "Check that you can outline current technology, emerging technology and mobile uses.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Retrieval quiz",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-retrieval-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Week 1 retrieval",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-retrieval-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Check that you can outline current technology, emerging technology and mobile uses."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-retrieval-q-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-1-retrieval:q1",
+          "sourceQuestionId": "q1",
+          "prompt": "Which statement best describes emerging digital technology?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Technology that every organisation already uses in the same way"
+            },
+            {
+              "id": "b",
+              "label": "Technology that is still developing or is not yet widely adopted"
+            },
+            {
+              "id": "c",
+              "label": "Any device that can connect to the internet"
+            },
+            {
+              "id": "d",
+              "label": "Software that only runs on a desktop computer"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Emerging technology is still developing, not yet widely adopted, or is starting to change how people live or work.",
+            "incorrect": "Emerging technology is still developing, not yet widely adopted, or is starting to change how people live or work."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-retrieval-q-2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-1-retrieval:q2",
+          "sourceQuestionId": "q2",
+          "prompt": "A supermarket self-checkout is an example of which kind of technology in most UK stores today?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Emerging, because no shop has used it yet"
+            },
+            {
+              "id": "b",
+              "label": "Current, because it is already in common use"
+            },
+            {
+              "id": "c",
+              "label": "Only a wearable technology"
+            },
+            {
+              "id": "d",
+              "label": "Only a cloud service model"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Self-checkouts are already common in many stores, so they are current technology in that setting.",
+            "incorrect": "Self-checkouts are already common in many stores, so they are current technology in that setting."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-retrieval-q-3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-1-retrieval:q3",
+          "sourceQuestionId": "q3",
+          "prompt": "Which option is a typical business use of mobile technology?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A field engineer updating a job on a tablet"
+            },
+            {
+              "id": "b",
+              "label": "A server that never leaves a locked data centre"
+            },
+            {
+              "id": "c",
+              "label": "A printed paper form stored in a filing cabinet"
+            },
+            {
+              "id": "d",
+              "label": "A desktop-only accounts package with no network"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Mobile devices support work away from a desk, such as field engineers updating jobs.",
+            "incorrect": "Mobile devices support work away from a desk, such as field engineers updating jobs."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-retrieval-q-4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-1-retrieval:q4",
+          "sourceQuestionId": "q4",
+          "prompt": "Why might the same technology be current for one organisation and emerging for another?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Awarding bodies ban shared vocabulary"
+            },
+            {
+              "id": "b",
+              "label": "Adoption depends on sector, cost, skills and risk"
+            },
+            {
+              "id": "c",
+              "label": "All digital products become obsolete in one year"
+            },
+            {
+              "id": "d",
+              "label": "Mobile phones cannot connect to cloud services"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Cost, skills, regulation and risk mean sectors adopt the same technology at different speeds.",
+            "incorrect": "Cost, skills, regulation and risk mean sectors adopt the same technology at different speeds."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-1-classify",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Current or emerging?",
+      "status": "available",
+      "summary": "Sort each example as current technology or emerging technology for a typical UK college learner in 2026.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-classify-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Current or emerging?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-classify-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Sort each example as current technology or emerging technology for a typical UK college learner in 2026."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-classify-classification",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-1-classify",
+          "sourceQuestionId": "week-1-classify",
+          "prompt": "Classify each example as current or emerging.",
+          "categories": [
+            {
+              "id": "current",
+              "label": "Current"
+            },
+            {
+              "id": "emerging",
+              "label": "Emerging"
+            }
+          ],
+          "items": [
+            {
+              "id": "w1-01",
+              "text": "A smartphone used to check email and maps",
+              "correctCategoryId": "current",
+              "explanation": "Smartphones are already in everyday use."
+            },
+            {
+              "id": "w1-02",
+              "text": "A foldable phone that most people have not bought yet",
+              "correctCategoryId": "emerging",
+              "explanation": "Foldables exist but are not widely adopted."
+            },
+            {
+              "id": "w1-03",
+              "text": "Contactless payment with a bank card or phone",
+              "correctCategoryId": "current",
+              "explanation": "Contactless payment is already common."
+            },
+            {
+              "id": "w1-04",
+              "text": "A consumer brain-computer headset still in trials",
+              "correctCategoryId": "emerging",
+              "explanation": "This is still developing and not widely used."
+            },
+            {
+              "id": "w1-05",
+              "text": "Wi-Fi in a college classroom",
+              "correctCategoryId": "current",
+              "explanation": "Campus Wi-Fi is already standard."
+            },
+            {
+              "id": "w1-06",
+              "text": "A personal holographic display that few shops sell",
+              "correctCategoryId": "emerging",
+              "explanation": "This is not yet widely available or adopted."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-1-reflection",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Mobile in your week",
+      "status": "available",
+      "summary": "Write a short outline of one personal and one organisational mobile example.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Reflection",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-reflection-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Mobile in your week",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-reflection-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Write a short outline of one personal and one organisational mobile example."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-1-reflection-prompt",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "reflection",
+        "content": {
+          "formative": true,
+          "questionId": "week-1-reflection:learner-note",
+          "sourceQuestionId": "learner-note",
+          "prompt": "Name one mobile technology you used this week and one way an organisation might use a similar device. Keep it formative; this is not Gateway assignment evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-outline",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Internet of Things, RFID, NFC and wearables",
+      "status": "available",
+      "summary": "Outline IoT, RFID, NFC and wearables so you can tell them apart and give a realistic example of each.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 25,
+      "activityType": "Guided learning",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-outline-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Internet of Things, RFID, NFC and wearables",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-outline-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Outline IoT, RFID, NFC and wearables so you can tell them apart and give a realistic example of each."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-outline-h-0",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Internet of Things",
+          "level": 3
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-outline-p-0",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "The Internet of Things (IoT) is a network of physical devices that collect or share data over the internet, often with little direct human input. A smart thermostat or a connected warehouse sensor is an IoT example."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-outline-h-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "RFID, NFC and wearables",
+          "level": 3
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-outline-p-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "RFID uses radio tags and readers to identify items, often at a short distance without line of sight. NFC is a very short-range radio method used for taps such as contactless payment. Wearables are devices worn on the body, such as a fitness watch or a staff ID badge that also tracks access."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-retrieval",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 2 retrieval",
+      "status": "available",
+      "summary": "Check that you can outline IoT, RFID, NFC and wearables.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Retrieval quiz",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-retrieval-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Week 2 retrieval",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-retrieval-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Check that you can outline IoT, RFID, NFC and wearables."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-retrieval-q-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-retrieval:q1",
+          "sourceQuestionId": "q1",
+          "prompt": "Which statement best outlines the Internet of Things?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A single desktop that never leaves an office"
+            },
+            {
+              "id": "b",
+              "label": "Physical devices that collect or share data over a network"
+            },
+            {
+              "id": "c",
+              "label": "Printed barcodes that cannot be scanned"
+            },
+            {
+              "id": "d",
+              "label": "A cloud invoice with no connected device"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "IoT is a network of physical devices that collect or share data, often automatically.",
+            "incorrect": "IoT is a network of physical devices that collect or share data, often automatically."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-retrieval-q-2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-retrieval:q2",
+          "sourceQuestionId": "q2",
+          "prompt": "RFID is most useful when an organisation needs to:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Identify tagged items without lining each one up under a camera"
+            },
+            {
+              "id": "b",
+              "label": "Replace all radio with paper only"
+            },
+            {
+              "id": "c",
+              "label": "Project a hologram in a classroom"
+            },
+            {
+              "id": "d",
+              "label": "Run a desktop spreadsheet with no tags"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "RFID readers can identify tagged items at a short distance, including when they are not lined up one by one.",
+            "incorrect": "RFID readers can identify tagged items at a short distance, including when they are not lined up one by one."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-retrieval-q-3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-retrieval:q3",
+          "sourceQuestionId": "q3",
+          "prompt": "NFC is designed to work over:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Satellite distances"
+            },
+            {
+              "id": "b",
+              "label": "Very short range, typically a tap or a few centimetres"
+            },
+            {
+              "id": "c",
+              "label": "Any Wi-Fi range across a city"
+            },
+            {
+              "id": "d",
+              "label": "Underwater fibre only"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "NFC is a very short-range radio method, which is why payment and door taps need the devices close together.",
+            "incorrect": "NFC is a very short-range radio method, which is why payment and door taps need the devices close together."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-retrieval-q-4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-retrieval:q4",
+          "sourceQuestionId": "q4",
+          "prompt": "Which device is a wearable?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A warehouse pallet"
+            },
+            {
+              "id": "b",
+              "label": "A fitness watch that records heart rate"
+            },
+            {
+              "id": "c",
+              "label": "A wall-mounted smart speaker"
+            },
+            {
+              "id": "d",
+              "label": "A rack server in a data centre"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Wearables are worn on the body. A fitness watch is a clear example.",
+            "incorrect": "Wearables are worn on the body. A fitness watch is a clear example."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-classify",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "IoT, RFID, NFC or wearable?",
+      "status": "available",
+      "summary": "Match each example to the technology it mainly illustrates.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-classify-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "IoT, RFID, NFC or wearable?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-classify-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Match each example to the technology it mainly illustrates."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-classify-classification",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-classify",
+          "sourceQuestionId": "week-2-classify",
+          "prompt": "Classify each example.",
+          "categories": [
+            {
+              "id": "iot",
+              "label": "IoT"
+            },
+            {
+              "id": "rfid",
+              "label": "RFID"
+            },
+            {
+              "id": "nfc",
+              "label": "NFC"
+            },
+            {
+              "id": "wearable",
+              "label": "Wearable"
+            }
+          ],
+          "items": [
+            {
+              "id": "w2-01",
+              "text": "A connected fridge that reports its temperature to an app",
+              "correctCategoryId": "iot",
+              "explanation": "The fridge is a networked physical device sharing data."
+            },
+            {
+              "id": "w2-02",
+              "text": "Stock tags on clothing that a store reader counts",
+              "correctCategoryId": "rfid",
+              "explanation": "Item tags and readers are a classic RFID use."
+            },
+            {
+              "id": "w2-03",
+              "text": "Tapping a phone on a reader to pay for lunch",
+              "correctCategoryId": "nfc",
+              "explanation": "Contactless tap payments use NFC."
+            },
+            {
+              "id": "w2-04",
+              "text": "A smartwatch that counts steps during a lesson",
+              "correctCategoryId": "wearable",
+              "explanation": "The watch is worn on the body."
+            },
+            {
+              "id": "w2-05",
+              "text": "Soil sensors in a farm field sending moisture readings",
+              "correctCategoryId": "iot",
+              "explanation": "Remote sensors sharing data are IoT."
+            },
+            {
+              "id": "w2-06",
+              "text": "A staff badge that opens a door when held a few centimetres from the panel",
+              "correctCategoryId": "nfc",
+              "explanation": "A close tap on a reader is NFC, even if the badge is also worn."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-reflection",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Choose a connected example",
+      "status": "available",
+      "summary": "Outline one IoT, RFID, NFC or wearable example from college, work or daily life.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Reflection",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-reflection-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Choose a connected example",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-reflection-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Outline one IoT, RFID, NFC or wearable example from college, work or daily life."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-reflection-prompt",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "reflection",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-reflection:learner-note",
+          "sourceQuestionId": "learner-note",
+          "prompt": "Pick one of IoT, RFID, NFC or wearables. Outline what the technology does and who it helps. This is formative practice, not Gateway assignment evidence."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-outline",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Cloud technology and service models",
+      "status": "available",
+      "summary": "Outline cloud computing and the service models SaaS, IaaS, PaaS and DaaS so you can give a short, accurate example of each.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 25,
+      "activityType": "Guided learning",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-outline-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Cloud technology and service models",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-outline-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Outline cloud computing and the service models SaaS, IaaS, PaaS and DaaS so you can give a short, accurate example of each."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-outline-h-0",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Cloud technology",
+          "level": 3
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-outline-p-0",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Cloud technology delivers computing resources over the internet instead of only from a local device or a single on-site server. Users typically pay for what they use and can scale up or down."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-outline-h-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Service models",
+          "level": 3
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-outline-p-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "SaaS is software used through a browser or app, such as email or classroom tools. IaaS provides virtual machines, storage and networks that an organisation configures. PaaS provides a ready environment for building and running applications. DaaS delivers a desktop environment over the network so the user works on a remote desktop rather than only on the local PC."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-retrieval",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 3 retrieval",
+      "status": "available",
+      "summary": "Check that you can outline cloud computing and the main service models.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Retrieval quiz",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-retrieval-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Week 3 retrieval",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-retrieval-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Check that you can outline cloud computing and the main service models."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-retrieval-q-1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-retrieval:q1",
+          "sourceQuestionId": "q1",
+          "prompt": "Which statement best outlines cloud technology?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Computing resources delivered over the internet, often scaled as needed"
+            },
+            {
+              "id": "b",
+              "label": "A single USB stick that never connects to a network"
+            },
+            {
+              "id": "c",
+              "label": "Printed manuals stored in a cupboard"
+            },
+            {
+              "id": "d",
+              "label": "A calculator with no data connection"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Cloud services are delivered over the internet and can usually scale with demand.",
+            "incorrect": "Cloud services are delivered over the internet and can usually scale with demand."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-retrieval-q-2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-retrieval:q2",
+          "sourceQuestionId": "q2",
+          "prompt": "Using college email in a browser is an example of:",
+          "options": [
+            {
+              "id": "a",
+              "label": "IaaS"
+            },
+            {
+              "id": "b",
+              "label": "SaaS"
+            },
+            {
+              "id": "c",
+              "label": "A local-only desktop with no network"
+            },
+            {
+              "id": "d",
+              "label": "RFID stock control"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "The provider runs the email application. The learner uses it as software, which is SaaS.",
+            "incorrect": "The provider runs the email application. The learner uses it as software, which is SaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-retrieval-q-3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-retrieval:q3",
+          "sourceQuestionId": "q3",
+          "prompt": "An organisation that rents virtual machines and then installs its own operating systems is using:",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS only"
+            },
+            {
+              "id": "b",
+              "label": "IaaS"
+            },
+            {
+              "id": "c",
+              "label": "A wearable only"
+            },
+            {
+              "id": "d",
+              "label": "NFC payments"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "IaaS supplies infrastructure such as virtual machines, storage and networks.",
+            "incorrect": "IaaS supplies infrastructure such as virtual machines, storage and networks."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-retrieval-q-4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-retrieval:q4",
+          "sourceQuestionId": "q4",
+          "prompt": "DaaS is best outlined as:",
+          "options": [
+            {
+              "id": "a",
+              "label": "A desktop environment delivered over the network"
+            },
+            {
+              "id": "b",
+              "label": "A physical tower PC that cannot be accessed remotely"
+            },
+            {
+              "id": "c",
+              "label": "A paper timetable"
+            },
+            {
+              "id": "d",
+              "label": "A barcode on a box"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Desktop as a Service delivers a desktop session remotely, rather than only using software installed on one local PC.",
+            "incorrect": "Desktop as a Service delivers a desktop session remotely, rather than only using software installed on one local PC."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-classify",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Cloud service models",
+      "status": "available",
+      "summary": "Classify each example as SaaS, IaaS, PaaS or DaaS.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-classify-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Cloud service models",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-classify-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Classify each example as SaaS, IaaS, PaaS or DaaS."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-classify-classification",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-classify",
+          "sourceQuestionId": "week-3-classify",
+          "prompt": "Classify each example.",
+          "categories": [
+            {
+              "id": "saas",
+              "label": "SaaS"
+            },
+            {
+              "id": "iaas",
+              "label": "IaaS"
+            },
+            {
+              "id": "paas",
+              "label": "PaaS"
+            },
+            {
+              "id": "daas",
+              "label": "DaaS"
+            }
+          ],
+          "items": [
+            {
+              "id": "w3-01",
+              "text": "Learners write documents in a browser-based office suite",
+              "correctCategoryId": "saas",
+              "explanation": "The provider supplies the application. Users just use it."
+            },
+            {
+              "id": "w3-02",
+              "text": "An IT team rents virtual servers and installs its own software stack",
+              "correctCategoryId": "iaas",
+              "explanation": "The team manages the machines; the cloud supplies the infrastructure."
+            },
+            {
+              "id": "w3-03",
+              "text": "Developers deploy an app into a hosted build-and-run environment",
+              "correctCategoryId": "paas",
+              "explanation": "PaaS supplies the platform for building and running applications."
+            },
+            {
+              "id": "w3-04",
+              "text": "Staff log in to a Windows desktop that runs in the cloud",
+              "correctCategoryId": "daas",
+              "explanation": "The desktop itself is the service."
+            },
+            {
+              "id": "w3-05",
+              "text": "A class uses a hosted quiz tool with no local install",
+              "correctCategoryId": "saas",
+              "explanation": "The quiz tool is software delivered as a service."
+            },
+            {
+              "id": "w3-06",
+              "text": "A college rents extra virtual disks during exam week",
+              "correctCategoryId": "iaas",
+              "explanation": "Storage capacity is infrastructure."
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-reflection",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Name a cloud service",
+      "status": "available",
+      "summary": "Outline one cloud service you already use and which model it is closest to.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Reflection",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-reflection-title",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Name a cloud service",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-reflection-intro",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Outline one cloud service you already use and which model it is closest to."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-reflection-prompt",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "reflection",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-reflection:learner-note",
+          "sourceQuestionId": "learner-note",
+          "prompt": "Name a cloud service from college or daily life and say whether it is closest to SaaS, IaaS, PaaS or DaaS. Give one reason. This is formative, not Gateway assignment evidence."
+        }
+      }
+    ]
+  }
+]

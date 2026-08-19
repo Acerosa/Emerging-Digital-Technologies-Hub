@@ -1,0 +1,55 @@
+import { activityFromPackage, type ContentPackage } from "./from-package";
+
+export type CurriculumRuntime = {
+  source?: string;
+  package?: ContentPackage | null;
+  state?: { state?: string; message?: string } | null;
+  publication?: { version?: string; hub?: string; course?: string } | null;
+};
+
+function bannerHost(doc: Document) {
+  let host = doc.getElementById("lp-publication-status");
+  if (!host) {
+    host = doc.createElement("div");
+    host.id = "lp-publication-status";
+    doc.body.prepend(host);
+  }
+  return host;
+}
+
+export function applyL2eCurriculum(
+  runtime: CurriculumRuntime,
+  target: Window & typeof globalThis = window,
+  renderStatus?: (state: unknown) => string
+) {
+  const pkg = runtime.package || null;
+  const source = runtime.source || "none";
+  target.__lpPackage = pkg || undefined;
+  target.__lpPublishedCurriculum = Boolean(pkg);
+  if (target.document?.body) {
+    target.document.body.dataset.curriculumSource = source;
+    target.document.body.dataset.publicationState = runtime.state?.state || "ERROR";
+  }
+  if (runtime.state && target.document && typeof renderStatus === "function") {
+    bannerHost(target.document).innerHTML = renderStatus(runtime.state);
+  }
+  if (source !== "published") {
+    console.warn("L2E_CURRICULUM_FALLBACK", source, runtime.state?.state || "ERROR");
+  }
+  return runtime;
+}
+
+export function activityFromPublishedPackage(pkg: ContentPackage | null | undefined, activityId: string) {
+  if (!pkg) return null;
+  return activityFromPackage(pkg, activityId);
+}
+
+export async function loadL2eCurriculum(platform: {
+  curriculum: {
+    loadLatest: () => Promise<unknown>;
+    renderStatus?: (state: unknown) => string;
+  };
+}) {
+  const runtime = await platform.curriculum.loadLatest() as CurriculumRuntime;
+  return applyL2eCurriculum(runtime, window, (state) => platform.curriculum.renderStatus?.(state) || "");
+}

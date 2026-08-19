@@ -1,0 +1,12 @@
+[
+  {
+    "schema": "lp.content.learning-outcome",
+    "schemaVersion": "0.1.0",
+    "id": "lo1",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "LO1: Know about new and emerging digital technologies"
+    },
+    "relationships": {}
+  }
+]

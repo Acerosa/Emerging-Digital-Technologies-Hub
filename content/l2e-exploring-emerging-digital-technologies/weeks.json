@@ -1,0 +1,71 @@
+[
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-1",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 1,
+      "title": "Current and Emerging Technology, including Mobile",
+      "status": "available",
+      "professionalPractice": "LO1 / AC 1.1 - outline current and emerging digital technologies, including mobile",
+      "route": "week-1/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-1-session"
+      ]
+    }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-2",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 2,
+      "title": "Internet of Things, RFID, NFC and Wearables",
+      "status": "available",
+      "professionalPractice": "LO1 / AC 1.1 - outline IoT, RFID, NFC and wearables",
+      "route": "week-2/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-2-session"
+      ]
+    }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-3",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 3,
+      "title": "Cloud Technology, SaaS, IaaS, PaaS and DaaS",
+      "status": "available",
+      "professionalPractice": "LO1 / AC 1.1 - outline cloud technology and service models",
+      "route": "week-3/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-3-session"
+      ]
+    }
+  }
+]

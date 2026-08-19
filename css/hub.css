@@ -1,0 +1,219 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--lp-font);
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--lp-text);
+  background: var(--lp-background);
+}
+
+:focus-visible {
+  outline: 0.2rem solid var(--lp-focus);
+  outline-offset: 0.15rem;
+}
+
+.student-account {
+  display: flex;
+  align-items: center;
+  gap: var(--lp-space-2);
+}
+
+.student-account__name {
+  font-weight: 700;
+}
+
+.panel {
+  padding: var(--lp-space-5);
+  border: 0.0625rem solid var(--lp-border);
+  border-radius: var(--lp-radius);
+  background: var(--lp-surface);
+}
+
+.card-grid {
+  display: grid;
+  gap: var(--lp-space-4);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--lp-space-2);
+  padding: var(--lp-space-5);
+  border: 0.0625rem solid var(--lp-border);
+  border-radius: var(--lp-radius);
+  background: var(--lp-surface);
+}
+
+.hub-card h2,
+.hub-card h3 {
+  margin: 0;
+}
+
+.hub-card p {
+  margin: 0;
+  color: var(--lp-text-muted);
+}
+
+.card-link,
+.text-link {
+  margin-top: auto;
+  color: var(--lp-primary);
+  font-weight: 700;
+}
+
+.site-footer {
+  margin-top: auto;
+  border-top: 0.0625rem solid var(--lp-border);
+  background: var(--lp-surface-alt);
+  color: var(--lp-text-muted);
+}
+
+.page-width {
+  width: min(calc(100% - 2rem), 70rem);
+  margin-inline: auto;
+}
+
+.lp-shell__main.site-main {
+  display: block;
+  max-width: none;
+  padding: 0;
+  min-width: 0;
+}
+
+.study-layout {
+  display: grid;
+  flex: 1;
+  gap: 1.25rem;
+  padding-block: 2rem 3.5rem;
+}
+
+.course-navigation {
+  display: none;
+  overflow: hidden;
+  align-self: start;
+  border: 0.0625rem solid var(--lp-border);
+  border-radius: var(--lp-radius);
+  background: var(--lp-surface);
+}
+
+.course-navigation__title {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border-bottom: 0.0625rem solid var(--lp-border);
+  font-size: 1rem;
+}
+
+.course-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-navigation__item + .course-navigation__item {
+  border-top: 0.0625rem solid var(--lp-border);
+}
+
+.course-navigation__link {
+  display: flex;
+  min-height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.7rem 1.1rem;
+  color: var(--lp-text);
+  font-size: 0.92rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.course-navigation__link:hover {
+  background: var(--lp-surface-alt);
+  text-decoration: underline;
+}
+
+.course-navigation__link[aria-current="page"] {
+  box-shadow: inset 0.25rem 0 var(--lp-primary);
+  background: var(--lp-surface-alt);
+}
+
+.phase-badge {
+  flex: 0 0 auto;
+  padding: 0.1rem 0.45rem;
+  border: 0.0625rem solid var(--lp-border);
+  border-radius: 999px;
+  background: var(--lp-surface-alt);
+  color: var(--lp-text);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.study-main {
+  min-width: 0;
+}
+
+.study-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.study-card {
+  padding: 1.25rem;
+  border: 0.0625rem solid var(--lp-border);
+  border-radius: var(--lp-radius);
+  background: var(--lp-surface);
+}
+
+.study-card p:last-child,
+.study-card ul:last-child {
+  margin-bottom: 0;
+}
+
+.related-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.home-week-scroller {
+  --home-week-gap: 1rem;
+  --home-week-row: 14.5rem;
+  max-height: calc((var(--home-week-row) * 2) + (var(--home-week-gap) * 2) + 0.75rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-right: 0.35rem;
+  scrollbar-gutter: stable;
+}
+
+.home-week-scroller:focus-visible {
+  outline: 0.2rem solid var(--lp-focus);
+  outline-offset: 0.15rem;
+}
+
+.home-week-scroller .hub-card {
+  min-height: var(--home-week-row);
+}
+
+@media (min-width: 48rem) {
+  .study-layout {
+    grid-template-columns: 15.5rem minmax(0, 1fr);
+    gap: 1.75rem;
+    padding-top: 2.5rem;
+  }
+
+  .course-navigation {
+    display: block;
+  }
+}

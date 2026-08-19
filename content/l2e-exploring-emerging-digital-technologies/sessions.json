@@ -1,0 +1,68 @@
+[
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-1-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 1 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: current versus emerging technology, then mobile uses.",
+      "sortOrder": 1,
+      "defaultOpen": true
+    },
+    "relationships": {
+      "week": "week-1",
+      "activities": [
+        "week-1-outline",
+        "week-1-retrieval",
+        "week-1-classify",
+        "week-1-reflection"
+      ]
+    }
+  },
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 2 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: IoT, RFID, NFC and wearables.",
+      "sortOrder": 1,
+      "defaultOpen": true
+    },
+    "relationships": {
+      "week": "week-2",
+      "activities": [
+        "week-2-outline",
+        "week-2-retrieval",
+        "week-2-classify",
+        "week-2-reflection"
+      ]
+    }
+  },
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 3 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: cloud computing and SaaS, IaaS, PaaS and DaaS.",
+      "sortOrder": 1,
+      "defaultOpen": true
+    },
+    "relationships": {
+      "week": "week-3",
+      "activities": [
+        "week-3-outline",
+        "week-3-retrieval",
+        "week-3-classify",
+        "week-3-reflection"
+      ]
+    }
+  }
+]

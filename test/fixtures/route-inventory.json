@@ -1,0 +1,46 @@
+{
+  "hubId": "l2e-exploring-emerging-digital-technologies",
+  "profile": "week-based",
+  "routes": [
+    {
+      "id": "home",
+      "file": "index.html",
+      "path": ""
+    },
+    {
+      "id": "week-1",
+      "file": "week-1/index.html",
+      "path": "week-1/"
+    },
+    {
+      "id": "week-2",
+      "file": "week-2/index.html",
+      "path": "week-2/"
+    },
+    {
+      "id": "week-3",
+      "file": "week-3/index.html",
+      "path": "week-3/"
+    },
+    {
+      "id": "course-guide",
+      "file": "course-guide/index.html",
+      "path": "course-guide/"
+    },
+    {
+      "id": "resources",
+      "file": "resources/index.html",
+      "path": "resources/"
+    },
+    {
+      "id": "help",
+      "file": "help/index.html",
+      "path": "help/"
+    },
+    {
+      "id": "account",
+      "file": "account/index.html",
+      "path": "account/"
+    }
+  ]
+}
