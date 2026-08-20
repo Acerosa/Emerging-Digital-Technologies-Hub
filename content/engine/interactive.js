@@ -89,6 +89,32 @@
     });
   }
 
+  function setActivityNotice(article, message, submitState) {
+    var status = article.querySelector("[data-lp-activity-status]");
+    if (!status) return;
+    status.textContent = message || "";
+    if (submitState) status.setAttribute("data-lp-submit-state", submitState);
+    else status.removeAttribute("data-lp-submit-state");
+  }
+
+  function applySubmissionResult(article, draft, result, persist) {
+    if (!result) return;
+    draft.submission = {
+      status: result.status,
+      failed: Boolean(result.failed),
+      fingerprint: result.fingerprint || "",
+      reason: result.reason || ""
+    };
+    persist();
+    if (result.status === "submitted") {
+      setActivityNotice(article, result.reason || "Saved to your learning record.", "submitted");
+      return;
+    }
+    if (result.failed) {
+      setActivityNotice(article, result.reason, "local");
+    }
+  }
+
   function updateActivityStatus(article, activity, draft) {
     var status = article.querySelector("[data-lp-activity-status]");
     var interactive = activityInteractiveBlocks(activity);
@@ -100,6 +126,18 @@
     if (complete && !draft.completedAt) draft.completedAt = new Date().toISOString();
     if (!complete) draft.completedAt = null;
     if (status) {
+      if (draft.submission && draft.submission.failed) {
+        status.textContent = draft.submission.reason
+          || "Your work is still saved on this device. It has not been sent to your learning record yet. You can continue the lesson and try again later.";
+        status.setAttribute("data-lp-submit-state", "local");
+        return;
+      }
+      if (draft.submission && draft.submission.status === "submitted") {
+        status.textContent = draft.submission.reason || "Saved to your learning record.";
+        status.setAttribute("data-lp-submit-state", "submitted");
+        return;
+      }
+      status.removeAttribute("data-lp-submit-state");
       status.textContent = complete
         ? "Practised. This is learning progress, not an assignment grade."
         : (Object.keys(draft.responses).length ? "In progress. Your draft is saved on this device." : "");
@@ -169,7 +207,9 @@
         persist();
         ns.submitActivityDraft(activity, draft, Object.assign({}, options, {
           publication: ns.getPublicationState()
-        }));
+        })).then(function (result) {
+          applySubmissionResult(article, draft, result, persist);
+        });
       }
 
       if (resetBlockId) {
@@ -223,7 +263,10 @@
     Array.prototype.forEach.call(rootEl.querySelectorAll("[data-lp-activity]"), function (article) {
       var activityId = article.getAttribute("data-lp-activity");
       var activity = (pkg.activities || []).filter(function (item) { return item.id === activityId; })[0];
-      if (activity) bindActivity(article, activity, options || {});
+      if (!activity) return;
+      if (article.getAttribute("data-lp-bound") === activityId) return;
+      article.setAttribute("data-lp-bound", activityId);
+      bindActivity(article, activity, options || {});
     });
   };
 })(typeof globalThis !== "undefined" ? globalThis : this);

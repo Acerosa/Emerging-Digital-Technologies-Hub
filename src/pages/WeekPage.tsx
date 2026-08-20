@@ -24,7 +24,7 @@ export function WeekPage({
     engine.bindInteractive(mountRef.current, content, {
       sourcePage: window.location.pathname
     });
-  }, [engine, content, model]);
+  }, [engine, content, weekId]);
 
   if (!content) {
     return <LoadingState message="Loading this week's sessions" />;

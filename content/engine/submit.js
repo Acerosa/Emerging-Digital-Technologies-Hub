@@ -100,11 +100,26 @@
     };
   };
 
+  var inflightSubmissions = {};
+
+  function responseFingerprint(activity, draft) {
+    return JSON.stringify({
+      activityId: activity && activity.id,
+      activityVersion: (activity && activity.version) || "0.1.0",
+      responses: (draft && draft.responses) || {}
+    });
+  }
+
+  var LOCAL_KEEP_DRAFT = "Your work is still saved on this device. It has not been sent to your learning record yet. You can continue the lesson and try again later.";
+
   ns.submitActivityDraft = function (activity, draft, options) {
     var platform = (options && options.platform) || (root.LearningPlatform && root.LearningPlatform.platform);
     var responses = ns.buildActivityEvidence(activity, draft);
+    var activityId = activity && activity.id;
+    var fingerprint = responseFingerprint(activity, draft);
     var result = {
       status: "local",
+      failed: false,
       reason: "Your work is saved on this device. Sign in to store it against your learner record when this activity is published."
     };
 
@@ -124,9 +139,23 @@
       return Promise.resolve(result);
     }
     if (!platform.submission || typeof platform.submission.submit !== "function") {
-      result.reason = "The platform submission service is not available. Your draft remains on this device.";
+      result.failed = true;
+      result.reason = LOCAL_KEEP_DRAFT;
       return Promise.resolve(result);
     }
+    if (
+      draft
+      && draft.submission
+      && draft.submission.status === "submitted"
+      && draft.submission.fingerprint === fingerprint
+    ) {
+      return Promise.resolve({
+        status: "submitted",
+        failed: false,
+        reason: draft.submission.reason || "Saved to your learning record."
+      });
+    }
+    if (inflightSubmissions[activityId]) return inflightSubmissions[activityId];
 
     try {
       var payload = {
@@ -138,18 +167,39 @@
         completedAt: draft.completedAt || new Date().toISOString()
       };
       if (ns.activityRequiresPython(activity)) payload.programmingLanguage = "python";
-      return platform.submission.submit(payload).then(function () {
-        return { status: "submitted", reason: "Saved to your learning record." };
-      }).catch(function () {
+      inflightSubmissions[activityId] = platform.submission.submit(payload).then(function () {
+        return {
+          status: "submitted",
+          failed: false,
+          fingerprint: fingerprint,
+          reason: "Saved to your learning record."
+        };
+      }).catch(function (error) {
+        if (typeof console !== "undefined" && console.warn) {
+          console.warn("L2E_SUBMISSION_FAILED", error && (error.code || error.message) || error);
+        }
         return {
           status: "local",
-          reason: "The learning record could not accept this activity yet. Your draft remains on this device. The hub does not send learner, enrolment or assignment IDs."
+          failed: true,
+          reason: LOCAL_KEEP_DRAFT
         };
+      }).then(function (outcome) {
+        delete inflightSubmissions[activityId];
+        return outcome;
+      }, function (error) {
+        delete inflightSubmissions[activityId];
+        throw error;
       });
+      return inflightSubmissions[activityId];
     } catch (error) {
+      delete inflightSubmissions[activityId];
+      if (typeof console !== "undefined" && console.warn) {
+        console.warn("L2E_SUBMISSION_FAILED", error);
+      }
       return Promise.resolve({
         status: "local",
-        reason: "Submission is not available for this activity yet. Your draft remains on this device."
+        failed: true,
+        reason: LOCAL_KEEP_DRAFT
       });
     }
   };
