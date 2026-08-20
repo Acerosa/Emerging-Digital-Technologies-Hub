@@ -5,13 +5,39 @@ import { APP_CONFIG } from "./config";
 import { createSitePath } from "./paths";
 import { SUPABASE_CONFIG } from "./supabase-config";
 
+function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
+  const url = String(typeof input === "string" ? input : input instanceof URL ? input.href : input.url);
+  const requestInit: RequestInit = { ...init };
+  if (url.includes("published_curriculum_package")) {
+    requestInit.cache = "no-store";
+    requestInit.headers = {
+      ...(init?.headers || {}),
+      "Cache-Control": "no-cache"
+    };
+  }
+  return fetch(input, requestInit).then(async (response) => {
+    if (url.includes("published_curriculum_package") && !response.ok) {
+      let body = "";
+      try { body = await response.clone().text(); } catch {}
+      console.warn("L2E_CURRICULUM_RPC_FAILED", {
+        status: response.status,
+        hub: APP_CONFIG.hubId,
+        course: APP_CONFIG.courseKey,
+        body
+      });
+    }
+    return response;
+  });
+}
+
 export function createHubPlatform(root: string, createPlatformFn = createPlatform) {
   const client = createClient(SUPABASE_CONFIG.projectUrl, SUPABASE_CONFIG.publishableKey, {
     auth: {
       persistSession: true,
       autoRefreshToken: true,
       detectSessionInUrl: true
-    }
+    },
+    global: { fetch: curriculumAwareFetch }
   });
   const platform = createPlatformFn({
     hubCode: APP_CONFIG.hubId,
@@ -34,6 +60,7 @@ export function createHubPlatform(root: string, createPlatformFn = createPlatfor
     supabaseClient: client,
     localStorage: typeof window !== "undefined" ? window.localStorage : undefined,
     validatePackage,
+    fetch: curriculumAwareFetch,
     loadBundled: () => import("../content/l2e-exploring-emerging-digital-technologies/package.json").then((mod) => mod.default)
   });
 

@@ -4,7 +4,7 @@ import { activityFromPackage, type ContentPackage } from "./from-package";
 export type CurriculumRuntime = {
   source?: string;
   package?: ContentPackage | null;
-  state?: { state?: string; message?: string; allowsSubmission?: boolean } | null;
+  state?: { state?: string; message?: string; allowsSubmission?: boolean; reason?: string | null } | null;
   publication?: { version?: string; hub?: string; course?: string } | null;
 };
 
@@ -40,7 +40,14 @@ export function applyL2eCurriculum(
     bannerHost(target.document).innerHTML = renderStatus(runtime.state);
   }
   if (source !== "published") {
-    console.warn("L2E_CURRICULUM_FALLBACK", source, runtime.state?.state || "ERROR");
+    console.warn("L2E_CURRICULUM_FALLBACK", {
+      source,
+      state: runtime.state?.state || "ERROR",
+      reason: runtime.state?.reason || null,
+      message: runtime.state?.message || null,
+      hub: runtime.publication?.hub || null,
+      course: runtime.publication?.course || null
+    });
   }
   return runtime;
 }
