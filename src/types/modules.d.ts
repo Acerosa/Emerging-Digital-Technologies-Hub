@@ -29,6 +29,12 @@ declare module "@learning-platform/core" {
     auth: {
       signOut: () => Promise<void>;
       isSignedIn?: () => boolean;
+      subscribe?: (
+        listener: (state: {
+          status: string;
+          session?: { user?: { id?: string } } | null;
+        }) => void
+      ) => () => void;
     };
     learner: {
       subscribe: (listener: (state: LearnerState) => void) => () => void;

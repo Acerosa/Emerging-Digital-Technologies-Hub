@@ -8,7 +8,16 @@ import { APP_CONFIG } from "../config";
 
 export type ContentEngine = {
   renderActivity: (activity: unknown, options?: { root?: string }) => string;
-  bindInteractive: (root: ParentNode | null, pkg: unknown, options?: { sourcePage?: string }) => void;
+  bindInteractive: (
+    root: ParentNode | null,
+    pkg: unknown,
+    options?: {
+      sourcePage?: string;
+      storage?: Storage;
+      learnerKey?: string;
+      platform?: unknown;
+    }
+  ) => void;
   validatePackage: (pkg: unknown) => { valid: boolean; issues?: unknown[] };
   formatIssues: (issues: unknown) => string;
   loadCurriculumRuntime: (options: {
@@ -36,15 +45,20 @@ export type ContentEngine = {
       publication?: unknown;
       sourcePage?: string;
     }
-  ) => Promise<{ status: string; reason?: string }>;
+  ) => Promise<{ status: string; reason?: string; failed?: boolean; fingerprint?: string }>;
   serialiseActivityResult: (activity: unknown, draft: unknown) => unknown;
   createMemoryStorage?: () => Storage;
   createDraftStore?: (
     activity: { id: string; version?: string },
     options?: { storage?: Storage; learnerKey?: string }
   ) => {
-    load: () => { responses: Record<string, unknown>; activityId: string };
+    load: () => { responses: Record<string, unknown>; activityId: string; submission?: { status?: string; failed?: boolean; reason?: string } };
     save: (draft: unknown) => unknown;
+  };
+  migrateGuestDrafts?: (options?: { storage?: Storage; learnerKey?: string }) => {
+    migrated: number;
+    skipped: number;
+    reason: string;
   };
 };
 

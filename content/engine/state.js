@@ -6,10 +6,22 @@
 
   function memoryStorage() {
     var data = {};
+    var keys = [];
+    function refreshKeys() {
+      keys = Object.keys(data);
+    }
     return {
       getItem: function (key) { return Object.prototype.hasOwnProperty.call(data, key) ? data[key] : null; },
-      setItem: function (key, value) { data[key] = String(value); },
-      removeItem: function (key) { delete data[key]; }
+      setItem: function (key, value) {
+        data[key] = String(value);
+        refreshKeys();
+      },
+      removeItem: function (key) {
+        delete data[key];
+        refreshKeys();
+      },
+      key: function (index) { return keys[index] || null; },
+      get length() { return keys.length; }
     };
   }
 
@@ -64,11 +76,14 @@
 
   ns.createDraftStore = function (activity, options) {
     var storage = safeStorage(options && options.storage);
-    var key = storageKey(activity.id, options);
+
+    function currentKey() {
+      return storageKey(activity.id, options);
+    }
 
     function read() {
       try {
-        var raw = storage.getItem(key);
+        var raw = storage.getItem(currentKey());
         return raw ? JSON.parse(raw) : null;
       } catch (error) {
         return null;
@@ -77,7 +92,7 @@
 
     function write(draft) {
       try {
-        storage.setItem(key, JSON.stringify(draft));
+        storage.setItem(currentKey(), JSON.stringify(draft));
         return true;
       } catch (error) {
         return false;
@@ -97,18 +112,86 @@
     }
 
     function reset() {
-      try { storage.removeItem(key); } catch (error) {}
+      try { storage.removeItem(currentKey()); } catch (error) {}
       var draft = emptyDraft(activity);
       write(draft);
       return draft;
     }
 
     return {
-      key: key,
+      get key() { return currentKey(); },
       load: load,
       save: save,
       reset: reset
     };
+  };
+
+  function listStorageKeys(storage) {
+    var keys = [];
+    var index;
+    var key;
+    if (!storage) return keys;
+    if (typeof storage.length === "number" && typeof storage.key === "function") {
+      for (index = 0; index < storage.length; index += 1) {
+        key = storage.key(index);
+        if (key) keys.push(key);
+      }
+      return keys;
+    }
+    if (typeof storage.keys === "function") {
+      try { return storage.keys(); } catch (error) { return keys; }
+    }
+    return keys;
+  }
+
+  function draftHasWork(draft) {
+    if (!draft || typeof draft !== "object") return false;
+    if (draft.submission && draft.submission.status === "submitted") return true;
+    return Boolean(draft.responses && Object.keys(draft.responses).length);
+  }
+
+  ns.migrateGuestDrafts = function (options) {
+    var storage = safeStorage(options && options.storage);
+    var destLearner = learnerKey(options);
+    var guestToken = encodeURIComponent("guest");
+    var destToken;
+    var guestNeedle;
+    var destPrefix;
+    var migrated = 0;
+    var skipped = 0;
+    if (!destLearner || destLearner === "guest") {
+      return { migrated: 0, skipped: 0, reason: "not-authenticated" };
+    }
+    destToken = encodeURIComponent(destLearner);
+    guestNeedle = STORAGE_PREFIX + ":" + guestToken + ":";
+    destPrefix = STORAGE_PREFIX + ":" + destToken + ":";
+    listStorageKeys(storage).forEach(function (guestKey) {
+      var activityPart;
+      var destKey;
+      var guestRaw;
+      var destRaw;
+      var destDraft;
+      if (!guestKey || guestKey.indexOf(guestNeedle) !== 0) return;
+      activityPart = guestKey.slice(guestNeedle.length);
+      if (!activityPart) return;
+      destKey = destPrefix + activityPart;
+      try { guestRaw = storage.getItem(guestKey); } catch (error) { return; }
+      if (!guestRaw) return;
+      try { destRaw = storage.getItem(destKey); } catch (error) { destRaw = null; }
+      try { destDraft = destRaw ? JSON.parse(destRaw) : null; } catch (error) { destDraft = null; }
+      if (draftHasWork(destDraft)) {
+        skipped += 1;
+        return;
+      }
+      try {
+        storage.setItem(destKey, guestRaw);
+        storage.removeItem(guestKey);
+        migrated += 1;
+      } catch (error) {
+        skipped += 1;
+      }
+    });
+    return { migrated: migrated, skipped: skipped, reason: "ok" };
   };
 
   ns.summariseDraft = function (activity, options) {
