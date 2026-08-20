@@ -11,7 +11,7 @@ export function CourseGuidePage({ root }: { root: string }) {
           1.5-hour session.
         </p>
         <ul>
-          <li>Week 1: Current and Emerging Technology, including Mobile</li>
+          <li>Week 1: Introduction to New and Emerging Digital Technologies</li>
           <li>Week 2: Internet of Things, RFID, NFC and Wearables</li>
           <li>Week 3: Cloud Technology, SaaS, IaaS, PaaS and DaaS</li>
         </ul>

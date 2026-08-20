@@ -75,9 +75,9 @@
       "version": "0.1.0",
       "metadata": {
         "teachingWeek": 1,
-        "title": "Current and Emerging Technology, including Mobile",
+        "title": "Introduction to New and Emerging Digital Technologies",
         "status": "available",
-        "professionalPractice": "LO1 / AC 1.1 - outline current and emerging digital technologies, including mobile",
+        "professionalPractice": "LO1 / AC 1.1 - outline different new and emerging digital technologies",
         "route": "week-1/"
       },
       "relationships": {
@@ -147,17 +147,24 @@
       "metadata": {
         "title": "Week 1 session",
         "kind": "session",
-        "summary": "One 1.5-hour session: current versus emerging technology, then mobile uses.",
+        "summary": "One 1.5-hour interactive session: define digital technology, tell current from emerging, and outline mobile, intelligent computing, IoT and cloud.",
         "sortOrder": 1,
         "defaultOpen": true
       },
       "relationships": {
         "week": "week-1",
         "activities": [
-          "week-1-outline",
-          "week-1-retrieval",
-          "week-1-classify",
-          "week-1-reflection"
+          "week-1-welcome",
+          "week-1-digital-technology",
+          "week-1-current-emerging",
+          "week-1-mobile",
+          "week-1-intelligent-computing",
+          "week-1-iot",
+          "week-1-cloud",
+          "week-1-industry",
+          "week-1-knowledge-check",
+          "week-1-reflection",
+          "week-1-exit-ticket"
         ]
       }
     },
@@ -210,15 +217,15 @@
     {
       "schema": "lp.content.activity",
       "schemaVersion": "0.1.0",
-      "id": "week-1-outline",
+      "id": "week-1-welcome",
       "version": "0.1.0",
       "metadata": {
-        "title": "Current and emerging technology, including mobile",
+        "title": "Welcome and starter",
         "status": "available",
-        "summary": "Distinguish current technology from emerging technology, then outline how mobile devices are used by people and organisations.",
+        "summary": "Meet the unit, then choose one emerging technology example.",
         "href": null,
         "difficulty": "standard",
-        "estimatedDurationMinutes": 25,
+        "estimatedDurationMinutes": 8,
         "activityType": "Guided learning",
         "topics": []
       },
@@ -235,282 +242,113 @@
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-outline-title",
+          "id": "week-1-welcome-h",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "heading",
           "content": {
-            "text": "Current and emerging technology, including mobile",
+            "text": "Welcome",
             "level": 2
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-outline-intro",
+          "id": "week-1-welcome-p1",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "paragraph",
           "content": {
-            "text": "Distinguish current technology from emerging technology, then outline how mobile devices are used by people and organisations."
+            "text": "This unit is Exploring New and Emerging Digital Technologies (M/618/3683). Across the year you will outline technologies, then explain how people and organisations use them."
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-outline-h-0",
+          "id": "week-1-welcome-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Digital technology changes quickly. Businesses that notice new tools early can improve service, cut cost or stay safe. This lesson is formative practice for LO1 / AC 1.1. It is not Gateway assignment evidence."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-welcome-objectives",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "callout",
+          "content": {
+            "tone": "info",
+            "title": "By the end of this lesson",
+            "text": "Define digital technology; tell current from emerging; outline mobile, intelligent computing, IoT and cloud; and spot simple business uses."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-welcome-teacher",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "teacher-note",
+          "content": {
+            "text": "Misconception: learners often treat any new phone as emerging. Extension: ask for one sector where a current tool is still emerging. Discussion: why must businesses adapt? Differentiation: pair write the starter before sharing."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-welcome-starter-h",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "heading",
           "content": {
-            "text": "Current and emerging",
+            "text": "Starter",
             "level": 3
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-outline-p-0",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "paragraph",
-          "content": {
-            "text": "Current technology is already in common use. Emerging technology is still developing, is not yet widely adopted, or is starting to change how people live or work. The same product can be current in one sector and emerging in another."
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-outline-h-1",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "heading",
-          "content": {
-            "text": "Mobile technology",
-            "level": 3
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-outline-p-1",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "paragraph",
-          "content": {
-            "text": "Mobile technology includes smartphones, tablets and the apps, networks and cloud services that make them useful away from a desk. Learners should outline everyday personal uses and typical business uses such as field work, payments and secure access."
-          }
-        }
-      ]
-    },
-    {
-      "schema": "lp.content.activity",
-      "schemaVersion": "0.1.0",
-      "id": "week-1-retrieval",
-      "version": "0.1.0",
-      "metadata": {
-        "title": "Week 1 retrieval",
-        "status": "available",
-        "summary": "Check that you can outline current technology, emerging technology and mobile uses.",
-        "href": null,
-        "difficulty": "standard",
-        "estimatedDurationMinutes": 10,
-        "activityType": "Retrieval quiz",
-        "topics": []
-      },
-      "relationships": {
-        "learningOutcomes": [
-          "lo1"
-        ],
-        "assignment": "formative-practice",
-        "questions": [],
-        "assets": [],
-        "prerequisites": []
-      },
-      "blocks": [
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-retrieval-title",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "heading",
-          "content": {
-            "text": "Week 1 retrieval",
-            "level": 2
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-retrieval-intro",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "paragraph",
-          "content": {
-            "text": "Check that you can outline current technology, emerging technology and mobile uses."
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-retrieval-q-1",
+          "id": "week-1-welcome-q1",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "single-choice",
           "content": {
             "formative": true,
-            "questionId": "week-1-retrieval:q1",
-            "sourceQuestionId": "q1",
-            "prompt": "Which statement best describes emerging digital technology?",
+            "questionId": "week-1-welcome-q1",
+            "prompt": "Which of these is an example of an emerging digital technology?",
             "options": [
               {
                 "id": "a",
-                "label": "Technology that every organisation already uses in the same way"
+                "label": "A desktop PC used for word processing in most offices"
               },
               {
                 "id": "b",
-                "label": "Technology that is still developing or is not yet widely adopted"
+                "label": "Quantum computing still in limited research and early commercial trials"
               },
               {
                 "id": "c",
-                "label": "Any device that can connect to the internet"
+                "label": "A wired classroom projector that has been in schools for years"
               },
               {
                 "id": "d",
-                "label": "Software that only runs on a desktop computer"
+                "label": "A paper timetable on a noticeboard"
               }
             ],
             "correctOptionId": "b",
             "feedback": {
-              "correct": "Emerging technology is still developing, not yet widely adopted, or is starting to change how people live or work.",
-              "incorrect": "Emerging technology is still developing, not yet widely adopted, or is starting to change how people live or work."
-            },
-            "sourceType": "single"
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-retrieval-q-2",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "single-choice",
-          "content": {
-            "formative": true,
-            "questionId": "week-1-retrieval:q2",
-            "sourceQuestionId": "q2",
-            "prompt": "A supermarket self-checkout is an example of which kind of technology in most UK stores today?",
-            "options": [
-              {
-                "id": "a",
-                "label": "Emerging, because no shop has used it yet"
-              },
-              {
-                "id": "b",
-                "label": "Current, because it is already in common use"
-              },
-              {
-                "id": "c",
-                "label": "Only a wearable technology"
-              },
-              {
-                "id": "d",
-                "label": "Only a cloud service model"
-              }
-            ],
-            "correctOptionId": "b",
-            "feedback": {
-              "correct": "Self-checkouts are already common in many stores, so they are current technology in that setting.",
-              "incorrect": "Self-checkouts are already common in many stores, so they are current technology in that setting."
-            },
-            "sourceType": "single"
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-retrieval-q-3",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "single-choice",
-          "content": {
-            "formative": true,
-            "questionId": "week-1-retrieval:q3",
-            "sourceQuestionId": "q3",
-            "prompt": "Which option is a typical business use of mobile technology?",
-            "options": [
-              {
-                "id": "a",
-                "label": "A field engineer updating a job on a tablet"
-              },
-              {
-                "id": "b",
-                "label": "A server that never leaves a locked data centre"
-              },
-              {
-                "id": "c",
-                "label": "A printed paper form stored in a filing cabinet"
-              },
-              {
-                "id": "d",
-                "label": "A desktop-only accounts package with no network"
-              }
-            ],
-            "correctOptionId": "a",
-            "feedback": {
-              "correct": "Mobile devices support work away from a desk, such as field engineers updating jobs.",
-              "incorrect": "Mobile devices support work away from a desk, such as field engineers updating jobs."
-            },
-            "sourceType": "single"
-          }
-        },
-        {
-          "schema": "lp.content.block",
-          "schemaVersion": "0.1.0",
-          "id": "week-1-retrieval-q-4",
-          "version": "0.1.0",
-          "metadata": {},
-          "relationships": {},
-          "type": "single-choice",
-          "content": {
-            "formative": true,
-            "questionId": "week-1-retrieval:q4",
-            "sourceQuestionId": "q4",
-            "prompt": "Why might the same technology be current for one organisation and emerging for another?",
-            "options": [
-              {
-                "id": "a",
-                "label": "Awarding bodies ban shared vocabulary"
-              },
-              {
-                "id": "b",
-                "label": "Adoption depends on sector, cost, skills and risk"
-              },
-              {
-                "id": "c",
-                "label": "All digital products become obsolete in one year"
-              },
-              {
-                "id": "d",
-                "label": "Mobile phones cannot connect to cloud services"
-              }
-            ],
-            "correctOptionId": "b",
-            "feedback": {
-              "correct": "Cost, skills, regulation and risk mean sectors adopt the same technology at different speeds.",
-              "incorrect": "Cost, skills, regulation and risk mean sectors adopt the same technology at different speeds."
+              "correct": "Quantum computing is still developing and is not widely adopted, so it is emerging.",
+              "incorrect": "Emerging technology is still developing or not yet widely used. A common office PC or projector is current."
             },
             "sourceType": "single"
           }
@@ -520,12 +358,12 @@
     {
       "schema": "lp.content.activity",
       "schemaVersion": "0.1.0",
-      "id": "week-1-classify",
+      "id": "week-1-digital-technology",
       "version": "0.1.0",
       "metadata": {
-        "title": "Current or emerging?",
+        "title": "What is digital technology?",
         "status": "available",
-        "summary": "Sort each example as current technology or emerging technology for a typical UK college learner in 2026.",
+        "summary": "Outline devices, software, networks and data, then match each description to a technology.",
         "href": null,
         "difficulty": "standard",
         "estimatedDurationMinutes": 12,
@@ -545,41 +383,231 @@
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-classify-title",
+          "id": "week-1-digital-h",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "heading",
           "content": {
-            "text": "Current or emerging?",
+            "text": "What is digital technology?",
             "level": 2
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-classify-intro",
+          "id": "week-1-digital-p1",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "paragraph",
           "content": {
-            "text": "Sort each example as current technology or emerging technology for a typical UK college learner in 2026."
+            "text": "Digital technology uses electronic devices and software to create, store, share or process data."
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-classify-classification",
+          "id": "week-1-digital-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Devices are the hardware, such as phones, sensors and servers. Software is the programs and apps that tell hardware what to do."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-digital-p3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Networks connect devices so they can share data. Data is the information those systems collect, such as a location, a payment or a temperature reading."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-digital-match-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Match the description",
+            "level": 3
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-digital-match",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "classification",
           "content": {
             "formative": true,
-            "questionId": "week-1-classify",
-            "sourceQuestionId": "week-1-classify",
-            "prompt": "Classify each example as current or emerging.",
+            "questionId": "week-1-digital-match",
+            "prompt": "Match each description to the technology. Descriptions are listed in mixed order.",
+            "categories": [
+              {
+                "id": "mobile",
+                "label": "Mobile Technology"
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Computing"
+              },
+              {
+                "id": "iot",
+                "label": "Internet of Things"
+              },
+              {
+                "id": "ai",
+                "label": "Artificial Intelligence"
+              }
+            ],
+            "items": [
+              {
+                "id": "d-iot",
+                "label": "Physical objects that collect or share data over a network, often with little typing from a person",
+                "text": "Physical objects that collect or share data over a network, often with little typing from a person",
+                "correctCategoryId": "iot",
+                "explanation": ""
+              },
+              {
+                "id": "d-ai",
+                "label": "Software that finds patterns, makes predictions or generates content",
+                "text": "Software that finds patterns, makes predictions or generates content",
+                "correctCategoryId": "ai",
+                "explanation": ""
+              },
+              {
+                "id": "d-cloud",
+                "label": "Computing resources such as storage or software delivered over the internet",
+                "text": "Computing resources such as storage or software delivered over the internet",
+                "correctCategoryId": "cloud",
+                "explanation": ""
+              },
+              {
+                "id": "d-mobile",
+                "label": "Portable devices and apps used away from a desk, including phones and tablets",
+                "text": "Portable devices and apps used away from a desk, including phones and tablets",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Each description now matches the right technology.",
+              "incorrect": "Read each description again. Look for device, network, software pattern or internet-delivered resource."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-current-emerging",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Current versus emerging",
+        "status": "available",
+        "summary": "Explain the difference, then sort examples.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 12,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ce-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Current vs emerging technologies",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ce-p1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Current technology is already in common use. Most people or organisations in that setting already rely on it."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ce-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Emerging technology is still developing, is costly, or is not yet widely adopted. The same product can be current in one sector and emerging in another."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ce-p3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Example: contactless payment is current in many UK shops. A consumer brain-computer headset is still emerging."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ce-hint",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "hint",
+          "content": {
+            "text": "Ask: would most people in this setting already use it this year?"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ce-sort",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ce-sort",
+            "prompt": "Sort each example as current or emerging for a typical UK college learner in 2026.",
             "categories": [
               {
                 "id": "current",
@@ -592,42 +620,1568 @@
             ],
             "items": [
               {
-                "id": "w1-01",
-                "text": "A smartphone used to check email and maps",
+                "id": "ce-desktop",
+                "label": "Desktop PC",
+                "text": "Desktop PC",
                 "correctCategoryId": "current",
-                "explanation": "Smartphones are already in everyday use."
+                "explanation": ""
               },
               {
-                "id": "w1-02",
-                "text": "A foldable phone that most people have not bought yet",
+                "id": "ce-phone",
+                "label": "Smartphone",
+                "text": "Smartphone",
+                "correctCategoryId": "current",
+                "explanation": ""
+              },
+              {
+                "id": "ce-driverless",
+                "label": "Driverless cars as everyday personal transport",
+                "text": "Driverless cars as everyday personal transport",
                 "correctCategoryId": "emerging",
-                "explanation": "Foldables exist but are not widely adopted."
+                "explanation": ""
               },
               {
-                "id": "w1-03",
-                "text": "Contactless payment with a bank card or phone",
-                "correctCategoryId": "current",
-                "explanation": "Contactless payment is already common."
-              },
-              {
-                "id": "w1-04",
-                "text": "A consumer brain-computer headset still in trials",
+                "id": "ce-quantum",
+                "label": "Quantum computing",
+                "text": "Quantum computing",
                 "correctCategoryId": "emerging",
-                "explanation": "This is still developing and not widely used."
+                "explanation": ""
               },
               {
-                "id": "w1-05",
-                "text": "Wi-Fi in a college classroom",
+                "id": "ce-cloud",
+                "label": "Cloud storage such as OneDrive or Google Drive",
+                "text": "Cloud storage such as OneDrive or Google Drive",
                 "correctCategoryId": "current",
-                "explanation": "Campus Wi-Fi is already standard."
+                "explanation": ""
               },
               {
-                "id": "w1-06",
+                "id": "ce-ai",
+                "label": "An AI assistant built into everyday software",
+                "text": "An AI assistant built into everyday software",
+                "correctCategoryId": "current",
+                "explanation": ""
+              },
+              {
+                "id": "ce-wearable",
+                "label": "A wearable health monitor used by some people but not yet by most",
+                "text": "A wearable health monitor used by some people but not yet by most",
+                "correctCategoryId": "emerging",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Current tools are already common. Emerging tools are still limited, costly or not widely used.",
+              "incorrect": "A smartphone and cloud storage are already common. Driverless cars and quantum computing are not everyday tools yet."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-mobile",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Mobile technology",
+        "status": "available",
+        "summary": "Outline mobile uses, then select the mobile examples.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 10,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-mobile-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Mobile technology",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-mobile-p1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Mobile technology is computing you can carry. Smartphones and tablets run apps for messaging, maps, learning and work."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-mobile-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Mobile payments let people tap a phone or watch to pay. GPS gives location for maps, deliveries and safety."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-mobile-p3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Mobile banking lets customers check balances, pay bills and approve logins without a branch visit."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-mobile-h2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Select the mobile examples",
+            "level": 3
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-mobile-select",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-mobile-select",
+            "prompt": "Choose Mobile for every example that is mobile technology. Choose Not mobile for the distractors.",
+            "categories": [
+              {
+                "id": "mobile",
+                "label": "Mobile"
+              },
+              {
+                "id": "not-mobile",
+                "label": "Not mobile"
+              }
+            ],
+            "items": [
+              {
+                "id": "m-app",
+                "label": "A banking app on a smartphone",
+                "text": "A banking app on a smartphone",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              },
+              {
+                "id": "m-tablet",
+                "label": "A tablet used to sign for a parcel",
+                "text": "A tablet used to sign for a parcel",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              },
+              {
+                "id": "m-tap",
+                "label": "Tapping a phone to pay for lunch",
+                "text": "Tapping a phone to pay for lunch",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              },
+              {
+                "id": "m-gps",
+                "label": "Using GPS to find a college campus",
+                "text": "Using GPS to find a college campus",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              },
+              {
+                "id": "m-tower",
+                "label": "A desktop tower that never leaves the office",
+                "text": "A desktop tower that never leaves the office",
+                "correctCategoryId": "not-mobile",
+                "explanation": ""
+              },
+              {
+                "id": "m-paper",
+                "label": "A printed paper form in a filing cabinet",
+                "text": "A printed paper form in a filing cabinet",
+                "correctCategoryId": "not-mobile",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Mobile examples are portable devices, apps, payments or GPS. A desktop or paper form is not.",
+              "incorrect": "Look for phones, tablets, apps, tap-to-pay or GPS. A desktop PC and paper records are not mobile technology."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-intelligent-computing",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Intelligent computing",
+        "status": "available",
+        "summary": "Outline AI, machine learning, automation and robotics, then judge five statements.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 10,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Intelligent computing",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-p1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Intelligent computing is software and machines that can perform tasks that used to need human judgement, such as spotting a pattern or choosing a next step."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Artificial intelligence (AI) is the broad idea. Machine learning is a common method: the system improves by training on examples rather than only following fixed rules."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-p3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Automation runs a process with little human input, such as sorting invoices. Robotics uses machines that move or handle objects, sometimes with AI to decide what to do next."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-h2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "True or false",
+            "level": 3
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-tf1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ic-tf1",
+            "prompt": "Machine learning is one way a system can improve by training on examples.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Machine learning trains on data so the system can improve without rewriting every rule by hand.",
+              "incorrect": "Machine learning trains on data so the system can improve without rewriting every rule by hand."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-tf2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ic-tf2",
+            "prompt": "Every robot in a factory must also be an internet-connected wearable.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Robotics is about machines that move or handle objects. A factory robot is not a wearable, and it may or may not be connected to the internet.",
+              "incorrect": "Robotics is about machines that move or handle objects. A factory robot is not a wearable, and it may or may not be connected to the internet."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-tf3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ic-tf3",
+            "prompt": "Automation can reduce repetitive data-entry work.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Automation is often used for repeated processes such as copying invoice data.",
+              "incorrect": "Automation is often used for repeated processes such as copying invoice data."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-tf4",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ic-tf4",
+            "prompt": "AI can only be used for generating images, never for spotting fraud.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Banks already use AI-style pattern detection to flag unusual payments.",
+              "incorrect": "Banks already use AI-style pattern detection to flag unusual payments."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ic-tf5",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ic-tf5",
+            "prompt": "Intelligent computing always replaces every human job on day one.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "These tools usually support or change tasks. They do not instantly remove every role.",
+              "incorrect": "These tools usually support or change tasks. They do not instantly remove every role."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-iot",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Internet of Things",
+        "status": "available",
+        "summary": "Outline connected devices, then group consumer and business examples.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 10,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-iot-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Internet of Things",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-iot-p1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "The Internet of Things (IoT) is a network of physical devices that collect or share data, often with little typing from a person."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-iot-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Smart homes use connected lights, speakers and thermostats. Wearables such as a fitness watch are IoT when they send health or activity data."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-iot-p3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Industrial IoT uses sensors and machines in warehouses and factories to track stock, temperature or equipment."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-iot-h2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Consumer or business IoT?",
+            "level": 3
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-iot-groups",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-iot-groups",
+            "prompt": "Group each example as consumer IoT or business IoT.",
+            "categories": [
+              {
+                "id": "consumer",
+                "label": "Consumer IoT"
+              },
+              {
+                "id": "business",
+                "label": "Business IoT"
+              }
+            ],
+            "items": [
+              {
+                "id": "iot-watch",
+                "label": "Smart watch",
+                "text": "Smart watch",
+                "correctCategoryId": "consumer",
+                "explanation": ""
+              },
+              {
+                "id": "iot-thermo",
+                "label": "Smart thermostat in a house",
+                "text": "Smart thermostat in a house",
+                "correctCategoryId": "consumer",
+                "explanation": ""
+              },
+              {
+                "id": "iot-warehouse",
+                "label": "Warehouse sensors",
+                "text": "Warehouse sensors",
+                "correctCategoryId": "business",
+                "explanation": ""
+              },
+              {
+                "id": "iot-robot",
+                "label": "Smart factory robot",
+                "text": "Smart factory robot",
+                "correctCategoryId": "business",
+                "explanation": ""
+              },
+              {
+                "id": "iot-car",
+                "label": "Connected car used by a family",
+                "text": "Connected car used by a family",
+                "correctCategoryId": "consumer",
+                "explanation": ""
+              },
+              {
+                "id": "iot-rfid",
+                "label": "RFID scanner in a stock room",
+                "text": "RFID scanner in a stock room",
+                "correctCategoryId": "business",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Consumer examples are used by people at home or on the move. Business examples support stock, factories or scanning.",
+              "incorrect": "A watch, home thermostat or family car is consumer. Warehouse sensors, factory robots and RFID scanners are business."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-cloud",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Cloud technology",
+        "status": "available",
+        "summary": "Outline SaaS, IaaS and PaaS, then complete each sentence.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 10,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Cloud technology",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-p1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Cloud technology delivers computing over the internet instead of only from one local device. Users can often scale up or down as they need."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-p2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "SaaS is software you use in a browser or app, such as email. IaaS rents infrastructure such as virtual machines and storage. PaaS gives a ready place to build and run applications."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-callout",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "callout",
+          "content": {
+            "tone": "info",
+            "title": "Keep it simple",
+            "text": "Ask who manages the application. If the provider runs the app for you, it is usually SaaS."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-h2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Complete the sentences",
+            "level": 3
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-q1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-cloud-q1",
+            "prompt": "Google Docs is an example of ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "SaaS"
+              },
+              {
+                "id": "b",
+                "label": "IoT"
+              },
+              {
+                "id": "c",
+                "label": "AI"
+              },
+              {
+                "id": "d",
+                "label": "Blockchain"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "The provider runs the document app. You just use it, which is SaaS.",
+              "incorrect": "Google Docs is software delivered as a service, not a sensor network or a ledger."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-q2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-cloud-q2",
+            "prompt": "Renting virtual machines and then installing your own software is ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "SaaS"
+              },
+              {
+                "id": "b",
+                "label": "IaaS"
+              },
+              {
+                "id": "c",
+                "label": "NFC"
+              },
+              {
+                "id": "d",
+                "label": "A wearable"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "You manage the machines. The cloud supplies the infrastructure, which is IaaS.",
+              "incorrect": "IaaS is infrastructure: virtual machines, storage and networks."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-q3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-cloud-q3",
+            "prompt": "A hosted environment for building and running an app is ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "PaaS"
+              },
+              {
+                "id": "b",
+                "label": "RFID"
+              },
+              {
+                "id": "c",
+                "label": "GPS"
+              },
+              {
+                "id": "d",
+                "label": "A desktop tower"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "PaaS supplies the platform so developers can build and run software.",
+              "incorrect": "PaaS is a platform for building apps, not a tag, map or local PC."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-q4",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-cloud-q4",
+            "prompt": "College email in a browser is closest to ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "SaaS"
+              },
+              {
+                "id": "b",
+                "label": "A barcode"
+              },
+              {
+                "id": "c",
+                "label": "Industrial robotics"
+              },
+              {
+                "id": "d",
+                "label": "Paper records"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "The provider runs the email application. Learners just use it.",
+              "incorrect": "Browser email is software as a service."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-q5",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-cloud-q5",
+            "prompt": "Which statement best outlines cloud technology?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Computing resources delivered over the internet"
+              },
+              {
+                "id": "b",
+                "label": "A USB stick that never connects to a network"
+              },
+              {
+                "id": "c",
+                "label": "A printed staff handbook"
+              },
+              {
+                "id": "d",
+                "label": "A calculator with no data connection"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Cloud services are delivered over the internet and can usually scale.",
+              "incorrect": "Cloud is internet-delivered computing, not an offline object."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-cloud-q6",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-cloud-q6",
+            "prompt": "A team that only wants extra disk space during exam week is mainly buying ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "IaaS storage"
+              },
+              {
+                "id": "b",
+                "label": "A wearable"
+              },
+              {
+                "id": "c",
+                "label": "NFC payments"
+              },
+              {
+                "id": "d",
+                "label": "Desktop ink"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Extra virtual disks are infrastructure capacity.",
+              "incorrect": "Storage capacity is IaaS, not a wearable or a payment tap."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-industry",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Industry uses",
+        "status": "available",
+        "summary": "Match a technology to each organisation, then match technologies to business examples.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 12,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ind-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "How businesses use these technologies",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ind-p1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Retail, banking, entertainment and healthcare all use digital tools, but not always the same ones. Choose the best fit for each organisation in this lesson."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ind-orgs",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ind-orgs",
+            "prompt": "Choose the technology that best fits each organisation in this scenario.",
+            "categories": [
+              {
+                "id": "mobile",
+                "label": "Mobile Technology"
+              },
+              {
+                "id": "iot",
+                "label": "Internet of Things"
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud Technology"
+              },
+              {
+                "id": "ai",
+                "label": "Intelligent computing / AI"
+              }
+            ],
+            "items": [
+              {
+                "id": "org-retail",
+                "label": "Retail: sensors track stock on shelves",
+                "text": "Retail: sensors track stock on shelves",
+                "correctCategoryId": "iot",
+                "explanation": ""
+              },
+              {
+                "id": "org-bank",
+                "label": "Banking: customers pay and check balances on a phone",
+                "text": "Banking: customers pay and check balances on a phone",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              },
+              {
+                "id": "org-ent",
+                "label": "Entertainment: films stream to many viewers at once",
+                "text": "Entertainment: films stream to many viewers at once",
+                "correctCategoryId": "cloud",
+                "explanation": ""
+              },
+              {
+                "id": "org-health",
+                "label": "Healthcare: software flags unusual scans for a clinician to review",
+                "text": "Healthcare: software flags unusual scans for a clinician to review",
+                "correctCategoryId": "ai",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Stock sensors are IoT, phone banking is mobile, streaming is cloud, and scan flags are intelligent computing.",
+              "incorrect": "Match the job: sensors (IoT), phone app (mobile), streaming at scale (cloud), pattern spotting (AI)."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ind-h2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Technology to business example",
+            "level": 3
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-ind-match",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ind-match",
+            "prompt": "Match each business example to the technology.",
+            "categories": [
+              {
+                "id": "cloud",
+                "label": "Cloud Computing"
+              },
+              {
+                "id": "iot",
+                "label": "IoT"
+              },
+              {
+                "id": "ai",
+                "label": "AI"
+              },
+              {
+                "id": "mobile",
+                "label": "Mobile Technology"
+              }
+            ],
+            "items": [
+              {
+                "id": "ex-netflix",
+                "label": "Netflix",
+                "text": "Netflix",
+                "correctCategoryId": "cloud",
+                "explanation": ""
+              },
+              {
+                "id": "ex-amazon",
+                "label": "Amazon warehouse",
+                "text": "Amazon warehouse",
+                "correctCategoryId": "iot",
+                "explanation": ""
+              },
+              {
+                "id": "ex-fraud",
+                "label": "Fraud detection",
+                "text": "Fraud detection",
+                "correctCategoryId": "ai",
+                "explanation": ""
+              },
+              {
+                "id": "ex-bank",
+                "label": "Mobile banking",
+                "text": "Mobile banking",
+                "correctCategoryId": "mobile",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Streaming is cloud, warehouse sensing is IoT, fraud flags are AI, and phone banking is mobile.",
+              "incorrect": "Think about how the example works: streaming, warehouse sensors, pattern detection, or a phone app."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-knowledge-check",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Knowledge check",
+        "status": "available",
+        "summary": "Ten mixed questions. None of these copies an earlier item word for word.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 15,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Knowledge check",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-p",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "paragraph",
+          "content": {
+            "text": "Use this to check the lesson. It is formative. It does not produce a Gateway grade."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q1",
+            "prompt": "Which list best defines digital technology?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Devices, software, networks and data used to create or process information"
+              },
+              {
+                "id": "b",
+                "label": "Only paper archives in a locked cupboard"
+              },
+              {
+                "id": "c",
+                "label": "Only the colour of a company logo"
+              },
+              {
+                "id": "d",
+                "label": "Only face-to-face meetings with no devices"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Digital technology combines hardware, software, networks and data.",
+              "incorrect": "Look for electronic systems that handle information, not paper-only or brand colour."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q2",
+            "prompt": "A technology can be current in one sector and emerging in another.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Adoption depends on cost, skills, risk and regulation.",
+              "incorrect": "Adoption depends on cost, skills, risk and regulation."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q3",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q3",
+            "prompt": "GPS on a delivery driver's phone is mainly an example of ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "Mobile technology"
+              },
+              {
+                "id": "b",
+                "label": "A printed map only"
+              },
+              {
+                "id": "c",
+                "label": "Blockchain mining"
+              },
+              {
+                "id": "d",
+                "label": "Desktop publishing"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Location services on a phone are a mobile technology use.",
+              "incorrect": "GPS on a phone is mobile, not a paper map or a ledger."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q4",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q4",
+            "prompt": "Sort these two examples.",
+            "categories": [
+              {
+                "id": "current",
+                "label": "Current"
+              },
+              {
+                "id": "emerging",
+                "label": "Emerging"
+              }
+            ],
+            "items": [
+              {
+                "id": "kc-wifi",
+                "label": "Classroom Wi-Fi",
+                "text": "Classroom Wi-Fi",
+                "correctCategoryId": "current",
+                "explanation": ""
+              },
+              {
+                "id": "kc-holo",
+                "label": "A personal holographic display that few shops sell",
                 "text": "A personal holographic display that few shops sell",
                 "correctCategoryId": "emerging",
-                "explanation": "This is not yet widely available or adopted."
+                "explanation": ""
               }
-            ]
+            ],
+            "feedback": {
+              "correct": "Campus Wi-Fi is already common. A rare holographic display is still emerging.",
+              "incorrect": "Ask whether most people already use it."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q5",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q5",
+            "prompt": "IoT devices never share data over a network.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "IoT devices collect or share data, often automatically, over a network.",
+              "incorrect": "IoT devices collect or share data, often automatically, over a network."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q6",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q6",
+            "prompt": "Which option is intelligent computing rather than a simple calculator?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Software that learns from past payments to flag unusual activity"
+              },
+              {
+                "id": "b",
+                "label": "Adding two numbers with a basic handheld calculator"
+              },
+              {
+                "id": "c",
+                "label": "A blank notebook"
+              },
+              {
+                "id": "d",
+                "label": "A wall clock with no sensors"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Learning from examples to flag unusual payments is intelligent computing.",
+              "incorrect": "A basic calculator follows fixed arithmetic. Pattern detection from examples is closer to AI."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q7",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q7",
+            "prompt": "SaaS is best outlined as ______.",
+            "options": [
+              {
+                "id": "a",
+                "label": "Software you use through a browser or app while the provider runs it"
+              },
+              {
+                "id": "b",
+                "label": "A warehouse pallet"
+              },
+              {
+                "id": "c",
+                "label": "A paper invoice book"
+              },
+              {
+                "id": "d",
+                "label": "A HDMI cable"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "SaaS is software delivered as a service.",
+              "incorrect": "If you just use the app and the provider runs it, that is SaaS."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q8",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q8",
+            "prompt": "Cloud services can only ever run on one laptop with no internet.",
+            "options": [
+              {
+                "id": "a",
+                "label": "True"
+              },
+              {
+                "id": "b",
+                "label": "False"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Cloud services are delivered over the internet, not only on one offline laptop.",
+              "incorrect": "Cloud services are delivered over the internet, not only on one offline laptop."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q9",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q9",
+            "prompt": "Which business use is the best fit for mobile technology?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A nurse updating a patient note on a tablet on the ward"
+              },
+              {
+                "id": "b",
+                "label": "A server that never leaves a locked data centre and has no mobile app"
+              },
+              {
+                "id": "c",
+                "label": "A cardboard archive box"
+              },
+              {
+                "id": "d",
+                "label": "A desktop-only accounts pack with no network"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "A tablet on a ward is a portable device used away from a desk.",
+              "incorrect": "Mobile technology is used on the move. A locked server or cardboard box is not."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-q10",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "classification",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-kc-q10",
+            "prompt": "Match the remaining pair.",
+            "categories": [
+              {
+                "id": "iot",
+                "label": "IoT"
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud"
+              }
+            ],
+            "items": [
+              {
+                "id": "kc-soil",
+                "label": "Soil sensors sending moisture readings from a field",
+                "text": "Soil sensors sending moisture readings from a field",
+                "correctCategoryId": "iot",
+                "explanation": ""
+              },
+              {
+                "id": "kc-mail",
+                "label": "Staff mailboxes hosted by a provider and opened in a browser",
+                "text": "Staff mailboxes hosted by a provider and opened in a browser",
+                "correctCategoryId": "cloud",
+                "explanation": ""
+              }
+            ],
+            "feedback": {
+              "correct": "Field sensors are IoT. Hosted mailbox software is cloud / SaaS.",
+              "incorrect": "Sensors sharing data are IoT. Browser email is cloud software."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-kc-teacher",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "teacher-note",
+          "content": {
+            "text": "Common mix-up: cloud versus IoT. Extension: name one risk if a wearable leaks health data. Discussion: should a college treat AI assistants as current or emerging? Differentiation: allow the classification items to be completed with a partner."
           }
         }
       ]
@@ -638,9 +2192,9 @@
       "id": "week-1-reflection",
       "version": "0.1.0",
       "metadata": {
-        "title": "Mobile in your week",
+        "title": "Reflection",
         "status": "available",
-        "summary": "Write a short outline of one personal and one organisational mobile example.",
+        "summary": "Write a short response on impact over the next decade.",
         "href": null,
         "difficulty": "standard",
         "estimatedDurationMinutes": 8,
@@ -660,41 +2214,170 @@
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-reflection-title",
+          "id": "week-1-ref-h",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "heading",
           "content": {
-            "text": "Mobile in your week",
+            "text": "Reflection",
             "level": 2
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-reflection-intro",
+          "id": "week-1-ref-p",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "paragraph",
           "content": {
-            "text": "Write a short outline of one personal and one organisational mobile example."
+            "text": "Use one technology from this lesson. Keep the answer short. This is practice, not assignment evidence."
           }
         },
         {
           "schema": "lp.content.block",
           "schemaVersion": "0.1.0",
-          "id": "week-1-reflection-prompt",
+          "id": "week-1-ref-q",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "short-response",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-ref-q",
+            "prompt": "Which emerging technology do you believe will have the biggest impact over the next decade and why?",
+            "guidance": "Name the technology, say who it could help, and give one reason. One short paragraph is enough."
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-1-exit-ticket",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Exit ticket",
+        "status": "available",
+        "summary": "One multiple-choice check, a confidence rating, and a short reflection.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Reflection",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-exit-h",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "heading",
+          "content": {
+            "text": "Exit ticket",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-exit-q1",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": true,
+            "questionId": "week-1-exit-q1",
+            "prompt": "Which statement is the best outline of emerging digital technology?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Technology that is still developing or not yet widely adopted"
+              },
+              {
+                "id": "b",
+                "label": "Any device that has electricity"
+              },
+              {
+                "id": "c",
+                "label": "Only software that cannot connect to a network"
+              },
+              {
+                "id": "d",
+                "label": "A paper filing system with no computers"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Emerging technology is still developing or not yet in common use.",
+              "incorrect": "Electricity alone does not make a tool emerging. Look at adoption and development."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-exit-q2",
+          "version": "0.1.0",
+          "metadata": {},
+          "relationships": {},
+          "type": "single-choice",
+          "content": {
+            "formative": false,
+            "questionId": "week-1-exit-q2",
+            "prompt": "How confident are you that you can outline current versus emerging technology after this lesson?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Very unsure"
+              },
+              {
+                "id": "b",
+                "label": "Unsure"
+              },
+              {
+                "id": "c",
+                "label": "OK"
+              },
+              {
+                "id": "d",
+                "label": "Confident"
+              },
+              {
+                "id": "e",
+                "label": "Very confident"
+              }
+            ]
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-1-exit-q3",
           "version": "0.1.0",
           "metadata": {},
           "relationships": {},
           "type": "reflection",
           "content": {
             "formative": true,
-            "questionId": "week-1-reflection:learner-note",
-            "sourceQuestionId": "learner-note",
-            "prompt": "Name one mobile technology you used this week and one way an organisation might use a similar device. Keep it formative; this is not Gateway assignment evidence."
+            "questionId": "week-1-exit-q3",
+            "prompt": "Write one sentence: which idea from today will you reuse when you outline a technology next week?",
+            "guidance": "One sentence is enough. Name the idea, not a grade."
           }
         }
       ]

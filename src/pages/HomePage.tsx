@@ -17,9 +17,8 @@ export function HomePage({ root }: { root: string }) {
         </p>
         <p>
           L2 E Computing has one 1.5-hour session each week. Start with the current
-          week overview. Retrieval, classification and reflection for that week are
-          listed there so you can follow the teaching sequence without hunting across
-          the site.
+          week overview. Interactive activities for that week are listed there so you
+          can follow the teaching sequence without hunting across the site.
         </p>
       </section>
 

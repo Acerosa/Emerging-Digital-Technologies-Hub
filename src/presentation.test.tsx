@@ -35,6 +35,8 @@ describe("L2E presentation", () => {
     expect(screen.queryByText(/T Level/i)).toBeNull();
     expect(screen.getByRole("heading", { name: "Week 1 session" })).toBeTruthy();
     expect(screen.queryByRole("heading", { name: /Lesson 2/i })).toBeNull();
+    expect(screen.getByText(/Which of these is an example of an emerging digital technology/)).toBeTruthy();
+    expect(screen.getAllByRole("button", { name: "Check answer" }).length).toBeGreaterThan(0);
   });
 
   it("builds breadcrumbs for week pages from the content package", () => {
@@ -45,7 +47,7 @@ describe("L2E presentation", () => {
     });
     expect(items.map((item) => item.label)).toEqual([
       "Course home",
-      "Week 1: Current and Emerging Technology, including Mobile"
+      "Week 1: Introduction to New and Emerging Digital Technologies"
     ]);
   });
 });

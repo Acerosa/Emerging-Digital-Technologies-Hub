@@ -89,6 +89,7 @@ export type WeekPageModel = {
     summary: string;
     defaultOpen: boolean;
     activities: Array<{
+      id: string;
       title: string;
       description: string;
       activityType: string;
@@ -139,6 +140,7 @@ export function weekPageFromPackage(pkg: ContentPackage, weekId: string): WeekPa
         const activity = (pkg.activities || []).find((item) => item.id === activityId);
         const minutes = activity?.metadata?.estimatedDurationMinutes;
         return {
+          id: activityId,
           title: activity?.metadata?.title || activityId,
           description: activity?.metadata?.summary || "",
           activityType: activity?.metadata?.activityType || "Activity",

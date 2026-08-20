@@ -7,17 +7,24 @@
     "metadata": {
       "title": "Week 1 session",
       "kind": "session",
-      "summary": "One 1.5-hour session: current versus emerging technology, then mobile uses.",
+      "summary": "One 1.5-hour interactive session: define digital technology, tell current from emerging, and outline mobile, intelligent computing, IoT and cloud.",
       "sortOrder": 1,
       "defaultOpen": true
     },
     "relationships": {
       "week": "week-1",
       "activities": [
-        "week-1-outline",
-        "week-1-retrieval",
-        "week-1-classify",
-        "week-1-reflection"
+        "week-1-welcome",
+        "week-1-digital-technology",
+        "week-1-current-emerging",
+        "week-1-mobile",
+        "week-1-intelligent-computing",
+        "week-1-iot",
+        "week-1-cloud",
+        "week-1-industry",
+        "week-1-knowledge-check",
+        "week-1-reflection",
+        "week-1-exit-ticket"
       ]
     }
   },
