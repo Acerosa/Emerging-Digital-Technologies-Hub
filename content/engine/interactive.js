@@ -3,10 +3,6 @@
 
   var ns = root.LearningPlatformContent = root.LearningPlatformContent || {};
 
-  if (typeof ns.submitActivityDraft !== "function") {
-    ns.submitActivityDraft = function () {};
-  }
-
   function blockById(activity, blockId) {
     return (activity.blocks || []).filter(function (block) { return block.id === blockId; })[0] || null;
   }

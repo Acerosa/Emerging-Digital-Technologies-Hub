@@ -2,6 +2,7 @@ import "./bind-core";
 import "@learning-platform/content";
 import "../../content/engine/state.js";
 import "../../content/engine/publication.js";
+import "../../content/engine/submit.js";
 import "../../content/engine/interactive.js";
 import { APP_CONFIG } from "../config";
 
