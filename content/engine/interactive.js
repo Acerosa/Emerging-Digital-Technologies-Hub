@@ -6,9 +6,6 @@
   if (typeof ns.submitActivityDraft !== "function") {
     ns.submitActivityDraft = function () {};
   }
-  if (typeof ns.getPublicationState !== "function") {
-    ns.getPublicationState = function () { return null; };
-  }
 
   function blockById(activity, blockId) {
     return (activity.blocks || []).filter(function (block) { return block.id === blockId; })[0] || null;

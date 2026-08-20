@@ -1,15 +1,19 @@
 import { cleanup, render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
+import pkg from "../content/l2e-exploring-emerging-digital-technologies/package.json";
 import { CourseSidebar } from "./components/CourseSidebar";
+import { homeWeeksFromPackage, type ContentPackage } from "./curriculum/from-package";
 import { HomePage } from "./pages/HomePage";
 import { WeekPage } from "./pages/WeekPage";
 import { breadcrumbs } from "./page-copy";
+
+const content = pkg as ContentPackage;
 
 afterEach(cleanup);
 
 describe("L2E presentation", () => {
   it("puts Weeks 1 to 3 on the home page as the teaching starting points", () => {
-    render(<HomePage root="." />);
+    render(<HomePage root="." pkg={content} />);
     expect(screen.getByRole("link", { name: "Open Week 1" }).getAttribute("href")).toBe("./week-1/");
     expect(screen.getByRole("link", { name: "Open Week 2" }).getAttribute("href")).toBe("./week-2/");
     expect(screen.getByRole("link", { name: "Open Week 3" }).getAttribute("href")).toBe("./week-3/");
@@ -28,7 +32,7 @@ describe("L2E presentation", () => {
   });
 
   it("shows Gateway unit context on a week page and one session only", () => {
-    render(<WeekPage weekId="week-1" root=".." />);
+    render(<WeekPage weekId="week-1" root=".." pkg={content} />);
     expect(screen.getByText("Gateway Level 2 Digital and IT Skills")).toBeTruthy();
     expect(screen.getAllByText(/M\/618\/3683/).length).toBeGreaterThan(0);
     expect(screen.queryByText(/Pearson/i)).toBeNull();
@@ -44,10 +48,11 @@ describe("L2E presentation", () => {
       page: "week-1",
       section: "week-1",
       root: ".."
-    });
+    }, content);
     expect(items.map((item) => item.label)).toEqual([
       "Course home",
       "Week 1: Introduction to New and Emerging Digital Technologies"
     ]);
+    expect(homeWeeksFromPackage(content)[0].title).toBe("Introduction to New and Emerging Digital Technologies");
   });
 });

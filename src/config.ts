@@ -9,6 +9,8 @@ export const APP_CONFIG = Object.freeze({
   coreVersion: "0.2.0",
   learnerApiContractVersion: "0.1.0",
   submissionContractVersion: "0.1.0",
+  schemaVersion: "0.1.0",
+  contentPackageVersion: "0.1.0",
   currentPhase: "Weeks 1 to 3: LO1 / AC 1.1 formative teaching",
   navigation: Object.freeze([
     Object.freeze({ id: "home", label: "Home", path: "" }),

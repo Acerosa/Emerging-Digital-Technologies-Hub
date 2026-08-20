@@ -1,11 +1,15 @@
-import { Callout, StatusBadge } from "@learning-platform/ui";
-import pkg from "../../content/l2e-exploring-emerging-digital-technologies/package.json";
-import { homeWeeksFromPackage } from "../curriculum/from-package";
+import { Callout, LoadingState, StatusBadge } from "@learning-platform/ui";
+import { activeContentPackage } from "../curriculum/apply-runtime";
+import { homeWeeksFromPackage, type ContentPackage } from "../curriculum/from-package";
 import { createSitePath } from "../paths";
 
-const WEEKS = homeWeeksFromPackage(pkg);
+export function HomePage({ root, pkg }: { root: string; pkg?: ContentPackage | null }) {
+  const content = activeContentPackage(pkg);
+  if (!content) {
+    return <LoadingState message="Loading the weekly teaching sequence." />;
+  }
+  const weeks = homeWeeksFromPackage(content);
 
-export function HomePage({ root }: { root: string }) {
   return (
     <div className="study-stack">
       <section className="study-card" aria-labelledby="welcome-heading">
@@ -26,7 +30,7 @@ export function HomePage({ root }: { root: string }) {
         <h2 id="start-heading">Where to start</h2>
         <div className="home-week-scroller" tabIndex={0} aria-label="Week cards">
           <div className="card-grid">
-            {WEEKS.map((week) => (
+            {weeks.map((week) => (
               <article className="hub-card" key={week.id}>
                 <StatusBadge
                   status="available"

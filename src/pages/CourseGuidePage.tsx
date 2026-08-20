@@ -1,7 +1,15 @@
-import { Callout } from "@learning-platform/ui";
+import { Callout, LoadingState } from "@learning-platform/ui";
+import { activeContentPackage } from "../curriculum/apply-runtime";
+import { homeWeeksFromPackage, type ContentPackage } from "../curriculum/from-package";
 import { createSitePath } from "../paths";
 
-export function CourseGuidePage({ root }: { root: string }) {
+export function CourseGuidePage({ root, pkg }: { root: string; pkg?: ContentPackage | null }) {
+  const content = activeContentPackage(pkg);
+  if (!content) {
+    return <LoadingState message="Loading the course guide." />;
+  }
+  const weeks = homeWeeksFromPackage(content);
+
   return (
     <div className="study-stack">
       <section className="study-card" aria-labelledby="structure-heading">
@@ -11,9 +19,9 @@ export function CourseGuidePage({ root }: { root: string }) {
           1.5-hour session.
         </p>
         <ul>
-          <li>Week 1: Introduction to New and Emerging Digital Technologies</li>
-          <li>Week 2: Internet of Things, RFID, NFC and Wearables</li>
-          <li>Week 3: Cloud Technology, SaaS, IaaS, PaaS and DaaS</li>
+          {weeks.map((week) => (
+            <li key={week.id}>{`${week.label}: ${week.title}`}</li>
+          ))}
         </ul>
         <p>
           Later weeks stay in the scheme of learning until they are authored in this

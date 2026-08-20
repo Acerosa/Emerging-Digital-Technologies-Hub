@@ -2,7 +2,6 @@ import { createAccountDialog } from "@learning-platform/core";
 import { useEffect, useMemo, useState } from "react";
 import type { LearnerSummary, ThemeControl, ThemePreference } from "@learning-platform/ui";
 import { APP_CONFIG } from "../config";
-import { loadL2eCurriculum } from "../curriculum/apply-runtime";
 import { createHubPlatform } from "../platform";
 
 type AccountDialog = {
@@ -21,7 +20,6 @@ export function useHubPlatform(root: string) {
   useEffect(() => {
     let dialog: AccountDialog | null = null;
     const unsubscribers: Array<() => void> = [];
-    let cancelled = false;
     document.body.dataset.platformState = "loading";
 
     unsubscribers.push(platform.learner.subscribe((state) => {
@@ -49,17 +47,9 @@ export function useHubPlatform(root: string) {
     document.body.appendChild(dialog.element);
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
-
-    void (async () => {
-      if (platform.curriculum) {
-        await loadL2eCurriculum(platform);
-      }
-      await platform.initialise();
-      if (cancelled) return;
-    })();
+    void platform.initialise();
 
     return () => {
-      cancelled = true;
       unsubscribers.forEach((stop) => stop());
       dialog?.element.remove();
       dialog?.destroy?.();

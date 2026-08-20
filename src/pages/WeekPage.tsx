@@ -1,22 +1,34 @@
 import { LoadingState, WeekView } from "@learning-platform/ui";
 import { useEffect, useRef } from "react";
-import pkg from "../../content/l2e-exploring-emerging-digital-technologies/package.json";
 import { getContentEngine } from "../content/engine";
-import { weekPageFromPackage } from "../curriculum/from-package";
+import { activeContentPackage } from "../curriculum/apply-runtime";
+import { weekPageFromPackage, type ContentPackage } from "../curriculum/from-package";
 import { createSitePath } from "../paths";
 
-export function WeekPage({ weekId, root }: { weekId: string; root: string }) {
+export function WeekPage({
+  weekId,
+  root,
+  pkg
+}: {
+  weekId: string;
+  root: string;
+  pkg?: ContentPackage | null;
+}) {
   const engine = getContentEngine();
   const mountRef = useRef<HTMLDivElement>(null);
-  const model = weekPageFromPackage(pkg, weekId);
+  const content = activeContentPackage(pkg);
+  const model = content ? weekPageFromPackage(content, weekId) : null;
 
   useEffect(() => {
-    if (!pkg || !mountRef.current) return;
-    engine.bindInteractive(mountRef.current, pkg, {
+    if (!content || !mountRef.current) return;
+    engine.bindInteractive(mountRef.current, content, {
       sourcePage: window.location.pathname
     });
-  }, [engine, model]);
+  }, [engine, content, model]);
 
+  if (!content) {
+    return <LoadingState message="Loading this week's sessions" />;
+  }
   if (!model) {
     return <LoadingState message="This week has not been published yet." />;
   }
@@ -26,7 +38,7 @@ export function WeekPage({ weekId, root }: { weekId: string; root: string }) {
     ...session,
     activities: session.activities.map((activity) => ({
       html: engine.renderActivity(
-        pkg.activities.find((item) => item.id === activity.id)
+        content.activities?.find((item) => item.id === activity.id)
       )
     }))
   }));

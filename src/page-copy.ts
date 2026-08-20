@@ -1,6 +1,6 @@
 import type { BreadcrumbItem } from "@learning-platform/ui";
-import pkg from "../content/l2e-exploring-emerging-digital-technologies/package.json";
-import { weekPageFromPackage } from "./curriculum/from-package";
+import { activeContentPackage } from "./curriculum/apply-runtime";
+import { weekPageFromPackage, type ContentPackage } from "./curriculum/from-package";
 import type { PageContext } from "./page-context";
 
 const PAGE_COPY: Record<string, { title: string; subtitle: string }> = {
@@ -26,9 +26,13 @@ const PAGE_COPY: Record<string, { title: string; subtitle: string }> = {
   }
 };
 
-export function pageHeader(context: PageContext): { title: string; subtitle: string } {
+export function pageHeader(
+  context: PageContext,
+  pkg?: ContentPackage | null
+): { title: string; subtitle: string } {
   if (/^week-\d+$/.test(context.page)) {
-    const model = weekPageFromPackage(pkg, context.page);
+    const content = activeContentPackage(pkg);
+    const model = content ? weekPageFromPackage(content, context.page) : null;
     if (model) {
       return {
         title: `Week ${model.week.teachingWeek}: ${model.week.title}`,
@@ -39,9 +43,9 @@ export function pageHeader(context: PageContext): { title: string; subtitle: str
   return PAGE_COPY[context.page] || PAGE_COPY.home;
 }
 
-export function breadcrumbs(context: PageContext): BreadcrumbItem[] {
+export function breadcrumbs(context: PageContext, pkg?: ContentPackage | null): BreadcrumbItem[] {
   const home = { label: "Course home", path: "" };
   if (context.page === "home") return [home];
-  const header = pageHeader(context);
+  const header = pageHeader(context, pkg);
   return [home, { label: header.title }];
 }

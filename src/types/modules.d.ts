@@ -26,7 +26,10 @@ declare module "@learning-platform/core" {
   export interface PlatformFacade {
     config: { hubName: string; accountPath: string };
     theme: ThemeService;
-    auth: { signOut: () => Promise<void> };
+    auth: {
+      signOut: () => Promise<void>;
+      isSignedIn?: () => boolean;
+    };
     learner: {
       subscribe: (listener: (state: LearnerState) => void) => () => void;
     };
@@ -42,6 +45,9 @@ declare module "@learning-platform/core" {
     flags?: unknown;
     initialise: () => Promise<unknown>;
     destroy: () => void;
+    submission?: {
+      submit: (payload: unknown) => Promise<unknown>;
+    };
     curriculum: {
       loadLatest: () => Promise<{
         source?: string;

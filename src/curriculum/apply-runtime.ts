@@ -1,9 +1,10 @@
+import { getContentEngine } from "../content/engine";
 import { activityFromPackage, type ContentPackage } from "./from-package";
 
 export type CurriculumRuntime = {
   source?: string;
   package?: ContentPackage | null;
-  state?: { state?: string; message?: string } | null;
+  state?: { state?: string; message?: string; allowsSubmission?: boolean } | null;
   publication?: { version?: string; hub?: string; course?: string } | null;
 };
 
@@ -25,10 +26,15 @@ export function applyL2eCurriculum(
   const pkg = runtime.package || null;
   const source = runtime.source || "none";
   target.__lpPackage = pkg || undefined;
-  target.__lpPublishedCurriculum = Boolean(pkg);
+  target.__lpPublishedCurriculum = source === "published";
   if (target.document?.body) {
     target.document.body.dataset.curriculumSource = source;
     target.document.body.dataset.publicationState = runtime.state?.state || "ERROR";
+  }
+  try {
+    getContentEngine().setPublicationState?.(runtime.state);
+  } catch {
+    // Content engine is optional for unit tests that only hydrate window.__lpPackage.
   }
   if (runtime.state && target.document && typeof renderStatus === "function") {
     bannerHost(target.document).innerHTML = renderStatus(runtime.state);
@@ -37,6 +43,14 @@ export function applyL2eCurriculum(
     console.warn("L2E_CURRICULUM_FALLBACK", source, runtime.state?.state || "ERROR");
   }
   return runtime;
+}
+
+export function activeContentPackage(pkg?: ContentPackage | null): ContentPackage | null {
+  if (pkg) return pkg;
+  if (typeof window !== "undefined" && window.__lpPackage) {
+    return window.__lpPackage as ContentPackage;
+  }
+  return null;
 }
 
 export function activityFromPublishedPackage(pkg: ContentPackage | null | undefined, activityId: string) {
