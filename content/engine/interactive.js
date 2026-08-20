@@ -187,10 +187,18 @@
     });
 
     article.addEventListener("click", function (event) {
-      var checkId = event.target.getAttribute("data-lp-check");
-      var resetBlockId = event.target.getAttribute("data-lp-reset-block");
-      var copyId = event.target.getAttribute("data-lp-copy");
-      var resetActivity = event.target.getAttribute("data-lp-reset-activity");
+      var target = event.target;
+      if (target && target.nodeType === 3) target = target.parentElement;
+      if (!target || typeof target.closest !== "function") return;
+
+      var checkEl = target.closest("[data-lp-check]");
+      var resetBlockEl = target.closest("[data-lp-reset-block]");
+      var copyEl = target.closest("[data-lp-copy]");
+      var resetActivityEl = target.closest("[data-lp-reset-activity]");
+      var checkId = checkEl && checkEl.getAttribute("data-lp-check");
+      var resetBlockId = resetBlockEl && resetBlockEl.getAttribute("data-lp-reset-block");
+      var copyId = copyEl && copyEl.getAttribute("data-lp-copy");
+      var resetActivity = resetActivityEl && resetActivityEl.getAttribute("data-lp-reset-activity");
       var block;
       var blockRoot;
       var qid;
@@ -210,6 +218,7 @@
         })).then(function (result) {
           applySubmissionResult(article, draft, result, persist);
         });
+        return;
       }
 
       if (resetBlockId) {
@@ -224,6 +233,7 @@
           setFeedback(blockRoot, block, field.value, false);
           persist();
         }
+        return;
       }
 
       if (copyId) {
@@ -231,6 +241,7 @@
         if (field && navigator.clipboard && navigator.clipboard.writeText) {
           navigator.clipboard.writeText(field.value);
         }
+        return;
       }
 
       if (resetActivity === activity.id) {

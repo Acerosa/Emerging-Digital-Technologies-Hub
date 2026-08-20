@@ -1,5 +1,5 @@
 import { LoadingState, WeekView } from "@learning-platform/ui";
-import { useEffect, useRef } from "react";
+import { useLayoutEffect, useMemo, useRef } from "react";
 import { getContentEngine } from "../content/engine";
 import { activeContentPackage } from "../curriculum/apply-runtime";
 import { weekPageFromPackage, type ContentPackage } from "../curriculum/from-package";
@@ -8,23 +8,43 @@ import { createSitePath } from "../paths";
 export function WeekPage({
   weekId,
   root,
-  pkg
+  pkg,
+  platform
 }: {
   weekId: string;
   root: string;
   pkg?: ContentPackage | null;
+  platform?: unknown;
 }) {
   const engine = getContentEngine();
   const mountRef = useRef<HTMLDivElement>(null);
   const content = activeContentPackage(pkg);
-  const model = content ? weekPageFromPackage(content, weekId) : null;
+  const model = useMemo(
+    () => (content ? weekPageFromPackage(content, weekId) : null),
+    [content, weekId]
+  );
 
-  useEffect(() => {
-    if (!content || !mountRef.current) return;
-    engine.bindInteractive(mountRef.current, content, {
-      sourcePage: window.location.pathname
+  const sessions = useMemo(() => {
+    if (!content || !model) return [];
+    return model.sessions.map((session) => ({
+      ...session,
+      activities: session.activities.map((activity) => ({
+        html: engine.renderActivity(
+          content.activities?.find((item) => item.id === activity.id)
+        )
+      }))
+    }));
+  }, [content, engine, model]);
+
+  useLayoutEffect(() => {
+    const rootEl = mountRef.current;
+    if (!content || !rootEl || !sessions.length) return;
+
+    engine.bindInteractive(rootEl, content, {
+      sourcePage: window.location.pathname,
+      platform: platform || (typeof window !== "undefined" ? window.LearningPlatform?.platform : undefined)
     });
-  }, [engine, content, weekId]);
+  }, [engine, content, weekId, sessions, platform]);
 
   if (!content) {
     return <LoadingState message="Loading this week's sessions" />;
@@ -34,14 +54,6 @@ export function WeekPage({
   }
 
   const weekNumber = model.week.teachingWeek;
-  const sessions = model.sessions.map((session) => ({
-    ...session,
-    activities: session.activities.map((activity) => ({
-      html: engine.renderActivity(
-        content.activities?.find((item) => item.id === activity.id)
-      )
-    }))
-  }));
 
   return (
     <div data-lp-mount="" ref={mountRef}>

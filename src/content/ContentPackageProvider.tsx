@@ -13,7 +13,6 @@ export function ContentPackageProvider({
   platform?: {
     curriculum?: {
       loadLatest: () => Promise<unknown>;
-      renderStatus?: (state: unknown) => string;
     };
   } | null;
 }) {

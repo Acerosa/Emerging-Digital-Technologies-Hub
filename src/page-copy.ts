@@ -6,7 +6,7 @@ import type { PageContext } from "./page-context";
 const PAGE_COPY: Record<string, { title: string; subtitle: string }> = {
   home: {
     title: "Course home",
-    subtitle: "Find the weekly teaching sequence and course guidance for L2 E Computing."
+    subtitle: "Open a week to work through this week's activities."
   },
   "course-guide": {
     title: "Course Guide",

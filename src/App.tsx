@@ -11,11 +11,17 @@ import { AccountPage, HelpPage, ResourcesPage } from "./pages/StaticPages";
 import { WeekPage } from "./pages/WeekPage";
 import { createSitePath, navigationItems } from "./paths";
 
-function PageBody({ context }: { context: PageContext }) {
+function PageBody({
+  context,
+  platform
+}: {
+  context: PageContext;
+  platform?: unknown;
+}) {
   const { pkg } = useLoadedContent();
   if (context.page === "course-guide") return <CourseGuidePage root={context.root} pkg={pkg} />;
   if (/^week-\d+$/.test(context.page)) {
-    return <WeekPage weekId={context.page} root={context.root} pkg={pkg} />;
+    return <WeekPage weekId={context.page} root={context.root} pkg={pkg} platform={platform} />;
   }
   if (context.page === "resources") return <ResourcesPage root={context.root} />;
   if (context.page === "help") return <HelpPage />;
@@ -39,7 +45,7 @@ function HubApp({
   context: PageContext;
   hub: ReturnType<typeof useHubPlatform>;
 }) {
-  const { pkg, publicationHtml } = useLoadedContent();
+  const { pkg } = useLoadedContent();
   const { learner, theme, accountDialog, platform } = hub;
   const header = pageHeader(context, pkg);
 
@@ -87,9 +93,6 @@ function HubApp({
           onSignOut={() => platform.auth.signOut()}
         />
       )}
-      notice={publicationHtml
-        ? <div data-publication-status="" dangerouslySetInnerHTML={{ __html: publicationHtml }} />
-        : <div data-publication-status="" />}
       footer={{
         lines: [
           APP_CONFIG.siteName,
@@ -99,7 +102,7 @@ function HubApp({
       }}
     >
       <CourseLayout currentPage={context.section} root={context.root}>
-        <PageBody context={context} />
+        <PageBody context={context} platform={platform} />
       </CourseLayout>
     </HubShell>
   );

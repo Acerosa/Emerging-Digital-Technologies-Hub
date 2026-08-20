@@ -7,7 +7,6 @@ import type { ContentPackage } from "../curriculum/from-package";
 type CurriculumHost = {
   curriculum?: {
     loadLatest: () => Promise<CurriculumRuntime | unknown>;
-    renderStatus?: (state: unknown) => string;
   };
 };
 
@@ -22,7 +21,6 @@ async function loadBundledFallback(): Promise<CurriculumRuntime> {
 export function useContentPackage(platform?: CurriculumHost | null) {
   const [pkg, setPackage] = useState<ContentPackage | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [publicationHtml, setPublicationHtml] = useState("");
   const [source, setSource] = useState<string>("none");
 
   useEffect(() => {
@@ -38,18 +36,9 @@ export function useContentPackage(platform?: CurriculumHost | null) {
         }
       }
       engine.setPublicationState?.(runtime.state);
-      applyL2eCurriculum(runtime, window, (state) => {
-        return platform?.curriculum?.renderStatus?.(state)
-          || engine.renderPublicationStatus(state)
-          || "";
-      });
+      applyL2eCurriculum(runtime);
       setPackage(loaded);
       setSource(runtime.source || "none");
-      setPublicationHtml(
-        platform?.curriculum?.renderStatus?.(runtime.state)
-          || engine.renderPublicationStatus(runtime.state)
-          || ""
-      );
       document.dispatchEvent(new CustomEvent("lp:content-ready", {
         detail: { package: loaded, publication: runtime.state }
       }));
@@ -79,12 +68,7 @@ export function useContentPackage(platform?: CurriculumHost | null) {
 
     function onPublication(event: Event) {
       const state = (event as CustomEvent).detail || engine.getPublicationState?.();
-      if (state && state.state) {
-        setPublicationHtml(
-          platform?.curriculum?.renderStatus?.(state)
-            || engine.renderPublicationStatus(state)
-            || ""
-        );
+      if (state && state.state && document.body) {
         document.body.dataset.publicationState = state.state || "ERROR";
       }
     }
@@ -95,5 +79,5 @@ export function useContentPackage(platform?: CurriculumHost | null) {
     };
   }, [platform]);
 
-  return { pkg, error, publicationHtml, source };
+  return { pkg, error, source };
 }

@@ -1,4 +1,4 @@
-import { cleanup, render, screen, within } from "@testing-library/react";
+import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 import pkg from "../content/l2e-exploring-emerging-digital-technologies/package.json";
 import { CourseSidebar } from "./components/CourseSidebar";
@@ -41,6 +41,33 @@ describe("L2E presentation", () => {
     expect(screen.queryByRole("heading", { name: /Lesson 2/i })).toBeNull();
     expect(screen.getByText(/Which of these is an example of an emerging digital technology/)).toBeTruthy();
     expect(screen.getAllByRole("button", { name: "Check answer" }).length).toBeGreaterThan(0);
+  });
+
+  it("wires Check answer and Reset activity on the week page", async () => {
+    const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
+    const article = await waitFor(() => {
+      const node = container.querySelector('[data-lp-activity="week-1-welcome"]');
+      expect(node?.getAttribute("data-lp-bound")).toBe("week-1-welcome");
+      return node as HTMLElement;
+    });
+
+    const choice = article.querySelector('input[value="b"]') as HTMLInputElement | null;
+    const check = within(article).getByRole("button", { name: "Check answer" });
+    const reset = within(article).getByRole("button", { name: "Reset activity" });
+    expect(choice).toBeTruthy();
+    choice!.checked = true;
+    fireEvent.change(choice!);
+    fireEvent.click(check);
+
+    await waitFor(() => {
+      expect(article.querySelector("[data-lp-feedback]")?.textContent).toMatch(/quantum computing|emerging/i);
+    });
+
+    fireEvent.click(reset);
+    await waitFor(() => {
+      expect(choice!.checked).toBe(false);
+      expect(article.querySelector("[data-lp-feedback]")?.textContent || "").toBe("");
+    });
   });
 
   it("builds breadcrumbs for week pages from the content package", () => {
