@@ -32,6 +32,9 @@ test("activity check-answer is wired to the Unit 14 submission adapter", functio
   assert.match(read("content/engine/interactive.js"), /data-lp-bound/);
   assert.match(read("content/engine/interactive.js"), /minCharsFor/);
   assert.match(read("content/engine/interactive.js"), /Paste is disabled/);
+  assert.match(read("content/engine/interactive.js"), /lp-sort-card/);
+  assert.match(read("content/engine/interactive.js"), /data-lp-sort-board/);
+  assert.match(read("css/hub.css"), /\.lp-sort-board/);
   assert.match(read("content/engine/submit.js"), /platform\.submission\.submit/);
   assert.match(read("content/engine/submit.js"), /still saved on this device/);
   assert.doesNotMatch(read("content/engine/submit.js"), /learnerId\s*:|enrolmentId\s*:|assignmentId\s*:|attemptNumber\s*:/);

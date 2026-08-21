@@ -15,6 +15,19 @@
     return type === "short-response" || type === "reflection";
   }
 
+  function escapeHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+
+  function itemLabel(item) {
+    return (item && (item.text || item.label)) || "";
+  }
+
   function minCharsFor(block) {
     var content = (block && block.content) || {};
     var type = ns.normaliseBlockType(block && block.type);
@@ -117,7 +130,199 @@
     ns.markBlock = patched;
   }
 
+  function renderClassificationSortHtml(block) {
+    var content = block.content || {};
+    var questionIdValue = content.questionId || block.id;
+    var categories = content.categories || [];
+    var items = content.items || [];
+    var formative = content.formative === true;
+    var columnsHtml;
+    var selectsHtml;
+    var cardsHtml;
+
+    cardsHtml = items.map(function (item) {
+      return '<button type="button" class="lp-sort-card" draggable="true" data-lp-sort-card="' +
+        escapeHtml(item.id) + '" aria-pressed="false">' + escapeHtml(itemLabel(item)) + "</button>";
+    }).join("");
+
+    columnsHtml = '<div class="lp-sort-column" data-lp-sort-column="pool">' +
+      "<h4>Cards to sort</h4>" +
+      '<div class="lp-sort-stack" data-lp-sort-stack="pool">' + cardsHtml + "</div></div>" +
+      categories.map(function (category) {
+        return '<div class="lp-sort-column" data-lp-sort-column="' + escapeHtml(category.id) + '">' +
+          "<h4>" + escapeHtml(category.label) + "</h4>" +
+          '<div class="lp-sort-stack" data-lp-sort-stack="' + escapeHtml(category.id) + '"></div></div>';
+      }).join("");
+
+    selectsHtml = items.map(function (item) {
+      var selectId = "lp-class-" + (block.id || questionIdValue) + "-" + item.id;
+      var options = ['<option value="">Select a type</option>'].concat(categories.map(function (category) {
+        return '<option value="' + escapeHtml(category.id) + '">' + escapeHtml(category.label) + "</option>";
+      }));
+      return '<div class="lp-classify-item"><label for="' + escapeHtml(selectId) + '">' +
+        escapeHtml(itemLabel(item)) + '</label><select id="' + escapeHtml(selectId) +
+        '" data-lp-response data-lp-item="' + escapeHtml(item.id) + '">' + options.join("") +
+        '</select><span class="lp-item-status" data-lp-item-status="' + escapeHtml(item.id) +
+        '" role="status"></span></div>';
+    }).join("");
+
+    return '<div class="lp-block lp-block--interactive lp-block--sort" data-lp-block="classification" data-lp-block-id="' +
+      escapeHtml(block.id) + '" data-lp-question="' + escapeHtml(questionIdValue) + '"' +
+      (formative ? ' data-lp-formative="true"' : "") + ">" +
+      '<fieldset class="lp-fieldset"><legend>' + escapeHtml(content.prompt || "Classify each item") + "</legend>" +
+      '<p class="lp-sort-note">Drag each card into a column, or select a card then tap a column. You can also use the lists below if needed.</p>' +
+      '<div class="lp-sort-board" data-lp-sort-board data-lp-column-count="' +
+      escapeHtml(String(categories.length + 1)) + '">' + columnsHtml + "</div>" +
+      '<details class="lp-sort-fallback"><summary>Use dropdown lists instead</summary>' +
+      '<div class="lp-classify-legacy">' + selectsHtml + "</div></details>" +
+      "</fieldset>" +
+      '<div class="lp-block-actions"><button type="button" class="lp-button" data-lp-check="' +
+      escapeHtml(block.id) + '">Check types</button></div>' +
+      '<p class="lp-feedback" data-lp-feedback role="status" aria-live="polite"></p></div>';
+  }
+
+  function patchClassificationRender() {
+    var original = ns.renderBlock;
+    if (typeof original !== "function" || original.__l2eSortCards) return;
+
+    function patched(block, options) {
+      if (ns.normaliseBlockType(block && block.type) === "classification") {
+        return renderClassificationSortHtml(block);
+      }
+      return original(block, options);
+    }
+
+    patched.__l2eSortCards = true;
+    ns.renderBlock = patched;
+  }
+
+  function syncSortBoardFromSelects(blockRoot) {
+    var board = blockRoot.querySelector("[data-lp-sort-board]");
+    if (!board) return;
+    Array.prototype.forEach.call(blockRoot.querySelectorAll("[data-lp-item]"), function (select) {
+      var itemId = select.getAttribute("data-lp-item");
+      var columnId = select.value || "pool";
+      var card = board.querySelector('[data-lp-sort-card="' + itemId + '"]');
+      var stack = board.querySelector('[data-lp-sort-stack="' + columnId + '"]') ||
+        board.querySelector('[data-lp-sort-stack="pool"]');
+      if (card && stack && card.parentElement !== stack) {
+        stack.appendChild(card);
+      }
+    });
+  }
+
+  function setSortSelectValue(blockRoot, itemId, columnId) {
+    var select = blockRoot.querySelector('[data-lp-item="' + itemId + '"]');
+    if (!select) return;
+    select.value = columnId === "pool" ? "" : columnId;
+    select.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  function clearSortSelection(blockRoot) {
+    Array.prototype.forEach.call(blockRoot.querySelectorAll("[data-lp-sort-card]"), function (card) {
+      card.classList.remove("lp-sort-card-selected");
+      card.setAttribute("aria-pressed", "false");
+    });
+  }
+
+  function enhanceClassificationBoard(blockRoot) {
+    var board = blockRoot.querySelector("[data-lp-sort-board]");
+    var selectedId = null;
+
+    if (!board || board.getAttribute("data-lp-sort-bound") === "true") {
+      syncSortBoardFromSelects(blockRoot);
+      return;
+    }
+
+    board.setAttribute("data-lp-sort-bound", "true");
+
+    function moveCard(itemId, columnId) {
+      var card = board.querySelector('[data-lp-sort-card="' + itemId + '"]');
+      var stack = board.querySelector('[data-lp-sort-stack="' + columnId + '"]');
+      if (!card || !stack) return;
+      stack.appendChild(card);
+      setSortSelectValue(blockRoot, itemId, columnId);
+      selectedId = itemId;
+      Array.prototype.forEach.call(board.querySelectorAll("[data-lp-sort-card]"), function (node) {
+        var active = node.getAttribute("data-lp-sort-card") === itemId;
+        node.classList.toggle("lp-sort-card-selected", active);
+        node.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+    }
+
+    board.addEventListener("dragstart", function (event) {
+      var card = event.target && event.target.closest && event.target.closest("[data-lp-sort-card]");
+      if (!card || !event.dataTransfer) return;
+      selectedId = card.getAttribute("data-lp-sort-card");
+      event.dataTransfer.setData("text/plain", selectedId);
+      event.dataTransfer.effectAllowed = "move";
+      card.classList.add("lp-sort-card-dragging");
+    });
+
+    board.addEventListener("dragend", function (event) {
+      var card = event.target && event.target.closest && event.target.closest("[data-lp-sort-card]");
+      if (card) card.classList.remove("lp-sort-card-dragging");
+      Array.prototype.forEach.call(board.querySelectorAll(".lp-sort-column-active"), function (column) {
+        column.classList.remove("lp-sort-column-active");
+      });
+    });
+
+    board.addEventListener("dragover", function (event) {
+      var column = event.target && event.target.closest && event.target.closest("[data-lp-sort-column]");
+      if (!column) return;
+      event.preventDefault();
+      column.classList.add("lp-sort-column-active");
+    });
+
+    board.addEventListener("dragleave", function (event) {
+      var column = event.target && event.target.closest && event.target.closest("[data-lp-sort-column]");
+      if (column) column.classList.remove("lp-sort-column-active");
+    });
+
+    board.addEventListener("drop", function (event) {
+      var column = event.target && event.target.closest && event.target.closest("[data-lp-sort-column]");
+      var itemId;
+      if (!column) return;
+      event.preventDefault();
+      column.classList.remove("lp-sort-column-active");
+      itemId = event.dataTransfer ? event.dataTransfer.getData("text/plain") : "";
+      if (itemId) moveCard(itemId, column.getAttribute("data-lp-sort-column"));
+    });
+
+    board.addEventListener("click", function (event) {
+      var card = event.target && event.target.closest && event.target.closest("[data-lp-sort-card]");
+      var column = event.target && event.target.closest && event.target.closest("[data-lp-sort-column]");
+      if (card) {
+        selectedId = card.getAttribute("data-lp-sort-card");
+        Array.prototype.forEach.call(board.querySelectorAll("[data-lp-sort-card]"), function (node) {
+          var active = node === card;
+          node.classList.toggle("lp-sort-card-selected", active);
+          node.setAttribute("aria-pressed", active ? "true" : "false");
+        });
+        return;
+      }
+      if (column && selectedId) {
+        moveCard(selectedId, column.getAttribute("data-lp-sort-column"));
+      }
+    });
+
+    blockRoot.addEventListener("change", function (event) {
+      if (!event.target || !event.target.matches || !event.target.matches("[data-lp-item]")) return;
+      syncSortBoardFromSelects(blockRoot);
+    });
+
+    syncSortBoardFromSelects(blockRoot);
+    blockRoot.__lpResetSortBoard = function () {
+      clearSortSelection(blockRoot);
+      Array.prototype.forEach.call(blockRoot.querySelectorAll("[data-lp-item]"), function (select) {
+        select.selectedIndex = 0;
+      });
+      syncSortBoardFromSelects(blockRoot);
+    };
+  }
+
   patchMarkBlockForMinChars();
+  patchClassificationRender();
 
   function collectResponse(blockRoot, block) {
     var type = ns.normaliseBlockType(block.type);
@@ -146,6 +351,7 @@
           select.value = value[select.getAttribute("data-lp-item")];
         }
       });
+      syncSortBoardFromSelects(blockRoot);
       return;
     }
     if (type === "single-choice") {
@@ -170,6 +376,9 @@
         statusEl.textContent = "";
         if (row) row.removeAttribute("data-lp-result");
       });
+      Array.prototype.forEach.call(blockRoot.querySelectorAll("[data-lp-sort-card]"), function (card) {
+        card.removeAttribute("data-lp-result");
+      });
       return;
     }
     result = ns.markBlock(block, response);
@@ -181,13 +390,16 @@
       var itemId = statusEl.getAttribute("data-lp-item-status");
       var itemResult = (result.itemResults || []).filter(function (item) { return item.id === itemId; })[0];
       var row = statusEl.closest(".lp-classify-item");
+      var card = blockRoot.querySelector('[data-lp-sort-card="' + itemId + '"]');
       if (!itemResult || itemResult.correct == null) {
         statusEl.textContent = "";
         if (row) row.removeAttribute("data-lp-result");
+        if (card) card.removeAttribute("data-lp-result");
         return;
       }
       statusEl.textContent = itemResult.correct ? "Matched." : "Review.";
       if (row) row.setAttribute("data-lp-result", itemResult.correct ? "matched" : "review");
+      if (card) card.setAttribute("data-lp-result", itemResult.correct ? "matched" : "review");
     });
   }
 
@@ -268,6 +480,9 @@
       if (!blockRoot) return;
       if (isTextResponseType(ns.normaliseBlockType(block.type))) {
         enhanceTextResponseField(blockRoot, block);
+      }
+      if (ns.normaliseBlockType(block.type) === "classification") {
+        enhanceClassificationBoard(blockRoot);
       }
       restoreResponse(blockRoot, block, draft.responses[qid]);
       if (draft.checked[qid]) setFeedback(blockRoot, block, draft.responses[qid], true);
@@ -369,9 +584,13 @@
               input.checked = false;
             });
           } else if (ns.normaliseBlockType(item.type) === "classification") {
-            Array.prototype.forEach.call(rootEl.querySelectorAll("[data-lp-item]"), function (select) {
-              select.selectedIndex = 0;
-            });
+            if (typeof rootEl.__lpResetSortBoard === "function") {
+              rootEl.__lpResetSortBoard();
+            } else {
+              Array.prototype.forEach.call(rootEl.querySelectorAll("[data-lp-item]"), function (select) {
+                select.selectedIndex = 0;
+              });
+            }
           } else {
             responseField = rootEl.querySelector("[data-lp-response]");
             if (responseField) responseField.value = responseField.defaultValue;

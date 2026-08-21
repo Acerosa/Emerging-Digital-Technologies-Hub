@@ -272,6 +272,100 @@ body {
   margin-bottom: var(--lp-space-2);
 }
 
+.lp-sort-note {
+  margin: 0 0 var(--lp-space-3);
+  color: var(--lp-muted, #5b6470);
+}
+
+.lp-sort-board {
+  display: grid;
+  gap: var(--lp-space-3);
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+  margin-bottom: var(--lp-space-3);
+}
+
+.lp-sort-board[data-lp-column-count="3"] {
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+}
+
+.lp-sort-board[data-lp-column-count="5"] {
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+
+.lp-sort-column {
+  min-height: 9rem;
+  padding: var(--lp-space-2);
+  border: 0.125rem dashed var(--lp-border);
+  border-radius: var(--lp-radius-sm);
+  background: var(--lp-surface-alt);
+}
+
+.lp-sort-column h4 {
+  margin: 0 0 var(--lp-space-2);
+  font-size: 0.95rem;
+}
+
+.lp-sort-stack {
+  display: grid;
+  gap: 0.55rem;
+  min-height: 4rem;
+}
+
+.lp-sort-card {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.7rem 0.8rem;
+  border: 0.125rem solid var(--lp-border);
+  border-radius: var(--lp-radius-sm);
+  background: var(--lp-surface, #fff);
+  color: var(--lp-text);
+  font: inherit;
+  text-align: left;
+  cursor: grab;
+  box-shadow: 0 0.1rem 0.25rem rgb(15 23 42 / 8%);
+}
+
+.lp-sort-card:active {
+  cursor: grabbing;
+}
+
+.lp-sort-card-selected {
+  border-color: var(--lp-accent, #2a7a62);
+  box-shadow: 0 0 0 0.125rem var(--lp-accent, #2a7a62);
+}
+
+.lp-sort-card-dragging {
+  opacity: 0.65;
+}
+
+.lp-sort-column-active {
+  border-color: var(--lp-accent, #2a7a62);
+  background: color-mix(in srgb, var(--lp-accent, #2a7a62) 12%, var(--lp-surface-alt));
+}
+
+.lp-sort-card[data-lp-result="matched"] {
+  border-color: var(--lp-accent, #2a7a62);
+}
+
+.lp-sort-card[data-lp-result="review"] {
+  border-color: var(--lp-danger, #9b1c1c);
+}
+
+.lp-sort-card:focus-visible {
+  outline: 0.1875rem solid var(--lp-focus, #1e4d6b);
+  outline-offset: 0.125rem;
+}
+
+.lp-sort-fallback {
+  margin-top: var(--lp-space-2);
+}
+
+.lp-sort-fallback summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
 .lp-label,
 .lp-instructions {
   display: block;
