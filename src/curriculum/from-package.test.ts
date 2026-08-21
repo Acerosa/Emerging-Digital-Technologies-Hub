@@ -39,6 +39,22 @@ describe("L2E package hydration", () => {
       "week-1-reflection",
       "week-1-exit-ticket"
     ]);
+    const week2 = weekPageFromPackage(pkg, "week-2");
+    expect(week2?.sessions[0].activities.map((item) => item.id)).toEqual([
+      "week-2-starter",
+      "week-2-iot",
+      "week-2-iot-sectors",
+      "week-2-rfid",
+      "week-2-nfc",
+      "week-2-rfid-vs-nfc",
+      "week-2-wearables",
+      "week-2-smart-settings",
+      "week-2-benefits-risks",
+      "week-2-privacy",
+      "week-2-trends",
+      "week-2-reflection",
+      "week-2-exit"
+    ]);
   });
 
   it("restores Week 1 starter questions from published blocks", () => {

@@ -2170,16 +2170,16 @@
   {
     "schema": "lp.content.activity",
     "schemaVersion": "0.1.0",
-    "id": "week-2-outline",
+    "id": "week-2-starter",
     "version": "0.1.0",
     "metadata": {
-      "title": "Internet of Things, RFID, NFC and wearables",
+      "title": "Welcome to Week 2",
       "status": "available",
-      "summary": "Outline IoT, RFID, NFC and wearables so you can tell them apart and give a realistic example of each.",
+      "summary": "Set the focus for AC1.1: outline IoT, connected devices, RFID, NFC and wearables.",
       "href": null,
       "difficulty": "standard",
-      "estimatedDurationMinutes": 25,
-      "activityType": "Guided learning",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Starter",
       "topics": []
     },
     "relationships": {
@@ -2195,147 +2195,56 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-outline-title",
+        "id": "week-2-starter-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Internet of Things, RFID, NFC and wearables",
+          "text": "Welcome to Week 2",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-outline-intro",
+        "id": "week-2-starter-p1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Outline IoT, RFID, NFC and wearables so you can tell them apart and give a realistic example of each."
+          "text": "This week you outline Internet of Things (IoT), connected devices, RFID, NFC and wearables (AC1.1)."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-outline-h-0",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "heading",
-        "content": {
-          "text": "Internet of Things",
-          "level": 3
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-2-outline-p-0",
+        "id": "week-2-starter-p2",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "The Internet of Things (IoT) is a network of physical devices that collect or share data over the internet, often with little direct human input. A smart thermostat or a connected warehouse sensor is an IoT example."
+          "text": "By the end you should define each technology, give a realistic example, and note one benefit and one risk."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-outline-h-1",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "heading",
-        "content": {
-          "text": "RFID, NFC and wearables",
-          "level": 3
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-2-outline-p-1",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "paragraph",
-        "content": {
-          "text": "RFID uses radio tags and readers to identify items, often at a short distance without line of sight. NFC is a very short-range radio method used for taps such as contactless payment. Wearables are devices worn on the body, such as a fitness watch or a staff ID badge that also tracks access."
-        }
-      }
-    ]
-  },
-  {
-    "schema": "lp.content.activity",
-    "schemaVersion": "0.1.0",
-    "id": "week-2-retrieval",
-    "version": "0.1.0",
-    "metadata": {
-      "title": "Week 2 retrieval",
-      "status": "available",
-      "summary": "Check that you can outline IoT, RFID, NFC and wearables.",
-      "href": null,
-      "difficulty": "standard",
-      "estimatedDurationMinutes": 10,
-      "activityType": "Retrieval quiz",
-      "topics": []
-    },
-    "relationships": {
-      "learningOutcomes": [
-        "lo1"
-      ],
-      "assignment": "formative-practice",
-      "questions": [],
-      "assets": [],
-      "prerequisites": []
-    },
-    "blocks": [
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-2-retrieval-title",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "heading",
-        "content": {
-          "text": "Week 2 retrieval",
-          "level": 2
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-2-retrieval-intro",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "paragraph",
-        "content": {
-          "text": "Check that you can outline IoT, RFID, NFC and wearables."
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-2-retrieval-q-1",
+        "id": "week-2-starter-q1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "single-choice",
         "content": {
           "formative": true,
-          "questionId": "week-2-retrieval:q1",
-          "sourceQuestionId": "q1",
-          "prompt": "Which statement best outlines the Internet of Things?",
+          "questionId": "week-2-starter-q1",
+          "prompt": "Which best describes the Internet of Things (IoT)?",
           "options": [
             {
               "id": "a",
-              "label": "A single desktop that never leaves an office"
+              "label": "A single desktop PC with no network link"
             },
             {
               "id": "b",
@@ -2343,11 +2252,11 @@
             },
             {
               "id": "c",
-              "label": "Printed barcodes that cannot be scanned"
+              "label": "Printed barcodes that never use radio"
             },
             {
               "id": "d",
-              "label": "A cloud invoice with no connected device"
+              "label": "A paper rota on a noticeboard"
             }
           ],
           "correctOptionId": "b",
@@ -2357,42 +2266,105 @@
           },
           "sourceType": "single"
         }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-iot",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "IoT and connected devices",
+      "status": "available",
+      "summary": "Outline what IoT is and what makes a device 'connected'.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-iot-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "IoT and connected devices",
+          "level": 2
+        }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-retrieval-q-2",
+        "id": "week-2-iot-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "IoT devices sense, act or share data with little constant human typing. A connected device can send or receive data over a network (Wi‑Fi, mobile, Bluetooth or similar)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-iot-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Examples: smart thermostat, warehouse temperature sensor, connected street light, hospital infusion pump that reports status."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-iot-q1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "single-choice",
         "content": {
           "formative": true,
-          "questionId": "week-2-retrieval:q2",
-          "sourceQuestionId": "q2",
-          "prompt": "RFID is most useful when an organisation needs to:",
+          "questionId": "week-2-iot-q1",
+          "prompt": "A device is 'connected' mainly when it can:",
           "options": [
             {
               "id": "a",
-              "label": "Identify tagged items without lining each one up under a camera"
+              "label": "Only store data offline with no network path"
             },
             {
               "id": "b",
-              "label": "Replace all radio with paper only"
+              "label": "Send or receive data over a network"
             },
             {
               "id": "c",
-              "label": "Project a hologram in a classroom"
+              "label": "Be made of metal only"
             },
             {
               "id": "d",
-              "label": "Run a desktop spreadsheet with no tags"
+              "label": "Print on paper without electronics"
             }
           ],
-          "correctOptionId": "a",
+          "correctOptionId": "b",
           "feedback": {
-            "correct": "RFID readers can identify tagged items at a short distance, including when they are not lined up one by one.",
-            "incorrect": "RFID readers can identify tagged items at a short distance, including when they are not lined up one by one."
+            "correct": "Connected devices exchange data over a network.",
+            "incorrect": "Connected devices exchange data over a network."
           },
           "sourceType": "single"
         }
@@ -2400,77 +2372,37 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-retrieval-q-3",
+        "id": "week-2-iot-q2",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "single-choice",
         "content": {
           "formative": true,
-          "questionId": "week-2-retrieval:q3",
-          "sourceQuestionId": "q3",
-          "prompt": "NFC is designed to work over:",
+          "questionId": "week-2-iot-q2",
+          "prompt": "Which is the clearest IoT example?",
           "options": [
             {
               "id": "a",
-              "label": "Satellite distances"
+              "label": "A paper clipboard in a storeroom"
             },
             {
               "id": "b",
-              "label": "Very short range, typically a tap or a few centimetres"
+              "label": "Soil moisture sensors uploading readings to a farm dashboard"
             },
             {
               "id": "c",
-              "label": "Any Wi-Fi range across a city"
+              "label": "A whiteboard marker"
             },
             {
               "id": "d",
-              "label": "Underwater fibre only"
+              "label": "An unplugged desk lamp with no radio"
             }
           ],
           "correctOptionId": "b",
           "feedback": {
-            "correct": "NFC is a very short-range radio method, which is why payment and door taps need the devices close together.",
-            "incorrect": "NFC is a very short-range radio method, which is why payment and door taps need the devices close together."
-          },
-          "sourceType": "single"
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-2-retrieval-q-4",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "single-choice",
-        "content": {
-          "formative": true,
-          "questionId": "week-2-retrieval:q4",
-          "sourceQuestionId": "q4",
-          "prompt": "Which device is a wearable?",
-          "options": [
-            {
-              "id": "a",
-              "label": "A warehouse pallet"
-            },
-            {
-              "id": "b",
-              "label": "A fitness watch that records heart rate"
-            },
-            {
-              "id": "c",
-              "label": "A wall-mounted smart speaker"
-            },
-            {
-              "id": "d",
-              "label": "A rack server in a data centre"
-            }
-          ],
-          "correctOptionId": "b",
-          "feedback": {
-            "correct": "Wearables are worn on the body. A fitness watch is a clear example.",
-            "incorrect": "Wearables are worn on the body. A fitness watch is a clear example."
+            "correct": "Sensors sharing field data are a classic IoT use.",
+            "incorrect": "Sensors sharing field data are a classic IoT use."
           },
           "sourceType": "single"
         }
@@ -2480,12 +2412,12 @@
   {
     "schema": "lp.content.activity",
     "schemaVersion": "0.1.0",
-    "id": "week-2-classify",
+    "id": "week-2-iot-sectors",
     "version": "0.1.0",
     "metadata": {
-      "title": "IoT, RFID, NFC or wearable?",
+      "title": "Consumer, industrial and healthcare IoT",
       "status": "available",
-      "summary": "Match each example to the technology it mainly illustrates.",
+      "summary": "Classify IoT examples by sector.",
       "href": null,
       "difficulty": "standard",
       "estimatedDurationMinutes": 12,
@@ -2505,46 +2437,402 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-classify-title",
+        "id": "week-2-iot-sectors-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "IoT, RFID, NFC or wearable?",
+          "text": "Consumer, industrial and healthcare IoT",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-classify-intro",
+        "id": "week-2-iot-sectors-p",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Match each example to the technology it mainly illustrates."
+          "text": "Consumer IoT is for homes and personal use. Industrial IoT supports factories, farms and logistics. Healthcare IoT supports patients and clinical monitoring."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-classify-classification",
+        "id": "week-2-iot-sectors-q",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "classification",
         "content": {
           "formative": true,
-          "questionId": "week-2-classify",
-          "sourceQuestionId": "week-2-classify",
-          "prompt": "Classify each example.",
+          "questionId": "week-2-iot-sectors-q",
+          "prompt": "Match each example to the sector.",
           "categories": [
             {
-              "id": "iot",
-              "label": "IoT"
+              "id": "consumer",
+              "label": "Consumer IoT"
             },
+            {
+              "id": "industrial",
+              "label": "Industrial IoT"
+            },
+            {
+              "id": "healthcare",
+              "label": "Healthcare IoT"
+            }
+          ],
+          "items": [
+            {
+              "id": "s1",
+              "text": "Smart home heating controlled from a phone",
+              "correctCategoryId": "consumer"
+            },
+            {
+              "id": "s2",
+              "text": "Factory machine vibration sensors for maintenance",
+              "correctCategoryId": "industrial"
+            },
+            {
+              "id": "s3",
+              "text": "Wearable heart-rate monitor used in a clinic trial",
+              "correctCategoryId": "healthcare"
+            },
+            {
+              "id": "s4",
+              "text": "Fridge camera helping a household reorder milk",
+              "correctCategoryId": "consumer"
+            },
+            {
+              "id": "s5",
+              "text": "Cold-store sensors in a warehouse",
+              "correctCategoryId": "industrial"
+            },
+            {
+              "id": "s6",
+              "text": "Connected drip pump reporting dose alerts",
+              "correctCategoryId": "healthcare"
+            }
+          ],
+          "feedback": {
+            "correct": "Those matches look right.",
+            "incorrect": "Check the definition and try again."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-rfid",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "RFID principles",
+      "status": "available",
+      "summary": "Outline how RFID tags and readers identify items.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "RFID",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "RFID uses radio tags and readers to identify items. Readers can often scan tags without lining every item up under a camera, which helps stock and asset tracking."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Typical uses: clothing tags in retail, pallet tags in warehouses, library books, tool tracking on a site."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-rfid-q1",
+          "prompt": "RFID is most useful when an organisation needs to:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Identify tagged items at short distance without lining each one under a camera"
+            },
+            {
+              "id": "b",
+              "label": "Replace all radio with paper only"
+            },
+            {
+              "id": "c",
+              "label": "Project a hologram in a classroom"
+            },
+            {
+              "id": "d",
+              "label": "Run a spreadsheet with no tags"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "RFID readers identify tagged items at short range, including when items are not lined up one by one.",
+            "incorrect": "RFID readers identify tagged items at short range, including when items are not lined up one by one."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-rfid-q2",
+          "prompt": "Give one realistic business use of RFID.",
+          "guidance": "Mention tagged items and tracking or scanning. One sentence is enough."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-nfc",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "NFC principles",
+      "status": "available",
+      "summary": "Outline NFC as very short-range radio for secure taps.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-nfc-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "NFC",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-nfc-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "NFC (Near Field Communication) is very short-range radio, usually centimetres. It suits deliberate taps such as contactless payment, door access badges and ticket gates."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-nfc-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-nfc-q1",
+          "prompt": "NFC is designed to work over:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Satellite distances"
+            },
+            {
+              "id": "b",
+              "label": "Very short range (about a few centimetres)"
+            },
+            {
+              "id": "c",
+              "label": "Cross-country microwave links only"
+            },
+            {
+              "id": "d",
+              "label": "Paper-only delivery"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "NFC is for close taps over a few centimetres.",
+            "incorrect": "NFC is for close taps over a few centimetres."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-nfc-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-nfc-q2",
+          "prompt": "Which is the clearest NFC example?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Tapping a phone on a till to pay"
+            },
+            {
+              "id": "b",
+              "label": "A weather satellite downlink"
+            },
+            {
+              "id": "c",
+              "label": "A printed poster with no electronics"
+            },
+            {
+              "id": "d",
+              "label": "A long-range warehouse aisle scan of 200 tagged boxes at once"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Contactless payment taps use NFC.",
+            "incorrect": "Contactless payment taps use NFC."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-rfid-vs-nfc",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "RFID versus NFC",
+      "status": "available",
+      "summary": "Compare RFID and NFC by range and typical use.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-vs-nfc-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "RFID versus NFC",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-vs-nfc-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Both use radio, but NFC is for very close taps. RFID often supports stock/asset tagging where a reader covers a short area and many tags."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-rfid-vs-nfc-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-rfid-vs-nfc-q",
+          "prompt": "Classify each statement.",
+          "categories": [
             {
               "id": "rfid",
               "label": "RFID"
@@ -2552,50 +2840,601 @@
             {
               "id": "nfc",
               "label": "NFC"
-            },
-            {
-              "id": "wearable",
-              "label": "Wearable"
             }
           ],
           "items": [
             {
-              "id": "w2-01",
-              "text": "A connected fridge that reports its temperature to an app",
-              "correctCategoryId": "iot",
-              "explanation": "The fridge is a networked physical device sharing data."
+              "id": "v1",
+              "text": "Best for scanning many tagged boxes in a stock room",
+              "correctCategoryId": "rfid"
             },
             {
-              "id": "w2-02",
-              "text": "Stock tags on clothing that a store reader counts",
-              "correctCategoryId": "rfid",
-              "explanation": "Item tags and readers are a classic RFID use."
+              "id": "v2",
+              "text": "Best for a deliberate phone tap at a payment terminal",
+              "correctCategoryId": "nfc"
             },
             {
-              "id": "w2-03",
-              "text": "Tapping a phone on a reader to pay for lunch",
-              "correctCategoryId": "nfc",
-              "explanation": "Contactless tap payments use NFC."
+              "id": "v3",
+              "text": "Often used on clothing security tags",
+              "correctCategoryId": "rfid"
             },
             {
-              "id": "w2-04",
-              "text": "A smartwatch that counts steps during a lesson",
-              "correctCategoryId": "wearable",
-              "explanation": "The watch is worn on the body."
-            },
-            {
-              "id": "w2-05",
-              "text": "Soil sensors in a farm field sending moisture readings",
-              "correctCategoryId": "iot",
-              "explanation": "Remote sensors sharing data are IoT."
-            },
-            {
-              "id": "w2-06",
-              "text": "A staff badge that opens a door when held a few centimetres from the panel",
-              "correctCategoryId": "nfc",
-              "explanation": "A close tap on a reader is NFC, even if the badge is also worn."
+              "id": "v4",
+              "text": "Usually limited to a few centimetres for a secure tap",
+              "correctCategoryId": "nfc"
             }
-          ]
+          ],
+          "feedback": {
+            "correct": "Those matches look right.",
+            "incorrect": "Check the definition and try again."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-wearables",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Wearable technologies",
+      "status": "available",
+      "summary": "Outline wearables and how they link to IoT.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-wearables-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Wearables",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-wearables-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Wearables are devices worn on the body: fitness watches, smart badges, medical patches. Many are IoT devices when they upload activity or health data."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-wearables-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-wearables-q1",
+          "prompt": "Which is a wearable?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A rack server in a data centre"
+            },
+            {
+              "id": "b",
+              "label": "A fitness watch counting steps"
+            },
+            {
+              "id": "c",
+              "label": "A wall-mounted classroom projector"
+            },
+            {
+              "id": "d",
+              "label": "A paper timetable"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Wearables are worn on the body.",
+            "incorrect": "Wearables are worn on the body."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-wearables-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-wearables-q2",
+          "prompt": "A wearable becomes an IoT example mainly when it:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Never leaves airplane mode and never shares data"
+            },
+            {
+              "id": "b",
+              "label": "Shares sensor data over a network to an app or service"
+            },
+            {
+              "id": "c",
+              "label": "Is made of plastic only"
+            },
+            {
+              "id": "d",
+              "label": "Is larger than a fridge"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Shared sensor data over a network makes it an IoT wearable.",
+            "incorrect": "Shared sensor data over a network makes it an IoT wearable."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-smart-settings",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Smart homes, cities and healthcare settings",
+      "status": "available",
+      "summary": "Match connected examples to smart home, smart city or healthcare.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-smart-settings-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Smart homes, cities and healthcare",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-smart-settings-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "The same IoT idea appears in homes, cities and healthcare, with different goals: comfort, public services, or patient safety."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-smart-settings-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-smart-settings-q",
+          "prompt": "Match each example.",
+          "categories": [
+            {
+              "id": "home",
+              "label": "Smart home"
+            },
+            {
+              "id": "city",
+              "label": "Smart city"
+            },
+            {
+              "id": "health",
+              "label": "Healthcare"
+            }
+          ],
+          "items": [
+            {
+              "id": "m1",
+              "text": "Connected thermostat learning household routines",
+              "correctCategoryId": "home"
+            },
+            {
+              "id": "m2",
+              "text": "Street lights that dim when roads are empty",
+              "correctCategoryId": "city"
+            },
+            {
+              "id": "m3",
+              "text": "Remote monitoring of a patient's oxygen levels",
+              "correctCategoryId": "health"
+            },
+            {
+              "id": "m4",
+              "text": "Smart door lock for a flat",
+              "correctCategoryId": "home"
+            },
+            {
+              "id": "m5",
+              "text": "Traffic sensors feeding a live congestion map",
+              "correctCategoryId": "city"
+            },
+            {
+              "id": "m6",
+              "text": "Hospital bed sensor alerting when a patient leaves the bed",
+              "correctCategoryId": "health"
+            }
+          ],
+          "feedback": {
+            "correct": "Those matches look right.",
+            "incorrect": "Check the definition and try again."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-benefits-risks",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Benefits, risks and security",
+      "status": "available",
+      "summary": "Check benefits of connected tech and key security risks.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-benefits-risks-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Benefits, risks and security",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-benefits-risks-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Benefits include automation, better decisions from live data, and convenience. Risks include hacking, outages, cost, and poor configuration."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-benefits-risks-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-benefits-risks-q1",
+          "prompt": "A clear benefit of industrial IoT sensors is that they can:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Remove the need for any safety rules"
+            },
+            {
+              "id": "b",
+              "label": "Provide live data to spot faults earlier"
+            },
+            {
+              "id": "c",
+              "label": "Guarantee zero cyber risk"
+            },
+            {
+              "id": "d",
+              "label": "Replace all human staff overnight"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Live sensor data helps spot faults and improve decisions.",
+            "incorrect": "Live sensor data helps spot faults and improve decisions."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-benefits-risks-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-benefits-risks-q2",
+          "prompt": "A key security risk for always-on IoT devices is:",
+          "options": [
+            {
+              "id": "a",
+              "label": "They never use electricity"
+            },
+            {
+              "id": "b",
+              "label": "Weak passwords or unpatched firmware can be exploited"
+            },
+            {
+              "id": "c",
+              "label": "They only work on paper"
+            },
+            {
+              "id": "d",
+              "label": "They cannot store any data"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Weak credentials and missing updates are common IoT security risks.",
+            "incorrect": "Weak credentials and missing updates are common IoT security risks."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-privacy",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Privacy and case study thinking",
+      "status": "available",
+      "summary": "Consider privacy implications and outline a short case study.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-privacy-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Privacy and real-world cases",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-privacy-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Wearables and healthcare IoT often handle sensitive data. Organisations need consent, clear purpose, access control and secure storage."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-privacy-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-privacy-q1",
+          "prompt": "Main privacy risk if a fitness wearable leaks heart-rate data?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Faster Wi‑Fi only"
+            },
+            {
+              "id": "b",
+              "label": "Private health details exposed without consent"
+            },
+            {
+              "id": "c",
+              "label": "Larger fonts on the screen"
+            },
+            {
+              "id": "d",
+              "label": "Longer battery life"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Leaked health data is a privacy and consent issue.",
+            "incorrect": "Leaked health data is a privacy and consent issue."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-privacy-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-privacy-q2",
+          "prompt": "Outline one real-world case: name the technology (IoT, RFID, NFC or wearable), who uses it, and one risk to manage.",
+          "guidance": "Keep to 2–4 short sentences. Formative practice only."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-trends",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Emerging trends",
+      "status": "available",
+      "summary": "Spot sensible near-term trends for connected devices.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-trends-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Emerging trends",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-trends-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Trends include more sensors in cities, tighter security expectations, edge processing on devices, and wearables used in workplace health programmes."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-trends-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-trends-q1",
+          "prompt": "Which statement is a realistic emerging trend?",
+          "options": [
+            {
+              "id": "a",
+              "label": "All IoT devices will stop using networks"
+            },
+            {
+              "id": "b",
+              "label": "More organisations expect stronger IoT security and updates"
+            },
+            {
+              "id": "c",
+              "label": "RFID will only work on the Moon"
+            },
+            {
+              "id": "d",
+              "label": "NFC will replace all long-distance radio"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Security and update expectations for IoT are rising.",
+            "incorrect": "Security and update expectations for IoT are rising."
+          },
+          "sourceType": "single"
         }
       }
     ]
@@ -2606,12 +3445,12 @@
     "id": "week-2-reflection",
     "version": "0.1.0",
     "metadata": {
-      "title": "Choose a connected example",
+      "title": "Portfolio reflection",
       "status": "available",
-      "summary": "Outline one IoT, RFID, NFC or wearable example from college, work or daily life.",
+      "summary": "Build a short reflective portfolio note covering Week 2 technologies.",
       "href": null,
       "difficulty": "standard",
-      "estimatedDurationMinutes": 8,
+      "estimatedDurationMinutes": 10,
       "activityType": "Reflection",
       "topics": []
     },
@@ -2628,41 +3467,156 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-reflection-title",
+        "id": "week-2-reflection-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Choose a connected example",
+          "text": "Portfolio reflection",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-reflection-intro",
+        "id": "week-2-reflection-p",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Outline one IoT, RFID, NFC or wearable example from college, work or daily life."
+          "text": "Capture one example each for IoT, RFID, NFC and wearables. This is formative practice, not Gateway assignment evidence."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-2-reflection-prompt",
+        "id": "week-2-reflection-q",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "reflection",
         "content": {
           "formative": true,
-          "questionId": "week-2-reflection:learner-note",
-          "sourceQuestionId": "learner-note",
-          "prompt": "Pick one of IoT, RFID, NFC or wearables. Outline what the technology does and who it helps. This is formative practice, not Gateway assignment evidence."
+          "questionId": "week-2-reflection-q",
+          "prompt": "List one realistic example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-2-exit",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Exit ticket",
+      "status": "available",
+      "summary": "Quick check that you can outline Week 2 technologies.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Exit ticket",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-exit-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Exit ticket",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-exit-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-exit-q1",
+          "prompt": "Which pair is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "NFC = long-range satellite; RFID = paper only"
+            },
+            {
+              "id": "b",
+              "label": "RFID = tagged item identification; NFC = very short-range tap"
+            },
+            {
+              "id": "c",
+              "label": "Wearable = data-centre rack; IoT = printed poster"
+            },
+            {
+              "id": "d",
+              "label": "IoT = no network; NFC = continental radio"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "RFID identifies tagged items; NFC is for close taps.",
+            "incorrect": "RFID identifies tagged items; NFC is for close taps."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-2-exit-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-2-exit-q2",
+          "prompt": "How confident are you outlining IoT, RFID, NFC and wearables?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Not yet — I need another look at the definitions"
+            },
+            {
+              "id": "b",
+              "label": "Getting there — I can give one example for most"
+            },
+            {
+              "id": "c",
+              "label": "Confident — I can define each and give a use plus a risk"
+            },
+            {
+              "id": "d",
+              "label": "I can teach it to a classmate tomorrow"
+            }
+          ],
+          "correctOptionId": "c",
+          "feedback": {
+            "correct": "Aim to define each technology, give a use, and note a risk.",
+            "incorrect": "Aim to define each technology, give a use, and note a risk."
+          },
+          "sourceType": "single"
         }
       }
     ]

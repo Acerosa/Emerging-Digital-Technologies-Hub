@@ -36,17 +36,26 @@
     "metadata": {
       "title": "Week 2 session",
       "kind": "session",
-      "summary": "One 1.5-hour session: IoT, RFID, NFC and wearables.",
+      "summary": "One 1.5-hour session: IoT, connected devices, RFID, NFC, wearables, benefits, risks and privacy (AC1.1).",
       "sortOrder": 1,
       "defaultOpen": true
     },
     "relationships": {
       "week": "week-2",
       "activities": [
-        "week-2-outline",
-        "week-2-retrieval",
-        "week-2-classify",
-        "week-2-reflection"
+        "week-2-starter",
+        "week-2-iot",
+        "week-2-iot-sectors",
+        "week-2-rfid",
+        "week-2-nfc",
+        "week-2-rfid-vs-nfc",
+        "week-2-wearables",
+        "week-2-smart-settings",
+        "week-2-benefits-risks",
+        "week-2-privacy",
+        "week-2-trends",
+        "week-2-reflection",
+        "week-2-exit"
       ]
     }
   },
