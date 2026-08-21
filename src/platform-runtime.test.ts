@@ -314,7 +314,10 @@ describe("published curriculum and learner submissions", () => {
           }
           responses[questionId] = selected;
         } else {
-          responses[questionId] = "A concise learner response for verification.";
+          const minChars = Number(content.minChars || content.minimumCharacters || 200);
+          responses[questionId] = "A concise learner response for verification. ".repeat(
+            Math.max(1, Math.ceil((minChars + 20) / 44))
+          );
         }
         if (typeof marked === "function") {
           const result = marked(block, responses[questionId]);
