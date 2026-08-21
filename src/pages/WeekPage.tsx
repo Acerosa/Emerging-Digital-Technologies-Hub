@@ -40,10 +40,29 @@ export function WeekPage({
     const rootEl = mountRef.current;
     if (!content || !rootEl || !sessions.length) return;
 
-    engine.bindInteractive(rootEl, content, {
+    const options = {
       sourcePage: window.location.pathname,
       platform: platform || (typeof window !== "undefined" ? window.LearningPlatform?.platform : undefined)
-    });
+    };
+
+    const bind = () => {
+      const articles = rootEl.querySelectorAll("[data-lp-activity]");
+      if (!articles.length) return;
+      // Replace already-bound nodes so a later curriculum hydrate can re-attach listeners.
+      articles.forEach((article) => {
+        if (!article.getAttribute("data-lp-bound")) return;
+        article.parentNode?.replaceChild(article.cloneNode(true), article);
+      });
+      engine.bindInteractive(rootEl, content, options);
+    };
+
+    bind();
+    const frame = window.requestAnimationFrame(bind);
+    const timer = window.setTimeout(bind, 0);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.clearTimeout(timer);
+    };
   }, [engine, content, weekId, sessions, platform]);
 
   if (!content) {
