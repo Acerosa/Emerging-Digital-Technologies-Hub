@@ -28,6 +28,7 @@ describe("L2E presentation", () => {
     expect(within(nav()).getByRole("link", { name: /Week 2/ }).getAttribute("aria-current")).toBe("page");
     expect(within(nav()).getByText("Current").closest("a")?.textContent).toMatch(/Week 2/);
     expect(within(nav()).getByRole("link", { name: /Week 2/ }).textContent).toMatch(/IoT/);
+    expect(within(nav()).getByRole("link", { name: /Week 3/ }).textContent).toMatch(/Cloud/);
     rerender(<CourseSidebar currentPage="course-guide" root=".." />);
     expect(within(nav()).getByRole("link", { name: /Course Guide/ }).getAttribute("aria-current")).toBe("page");
   });

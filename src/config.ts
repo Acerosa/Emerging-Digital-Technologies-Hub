@@ -16,7 +16,7 @@ export const APP_CONFIG = Object.freeze({
     Object.freeze({ id: "home", label: "Home", path: "" }),
     Object.freeze({ id: "week-1", label: "Week 1", path: "week-1/" }),
     Object.freeze({ id: "week-2", label: "Week 2: IoT, RFID, NFC and wearables", path: "week-2/" }),
-    Object.freeze({ id: "week-3", label: "Week 3", path: "week-3/" }),
+    Object.freeze({ id: "week-3", label: "Week 3: Cloud technology - SaaS, IaaS, PaaS, DaaS", path: "week-3/" }),
     Object.freeze({ id: "course-guide", label: "Course Guide", path: "course-guide/" }),
     Object.freeze({ id: "resources", label: "Resources", path: "resources/" }),
     Object.freeze({ id: "help", label: "Help", path: "help/" })

@@ -55,6 +55,39 @@ describe("L2E package hydration", () => {
       "week-2-reflection",
       "week-2-exit"
     ]);
+    const week3 = weekPageFromPackage(pkg, "week-3");
+    expect(week3?.sessions[0].activities.map((item) => item.id)).toEqual([
+      "week-3-starter",
+      "week-3-cloud-outline",
+      "week-3-local-vs-cloud",
+      "week-3-saas",
+      "week-3-iaas",
+      "week-3-paas",
+      "week-3-daas",
+      "week-3-models-match",
+      "week-3-responsibility",
+      "week-3-scenarios",
+      "week-3-benefits-risks",
+      "week-3-org-example",
+      "week-3-extension",
+      "week-3-profile",
+      "week-3-exit"
+    ]);
+  });
+
+  it("includes each supported interactive type in Weeks 1 to 3", () => {
+    const required = ["single-choice", "classification", "short-response", "reflection"];
+    for (const weekId of ["week-1", "week-2", "week-3"]) {
+      const page = weekPageFromPackage(pkg, weekId);
+      const types = new Set<string>();
+      for (const activityId of page?.sessions[0]?.activities.map((item) => item.id) || []) {
+        const activity = pkg.activities.find((item) => item.id === activityId);
+        for (const block of activity?.blocks || []) {
+          if (required.includes(String(block.type))) types.add(String(block.type));
+        }
+      }
+      expect([...types].sort(), weekId).toEqual([...required].sort());
+    }
   });
 
   it("restores Week 1 starter questions from published blocks", () => {

@@ -67,17 +67,28 @@
     "metadata": {
       "title": "Week 3 session",
       "kind": "session",
-      "summary": "One 1.5-hour session: cloud computing and SaaS, IaaS, PaaS and DaaS.",
+      "summary": "One 1.5-hour session: cloud technology, SaaS, IaaS, PaaS, DaaS, benefits, dependencies and a cloud profile (AC1.1).",
       "sortOrder": 1,
       "defaultOpen": true
     },
     "relationships": {
       "week": "week-3",
       "activities": [
-        "week-3-outline",
-        "week-3-retrieval",
-        "week-3-classify",
-        "week-3-reflection"
+        "week-3-starter",
+        "week-3-cloud-outline",
+        "week-3-local-vs-cloud",
+        "week-3-saas",
+        "week-3-iaas",
+        "week-3-paas",
+        "week-3-daas",
+        "week-3-models-match",
+        "week-3-responsibility",
+        "week-3-scenarios",
+        "week-3-benefits-risks",
+        "week-3-org-example",
+        "week-3-extension",
+        "week-3-profile",
+        "week-3-exit"
       ]
     }
   }

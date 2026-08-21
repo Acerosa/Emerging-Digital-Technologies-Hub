@@ -3630,16 +3630,16 @@
   {
     "schema": "lp.content.activity",
     "schemaVersion": "0.1.0",
-    "id": "week-3-outline",
+    "id": "week-3-starter",
     "version": "0.1.0",
     "metadata": {
-      "title": "Cloud technology and service models",
+      "title": "Welcome to Week 3",
       "status": "available",
-      "summary": "Outline cloud computing and the service models SaaS, IaaS, PaaS and DaaS so you can give a short, accurate example of each.",
+      "summary": "Retrieve where data lives, then set the focus for cloud service models (AC1.1).",
       "href": null,
       "difficulty": "standard",
-      "estimatedDurationMinutes": 25,
-      "activityType": "Guided learning",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Starter",
       "topics": []
     },
     "relationships": {
@@ -3655,76 +3655,76 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-outline-title",
+        "id": "week-3-starter-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Cloud technology and service models",
+          "text": "Welcome to Week 3",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-outline-intro",
+        "id": "week-3-starter-p1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Outline cloud computing and the service models SaaS, IaaS, PaaS and DaaS so you can give a short, accurate example of each."
+          "text": "This week you outline cloud technology and distinguish SaaS, IaaS, PaaS and DaaS (AC1.1)."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-outline-h-0",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "heading",
-        "content": {
-          "text": "Cloud technology",
-          "level": 3
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-3-outline-p-0",
+        "id": "week-3-starter-p2",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Cloud technology delivers computing resources over the internet instead of only from a local device or a single on-site server. Users typically pay for what they use and can scale up or down."
+          "text": "By the end, define cloud computing, match everyday services to a model, and write a short cloud profile."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-outline-h-1",
+        "id": "week-3-starter-q1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
-        "type": "heading",
+        "type": "single-choice",
         "content": {
-          "text": "Service models",
-          "level": 3
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-3-outline-p-1",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "paragraph",
-        "content": {
-          "text": "SaaS is software used through a browser or app, such as email or classroom tools. IaaS provides virtual machines, storage and networks that an organisation configures. PaaS provides a ready environment for building and running applications. DaaS delivers a desktop environment over the network so the user works on a remote desktop rather than only on the local PC."
+          "formative": true,
+          "questionId": "week-3-starter-q1",
+          "prompt": "A fitness watch from Week 2 uploads heart-rate readings to an app account. Where is that health data mainly stored for later viewing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Only inside the watch with no other copy"
+            },
+            {
+              "id": "b",
+              "label": "Often on remote servers accessed over the internet (the cloud), as well as on the device"
+            },
+            {
+              "id": "c",
+              "label": "Only on a printed paper chart"
+            },
+            {
+              "id": "d",
+              "label": "Only in a classroom USB stick that never connects"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Connected devices often keep a local copy and also send data to cloud services so it can be viewed later on other devices.",
+            "incorrect": "Connected devices often keep a local copy and also send data to cloud services so it can be viewed later on other devices."
+          },
+          "sourceType": "single"
         }
       }
     ]
@@ -3732,16 +3732,16 @@
   {
     "schema": "lp.content.activity",
     "schemaVersion": "0.1.0",
-    "id": "week-3-retrieval",
+    "id": "week-3-cloud-outline",
     "version": "0.1.0",
     "metadata": {
-      "title": "Week 3 retrieval",
+      "title": "What is cloud technology?",
       "status": "available",
-      "summary": "Check that you can outline cloud computing and the main service models.",
+      "summary": "Outline cloud computing as internet-delivered resources that can scale.",
       "href": null,
       "difficulty": "standard",
       "estimatedDurationMinutes": 10,
-      "activityType": "Retrieval quiz",
+      "activityType": "Teaching",
       "topics": []
     },
     "relationships": {
@@ -3757,40 +3757,51 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-retrieval-title",
+        "id": "week-3-cloud-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Week 3 retrieval",
+          "text": "What is cloud technology?",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-retrieval-intro",
+        "id": "week-3-cloud-p1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Check that you can outline cloud computing and the main service models."
+          "text": "Cloud technology delivers computing resources over the internet instead of only from one local device or a single on-site server. Users can often scale up or down and pay for what they use."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-retrieval-q-1",
+        "id": "week-3-cloud-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Examples include web email, online file storage, rented virtual machines, hosted app platforms and remote desktops."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-cloud-q1",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "single-choice",
         "content": {
           "formative": true,
-          "questionId": "week-3-retrieval:q1",
-          "sourceQuestionId": "q1",
+          "questionId": "week-3-cloud-q1",
           "prompt": "Which statement best outlines cloud technology?",
           "options": [
             {
@@ -3803,17 +3814,17 @@
             },
             {
               "id": "c",
-              "label": "Printed manuals stored in a cupboard"
+              "label": "Only paper filing cabinets in one office"
             },
             {
               "id": "d",
-              "label": "A calculator with no data connection"
+              "label": "A projector that cannot store or share files"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
-            "correct": "Cloud services are delivered over the internet and can usually scale with demand.",
-            "incorrect": "Cloud services are delivered over the internet and can usually scale with demand."
+            "correct": "Cloud means resources are delivered over the internet and can usually grow or shrink with demand.",
+            "incorrect": "Cloud means resources are delivered over the internet and can usually grow or shrink with demand."
           },
           "sourceType": "single"
         }
@@ -3821,116 +3832,37 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-retrieval-q-2",
+        "id": "week-3-cloud-q2",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "single-choice",
         "content": {
           "formative": true,
-          "questionId": "week-3-retrieval:q2",
-          "sourceQuestionId": "q2",
-          "prompt": "Using college email in a browser is an example of:",
+          "questionId": "week-3-cloud-q2",
+          "prompt": "Saving a document only on the hard drive of one classroom PC (never uploaded) is mainly an example of:",
           "options": [
             {
               "id": "a",
-              "label": "IaaS"
+              "label": "Cloud storage"
             },
             {
               "id": "b",
-              "label": "SaaS"
+              "label": "Local storage"
             },
             {
               "id": "c",
-              "label": "A local-only desktop with no network"
+              "label": "DaaS"
             },
             {
               "id": "d",
-              "label": "RFID stock control"
+              "label": "IaaS"
             }
           ],
           "correctOptionId": "b",
           "feedback": {
-            "correct": "The provider runs the email application. The learner uses it as software, which is SaaS.",
-            "incorrect": "The provider runs the email application. The learner uses it as software, which is SaaS."
-          },
-          "sourceType": "single"
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-3-retrieval-q-3",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "single-choice",
-        "content": {
-          "formative": true,
-          "questionId": "week-3-retrieval:q3",
-          "sourceQuestionId": "q3",
-          "prompt": "An organisation that rents virtual machines and then installs its own operating systems is using:",
-          "options": [
-            {
-              "id": "a",
-              "label": "SaaS only"
-            },
-            {
-              "id": "b",
-              "label": "IaaS"
-            },
-            {
-              "id": "c",
-              "label": "A wearable only"
-            },
-            {
-              "id": "d",
-              "label": "NFC payments"
-            }
-          ],
-          "correctOptionId": "b",
-          "feedback": {
-            "correct": "IaaS supplies infrastructure such as virtual machines, storage and networks.",
-            "incorrect": "IaaS supplies infrastructure such as virtual machines, storage and networks."
-          },
-          "sourceType": "single"
-        }
-      },
-      {
-        "schema": "lp.content.block",
-        "schemaVersion": "0.1.0",
-        "id": "week-3-retrieval-q-4",
-        "version": "0.1.0",
-        "metadata": {},
-        "relationships": {},
-        "type": "single-choice",
-        "content": {
-          "formative": true,
-          "questionId": "week-3-retrieval:q4",
-          "sourceQuestionId": "q4",
-          "prompt": "DaaS is best outlined as:",
-          "options": [
-            {
-              "id": "a",
-              "label": "A desktop environment delivered over the network"
-            },
-            {
-              "id": "b",
-              "label": "A physical tower PC that cannot be accessed remotely"
-            },
-            {
-              "id": "c",
-              "label": "A paper timetable"
-            },
-            {
-              "id": "d",
-              "label": "A barcode on a box"
-            }
-          ],
-          "correctOptionId": "a",
-          "feedback": {
-            "correct": "Desktop as a Service delivers a desktop session remotely, rather than only using software installed on one local PC.",
-            "incorrect": "Desktop as a Service delivers a desktop session remotely, rather than only using software installed on one local PC."
+            "correct": "If the file stays only on that PC, it is local storage, not cloud storage.",
+            "incorrect": "If the file stays only on that PC, it is local storage, not cloud storage."
           },
           "sourceType": "single"
         }
@@ -3940,15 +3872,15 @@
   {
     "schema": "lp.content.activity",
     "schemaVersion": "0.1.0",
-    "id": "week-3-classify",
+    "id": "week-3-local-vs-cloud",
     "version": "0.1.0",
     "metadata": {
-      "title": "Cloud service models",
+      "title": "Local storage versus cloud",
       "status": "available",
-      "summary": "Classify each example as SaaS, IaaS, PaaS or DaaS.",
+      "summary": "Classify examples as local storage or cloud storage.",
       "href": null,
       "difficulty": "standard",
-      "estimatedDurationMinutes": 12,
+      "estimatedDurationMinutes": 10,
       "activityType": "Classification",
       "topics": []
     },
@@ -3965,40 +3897,663 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-classify-title",
+        "id": "week-3-local-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Cloud service models",
+          "text": "Local storage versus cloud",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-classify-intro",
+        "id": "week-3-local-p",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Classify each example as SaaS, IaaS, PaaS or DaaS."
+          "text": "Local storage keeps files on a device you control in the room. Cloud storage keeps files on remote servers you reach over the internet."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-classify-classification",
+        "id": "week-3-local-q",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "classification",
         "content": {
           "formative": true,
-          "questionId": "week-3-classify",
-          "sourceQuestionId": "week-3-classify",
+          "questionId": "week-3-local-q",
+          "prompt": "Classify each example.",
+          "categories": [
+            {
+              "id": "local",
+              "label": "Local storage"
+            },
+            {
+              "id": "cloud",
+              "label": "Cloud storage"
+            }
+          ],
+          "items": [
+            {
+              "id": "l1",
+              "text": "A homework file saved only on a laptop hard drive",
+              "correctCategoryId": "local"
+            },
+            {
+              "id": "l2",
+              "text": "Photos backed up to Google Drive or OneDrive",
+              "correctCategoryId": "cloud"
+            },
+            {
+              "id": "l3",
+              "text": "Music stored only on a phone with airplane mode and no sync",
+              "correctCategoryId": "local"
+            },
+            {
+              "id": "l4",
+              "text": "College email messages held on the provider's mail servers",
+              "correctCategoryId": "cloud"
+            },
+            {
+              "id": "l5",
+              "text": "A spreadsheet on a USB stick that never uploads",
+              "correctCategoryId": "local"
+            },
+            {
+              "id": "l6",
+              "text": "Shared team files in a browser-based document suite",
+              "correctCategoryId": "cloud"
+            }
+          ],
+          "feedback": {
+            "correct": "Those matches look right.",
+            "incorrect": "Check the definition and try again."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-saas",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "SaaS",
+      "status": "available",
+      "summary": "Outline Software as a Service with familiar examples.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-saas-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "SaaS (Software as a Service)",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-saas-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "SaaS is software you use through a browser or app. The provider runs and updates the application. You mainly manage your account, content and access rights."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-saas-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-saas-q1",
+          "prompt": "Using college email in a browser is closest to:",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS"
+            },
+            {
+              "id": "b",
+              "label": "IaaS"
+            },
+            {
+              "id": "c",
+              "label": "PaaS"
+            },
+            {
+              "id": "d",
+              "label": "Only local storage with no provider"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "The email application is provided and managed for you. That is SaaS.",
+            "incorrect": "The email application is provided and managed for you. That is SaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-saas-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-saas-q2",
+          "prompt": "In SaaS, who usually installs security updates for the application itself?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Every learner must install the app updates on school servers"
+            },
+            {
+              "id": "b",
+              "label": "The cloud provider"
+            },
+            {
+              "id": "c",
+              "label": "The electricity company"
+            },
+            {
+              "id": "d",
+              "label": "Nobody ever updates SaaS apps"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "The provider maintains the SaaS application. Customers focus on using it and managing their data access.",
+            "incorrect": "The provider maintains the SaaS application. Customers focus on using it and managing their data access."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-iaas",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "IaaS",
+      "status": "available",
+      "summary": "Outline Infrastructure as a Service: rented virtual machines, storage and networks.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-iaas-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "IaaS (Infrastructure as a Service)",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-iaas-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "IaaS rents infrastructure such as virtual machines, storage and networks. The customer installs and manages operating systems and software. The provider manages the physical data centre hardware."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-iaas-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-iaas-q1",
+          "prompt": "An IT team rents virtual servers and then installs its own operating systems and apps. This is mainly:",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS"
+            },
+            {
+              "id": "b",
+              "label": "IaaS"
+            },
+            {
+              "id": "c",
+              "label": "DaaS"
+            },
+            {
+              "id": "d",
+              "label": "A paper archive"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Renting virtual servers and managing the software stack yourself is IaaS.",
+            "incorrect": "Renting virtual servers and managing the software stack yourself is IaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-iaas-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-iaas-q2",
+          "prompt": "A college rents extra virtual disks during exam week, then scales down afterwards. This mainly shows:",
+          "options": [
+            {
+              "id": "a",
+              "label": "That cloud capacity cannot change"
+            },
+            {
+              "id": "b",
+              "label": "That IaaS-style resources can scale with demand"
+            },
+            {
+              "id": "c",
+              "label": "That only SaaS can use disks"
+            },
+            {
+              "id": "d",
+              "label": "That local USB sticks are required"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Scaling storage up and down is a common cloud benefit, often via infrastructure services.",
+            "incorrect": "Scaling storage up and down is a common cloud benefit, often via infrastructure services."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-paas",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "PaaS",
+      "status": "available",
+      "summary": "Outline Platform as a Service for building and running applications.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-paas-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "PaaS (Platform as a Service)",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-paas-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "PaaS gives a ready environment to build, test and run applications. The provider manages the platform. Developers focus on their app code rather than buying and patching every server."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-paas-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-paas-q1",
+          "prompt": "Developers deploy an app into a hosted build-and-run environment. This is mainly:",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS"
+            },
+            {
+              "id": "b",
+              "label": "IaaS"
+            },
+            {
+              "id": "c",
+              "label": "PaaS"
+            },
+            {
+              "id": "d",
+              "label": "DaaS"
+            }
+          ],
+          "correctOptionId": "c",
+          "feedback": {
+            "correct": "A hosted environment for building and running apps is PaaS.",
+            "incorrect": "A hosted environment for building and running apps is PaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-paas-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-paas-q2",
+          "prompt": "Compared with IaaS, PaaS usually means the customer:",
+          "options": [
+            {
+              "id": "a",
+              "label": "Must build the physical data centre"
+            },
+            {
+              "id": "b",
+              "label": "Manages less of the underlying servers and focuses more on the application"
+            },
+            {
+              "id": "c",
+              "label": "Can never write any code"
+            },
+            {
+              "id": "d",
+              "label": "Only prints paper reports"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "PaaS reduces how much infrastructure the customer manages so they can focus on the application.",
+            "incorrect": "PaaS reduces how much infrastructure the customer manages so they can focus on the application."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-daas",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "DaaS",
+      "status": "available",
+      "summary": "Outline Desktop as a Service: a desktop session delivered over the network.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-daas-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "DaaS (Desktop as a Service)",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-daas-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "DaaS delivers a desktop environment over the network. The user works on a remote desktop rather than relying only on software installed on one local PC."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-daas-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-daas-q1",
+          "prompt": "Staff log in to a Windows desktop that runs in the cloud. This is mainly:",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS document editing only"
+            },
+            {
+              "id": "b",
+              "label": "IaaS bare-metal only"
+            },
+            {
+              "id": "c",
+              "label": "DaaS"
+            },
+            {
+              "id": "d",
+              "label": "A USB stick OS"
+            }
+          ],
+          "correctOptionId": "c",
+          "feedback": {
+            "correct": "A full desktop session delivered remotely is Desktop as a Service (DaaS).",
+            "incorrect": "A full desktop session delivered remotely is Desktop as a Service (DaaS)."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-daas-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-daas-q2",
+          "prompt": "DaaS is best outlined as:",
+          "options": [
+            {
+              "id": "a",
+              "label": "A desktop environment delivered over the network"
+            },
+            {
+              "id": "b",
+              "label": "A physical tower PC that cannot be accessed remotely"
+            },
+            {
+              "id": "c",
+              "label": "Only a barcode scanner"
+            },
+            {
+              "id": "d",
+              "label": "Only a printed timetable"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "DaaS provides a desktop session remotely over the network.",
+            "incorrect": "DaaS provides a desktop session remotely over the network."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-models-match",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Match services to cloud models",
+      "status": "available",
+      "summary": "Classify everyday services as SaaS, IaaS, PaaS or DaaS.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 14,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-models-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Match services to cloud models",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-models-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Ask what you are buying: a ready app (SaaS), raw infrastructure (IaaS), an app platform (PaaS), or a remote desktop (DaaS)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-models-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-models-q",
           "prompt": "Classify each example.",
           "categories": [
             {
@@ -4020,42 +4575,50 @@
           ],
           "items": [
             {
-              "id": "w3-01",
+              "id": "m1",
               "text": "Learners write documents in a browser-based office suite",
-              "correctCategoryId": "saas",
-              "explanation": "The provider supplies the application. Users just use it."
+              "correctCategoryId": "saas"
             },
             {
-              "id": "w3-02",
+              "id": "m2",
               "text": "An IT team rents virtual servers and installs its own software stack",
-              "correctCategoryId": "iaas",
-              "explanation": "The team manages the machines; the cloud supplies the infrastructure."
+              "correctCategoryId": "iaas"
             },
             {
-              "id": "w3-03",
+              "id": "m3",
               "text": "Developers deploy an app into a hosted build-and-run environment",
-              "correctCategoryId": "paas",
-              "explanation": "PaaS supplies the platform for building and running applications."
+              "correctCategoryId": "paas"
             },
             {
-              "id": "w3-04",
+              "id": "m4",
               "text": "Staff log in to a Windows desktop that runs in the cloud",
-              "correctCategoryId": "daas",
-              "explanation": "The desktop itself is the service."
+              "correctCategoryId": "daas"
             },
             {
-              "id": "w3-05",
+              "id": "m5",
               "text": "A class uses a hosted quiz tool with no local install",
-              "correctCategoryId": "saas",
-              "explanation": "The quiz tool is software delivered as a service."
+              "correctCategoryId": "saas"
             },
             {
-              "id": "w3-06",
+              "id": "m6",
               "text": "A college rents extra virtual disks during exam week",
-              "correctCategoryId": "iaas",
-              "explanation": "Storage capacity is infrastructure."
+              "correctCategoryId": "iaas"
+            },
+            {
+              "id": "m7",
+              "text": "College email opened in a browser",
+              "correctCategoryId": "saas"
+            },
+            {
+              "id": "m8",
+              "text": "A remote desktop used from a thin client in a library",
+              "correctCategoryId": "daas"
             }
-          ]
+          ],
+          "feedback": {
+            "correct": "Those matches look right.",
+            "incorrect": "Check the definition and try again."
+          }
         }
       }
     ]
@@ -4063,15 +4626,649 @@
   {
     "schema": "lp.content.activity",
     "schemaVersion": "0.1.0",
-    "id": "week-3-reflection",
+    "id": "week-3-responsibility",
     "version": "0.1.0",
     "metadata": {
-      "title": "Name a cloud service",
+      "title": "Who manages what?",
       "status": "available",
-      "summary": "Outline one cloud service you already use and which model it is closest to.",
+      "summary": "Classify responsibilities as mainly customer or mainly provider.",
       "href": null,
       "difficulty": "standard",
-      "estimatedDurationMinutes": 8,
+      "estimatedDurationMinutes": 12,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-resp-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Who manages what?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-resp-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "In cloud models, some jobs stay with the customer and some stay with the provider. The split changes across SaaS, IaaS, PaaS and DaaS."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-resp-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-resp-q",
+          "prompt": "For a typical SaaS email service, classify each responsibility.",
+          "categories": [
+            {
+              "id": "customer",
+              "label": "Mainly the customer"
+            },
+            {
+              "id": "provider",
+              "label": "Mainly the provider"
+            }
+          ],
+          "items": [
+            {
+              "id": "r1",
+              "text": "Choosing strong passwords and careful sharing settings",
+              "correctCategoryId": "customer"
+            },
+            {
+              "id": "r2",
+              "text": "Patching the email application on the provider servers",
+              "correctCategoryId": "provider"
+            },
+            {
+              "id": "r3",
+              "text": "Deciding which classmates may edit a shared folder",
+              "correctCategoryId": "customer"
+            },
+            {
+              "id": "r4",
+              "text": "Keeping the data centre power and cooling running",
+              "correctCategoryId": "provider"
+            },
+            {
+              "id": "r5",
+              "text": "Writing the message content of your own emails",
+              "correctCategoryId": "customer"
+            },
+            {
+              "id": "r6",
+              "text": "Updating the SaaS product features for all tenants",
+              "correctCategoryId": "provider"
+            }
+          ],
+          "feedback": {
+            "correct": "Those matches look right.",
+            "incorrect": "Check the definition and try again."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-scenarios",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Which model fits?",
+      "status": "available",
+      "summary": "Choose the best cloud model for each organisational scenario.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-scen-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Which model fits?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-scen-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Read each scenario and pick the model that best matches what the organisation is buying."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-scen-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-scen-q1",
+          "prompt": "A small charity wants staff to use email and shared docs without running its own mail servers. Best fit:",
+          "options": [
+            {
+              "id": "a",
+              "label": "IaaS"
+            },
+            {
+              "id": "b",
+              "label": "SaaS"
+            },
+            {
+              "id": "c",
+              "label": "Only local hard drives"
+            },
+            {
+              "id": "d",
+              "label": "DaaS physical towers only"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Ready-to-use apps with little server management point to SaaS.",
+            "incorrect": "Ready-to-use apps with little server management point to SaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-scen-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-scen-q2",
+          "prompt": "A college IT team wants full control of operating systems on rented virtual machines. Best fit:",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS"
+            },
+            {
+              "id": "b",
+              "label": "IaaS"
+            },
+            {
+              "id": "c",
+              "label": "Only paper records"
+            },
+            {
+              "id": "d",
+              "label": "DaaS without any network"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Control of OS and software on rented machines is IaaS.",
+            "incorrect": "Control of OS and software on rented machines is IaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-scen-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-scen-q3",
+          "prompt": "A start-up wants developers to deploy code quickly without building servers from scratch. Best fit:",
+          "options": [
+            {
+              "id": "a",
+              "label": "PaaS"
+            },
+            {
+              "id": "b",
+              "label": "Only USB sticks"
+            },
+            {
+              "id": "c",
+              "label": "Printed manuals"
+            },
+            {
+              "id": "d",
+              "label": "Barcode-only systems"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "A ready build-and-run platform for developers is PaaS.",
+            "incorrect": "A ready build-and-run platform for developers is PaaS."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-scen-q4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-scen-q4",
+          "prompt": "A business wants staff to open the same managed Windows desktop from home or campus. Best fit:",
+          "options": [
+            {
+              "id": "a",
+              "label": "DaaS"
+            },
+            {
+              "id": "b",
+              "label": "Only a classroom whiteboard"
+            },
+            {
+              "id": "c",
+              "label": "Local-only floppy disks"
+            },
+            {
+              "id": "d",
+              "label": "NFC tags with no network"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "A managed desktop delivered over the network is DaaS.",
+            "incorrect": "A managed desktop delivered over the network is DaaS."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-benefits-risks",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Cloud benefits and dependencies",
+      "status": "available",
+      "summary": "Check benefits of cloud use and key dependencies or risks.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-br-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Benefits, dependencies and risks",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-br-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Cloud can reduce on-site equipment needs and support scaling. It can also create dependency on a provider, internet access and good account security."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-br-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-br-q1",
+          "prompt": "A clear benefit of cloud for many organisations is:",
+          "options": [
+            {
+              "id": "a",
+              "label": "They never need internet access again"
+            },
+            {
+              "id": "b",
+              "label": "They can often scale capacity without buying new on-site hardware every time"
+            },
+            {
+              "id": "c",
+              "label": "Providers delete all customer data daily by default with no backup option"
+            },
+            {
+              "id": "d",
+              "label": "Cloud always means zero cost"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Scaling without constantly buying new local hardware is a common cloud benefit.",
+            "incorrect": "Scaling without constantly buying new local hardware is a common cloud benefit."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-br-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-br-q2",
+          "prompt": "A key dependency or risk of heavy cloud use is:",
+          "options": [
+            {
+              "id": "a",
+              "label": "No one ever needs a password"
+            },
+            {
+              "id": "b",
+              "label": "Service outages or lock-in can affect work if the provider or internet link fails"
+            },
+            {
+              "id": "c",
+              "label": "Paper printers stop existing"
+            },
+            {
+              "id": "d",
+              "label": "USB sticks become illegal"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Organisations depend on connectivity and the provider. Outages and lock-in are real risks to manage.",
+            "incorrect": "Organisations depend on connectivity and the provider. Outages and lock-in are real risks to manage."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-br-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-br-q3",
+          "prompt": "Give one benefit of using cloud technology and one dependency or risk an organisation should manage.",
+          "guidance": "Write at least 300 characters. Mention one benefit and one dependency or risk. Paste is disabled.",
+          "minChars": 300
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-org-example",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Organisational cloud example",
+      "status": "available",
+      "summary": "Outline one organisation and how it uses a cloud model.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Short response",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-org-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Organisational cloud example",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-org-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Organisations use cloud services for email, storage, development platforms, virtual machines and remote desktops."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-org-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-org-q",
+          "prompt": "Name one organisation (real or realistic). State which cloud model it uses in your example and what the service is for.",
+          "guidance": "Write at least 300 characters. Name the organisation, the model (SaaS, IaaS, PaaS or DaaS), and the purpose. Paste is disabled.",
+          "minChars": 300
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-extension",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Extension: SaaS or IaaS for a small business?",
+      "status": "available",
+      "summary": "Explain why a small business might choose SaaS rather than IaaS.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 10,
+      "activityType": "Extension",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-ext-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Extension: SaaS or IaaS?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-ext-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Small organisations often prefer ready apps over managing servers. Larger IT teams may want IaaS for control."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-ext-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-ext-q1",
+          "prompt": "A three-person charity with no IT team needs email and shared files quickly. The stronger first choice is usually:",
+          "options": [
+            {
+              "id": "a",
+              "label": "IaaS with self-managed servers"
+            },
+            {
+              "id": "b",
+              "label": "SaaS apps from a provider"
+            },
+            {
+              "id": "c",
+              "label": "Only handwritten letters"
+            },
+            {
+              "id": "d",
+              "label": "Building a private data centre first"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "With little IT capacity, SaaS reduces the need to run and patch your own servers.",
+            "incorrect": "With little IT capacity, SaaS reduces the need to run and patch your own servers."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-ext-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-ext-q2",
+          "prompt": "In your own words, explain why a small business might choose SaaS rather than IaaS.",
+          "guidance": "Write at least 250 characters. Link your reason to skills, time or cost. Paste is disabled.",
+          "minChars": 250
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-profile",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Cloud technology profile",
+      "status": "available",
+      "summary": "Produce a short cloud profile naming the service, model and organisation context.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 12,
       "activityType": "Reflection",
       "topics": []
     },
@@ -4088,43 +5285,154 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-reflection-title",
+        "id": "week-3-profile-h",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Name a cloud service",
+          "text": "Cloud technology profile",
           "level": 2
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-reflection-intro",
+        "id": "week-3-profile-p",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Outline one cloud service you already use and which model it is closest to."
+          "text": "Independent task: build a short profile you could reuse when outlining technologies for AC1.1 practice. This is formative, not Gateway assignment evidence."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
-        "id": "week-3-reflection-prompt",
+        "id": "week-3-profile-q",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "reflection",
         "content": {
           "formative": true,
-          "questionId": "week-3-reflection:learner-note",
-          "sourceQuestionId": "learner-note",
-          "prompt": "Name a cloud service from college or daily life and say whether it is closest to SaaS, IaaS, PaaS or DaaS. Give one reason. This is formative, not Gateway assignment evidence.",
-          "minChars": 350,
-          "guidance": "Name the service, the closest model, and one reason. Write at least 350 characters. Paste is disabled."
+          "questionId": "week-3-profile-q",
+          "prompt": "Write a cloud profile: name one cloud service, state whether it is closest to SaaS, IaaS, PaaS or DaaS, say who uses it, give one benefit, and give one dependency or risk.",
+          "minChars": 500,
+          "guidance": "Cover service, model, who uses it, one benefit and one dependency or risk. Write at least 500 characters. Paste is disabled."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-3-exit",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Exit ticket",
+      "status": "available",
+      "summary": "Quick check that you can outline cloud models and judge your confidence.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Exit ticket",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-exit-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Exit ticket",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-exit-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-exit-q1",
+          "prompt": "Which pair is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "SaaS = rent virtual machines; IaaS = browser email only"
+            },
+            {
+              "id": "b",
+              "label": "SaaS = ready software over the internet; IaaS = rented infrastructure such as VMs"
+            },
+            {
+              "id": "c",
+              "label": "DaaS = paper only; PaaS = USB sticks only"
+            },
+            {
+              "id": "d",
+              "label": "Cloud = no network; Local = always remote servers"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "SaaS is ready software. IaaS is rented infrastructure such as virtual machines.",
+            "incorrect": "SaaS is ready software. IaaS is rented infrastructure such as virtual machines."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-3-exit-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-3-exit-q2",
+          "prompt": "How confident are you outlining SaaS, IaaS, PaaS and DaaS?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Not yet. I need another look at the definitions."
+            },
+            {
+              "id": "b",
+              "label": "Getting there. I can give one example for most."
+            },
+            {
+              "id": "c",
+              "label": "Confident. I can define each and give a use plus a risk."
+            }
+          ],
+          "correctOptionId": "c",
+          "feedback": {
+            "correct": "Use this rating to decide what to revise before Assignment 1 practice.",
+            "incorrect": "Use this rating to decide what to revise before Assignment 1 practice."
+          },
+          "sourceType": "single"
         }
       }
     ]
