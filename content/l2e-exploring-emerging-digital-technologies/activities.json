@@ -2033,7 +2033,8 @@
           "formative": true,
           "questionId": "week-1-ref-q",
           "prompt": "Which emerging technology do you believe will have the biggest impact over the next decade and why?",
-          "guidance": "Name the technology, say who it could help, and give one reason. One short paragraph is enough."
+          "guidance": "Name the technology, who it could help, and one reason. Write at least 400 characters. Paste is disabled.",
+          "minChars": 400
         }
       }
     ]
@@ -2162,7 +2163,8 @@
           "formative": true,
           "questionId": "week-1-exit-q3",
           "prompt": "Write one sentence: which idea from today will you reuse when you outline a technology next week?",
-          "guidance": "One sentence is enough. Name the idea, not a grade."
+          "guidance": "One sentence is enough, but write at least 80 characters. Paste is disabled.",
+          "minChars": 80
         }
       }
     ]
@@ -2637,7 +2639,8 @@
           "formative": true,
           "questionId": "week-2-rfid-q2",
           "prompt": "Give one business use of RFID.",
-          "guidance": "Mention tagged items and tracking or scanning. One sentence is enough."
+          "guidance": "Mention tagged items and tracking or scanning. Write at least 100 characters. Paste is disabled.",
+          "minChars": 100
         }
       }
     ]
@@ -3344,7 +3347,8 @@
           "formative": true,
           "questionId": "week-2-privacy-q2",
           "prompt": "Outline one real-world case: name the technology (IoT, RFID, NFC or wearable), who uses it, and one risk to manage.",
-          "guidance": "Write 2-4 short sentences. This is practice only."
+          "guidance": "Write 2-4 short sentences (at least 350 characters). Paste is disabled. This is practice only.",
+          "minChars": 350
         }
       }
     ]
@@ -3500,7 +3504,9 @@
         "content": {
           "formative": true,
           "questionId": "week-2-reflection-q",
-          "prompt": "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
+          "prompt": "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk.",
+          "minChars": 500,
+          "guidance": "Cover all four technologies and one benefit plus one risk. Write at least 500 characters. Paste is disabled."
         }
       }
     ]
@@ -4116,7 +4122,9 @@
           "formative": true,
           "questionId": "week-3-reflection:learner-note",
           "sourceQuestionId": "learner-note",
-          "prompt": "Name a cloud service from college or daily life and say whether it is closest to SaaS, IaaS, PaaS or DaaS. Give one reason. This is formative, not Gateway assignment evidence."
+          "prompt": "Name a cloud service from college or daily life and say whether it is closest to SaaS, IaaS, PaaS or DaaS. Give one reason. This is formative, not Gateway assignment evidence.",
+          "minChars": 350,
+          "guidance": "Name the service, the closest model, and one reason. Write at least 350 characters. Paste is disabled."
         }
       }
     ]

@@ -246,9 +246,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Welcome",
             "level": 2
@@ -259,9 +259,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "This unit is Exploring New and Emerging Digital Technologies (M/618/3683). Across the year you will outline technologies, then explain how people and organisations use them."
           }
@@ -271,9 +271,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Digital technology changes quickly. Businesses that notice new tools early can improve service, cut cost or stay safe. This lesson is formative practice for LO1 / AC 1.1. It is not Gateway assignment evidence."
           }
@@ -283,9 +283,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-objectives",
           "version": "0.1.0",
-          "type": "callout",
           "metadata": {},
           "relationships": {},
+          "type": "callout",
           "content": {
             "tone": "info",
             "title": "By the end of this lesson",
@@ -297,9 +297,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-teacher",
           "version": "0.1.0",
-          "type": "teacher-note",
           "metadata": {},
           "relationships": {},
+          "type": "teacher-note",
           "content": {
             "text": "Misconception: learners often treat any new phone as emerging. Extension: ask for one sector where a current tool is still emerging. Discussion: why must businesses adapt? Differentiation: pair write the starter before sharing."
           }
@@ -309,9 +309,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-starter-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Starter",
             "level": 3
@@ -322,9 +322,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-welcome-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-welcome-q1",
@@ -387,9 +387,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-digital-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "What is digital technology?",
             "level": 2
@@ -400,9 +400,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-digital-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Digital technology uses electronic devices and software to create, store, share or process data."
           }
@@ -412,9 +412,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-digital-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Devices are the hardware, such as phones, sensors and servers. Software is the programs and apps that tell hardware what to do."
           }
@@ -424,9 +424,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-digital-p3",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Networks connect devices so they can share data. Data is the information those systems collect, such as a location, a payment or a temperature reading."
           }
@@ -436,9 +436,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-digital-match-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Match the description",
             "level": 3
@@ -449,9 +449,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-digital-match",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-digital-match",
@@ -542,9 +542,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ce-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Current vs emerging technologies",
             "level": 2
@@ -555,9 +555,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ce-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Current technology is already in common use. Most people or organisations in that setting already rely on it."
           }
@@ -567,9 +567,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ce-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Emerging technology is still developing, is costly, or is not yet widely adopted. The same product can be current in one sector and emerging in another."
           }
@@ -579,9 +579,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ce-p3",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Example: contactless payment is current in many UK shops. A consumer brain-computer headset is still emerging."
           }
@@ -591,9 +591,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ce-hint",
           "version": "0.1.0",
-          "type": "hint",
           "metadata": {},
           "relationships": {},
+          "type": "hint",
           "content": {
             "text": "Ask: would most people in this setting already use it this year?"
           }
@@ -603,9 +603,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ce-sort",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-ce-sort",
@@ -709,9 +709,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-mobile-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Mobile technology",
             "level": 2
@@ -722,9 +722,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-mobile-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Mobile technology is computing you can carry. Smartphones and tablets run apps for messaging, maps, learning and work."
           }
@@ -734,9 +734,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-mobile-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Mobile payments let people tap a phone or watch to pay. GPS gives location for maps, deliveries and safety."
           }
@@ -746,9 +746,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-mobile-p3",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Mobile banking lets customers check balances, pay bills and approve logins without a branch visit."
           }
@@ -758,9 +758,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-mobile-h2",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Select the mobile examples",
             "level": 3
@@ -771,9 +771,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-mobile-select",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-mobile-select",
@@ -870,9 +870,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Intelligent computing",
             "level": 2
@@ -883,9 +883,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Intelligent computing is software and machines that can perform tasks that used to need human judgement, such as spotting a pattern or choosing a next step."
           }
@@ -895,9 +895,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Artificial intelligence (AI) is the broad idea. Machine learning is a common method: the system improves by training on examples rather than only following fixed rules."
           }
@@ -907,9 +907,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-p3",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Automation runs a process with little human input, such as sorting invoices. Robotics uses machines that move or handle objects, sometimes with AI to decide what to do next."
           }
@@ -919,9 +919,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-h2",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "True or false",
             "level": 3
@@ -932,9 +932,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-tf1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-ic-tf1",
@@ -962,9 +962,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-tf2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-ic-tf2",
@@ -992,9 +992,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-tf3",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-ic-tf3",
@@ -1022,9 +1022,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-tf4",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-ic-tf4",
@@ -1052,9 +1052,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ic-tf5",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-ic-tf5",
@@ -1109,9 +1109,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-iot-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Internet of Things",
             "level": 2
@@ -1122,9 +1122,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-iot-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "The Internet of Things (IoT) is a network of physical devices that collect or share data, often with little manual input."
           }
@@ -1134,9 +1134,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-iot-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Smart homes use connected lights, speakers and thermostats. Wearables such as a fitness watch are IoT when they send health or activity data."
           }
@@ -1146,9 +1146,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-iot-p3",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Industrial IoT uses sensors and machines in warehouses and factories to track stock, temperature or equipment."
           }
@@ -1158,9 +1158,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-iot-h2",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Consumer or business IoT?",
             "level": 3
@@ -1171,9 +1171,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-iot-groups",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-iot-groups",
@@ -1270,9 +1270,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Cloud technology",
             "level": 2
@@ -1283,9 +1283,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Cloud technology delivers computing over the internet instead of only from one local device. Users can often scale up or down as they need."
           }
@@ -1295,9 +1295,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "SaaS is software you use in a browser or app, such as email. IaaS rents infrastructure such as virtual machines and storage. PaaS gives a ready place to build and run applications."
           }
@@ -1307,9 +1307,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-callout",
           "version": "0.1.0",
-          "type": "callout",
           "metadata": {},
           "relationships": {},
+          "type": "callout",
           "content": {
             "tone": "info",
             "title": "Keep it simple",
@@ -1321,9 +1321,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-h2",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Complete the sentences",
             "level": 3
@@ -1334,9 +1334,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-cloud-q1",
@@ -1372,9 +1372,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-cloud-q2",
@@ -1410,9 +1410,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-q3",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-cloud-q3",
@@ -1448,9 +1448,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-q4",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-cloud-q4",
@@ -1486,9 +1486,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-q5",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-cloud-q5",
@@ -1524,9 +1524,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-cloud-q6",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-cloud-q6",
@@ -1589,9 +1589,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ind-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "How businesses use these technologies",
             "level": 2
@@ -1602,9 +1602,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ind-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Retail, banking, entertainment and healthcare all use digital tools, but not always the same ones. Choose the best fit for each organisation in this lesson."
           }
@@ -1614,9 +1614,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ind-orgs",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-ind-orgs",
@@ -1680,9 +1680,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ind-h2",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Technology to business example",
             "level": 3
@@ -1693,9 +1693,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ind-match",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-ind-match",
@@ -1786,9 +1786,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Knowledge check",
             "level": 2
@@ -1799,9 +1799,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Use this to check the lesson. It is formative. It does not produce a Gateway grade."
           }
@@ -1811,9 +1811,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q1",
@@ -1849,9 +1849,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q2",
@@ -1879,9 +1879,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q3",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q3",
@@ -1917,9 +1917,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q4",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q4",
@@ -1961,9 +1961,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q5",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q5",
@@ -1991,9 +1991,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q6",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q6",
@@ -2029,9 +2029,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q7",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q7",
@@ -2067,9 +2067,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q8",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q8",
@@ -2097,9 +2097,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q9",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q9",
@@ -2135,9 +2135,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-q10",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-1-kc-q10",
@@ -2179,9 +2179,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-kc-teacher",
           "version": "0.1.0",
-          "type": "teacher-note",
           "metadata": {},
           "relationships": {},
+          "type": "teacher-note",
           "content": {
             "text": "Common mix-up: cloud versus IoT. Extension: name one risk if a wearable leaks health data. Discussion: should a college treat AI assistants as current or emerging? Differentiation: allow the classification items to be completed with a partner."
           }
@@ -2218,9 +2218,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ref-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Reflection",
             "level": 2
@@ -2231,9 +2231,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ref-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Use one technology from this lesson. Keep the answer short. This is practice, not assignment evidence."
           }
@@ -2243,14 +2243,15 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-ref-q",
           "version": "0.1.0",
-          "type": "short-response",
           "metadata": {},
           "relationships": {},
+          "type": "short-response",
           "content": {
             "formative": true,
             "questionId": "week-1-ref-q",
             "prompt": "Which emerging technology do you believe will have the biggest impact over the next decade and why?",
-            "guidance": "Name the technology, say who it could help, and give one reason. One short paragraph is enough."
+            "guidance": "Name the technology, who it could help, and one reason. Write at least 400 characters. Paste is disabled.",
+            "minChars": 400
           }
         }
       ]
@@ -2285,9 +2286,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-exit-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Exit ticket",
             "level": 2
@@ -2298,9 +2299,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-exit-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-1-exit-q1",
@@ -2336,9 +2337,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-exit-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": false,
             "questionId": "week-1-exit-q2",
@@ -2372,14 +2373,15 @@
           "schemaVersion": "0.1.0",
           "id": "week-1-exit-q3",
           "version": "0.1.0",
-          "type": "reflection",
           "metadata": {},
           "relationships": {},
+          "type": "reflection",
           "content": {
             "formative": true,
             "questionId": "week-1-exit-q3",
             "prompt": "Write one sentence: which idea from today will you reuse when you outline a technology next week?",
-            "guidance": "One sentence is enough. Name the idea, not a grade."
+            "guidance": "One sentence is enough, but write at least 80 characters. Paste is disabled.",
+            "minChars": 80
           }
         }
       ]
@@ -2414,9 +2416,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-starter-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Welcome to Week 2",
             "level": 2
@@ -2427,9 +2429,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-starter-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "This week you outline Internet of Things (IoT), connected devices, RFID, NFC and wearables (AC1.1)."
           }
@@ -2439,9 +2441,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-starter-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "By the end, define each technology, give an example, and note one benefit and one risk."
           }
@@ -2451,9 +2453,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-starter-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-starter-q1",
@@ -2516,9 +2518,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "IoT and connected devices",
             "level": 2
@@ -2529,9 +2531,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "IoT devices sense, act or share data with little manual input. A connected device can send or receive data over a network (Wi-Fi, mobile, Bluetooth or similar)."
           }
@@ -2541,9 +2543,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Examples: smart thermostat, warehouse temperature sensor, connected street light, hospital infusion pump that reports status."
           }
@@ -2553,9 +2555,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-iot-q1",
@@ -2591,9 +2593,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-iot-q2",
@@ -2656,9 +2658,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-sectors-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Consumer, industrial and healthcare IoT",
             "level": 2
@@ -2669,9 +2671,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-sectors-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Consumer IoT is for homes and personal use. Industrial IoT supports factories, farms and logistics. Healthcare IoT supports patients and clinical monitoring."
           }
@@ -2681,9 +2683,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-iot-sectors-q",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-2-iot-sectors-q",
@@ -2772,9 +2774,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "RFID",
             "level": 2
@@ -2785,9 +2787,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "RFID uses radio tags and readers to identify items. Readers can often scan tags without lining every item up under a camera, which helps stock and asset tracking."
           }
@@ -2797,9 +2799,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-p2",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Typical uses: clothing tags in retail, pallet tags in warehouses, library books, tool tracking on a site."
           }
@@ -2809,9 +2811,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-rfid-q1",
@@ -2847,14 +2849,15 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-q2",
           "version": "0.1.0",
-          "type": "short-response",
           "metadata": {},
           "relationships": {},
+          "type": "short-response",
           "content": {
             "formative": true,
             "questionId": "week-2-rfid-q2",
             "prompt": "Give one business use of RFID.",
-            "guidance": "Mention tagged items and tracking or scanning. One sentence is enough."
+            "guidance": "Mention tagged items and tracking or scanning. Write at least 100 characters. Paste is disabled.",
+            "minChars": 100
           }
         }
       ]
@@ -2889,9 +2892,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-nfc-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "NFC",
             "level": 2
@@ -2902,9 +2905,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-nfc-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "NFC (Near Field Communication) is very short-range radio, usually centimetres. It suits short taps such as contactless payment, door badges and ticket gates."
           }
@@ -2914,9 +2917,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-nfc-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-nfc-q1",
@@ -2952,9 +2955,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-nfc-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-nfc-q2",
@@ -3017,9 +3020,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-vs-nfc-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "RFID versus NFC",
             "level": 2
@@ -3030,9 +3033,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-vs-nfc-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Both use radio, but NFC is for very close taps. RFID often supports stock/asset tagging where a reader covers a short area and many tags."
           }
@@ -3042,9 +3045,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-rfid-vs-nfc-q",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-2-rfid-vs-nfc-q",
@@ -3119,9 +3122,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-wearables-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Wearables",
             "level": 2
@@ -3132,9 +3135,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-wearables-p1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Wearables are devices worn on the body: fitness watches, smart badges, medical patches. Many are IoT devices when they upload activity or health data."
           }
@@ -3144,9 +3147,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-wearables-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-wearables-q1",
@@ -3182,9 +3185,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-wearables-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-wearables-q2",
@@ -3247,9 +3250,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-smart-settings-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Smart homes, cities and healthcare",
             "level": 2
@@ -3260,9 +3263,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-smart-settings-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "The same IoT idea appears in homes, cities and healthcare, with different goals: comfort, public services, or patient safety."
           }
@@ -3272,9 +3275,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-smart-settings-q",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-2-smart-settings-q",
@@ -3363,9 +3366,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-benefits-risks-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Benefits, risks and security",
             "level": 2
@@ -3376,9 +3379,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-benefits-risks-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Benefits include automation, better decisions from live data, and convenience. Risks include hacking, outages, cost, and poor configuration."
           }
@@ -3388,9 +3391,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-benefits-risks-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-benefits-risks-q1",
@@ -3426,9 +3429,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-benefits-risks-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-benefits-risks-q2",
@@ -3491,9 +3494,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-privacy-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Privacy and real-world cases",
             "level": 2
@@ -3504,9 +3507,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-privacy-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Wearables and healthcare IoT often handle sensitive data. Organisations need consent, clear purpose, access control and secure storage."
           }
@@ -3516,9 +3519,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-privacy-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-privacy-q1",
@@ -3554,14 +3557,15 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-privacy-q2",
           "version": "0.1.0",
-          "type": "short-response",
           "metadata": {},
           "relationships": {},
+          "type": "short-response",
           "content": {
             "formative": true,
             "questionId": "week-2-privacy-q2",
             "prompt": "Outline one real-world case: name the technology (IoT, RFID, NFC or wearable), who uses it, and one risk to manage.",
-            "guidance": "Write 2-4 short sentences. This is practice only."
+            "guidance": "Write 2-4 short sentences (at least 350 characters). Paste is disabled. This is practice only.",
+            "minChars": 350
           }
         }
       ]
@@ -3596,9 +3600,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-trends-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Emerging trends",
             "level": 2
@@ -3609,9 +3613,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-trends-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Trends include more sensors in cities, tighter security expectations, edge processing on devices, and wearables used in workplace health programmes."
           }
@@ -3621,9 +3625,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-trends-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-trends-q1",
@@ -3686,9 +3690,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-reflection-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Portfolio reflection",
             "level": 2
@@ -3699,9 +3703,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-reflection-p",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Write one example each for IoT, RFID, NFC and wearables. This is practice only, not Gateway assignment evidence."
           }
@@ -3711,13 +3715,15 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-reflection-q",
           "version": "0.1.0",
-          "type": "reflection",
           "metadata": {},
           "relationships": {},
+          "type": "reflection",
           "content": {
             "formative": true,
             "questionId": "week-2-reflection-q",
-            "prompt": "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
+            "prompt": "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk.",
+            "minChars": 500,
+            "guidance": "Cover all four technologies and one benefit plus one risk. Write at least 500 characters. Paste is disabled."
           }
         }
       ]
@@ -3752,9 +3758,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-exit-h",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Exit ticket",
             "level": 2
@@ -3765,9 +3771,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-exit-q1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-exit-q1",
@@ -3803,9 +3809,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-2-exit-q2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-2-exit-q2",
@@ -3868,9 +3874,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-outline-title",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Cloud technology and service models",
             "level": 2
@@ -3881,9 +3887,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-outline-intro",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Outline cloud computing and the service models SaaS, IaaS, PaaS and DaaS so you can give a short, accurate example of each."
           }
@@ -3893,9 +3899,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-outline-h-0",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Cloud technology",
             "level": 3
@@ -3906,9 +3912,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-outline-p-0",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Cloud technology delivers computing resources over the internet instead of only from a local device or a single on-site server. Users typically pay for what they use and can scale up or down."
           }
@@ -3918,9 +3924,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-outline-h-1",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Service models",
             "level": 3
@@ -3931,9 +3937,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-outline-p-1",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "SaaS is software used through a browser or app, such as email or classroom tools. IaaS provides virtual machines, storage and networks that an organisation configures. PaaS provides a ready environment for building and running applications. DaaS delivers a desktop environment over the network so the user works on a remote desktop rather than only on the local PC."
           }
@@ -3970,9 +3976,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-retrieval-title",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Week 3 retrieval",
             "level": 2
@@ -3983,9 +3989,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-retrieval-intro",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Check that you can outline cloud computing and the main service models."
           }
@@ -3995,9 +4001,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-retrieval-q-1",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-3-retrieval:q1",
@@ -4034,9 +4040,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-retrieval-q-2",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-3-retrieval:q2",
@@ -4073,9 +4079,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-retrieval-q-3",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-3-retrieval:q3",
@@ -4112,9 +4118,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-retrieval-q-4",
           "version": "0.1.0",
-          "type": "single-choice",
           "metadata": {},
           "relationships": {},
+          "type": "single-choice",
           "content": {
             "formative": true,
             "questionId": "week-3-retrieval:q4",
@@ -4178,9 +4184,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-classify-title",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Cloud service models",
             "level": 2
@@ -4191,9 +4197,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-classify-intro",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Classify each example as SaaS, IaaS, PaaS or DaaS."
           }
@@ -4203,9 +4209,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-classify-classification",
           "version": "0.1.0",
-          "type": "classification",
           "metadata": {},
           "relationships": {},
+          "type": "classification",
           "content": {
             "formative": true,
             "questionId": "week-3-classify",
@@ -4301,9 +4307,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-reflection-title",
           "version": "0.1.0",
-          "type": "heading",
           "metadata": {},
           "relationships": {},
+          "type": "heading",
           "content": {
             "text": "Name a cloud service",
             "level": 2
@@ -4314,9 +4320,9 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-reflection-intro",
           "version": "0.1.0",
-          "type": "paragraph",
           "metadata": {},
           "relationships": {},
+          "type": "paragraph",
           "content": {
             "text": "Outline one cloud service you already use and which model it is closest to."
           }
@@ -4326,14 +4332,16 @@
           "schemaVersion": "0.1.0",
           "id": "week-3-reflection-prompt",
           "version": "0.1.0",
-          "type": "reflection",
           "metadata": {},
           "relationships": {},
+          "type": "reflection",
           "content": {
             "formative": true,
             "questionId": "week-3-reflection:learner-note",
             "sourceQuestionId": "learner-note",
-            "prompt": "Name a cloud service from college or daily life and say whether it is closest to SaaS, IaaS, PaaS or DaaS. Give one reason. This is formative, not Gateway assignment evidence."
+            "prompt": "Name a cloud service from college or daily life and say whether it is closest to SaaS, IaaS, PaaS or DaaS. Give one reason. This is formative, not Gateway assignment evidence.",
+            "minChars": 350,
+            "guidance": "Name the service, the closest model, and one reason. Write at least 350 characters. Paste is disabled."
           }
         }
       ]

@@ -81,21 +81,26 @@ function classify(id, prompt, categories, items) {
   });
 }
 
-function short(id, prompt, guidance) {
-  return block(id, "short-response", {
+function short(id, prompt, guidance, minChars) {
+  const body = {
     formative: true,
     questionId: id,
     prompt,
-    guidance
-  });
+    guidance,
+    minChars: minChars == null ? 200 : minChars
+  };
+  return block(id, "short-response", body);
 }
 
-function reflection(id, prompt) {
-  return block(id, "reflection", {
+function reflection(id, prompt, minChars, guidance) {
+  const body = {
     formative: true,
     questionId: id,
-    prompt
-  });
+    prompt,
+    minChars: minChars == null ? 500 : minChars
+  };
+  if (guidance) body.guidance = guidance;
+  return block(id, "reflection", body);
 }
 
 const week2Activities = [
@@ -225,7 +230,8 @@ const week2Activities = [
       short(
         "week-2-rfid-q2",
         "Give one business use of RFID.",
-        "Mention tagged items and tracking or scanning. One sentence is enough."
+        "Mention tagged items and tracking or scanning. Write at least 100 characters. Paste is disabled.",
+        100
       )
     ],
     12
@@ -423,7 +429,8 @@ const week2Activities = [
       short(
         "week-2-privacy-q2",
         "Outline one real-world case: name the technology (IoT, RFID, NFC or wearable), who uses it, and one risk to manage.",
-        "Write 2-4 short sentences. This is practice only."
+        "Write 2-4 short sentences (at least 350 characters). Paste is disabled. This is practice only.",
+        350
       )
     ],
     12
@@ -465,7 +472,9 @@ const week2Activities = [
       }),
       reflection(
         "week-2-reflection-q",
-        "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
+        "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk.",
+        500,
+        "Cover all four technologies and one benefit plus one risk. Write at least 500 characters. Paste is disabled."
       )
     ],
     10

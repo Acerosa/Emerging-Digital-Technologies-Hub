@@ -317,6 +317,26 @@ body {
   font-weight: 700;
 }
 
+.lp-char-count {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  color: var(--lp-muted, #5b6470);
+}
+
+.lp-char-count[data-lp-met="true"] {
+  color: var(--lp-text);
+}
+
+.lp-paste-notice {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  color: var(--lp-danger, #9b1c1c);
+}
+
+.lp-paste-notice:empty {
+  display: none;
+}
+
 .lp-classify-item[data-lp-result="matched"] .lp-item-status,
 .lp-classify-item[data-lp-result="review"] .lp-item-status {
   display: inline-block;

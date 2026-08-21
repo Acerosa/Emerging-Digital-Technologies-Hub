@@ -11,6 +11,114 @@
     return (block.content && block.content.questionId) || block.id;
   }
 
+  function isTextResponseType(type) {
+    return type === "short-response" || type === "reflection";
+  }
+
+  function minCharsFor(block) {
+    var content = (block && block.content) || {};
+    var type = ns.normaliseBlockType(block && block.type);
+    var configured = Number(content.minChars || content.minimumCharacters || 0);
+    if (configured > 0) return configured;
+    if (type === "reflection") return 500;
+    if (type === "short-response") return 200;
+    return 0;
+  }
+
+  function enhanceTextResponseField(blockRoot, block) {
+    var field = blockRoot.querySelector("textarea.lp-textarea[data-lp-response], textarea[data-lp-response]:not(.lp-code)");
+    var min;
+    var counter;
+    var notice;
+
+    if (!field || field.getAttribute("data-lp-text-enhanced") === "true") return;
+    if (field.classList.contains("lp-code")) return;
+
+    min = minCharsFor(block);
+    if (!min) return;
+
+    field.setAttribute("data-lp-text-enhanced", "true");
+    field.setAttribute("data-lp-min-chars", String(min));
+    field.setAttribute("minlength", String(min));
+    field.setAttribute("autocomplete", "off");
+
+    counter = blockRoot.querySelector("[data-lp-char-count]");
+    if (!counter) {
+      counter = document.createElement("p");
+      counter.className = "lp-char-count";
+      counter.setAttribute("data-lp-char-count", "");
+      counter.setAttribute("aria-live", "polite");
+      field.insertAdjacentElement("afterend", counter);
+    }
+
+    notice = blockRoot.querySelector("[data-lp-paste-notice]");
+    if (!notice) {
+      notice = document.createElement("p");
+      notice.className = "lp-paste-notice";
+      notice.setAttribute("data-lp-paste-notice", "");
+      notice.setAttribute("role", "status");
+      counter.insertAdjacentElement("afterend", notice);
+    }
+
+    function updateCount() {
+      var length = String(field.value || "").trim().length;
+      counter.textContent = length + " / " + min + " characters minimum";
+      counter.setAttribute("data-lp-met", length >= min ? "true" : "false");
+    }
+
+    field.addEventListener("paste", function (event) {
+      event.preventDefault();
+      notice.textContent = "Paste is disabled. Type your answer in your own words.";
+    });
+
+    field.addEventListener("drop", function (event) {
+      event.preventDefault();
+      notice.textContent = "Dropping text is disabled. Type your answer in your own words.";
+    });
+
+    field.addEventListener("input", updateCount);
+    updateCount();
+  }
+
+  function patchMarkBlockForMinChars() {
+    var original = ns.markBlock;
+    if (typeof original !== "function" || original.__l2eMinChars) return;
+
+    function patched(block, response) {
+      var type = ns.normaliseBlockType(block && block.type);
+      var min;
+      var text;
+      var result;
+
+      if (!isTextResponseType(type)) {
+        return original(block, response);
+      }
+
+      min = minCharsFor(block);
+      text = String(response == null ? "" : response).trim();
+      if (min > 0 && text.length < min) {
+        return {
+          complete: false,
+          correct: null,
+          feedback: text.length
+            ? ("Write at least " + min + " characters. You currently have " + text.length + ".")
+            : ("Write at least " + min + " characters before saving.")
+        };
+      }
+
+      result = original(block, response);
+      if (result && result.complete && !result.feedback) {
+        result.feedback = ((block.content && block.content.guidance) || "Saved.");
+      }
+      return result;
+    }
+
+    patched.__l2eMinChars = true;
+    ns.markBlock = patched;
+  }
+
+  patchMarkBlockForMinChars();
+
   function collectResponse(blockRoot, block) {
     var type = ns.normaliseBlockType(block.type);
     var selected;
@@ -156,9 +264,15 @@
     activityInteractiveBlocks(activity).forEach(function (block) {
       var blockRoot = article.querySelector('[data-lp-block-id="' + block.id + '"]');
       var qid = questionId(block);
+      var field;
       if (!blockRoot) return;
+      if (isTextResponseType(ns.normaliseBlockType(block.type))) {
+        enhanceTextResponseField(blockRoot, block);
+      }
       restoreResponse(blockRoot, block, draft.responses[qid]);
       if (draft.checked[qid]) setFeedback(blockRoot, block, draft.responses[qid], true);
+      field = blockRoot.querySelector("textarea[data-lp-response]");
+      if (field) field.dispatchEvent(new Event("input", { bubbles: true }));
     });
     updateActivityStatus(article, activity, draft);
 
