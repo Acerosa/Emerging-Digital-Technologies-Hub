@@ -16,7 +16,6 @@ export function WeekPage({
   pkg?: ContentPackage | null;
   platform?: unknown;
 }) {
-  const engine = getContentEngine();
   const mountRef = useRef<HTMLDivElement>(null);
   const content = activeContentPackage(pkg);
   const model = useMemo(
@@ -24,8 +23,11 @@ export function WeekPage({
     [content, weekId]
   );
 
+  // Keep session HTML stable across parent re-renders. A fresh engine/sessions
+  // identity forces WeekView to replace activity DOM and wipe Check/Reset listeners.
   const sessions = useMemo(() => {
     if (!content || !model) return [];
+    const engine = getContentEngine();
     return model.sessions.map((session) => ({
       ...session,
       activities: session.activities.map((activity) => ({
@@ -34,41 +36,17 @@ export function WeekPage({
         )
       }))
     }));
-  }, [content, engine, model]);
+  }, [content, model]);
 
   useLayoutEffect(() => {
     const rootEl = mountRef.current;
     if (!content || !rootEl || !sessions.length) return;
 
-    const options = {
+    getContentEngine().bindInteractive(rootEl, content, {
       sourcePage: window.location.pathname,
       platform: platform || (typeof window !== "undefined" ? window.LearningPlatform?.platform : undefined)
-    };
-
-    const bind = () => {
-      if (!rootEl.querySelector("[data-lp-activity]")) return false;
-      rootEl.querySelectorAll("[data-lp-activity][data-lp-bound]").forEach((article) => {
-        article.parentNode?.replaceChild(article.cloneNode(true), article);
-      });
-      engine.bindInteractive(rootEl, content, options);
-      return true;
-    };
-
-    if (bind()) return undefined;
-
-    const observer = new MutationObserver(() => {
-      if (bind()) observer.disconnect();
     });
-    observer.observe(rootEl, { childList: true, subtree: true });
-    const timer = window.setTimeout(() => {
-      bind();
-      observer.disconnect();
-    }, 1000);
-    return () => {
-      observer.disconnect();
-      window.clearTimeout(timer);
-    };
-  }, [engine, content, weekId, sessions, platform]);
+  }, [content, weekId, sessions, platform]);
 
   if (!content) {
     return <LoadingState message="Loading this week's sessions" />;
