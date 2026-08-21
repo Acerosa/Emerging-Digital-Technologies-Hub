@@ -46,21 +46,26 @@ export function WeekPage({
     };
 
     const bind = () => {
-      const articles = rootEl.querySelectorAll("[data-lp-activity]");
-      if (!articles.length) return;
-      // Replace already-bound nodes so a later curriculum hydrate can re-attach listeners.
-      articles.forEach((article) => {
-        if (!article.getAttribute("data-lp-bound")) return;
+      if (!rootEl.querySelector("[data-lp-activity]")) return false;
+      rootEl.querySelectorAll("[data-lp-activity][data-lp-bound]").forEach((article) => {
         article.parentNode?.replaceChild(article.cloneNode(true), article);
       });
       engine.bindInteractive(rootEl, content, options);
+      return true;
     };
 
-    bind();
-    const frame = window.requestAnimationFrame(bind);
-    const timer = window.setTimeout(bind, 0);
+    if (bind()) return undefined;
+
+    const observer = new MutationObserver(() => {
+      if (bind()) observer.disconnect();
+    });
+    observer.observe(rootEl, { childList: true, subtree: true });
+    const timer = window.setTimeout(() => {
+      bind();
+      observer.disconnect();
+    }, 1000);
     return () => {
-      window.cancelAnimationFrame(frame);
+      observer.disconnect();
       window.clearTimeout(timer);
     };
   }, [engine, content, weekId, sessions, platform]);
