@@ -110,7 +110,7 @@ const week2Activities = [
         text: "This week you outline Internet of Things (IoT), connected devices, RFID, NFC and wearables (AC1.1)."
       }),
       block("week-2-starter-p2", "paragraph", {
-        text: "By the end you should define each technology, give a realistic example, and note one benefit and one risk."
+        text: "By the end, define each technology, give an example, and note one benefit and one risk."
       }),
       sc(
         "week-2-starter-q1",
@@ -135,7 +135,7 @@ const week2Activities = [
     [
       block("week-2-iot-h", "heading", { text: "IoT and connected devices", level: 2 }),
       block("week-2-iot-p1", "paragraph", {
-        text: "IoT devices sense, act or share data with little constant human typing. A connected device can send or receive data over a network (Wi‑Fi, mobile, Bluetooth or similar)."
+        text: "IoT devices sense, act or share data with little manual input. A connected device can send or receive data over a network (Wi-Fi, mobile, Bluetooth or similar)."
       }),
       block("week-2-iot-p2", "paragraph", {
         text: "Examples: smart thermostat, warehouse temperature sensor, connected street light, hospital infusion pump that reports status."
@@ -154,7 +154,7 @@ const week2Activities = [
       ),
       sc(
         "week-2-iot-q2",
-        "Which is the clearest IoT example?",
+        "Which is the best IoT example?",
         [
           "A paper clipboard in a storeroom",
           "Soil moisture sensors uploading readings to a farm dashboard",
@@ -224,7 +224,7 @@ const week2Activities = [
       ),
       short(
         "week-2-rfid-q2",
-        "Give one realistic business use of RFID.",
+        "Give one business use of RFID.",
         "Mention tagged items and tracking or scanning. One sentence is enough."
       )
     ],
@@ -238,7 +238,7 @@ const week2Activities = [
     [
       block("week-2-nfc-h", "heading", { text: "NFC", level: 2 }),
       block("week-2-nfc-p1", "paragraph", {
-        text: "NFC (Near Field Communication) is very short-range radio, usually centimetres. It suits deliberate taps such as contactless payment, door access badges and ticket gates."
+        text: "NFC (Near Field Communication) is very short-range radio, usually centimetres. It suits short taps such as contactless payment, door badges and ticket gates."
       }),
       sc(
         "week-2-nfc-q1",
@@ -254,7 +254,7 @@ const week2Activities = [
       ),
       sc(
         "week-2-nfc-q2",
-        "Which is the clearest NFC example?",
+        "Which is the best NFC example?",
         [
           "Tapping a phone on a till to pay",
           "A weather satellite downlink",
@@ -286,9 +286,9 @@ const week2Activities = [
         ],
         [
           { id: "v1", text: "Best for scanning many tagged boxes in a stock room", correctCategoryId: "rfid" },
-          { id: "v2", text: "Best for a deliberate phone tap at a payment terminal", correctCategoryId: "nfc" },
+          { id: "v2", text: "Best for a phone tap at a payment terminal", correctCategoryId: "nfc" },
           { id: "v3", text: "Often used on clothing security tags", correctCategoryId: "rfid" },
-          { id: "v4", text: "Usually limited to a few centimetres for a secure tap", correctCategoryId: "nfc" }
+          { id: "v4", text: "Usually limited to a few centimetres", correctCategoryId: "nfc" }
         ]
       )
     ],
@@ -412,7 +412,7 @@ const week2Activities = [
         "week-2-privacy-q1",
         "Main privacy risk if a fitness wearable leaks heart-rate data?",
         [
-          "Faster Wi‑Fi only",
+          "Faster Wi-Fi only",
           "Private health details exposed without consent",
           "Larger fonts on the screen",
           "Longer battery life"
@@ -423,7 +423,7 @@ const week2Activities = [
       short(
         "week-2-privacy-q2",
         "Outline one real-world case: name the technology (IoT, RFID, NFC or wearable), who uses it, and one risk to manage.",
-        "Keep to 2–4 short sentences. Formative practice only."
+        "Write 2-4 short sentences. This is practice only."
       )
     ],
     12
@@ -456,16 +456,16 @@ const week2Activities = [
   activity(
     "week-2-reflection",
     "Portfolio reflection",
-    "Build a short reflective portfolio note covering Week 2 technologies.",
+    "Write a short note covering the Week 2 technologies.",
     "Reflection",
     [
       block("week-2-reflection-h", "heading", { text: "Portfolio reflection", level: 2 }),
       block("week-2-reflection-p", "paragraph", {
-        text: "Capture one example each for IoT, RFID, NFC and wearables. This is formative practice, not Gateway assignment evidence."
+        text: "Write one example each for IoT, RFID, NFC and wearables. This is practice only, not Gateway assignment evidence."
       }),
       reflection(
         "week-2-reflection-q",
-        "List one realistic example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
+        "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
       )
     ],
     10
@@ -473,7 +473,7 @@ const week2Activities = [
   activity(
     "week-2-exit",
     "Exit ticket",
-    "Quick check that you can outline Week 2 technologies.",
+    "Quick check: can you outline the Week 2 technologies?",
     "Exit ticket",
     [
       block("week-2-exit-h", "heading", { text: "Exit ticket", level: 2 }),
@@ -491,11 +491,11 @@ const week2Activities = [
       ),
       sc(
         "week-2-exit-q2",
-        "How confident are you outlining IoT, RFID, NFC and wearables?",
+        "How confident are you with IoT, RFID, NFC and wearables?",
         [
-          "Not yet — I need another look at the definitions",
-          "Getting there — I can give one example for most",
-          "Confident — I can define each and give a use plus a risk",
+          "Not yet. I need another look at the definitions.",
+          "Getting there. I can give one example for most.",
+          "Confident. I can define each and give a use plus a risk.",
           "I can teach it to a classmate tomorrow"
         ],
         "c",

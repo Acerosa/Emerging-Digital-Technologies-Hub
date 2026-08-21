@@ -477,8 +477,8 @@
             "items": [
               {
                 "id": "d-iot",
-                "label": "Physical objects that collect or share data over a network, often with little typing from a person",
-                "text": "Physical objects that collect or share data over a network, often with little typing from a person",
+                "label": "Physical objects that collect or share data over a network, often with little manual input",
+                "text": "Physical objects that collect or share data over a network, often with little manual input",
                 "correctCategoryId": "iot",
                 "explanation": ""
               },
@@ -1126,7 +1126,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "The Internet of Things (IoT) is a network of physical devices that collect or share data, often with little typing from a person."
+            "text": "The Internet of Things (IoT) is a network of physical devices that collect or share data, often with little manual input."
           }
         },
         {
@@ -2443,7 +2443,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "By the end you should define each technology, give a realistic example, and note one benefit and one risk."
+            "text": "By the end, define each technology, give an example, and note one benefit and one risk."
           }
         },
         {
@@ -2533,7 +2533,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "IoT devices sense, act or share data with little constant human typing. A connected device can send or receive data over a network (Wi‑Fi, mobile, Bluetooth or similar)."
+            "text": "IoT devices sense, act or share data with little manual input. A connected device can send or receive data over a network (Wi-Fi, mobile, Bluetooth or similar)."
           }
         },
         {
@@ -2597,7 +2597,7 @@
           "content": {
             "formative": true,
             "questionId": "week-2-iot-q2",
-            "prompt": "Which is the clearest IoT example?",
+            "prompt": "Which is the best IoT example?",
             "options": [
               {
                 "id": "a",
@@ -2853,7 +2853,7 @@
           "content": {
             "formative": true,
             "questionId": "week-2-rfid-q2",
-            "prompt": "Give one realistic business use of RFID.",
+            "prompt": "Give one business use of RFID.",
             "guidance": "Mention tagged items and tracking or scanning. One sentence is enough."
           }
         }
@@ -2906,7 +2906,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "NFC (Near Field Communication) is very short-range radio, usually centimetres. It suits deliberate taps such as contactless payment, door access badges and ticket gates."
+            "text": "NFC (Near Field Communication) is very short-range radio, usually centimetres. It suits short taps such as contactless payment, door badges and ticket gates."
           }
         },
         {
@@ -2958,7 +2958,7 @@
           "content": {
             "formative": true,
             "questionId": "week-2-nfc-q2",
-            "prompt": "Which is the clearest NFC example?",
+            "prompt": "Which is the best NFC example?",
             "options": [
               {
                 "id": "a",
@@ -3067,7 +3067,7 @@
               },
               {
                 "id": "v2",
-                "text": "Best for a deliberate phone tap at a payment terminal",
+                "text": "Best for a phone tap at a payment terminal",
                 "correctCategoryId": "nfc"
               },
               {
@@ -3077,7 +3077,7 @@
               },
               {
                 "id": "v4",
-                "text": "Usually limited to a few centimetres for a secure tap",
+                "text": "Usually limited to a few centimetres",
                 "correctCategoryId": "nfc"
               }
             ],
@@ -3526,7 +3526,7 @@
             "options": [
               {
                 "id": "a",
-                "label": "Faster Wi‑Fi only"
+                "label": "Faster Wi-Fi only"
               },
               {
                 "id": "b",
@@ -3561,7 +3561,7 @@
             "formative": true,
             "questionId": "week-2-privacy-q2",
             "prompt": "Outline one real-world case: name the technology (IoT, RFID, NFC or wearable), who uses it, and one risk to manage.",
-            "guidance": "Keep to 2–4 short sentences. Formative practice only."
+            "guidance": "Write 2-4 short sentences. This is practice only."
           }
         }
       ]
@@ -3664,7 +3664,7 @@
       "metadata": {
         "title": "Portfolio reflection",
         "status": "available",
-        "summary": "Build a short reflective portfolio note covering Week 2 technologies.",
+        "summary": "Write a short note covering the Week 2 technologies.",
         "href": null,
         "difficulty": "standard",
         "estimatedDurationMinutes": 10,
@@ -3703,7 +3703,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Capture one example each for IoT, RFID, NFC and wearables. This is formative practice, not Gateway assignment evidence."
+            "text": "Write one example each for IoT, RFID, NFC and wearables. This is practice only, not Gateway assignment evidence."
           }
         },
         {
@@ -3717,7 +3717,7 @@
           "content": {
             "formative": true,
             "questionId": "week-2-reflection-q",
-            "prompt": "List one realistic example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
+            "prompt": "List one example for IoT, RFID, NFC and wearables. For one of them, add one benefit and one privacy or security risk."
           }
         }
       ]
@@ -3730,7 +3730,7 @@
       "metadata": {
         "title": "Exit ticket",
         "status": "available",
-        "summary": "Quick check that you can outline Week 2 technologies.",
+        "summary": "Quick check: can you outline the Week 2 technologies?",
         "href": null,
         "difficulty": "standard",
         "estimatedDurationMinutes": 6,
@@ -3809,19 +3809,19 @@
           "content": {
             "formative": true,
             "questionId": "week-2-exit-q2",
-            "prompt": "How confident are you outlining IoT, RFID, NFC and wearables?",
+            "prompt": "How confident are you with IoT, RFID, NFC and wearables?",
             "options": [
               {
                 "id": "a",
-                "label": "Not yet — I need another look at the definitions"
+                "label": "Not yet. I need another look at the definitions."
               },
               {
                 "id": "b",
-                "label": "Getting there — I can give one example for most"
+                "label": "Getting there. I can give one example for most."
               },
               {
                 "id": "c",
-                "label": "Confident — I can define each and give a use plus a risk"
+                "label": "Confident. I can define each and give a use plus a risk."
               },
               {
                 "id": "d",
