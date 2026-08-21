@@ -23,8 +23,8 @@ export function WeekPage({
     [content, weekId]
   );
 
-  // Keep session HTML stable across parent re-renders. A fresh engine/sessions
-  // identity forces WeekView to replace activity DOM and wipe Check/Reset listeners.
+  // Keep session HTML stable across parent re-renders so activity markup is not rebuilt
+  // unless the content package actually changed.
   const sessions = useMemo(() => {
     if (!content || !model) return [];
     const engine = getContentEngine();
@@ -38,6 +38,8 @@ export function WeekPage({
     }));
   }, [content, model]);
 
+  // Re-bind after every commit. React can rewrite dangerouslySetInnerHTML nodes on a
+  // later render and wipe data-lp-bound / listeners without changing sessions identity.
   useLayoutEffect(() => {
     const rootEl = mountRef.current;
     if (!content || !rootEl || !sessions.length) return;
@@ -46,7 +48,7 @@ export function WeekPage({
       sourcePage: window.location.pathname,
       platform: platform || (typeof window !== "undefined" ? window.LearningPlatform?.platform : undefined)
     });
-  }, [content, weekId, sessions, platform]);
+  });
 
   if (!content) {
     return <LoadingState message="Loading this week's sessions" />;
