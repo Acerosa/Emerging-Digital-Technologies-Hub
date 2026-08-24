@@ -445,3 +445,8 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* Core account fields use the hidden attribute when switching modes. */
+.lp-form__field[hidden] {
+  display: none !important;
+}

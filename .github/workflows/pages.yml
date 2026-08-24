@@ -29,9 +29,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: Acerosa/learning-platform-core
-          # Temporary: tagged v0.2.0 predates createPublishedCurriculumService.
-          # Pin the curriculum-runtime Core commit until a new Core tag ships.
-          ref: 5cc3029391cf77b70318a78d1f328dff170134ff
+          ref: main
           path: learning-platform-core
 
       - name: Check out reviewed UI
