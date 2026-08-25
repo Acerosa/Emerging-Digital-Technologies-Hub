@@ -15,6 +15,13 @@
     return type === "short-response" || type === "reflection";
   }
 
+  function shouldSkipHtmlBlockBind(blockRoot, type) {
+    // React OptionCards / Classification own FeedbackPanel; do not restore or mark via HTML.
+    if (blockRoot.getAttribute("data-lp-block") === "option-cards") return true;
+    if (type === "classification" && !blockRoot.querySelector("[data-lp-sort-board]")) return true;
+    return false;
+  }
+
   function escapeHtml(value) {
     return String(value == null ? "" : value)
       .replace(/&/g, "&amp;")
@@ -474,14 +481,16 @@
     }
 
     activityInteractiveBlocks(activity).forEach(function (block) {
+      var type = ns.normaliseBlockType(block.type);
       var blockRoot = article.querySelector('[data-lp-block-id="' + block.id + '"]');
       var qid = questionId(block);
       var field;
       if (!blockRoot) return;
-      if (isTextResponseType(ns.normaliseBlockType(block.type))) {
+      if (shouldSkipHtmlBlockBind(blockRoot, type)) return;
+      if (isTextResponseType(type)) {
         enhanceTextResponseField(blockRoot, block);
       }
-      if (ns.normaliseBlockType(block.type) === "classification") {
+      if (type === "classification") {
         enhanceClassificationBoard(blockRoot);
       }
       restoreResponse(blockRoot, block, draft.responses[qid]);
@@ -490,6 +499,29 @@
       if (field) field.dispatchEvent(new Event("input", { bubbles: true }));
     });
     updateActivityStatus(article, activity, draft);
+
+    article.addEventListener("lp-block-result", function (event) {
+      var detail = event.detail || {};
+      var qid = detail.questionId;
+      if (!qid) return;
+      if (detail.completed === false) {
+        if (detail.response == null || detail.response === "") delete draft.responses[qid];
+        else draft.responses[qid] = detail.response;
+        draft.checked[qid] = false;
+        persist();
+        return;
+      }
+      draft.responses[qid] = detail.response;
+      if (detail.completed) draft.checked[qid] = true;
+      persist();
+      if (detail.completed) {
+        ns.submitActivityDraft(activity, draft, Object.assign({}, options, {
+          publication: ns.getPublicationState()
+        })).then(function (result) {
+          applySubmissionResult(article, draft, result, persist);
+        });
+      }
+    });
 
     article.addEventListener("change", function (event) {
       var blockRoot = event.target.closest("[data-lp-block-id]");

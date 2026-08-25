@@ -53,23 +53,61 @@ describe("L2E presentation", () => {
       return node as HTMLElement;
     });
 
-    const choice = article.querySelector('input[value="b"]') as HTMLInputElement | null;
-    const check = within(article).getByRole("button", { name: "Check answer" });
-    const reset = within(article).getByRole("button", { name: "Reset activity" });
-    expect(choice).toBeTruthy();
-    choice!.checked = true;
-    fireEvent.change(choice!);
-    fireEvent.click(check);
+    fireEvent.click(within(article).getByRole("radio", { name: /Quantum computing/ }));
+    fireEvent.click(within(article).getByRole("button", { name: "Check answer" }));
 
     await waitFor(() => {
-      expect(article.querySelector("[data-lp-feedback]")?.textContent).toMatch(/quantum computing|emerging/i);
+      expect(within(article).getByText(/Quantum computing is still developing/i)).toBeTruthy();
     });
 
-    fireEvent.click(reset);
+    fireEvent.click(within(article).getByRole("button", { name: "Reset activity" }));
     await waitFor(() => {
-      expect(choice!.checked).toBe(false);
-      expect(article.querySelector("[data-lp-feedback]")?.textContent || "").toBe("");
+      const radio = within(article).getByRole("radio", { name: /Quantum computing/ }) as HTMLInputElement;
+      expect(radio.checked).toBe(false);
     });
+  });
+
+  it("renders Week 1 single-choice and classification through React, with reflection on HTML", () => {
+    const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
+    const welcome = container.querySelector('[data-lp-activity="week-1-welcome"]') as HTMLElement;
+    const classify = container.querySelector('[data-lp-activity="week-1-digital-technology"]') as HTMLElement;
+    const reflection = container.querySelector('[data-lp-activity="week-1-exit-ticket"]') as HTMLElement;
+
+    expect(within(welcome).getByRole("radio", { name: /Quantum computing/ })).toBeTruthy();
+    expect(welcome.querySelector("[data-lp-block='option-cards']")).toBeTruthy();
+    expect(within(classify).getByRole("button", { name: "Check types" })).toBeTruthy();
+    expect(classify.querySelector("[data-lp-block='classification']")).toBeTruthy();
+    expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
+    expect(reflection.querySelector("textarea[data-lp-response]")).toBeTruthy();
+    expect(reflection.querySelector("[data-lp-block='reflection']")).toBeTruthy();
+  });
+
+  it("renders Week 2 single-choice and classification through React, with short-response on HTML", () => {
+    const { container } = render(<WeekPage weekId="week-2" root=".." pkg={content} />);
+    const starter = container.querySelector('[data-lp-activity="week-2-starter"]') as HTMLElement;
+    const classify = container.querySelector('[data-lp-activity="week-2-iot-sectors"]') as HTMLElement;
+    const written = container.querySelector('[data-lp-activity="week-2-rfid"]') as HTMLElement;
+
+    expect(within(starter).getAllByRole("radio").length).toBeGreaterThan(0);
+    expect(starter.querySelector("[data-lp-block='option-cards']")).toBeTruthy();
+    expect(within(classify).getByRole("button", { name: "Check types" })).toBeTruthy();
+    expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
+    expect(written.querySelector("textarea[data-lp-response]")).toBeTruthy();
+    expect(written.querySelector("[data-lp-block='short-response']")).toBeTruthy();
+  });
+
+  it("renders Week 3 single-choice and classification through React, with short-response on HTML", () => {
+    const { container } = render(<WeekPage weekId="week-3" root=".." pkg={content} />);
+    const starter = container.querySelector('[data-lp-activity="week-3-starter"]') as HTMLElement;
+    const classify = container.querySelector('[data-lp-activity="week-3-local-vs-cloud"]') as HTMLElement;
+    const written = container.querySelector('[data-lp-activity="week-3-benefits-risks"]') as HTMLElement;
+
+    expect(starter.querySelector("[data-lp-block='option-cards']")).toBeTruthy();
+    expect(classify.querySelector("[data-lp-block='classification']")).toBeTruthy();
+    expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
+    expect(within(classify).getByRole("button", { name: "Check types" })).toBeTruthy();
+    expect(written.querySelector("textarea[data-lp-response]")).toBeTruthy();
+    expect(written.querySelector("[data-lp-block='short-response']")).toBeTruthy();
   });
 
   it("builds breadcrumbs for week pages from the content package", () => {

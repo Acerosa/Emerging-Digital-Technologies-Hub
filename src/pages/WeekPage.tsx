@@ -1,9 +1,30 @@
-import { LoadingState, WeekView } from "@learning-platform/ui";
+import {
+  InteractiveActivity,
+  LoadingState,
+  WeekView,
+  questionIdFor,
+  type ActivityBlockDocument,
+  type ActivityDocument,
+  type ActivityResult
+} from "@learning-platform/ui";
 import { useLayoutEffect, useMemo, useRef } from "react";
 import { getContentEngine } from "../content/engine";
 import { activeContentPackage } from "../curriculum/apply-runtime";
 import { weekPageFromPackage, type ContentPackage } from "../curriculum/from-package";
 import { createSitePath } from "../paths";
+
+function persistableResponse(block: ActivityBlockDocument, result: ActivityResult): unknown {
+  const type = String(block.type || "").toLowerCase();
+  const responses = result.responses;
+  if (type === "single-choice" || type === "option-cards") {
+    if (responses && typeof responses === "object" && !Array.isArray(responses) && "optionId" in responses) {
+      const optionId = (responses as { optionId?: string | null }).optionId;
+      return optionId == null ? "" : optionId;
+    }
+    return responses == null ? "" : responses;
+  }
+  return responses && typeof responses === "object" ? responses : {};
+}
 
 export function WeekPage({
   weekId,
@@ -23,18 +44,36 @@ export function WeekPage({
     [content, weekId]
   );
 
-  // Keep session HTML stable across parent re-renders so activity markup is not rebuilt
-  // unless the content package actually changed.
   const sessions = useMemo(() => {
     if (!content || !model) return [];
     const engine = getContentEngine();
     return model.sessions.map((session) => ({
       ...session,
-      activities: session.activities.map((activity) => ({
-        html: engine.renderActivity(
-          content.activities?.find((item) => item.id === activity.id)
-        )
-      }))
+      activities: session.activities.map((item) => {
+        const activity = content.activities?.find((entry) => entry.id === item.id) as ActivityDocument | undefined;
+        if (!activity) return { html: "" };
+        return {
+          children: (
+            <InteractiveActivity
+              activity={activity}
+              renderFallback={(block) => (
+                <div dangerouslySetInnerHTML={{ __html: engine.renderBlock(block) }} />
+              )}
+              onResult={(result: ActivityResult, block: ActivityBlockDocument) => {
+                const article = mountRef.current?.querySelector(`[data-lp-activity="${activity.id}"]`);
+                article?.dispatchEvent(new CustomEvent("lp-block-result", {
+                  bubbles: true,
+                  detail: {
+                    questionId: questionIdFor(block),
+                    response: persistableResponse(block, result),
+                    completed: result.completed
+                  }
+                }));
+              }}
+            />
+          )
+        };
+      })
     }));
   }, [content, model]);
 
