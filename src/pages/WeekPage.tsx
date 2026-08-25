@@ -1,13 +1,15 @@
 import {
+  CompletionModal,
   InteractiveActivity,
   LoadingState,
   WeekView,
   questionIdFor,
   type ActivityBlockDocument,
   type ActivityDocument,
-  type ActivityResult
+  type ActivityResult,
+  type ActivityScore
 } from "@learning-platform/ui";
-import { useLayoutEffect, useMemo, useRef } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { getContentEngine } from "../content/engine";
 import { activeContentPackage } from "../curriculum/apply-runtime";
 import { weekPageFromPackage, type ContentPackage } from "../curriculum/from-package";
@@ -26,6 +28,21 @@ function persistableResponse(block: ActivityBlockDocument, result: ActivityResul
   return responses && typeof responses === "object" ? responses : {};
 }
 
+function isScorableReactBlock(block: ActivityBlockDocument): boolean {
+  const type = String(block.type || "").toLowerCase();
+  return type === "single-choice" || type === "option-cards" || type === "classification";
+}
+
+function sumScores(scores: Record<string, ActivityScore>): ActivityScore {
+  return Object.values(scores).reduce(
+    (total, score) => ({
+      correct: total.correct + score.correct,
+      total: total.total + score.total
+    }),
+    { correct: 0, total: 0 }
+  );
+}
+
 export function WeekPage({
   weekId,
   root,
@@ -38,11 +55,39 @@ export function WeekPage({
   platform?: unknown;
 }) {
   const mountRef = useRef<HTMLDivElement>(null);
+  const dismissedRef = useRef(false);
+  const scoresRef = useRef<Record<string, ActivityScore>>({});
+  const [practiceScore, setPracticeScore] = useState<ActivityScore>({ correct: 0, total: 0 });
+  const [completionOpen, setCompletionOpen] = useState(false);
   const content = activeContentPackage(pkg);
   const model = useMemo(
     () => (content ? weekPageFromPackage(content, weekId) : null),
     [content, weekId]
   );
+
+  useEffect(() => {
+    scoresRef.current = {};
+    dismissedRef.current = false;
+    setPracticeScore({ correct: 0, total: 0 });
+    setCompletionOpen(false);
+  }, [weekId]);
+
+  const recordPracticeResult = useCallback((result: ActivityResult, block: ActivityBlockDocument) => {
+    if (!result.completed || !result.score || result.score.total <= 0) return;
+    if (!isScorableReactBlock(block)) return;
+
+    scoresRef.current = {
+      ...scoresRef.current,
+      [questionIdFor(block)]: result.score
+    };
+    const aggregate = sumScores(scoresRef.current);
+    setPracticeScore(aggregate);
+
+    const meaningful = result.score.total >= 2 || Object.keys(scoresRef.current).length >= 2;
+    if (meaningful && aggregate.total > 0 && !dismissedRef.current) {
+      setCompletionOpen(true);
+    }
+  }, []);
 
   const sessions = useMemo(() => {
     if (!content || !model) return [];
@@ -69,13 +114,14 @@ export function WeekPage({
                     completed: result.completed
                   }
                 }));
+                recordPracticeResult(result, block);
               }}
             />
           )
         };
       })
     }));
-  }, [content, model]);
+  }, [content, model, recordPracticeResult]);
 
   // Re-bind after every commit. React can rewrite dangerouslySetInnerHTML nodes on a
   // later render and wipe data-lp-bound / listeners without changing sessions identity.
@@ -97,6 +143,12 @@ export function WeekPage({
   }
 
   const weekNumber = model.week.teachingWeek;
+  const weekBadge = `Week ${weekNumber}: ${model.week.title}`;
+
+  function closeCompletion() {
+    dismissedRef.current = true;
+    setCompletionOpen(false);
+  }
 
   return (
     <div data-lp-mount="" ref={mountRef}>
@@ -117,7 +169,7 @@ export function WeekPage({
           items: [
             { label: "Qualification", value: "Gateway Level 2 Digital and IT Skills" },
             { label: "Unit", value: "Exploring New and Emerging Digital Technologies (M/618/3683)" },
-            { label: "Week", value: `Week ${weekNumber}: ${model.week.title}` }
+            { label: "Week", value: weekBadge }
           ]
         }}
         features={{
@@ -133,6 +185,16 @@ export function WeekPage({
           ? { label: `Week ${weekNumber + 1}`, href: createSitePath(root, `week-${weekNumber + 1}/`) }
           : null}
         sessions={sessions}
+      />
+      <CompletionModal
+        open={completionOpen && practiceScore.total > 0}
+        title="Practice complete"
+        badge={weekBadge}
+        score={practiceScore}
+        message="Keep practising. This score is formative feedback for this week, not Gateway assignment evidence."
+        onClose={closeCompletion}
+        onNext={closeCompletion}
+        nextLabel="Continue"
       />
     </div>
   );

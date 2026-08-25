@@ -67,6 +67,36 @@ describe("L2E presentation", () => {
     });
   });
 
+  it("opens CompletionModal with week badge and practice score after classification Check", async () => {
+    const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
+    const classify = await waitFor(() => {
+      const node = container.querySelector('[data-lp-activity="week-1-digital-technology"]');
+      expect(node).toBeTruthy();
+      return node as HTMLElement;
+    });
+
+    expect(screen.queryByRole("dialog", { name: /Practice complete/i })).toBeNull();
+
+    const selects = within(classify).getAllByRole("combobox");
+    expect(selects.length).toBeGreaterThan(1);
+    for (const select of selects) {
+      const options = within(select).getAllByRole("option").filter((option) => (option as HTMLOptionElement).value);
+      fireEvent.change(select, { target: { value: (options[0] as HTMLOptionElement).value } });
+    }
+    fireEvent.click(within(classify).getByRole("button", { name: "Check types" }));
+
+    const dialog = await waitFor(() => screen.getByRole("dialog", { name: /Practice complete/i }));
+    expect(within(dialog).getByText(/Week 1:/i)).toBeTruthy();
+    expect(within(dialog).getByText(/practice feedback, not an official mark/i)).toBeTruthy();
+    expect(dialog.querySelector("[data-lp-progress-score]")).toBeTruthy();
+    expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
+
+    fireEvent.click(within(dialog).getByRole("button", { name: "Continue" }));
+    await waitFor(() => {
+      expect(screen.queryByRole("dialog", { name: /Practice complete/i })).toBeNull();
+    });
+  });
+
   it("renders Week 1 single-choice and classification through React, with reflection on HTML", () => {
     const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
     const welcome = container.querySelector('[data-lp-activity="week-1-welcome"]') as HTMLElement;
