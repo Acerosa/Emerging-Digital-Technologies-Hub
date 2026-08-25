@@ -77,5 +77,6 @@ declare module "*.js";
 declare module "@learning-platform/content" {
   export function validatePackage(pkg: unknown): { valid: boolean; issues?: unknown[] };
   export function renderActivity(activity: unknown, options?: { root?: string }): string;
+  export function renderBlock(block: unknown, options?: { root?: string }): string;
 }
 declare module "@learning-platform/core/theme.css";

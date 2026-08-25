@@ -8,6 +8,7 @@ import { APP_CONFIG } from "../config";
 
 export type ContentEngine = {
   renderActivity: (activity: unknown, options?: { root?: string }) => string;
+  renderBlock: (block: unknown, options?: { root?: string }) => string;
   bindInteractive: (
     root: ParentNode | null,
     pkg: unknown,
