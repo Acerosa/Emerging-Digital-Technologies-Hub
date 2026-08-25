@@ -184,17 +184,7 @@ export function WeekPage({
   }
 
   return (
-    <div data-lp-mount="" ref={mountRef}>
-      <section className="panel" aria-label="Practice progress" data-lp-week-progress="">
-        <ProgressSummary
-          title="Practice progress"
-          badge={weekBadge}
-          score={summaryScore}
-          progress={coverage}
-          completed={practiceComplete}
-          message="Check answers on scored activities to update this bar. This is formative practice, not Gateway assignment evidence."
-        />
-      </section>
+    <div data-lp-mount="" data-lp-week-page="" ref={mountRef}>
       <WeekView
         week={{
           id: model.week.id,
@@ -229,6 +219,20 @@ export function WeekPage({
           : null}
         sessions={sessions}
       />
+      <section
+        className="panel lp-week-progress-float"
+        aria-label="Practice progress"
+        data-lp-week-progress=""
+      >
+        <ProgressSummary
+          title="Practice progress"
+          badge={weekBadge}
+          score={summaryScore}
+          progress={coverage}
+          completed={practiceComplete}
+          message="Check scored activities to update. Formative practice only."
+        />
+      </section>
       <CompletionModal
         open={completionOpen && practiceScore.total > 0}
         title="Practice complete"

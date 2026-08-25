@@ -45,6 +45,7 @@ describe("L2E presentation", () => {
     expect(screen.getAllByRole("button", { name: "Check answer" }).length).toBeGreaterThan(0);
     const progress = container.querySelector("[data-lp-week-progress] [data-lp-progress-summary]");
     expect(progress).toBeTruthy();
+    expect(container.querySelector(".lp-week-progress-float")).toBeTruthy();
     expect(within(progress as HTMLElement).getByText(/Practice progress/i)).toBeTruthy();
     expect(within(progress as HTMLElement).getByText(/practice feedback, not an official mark/i)).toBeTruthy();
     expect((progress as HTMLElement).querySelector("progress.lp-progress")).toBeTruthy();
