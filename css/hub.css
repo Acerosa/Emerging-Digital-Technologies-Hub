@@ -451,51 +451,26 @@ body {
   display: none !important;
 }
 
-/* Keep practice progress visible while scrolling week pages. */
+/* Leave room for the docked practice progress panel (UI catalogue chrome). */
 [data-lp-week-page] {
-  padding-bottom: 11rem;
+  padding-bottom: 6rem;
 }
 
-.lp-week-progress-float,
-[data-lp-week-progress] {
-  position: fixed;
-  z-index: 40;
-  left: 50%;
-  bottom: max(0.75rem, env(safe-area-inset-bottom, 0px));
-  transform: translateX(-50%);
-  width: min(36rem, calc(100vw - 1.5rem));
-  margin: 0;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 0.5rem 1.5rem rgb(15 23 42 / 18%);
-  border: 0.0625rem solid var(--lp-border);
-  background: var(--lp-surface);
-}
-
-.lp-week-progress-float .lp-progress-summary {
+[data-lp-practice-progress-panel] .lp-progress-summary {
   display: grid;
   gap: 0.35rem;
 }
 
-.lp-week-progress-float .lp-progress-summary__title,
-.lp-week-progress-float .lp-progress-summary__score {
+[data-lp-practice-progress-panel] .lp-progress-summary__title,
+[data-lp-practice-progress-panel] .lp-progress-summary__score {
   margin: 0;
 }
 
-.lp-week-progress-float .lp-progress {
+[data-lp-practice-progress-panel] .lp-progress {
   height: 0.65rem;
 }
 
-.lp-week-progress-float .lp-card__meta {
+[data-lp-practice-progress-panel] .lp-card__meta {
   margin: 0;
   font-size: 0.85rem;
-}
-
-@media (max-width: 40rem) {
-  [data-lp-week-page] {
-    padding-bottom: 13rem;
-  }
-
-  .lp-week-progress-float .lp-progress-summary__badge {
-    display: none;
-  }
 }

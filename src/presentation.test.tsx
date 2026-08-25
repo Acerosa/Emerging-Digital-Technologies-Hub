@@ -43,12 +43,14 @@ describe("L2E presentation", () => {
     expect(screen.queryByRole("heading", { name: /Lesson 2/i })).toBeNull();
     expect(screen.getByText(/Which of these is an example of an emerging digital technology/)).toBeTruthy();
     expect(screen.getAllByRole("button", { name: "Check answer" }).length).toBeGreaterThan(0);
-    const progress = container.querySelector("[data-lp-week-progress] [data-lp-progress-summary]");
-    expect(progress).toBeTruthy();
-    expect(container.querySelector(".lp-week-progress-float")).toBeTruthy();
-    expect(within(progress as HTMLElement).getByText(/Practice progress/i)).toBeTruthy();
-    expect(within(progress as HTMLElement).getByText(/practice feedback, not an official mark/i)).toBeTruthy();
-    expect((progress as HTMLElement).querySelector("progress.lp-progress")).toBeTruthy();
+    const panel = screen.getByRole("complementary", { name: "Practice progress" });
+    expect(panel.getAttribute("data-lp-docked")).toBe("left");
+    expect(panel.getAttribute("data-lp-collapsed")).toBe("true");
+    expect(within(panel).getByText(/Practice progress/i)).toBeTruthy();
+    expect(within(panel).getByText(/\d+ \/ \d+/)).toBeTruthy();
+    expect(within(panel).queryByText(/practice feedback, not an official mark/i)).toBeNull();
+    expect(panel.querySelector("progress.lp-progress")).toBeNull();
+    expect(container.querySelector(".lp-week-progress-float")).toBeNull();
   });
 
   it("wires Check answer and Reset activity on the week page", async () => {
@@ -71,6 +73,18 @@ describe("L2E presentation", () => {
       const radio = within(article).getByRole("radio", { name: /Quantum computing/ }) as HTMLInputElement;
       expect(radio.checked).toBe(false);
     });
+  });
+
+  it("docks practice progress on the left and keeps exercises uncovered", () => {
+    const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
+    const panel = screen.getByRole("complementary", { name: "Practice progress" });
+    expect(panel.getAttribute("data-lp-docked")).toBe("left");
+    expect(panel.getAttribute("data-lp-collapsed")).toBe("true");
+    expect(within(panel).getByText("0 / 57")).toBeTruthy();
+    expect(within(panel).getByText("0 of 57 correct")).toBeTruthy();
+    expect(within(panel).queryByRole("progressbar")).toBeNull();
+    expect(container.querySelector(".lp-week-progress-float")).toBeNull();
+    expect(screen.getByRole("heading", { name: "Week 1 session" })).toBeTruthy();
   });
 
   it("opens CompletionModal with week badge and practice score after classification Check", async () => {
