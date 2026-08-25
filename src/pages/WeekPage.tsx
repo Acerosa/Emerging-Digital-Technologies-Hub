@@ -2,6 +2,7 @@ import {
   CompletionModal,
   InteractiveActivity,
   LoadingState,
+  ProgressSummary,
   WeekView,
   questionIdFor,
   type ActivityBlockDocument,
@@ -33,6 +34,28 @@ function isScorableReactBlock(block: ActivityBlockDocument): boolean {
   return type === "single-choice" || type === "option-cards" || type === "classification";
 }
 
+function blockScorableTotal(block: ActivityBlockDocument): number {
+  const type = String(block.type || "").toLowerCase();
+  if (type === "single-choice" || type === "option-cards") return 1;
+  if (type === "classification") return ((block.content && block.content.items) || []).length;
+  return 0;
+}
+
+function weekScorableTotal(content: ContentPackage, weekId: string): number {
+  const model = weekPageFromPackage(content, weekId);
+  if (!model) return 0;
+  let total = 0;
+  for (const session of model.sessions) {
+    for (const item of session.activities) {
+      const activity = content.activities?.find((entry) => entry.id === item.id) as ActivityDocument | undefined;
+      for (const block of activity?.blocks || []) {
+        total += blockScorableTotal(block as ActivityBlockDocument);
+      }
+    }
+  }
+  return total;
+}
+
 function sumScores(scores: Record<string, ActivityScore>): ActivityScore {
   return Object.values(scores).reduce(
     (total, score) => ({
@@ -62,6 +85,10 @@ export function WeekPage({
   const content = activeContentPackage(pkg);
   const model = useMemo(
     () => (content ? weekPageFromPackage(content, weekId) : null),
+    [content, weekId]
+  );
+  const scorableTotal = useMemo(
+    () => (content ? weekScorableTotal(content, weekId) : 0),
     [content, weekId]
   );
 
@@ -144,6 +171,12 @@ export function WeekPage({
 
   const weekNumber = model.week.teachingWeek;
   const weekBadge = `Week ${weekNumber}: ${model.week.title}`;
+  const summaryScore = {
+    correct: practiceScore.correct,
+    total: Math.max(scorableTotal, practiceScore.total, 1)
+  };
+  const coverage = summaryScore.total > 0 ? practiceScore.total / summaryScore.total : 0;
+  const practiceComplete = scorableTotal > 0 && practiceScore.total >= scorableTotal;
 
   function closeCompletion() {
     dismissedRef.current = true;
@@ -152,6 +185,16 @@ export function WeekPage({
 
   return (
     <div data-lp-mount="" ref={mountRef}>
+      <section className="panel" aria-label="Practice progress" data-lp-week-progress="">
+        <ProgressSummary
+          title="Practice progress"
+          badge={weekBadge}
+          score={summaryScore}
+          progress={coverage}
+          completed={practiceComplete}
+          message="Check answers on scored activities to update this bar. This is formative practice, not Gateway assignment evidence."
+        />
+      </section>
       <WeekView
         week={{
           id: model.week.id,
@@ -190,7 +233,8 @@ export function WeekPage({
         open={completionOpen && practiceScore.total > 0}
         title="Practice complete"
         badge={weekBadge}
-        score={practiceScore}
+        score={summaryScore}
+        progress={coverage}
         message="Keep practising. This score is formative feedback for this week, not Gateway assignment evidence."
         onClose={closeCompletion}
         onNext={closeCompletion}

@@ -34,7 +34,7 @@ describe("L2E presentation", () => {
   });
 
   it("shows Gateway unit context on a week page and one session only", () => {
-    render(<WeekPage weekId="week-1" root=".." pkg={content} />);
+    const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
     expect(screen.getByText("Gateway Level 2 Digital and IT Skills")).toBeTruthy();
     expect(screen.getAllByText(/M\/618\/3683/).length).toBeGreaterThan(0);
     expect(screen.queryByText(/Pearson/i)).toBeNull();
@@ -43,6 +43,11 @@ describe("L2E presentation", () => {
     expect(screen.queryByRole("heading", { name: /Lesson 2/i })).toBeNull();
     expect(screen.getByText(/Which of these is an example of an emerging digital technology/)).toBeTruthy();
     expect(screen.getAllByRole("button", { name: "Check answer" }).length).toBeGreaterThan(0);
+    const progress = container.querySelector("[data-lp-week-progress] [data-lp-progress-summary]");
+    expect(progress).toBeTruthy();
+    expect(within(progress as HTMLElement).getByText(/Practice progress/i)).toBeTruthy();
+    expect(within(progress as HTMLElement).getByText(/practice feedback, not an official mark/i)).toBeTruthy();
+    expect((progress as HTMLElement).querySelector("progress.lp-progress")).toBeTruthy();
   });
 
   it("wires Check answer and Reset activity on the week page", async () => {
