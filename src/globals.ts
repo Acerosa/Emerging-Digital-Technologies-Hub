@@ -10,6 +10,7 @@ declare global {
       coreVersion: string;
     };
     __lpPackage?: unknown;
+    __lpLivePackage?: unknown;
     __lpPublishedCurriculum?: boolean;
   }
 }

@@ -42,5 +42,6 @@ test("activity check-answer is wired to the Unit 14 submission adapter", functio
   assert.match(read("content/engine/state.js"), /migrateGuestDrafts/);
   assert.match(read("src/hooks/useHubPlatform.ts"), /migrateGuestDrafts/);
   assert.match(read("src/platform.ts"), /L2E_CURRICULUM_RPC_FAILED/);
+  assert.match(read("src/platform.ts"), /new Headers\(init\?\.headers\)/);
   assert.match(read("src/curriculum/apply-runtime.ts"), /L2E_CURRICULUM_FALLBACK/);
 });

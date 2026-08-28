@@ -3,6 +3,8 @@ import { cpSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { defineConfig } from "vite";
 
+const coreRoot = resolve(__dirname, "node_modules/@learning-platform/core");
+
 function collectHtml(directory: string, acc: string[] = []): string[] {
   for (const entry of readdirSync(directory)) {
     if (entry === "node_modules" || entry === "dist" || entry === "test" || entry === "tests") continue;
@@ -37,6 +39,11 @@ function pagesAssets() {
 export default defineConfig({
   base: "./",
   plugins: [react(), pagesAssets()],
+  resolve: {
+    alias: {
+      "@learning-platform/core/curriculum-runtime": resolve(coreRoot, "dist/curriculum-runtime.esm.js")
+    }
+  },
   build: {
     sourcemap: true,
     rollupOptions: {

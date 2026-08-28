@@ -3,6 +3,7 @@ import {
   InteractiveActivity,
   LoadingState,
   PracticeProgressPanel,
+  WeekAccessGuard,
   WeekView,
   questionIdFor,
   type ActivityBlockDocument,
@@ -12,12 +13,20 @@ import {
 } from "@learning-platform/ui";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { getContentEngine } from "../content/engine";
-import { activeContentPackage } from "../curriculum/apply-runtime";
+import { activeContentPackage, liveContentPackage } from "../curriculum/apply-runtime";
 import { weekPageFromPackage, type ContentPackage } from "../curriculum/from-package";
+import { runtimeWeekForId, runtimeWeekForTeachingWeek } from "../curriculum/runtime-weeks";
 import { createSitePath } from "../paths";
 
+function normaliseBlockType(value: string | undefined): string {
+  return String(value || "")
+    .trim()
+    .toLowerCase()
+    .replace(/_/g, "-");
+}
+
 function persistableResponse(block: ActivityBlockDocument, result: ActivityResult): unknown {
-  const type = String(block.type || "").toLowerCase();
+  const type = normaliseBlockType(block.type);
   const responses = result.responses;
   if (type === "single-choice" || type === "option-cards") {
     if (responses && typeof responses === "object" && !Array.isArray(responses) && "optionId" in responses) {
@@ -26,16 +35,21 @@ function persistableResponse(block: ActivityBlockDocument, result: ActivityResul
     }
     return responses == null ? "" : responses;
   }
+  if (type === "short-response" || type === "reflection") {
+    if (typeof responses === "string") return responses.trim();
+    if (responses == null) return "";
+    return String(responses).trim();
+  }
   return responses && typeof responses === "object" ? responses : {};
 }
 
 function isScorableReactBlock(block: ActivityBlockDocument): boolean {
-  const type = String(block.type || "").toLowerCase();
+  const type = normaliseBlockType(block.type);
   return type === "single-choice" || type === "option-cards" || type === "classification";
 }
 
 function blockScorableTotal(block: ActivityBlockDocument): number {
-  const type = String(block.type || "").toLowerCase();
+  const type = normaliseBlockType(block.type);
   if (type === "single-choice" || type === "option-cards") return 1;
   if (type === "classification") return ((block.content && block.content.items) || []).length;
   return 0;
@@ -66,6 +80,37 @@ function sumScores(scores: Record<string, ActivityScore>): ActivityScore {
   );
 }
 
+function draftResponsesFor(activity: ActivityDocument): Record<string, unknown> {
+  const engine = getContentEngine();
+  if (!engine.createDraftStore) return {};
+  try {
+    const draft = engine.createDraftStore(activity).load();
+    return draft?.responses && typeof draft.responses === "object" ? draft.responses : {};
+  } catch {
+    return {};
+  }
+}
+
+function adjacentWeekLink(
+  root: string,
+  teachingWeek: number,
+  livePackage: ReturnType<typeof liveContentPackage>
+) {
+  const record = runtimeWeekForTeachingWeek(livePackage, teachingWeek);
+  if (!record?.available) return null;
+  return {
+    label: `Week ${teachingWeek}`,
+    href: createSitePath(root, `week-${teachingWeek}/`)
+  };
+}
+
+export function weekPageOpenable(
+  weekId: string,
+  livePackage: ReturnType<typeof liveContentPackage>
+): boolean {
+  return runtimeWeekForId(livePackage, weekId)?.available === true;
+}
+
 export function WeekPage({
   weekId,
   root,
@@ -82,7 +127,19 @@ export function WeekPage({
   const scoresRef = useRef<Record<string, ActivityScore>>({});
   const [practiceScore, setPracticeScore] = useState<ActivityScore>({ correct: 0, total: 0 });
   const [completionOpen, setCompletionOpen] = useState(false);
+  const livePackage = liveContentPackage();
   const content = activeContentPackage(pkg);
+  const runtimeWeek = useMemo(
+    () => runtimeWeekForId(livePackage, weekId),
+    [livePackage, weekId]
+  );
+  const guardWeek = runtimeWeek || {
+    id: weekId,
+    teachingWeek: Number(weekId.replace("week-", "")) || 0,
+    status: "",
+    available: false,
+    title: weekId
+  };
   const model = useMemo(
     () => (content ? weekPageFromPackage(content, weekId) : null),
     [content, weekId]
@@ -128,6 +185,7 @@ export function WeekPage({
           children: (
             <InteractiveActivity
               activity={activity}
+              initialResponses={draftResponsesFor(activity)}
               renderFallback={(block) => (
                 <div dangerouslySetInnerHTML={{ __html: engine.renderBlock(block) }} />
               )}
@@ -171,6 +229,8 @@ export function WeekPage({
 
   const weekNumber = model.week.teachingWeek;
   const weekBadge = `Week ${weekNumber}: ${model.week.title}`;
+  const previousWeek = adjacentWeekLink(root, weekNumber - 1, livePackage);
+  const nextWeek = adjacentWeekLink(root, weekNumber + 1, livePackage);
   const summaryScore = {
     correct: practiceScore.correct,
     total: Math.max(scorableTotal, practiceScore.total, 1)
@@ -184,61 +244,62 @@ export function WeekPage({
   }
 
   return (
-    <div data-lp-mount="" data-lp-week-page="" ref={mountRef}>
-      <WeekView
-        week={{
-          id: model.week.id,
-          teachingWeek: weekNumber,
-          title: model.week.title,
-          subtitle: model.week.subtitle,
-          status: model.week.status
-        }}
-        learningOutcomes={model.learningOutcomes}
-        context={{
-          type: "assignment",
-          contextType: "assignment",
-          heading: "Teaching context",
-          description: "Formative learning for Exploring New and Emerging Digital Technologies (M/618/3683). This is not Gateway assignment evidence.",
-          items: [
-            { label: "Qualification", value: "Gateway Level 2 Digital and IT Skills" },
-            { label: "Unit", value: "Exploring New and Emerging Digital Technologies (M/618/3683)" },
-            { label: "Week", value: weekBadge }
-          ]
-        }}
-        features={{
-          showTitle: false,
-          showAssignmentContext: true,
-          showProjectContext: false,
-          showExamContext: false
-        }}
-        previousWeek={weekNumber > 1
-          ? { label: `Week ${weekNumber - 1}`, href: createSitePath(root, `week-${weekNumber - 1}/`) }
-          : null}
-        nextWeek={weekNumber < 3
-          ? { label: `Week ${weekNumber + 1}`, href: createSitePath(root, `week-${weekNumber + 1}/`) }
-          : null}
-        sessions={sessions}
-      />
-      <PracticeProgressPanel
-        title="Practice progress"
-        badge={weekBadge}
-        score={summaryScore}
-        progress={coverage}
-        completed={practiceComplete}
-        message="Check scored activities to update. Formative practice only."
-        defaultCollapsed
-      />
-      <CompletionModal
-        open={completionOpen && practiceScore.total > 0}
-        title="Practice complete"
-        badge={weekBadge}
-        score={summaryScore}
-        progress={coverage}
-        message="Keep practising. This score is formative feedback for this week, not Gateway assignment evidence."
-        onClose={closeCompletion}
-        onNext={closeCompletion}
-        nextLabel="Continue"
-      />
-    </div>
+    <WeekAccessGuard week={guardWeek}>
+      <div data-lp-mount="" data-lp-week-page="" ref={mountRef}>
+        <WeekView
+          week={{
+            id: model.week.id,
+            teachingWeek: weekNumber,
+            title: model.week.title,
+            subtitle: model.week.subtitle,
+            status: guardWeek.status || model.week.status
+          }}
+          learningOutcomes={model.learningOutcomes}
+          context={{
+            type: "assignment",
+            contextType: "assignment",
+            heading: "Teaching context",
+            description: "Formative learning for Exploring New and Emerging Digital Technologies (M/618/3683). This is not Gateway assignment evidence.",
+            items: [
+              { label: "Qualification", value: "Gateway Level 2 Digital and IT Skills" },
+              { label: "Unit", value: "Exploring New and Emerging Digital Technologies (M/618/3683)" },
+              { label: "Week", value: weekBadge }
+            ]
+          }}
+          features={{
+            showTitle: false,
+            showAssignmentContext: true,
+            showProjectContext: false,
+            showExamContext: false
+          }}
+          previousWeek={previousWeek}
+          nextWeek={nextWeek}
+          sessions={sessions}
+        />
+        <PracticeProgressPanel
+          title="Practice progress"
+          badge={weekBadge}
+          score={summaryScore}
+          progress={coverage}
+          completed={practiceComplete}
+          message="Check scored activities to update. Formative practice only."
+          defaultCollapsed
+        />
+        <CompletionModal
+          open={completionOpen && practiceScore.total > 0}
+          title="Practice complete"
+          badge={weekBadge}
+          score={summaryScore}
+          progress={coverage}
+          message="Keep practising. This score is formative feedback for this week, not Gateway assignment evidence."
+          onClose={closeCompletion}
+          onNext={closeCompletion}
+          nextLabel="Continue"
+        />
+      </div>
+    </WeekAccessGuard>
   );
 }
+
+/** Exported for focused tests — mirrors the WeekPage draft payload mapping. */
+export { persistableResponse };

@@ -1,19 +1,37 @@
 import { cleanup, fireEvent, render, screen, waitFor, within } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, beforeAll, describe, expect, it } from "vitest";
 import pkg from "../content/l2e-exploring-emerging-digital-technologies/package.json";
 import { CourseSidebar } from "./components/CourseSidebar";
 import { homeWeeksFromPackage, type ContentPackage } from "./curriculum/from-package";
+import { configureBundledPackage } from "./curriculum/runtime-weeks";
 import { HomePage } from "./pages/HomePage";
-import { WeekPage } from "./pages/WeekPage";
+import { WeekPage, persistableResponse } from "./pages/WeekPage";
 import { breadcrumbs } from "./page-copy";
 
 const content = pkg as ContentPackage;
 
+beforeAll(() => {
+  configureBundledPackage(content);
+});
+
 afterEach(cleanup);
+
+function expectReactTextBlock(root: HTMLElement, blockType: "short-response" | "reflection") {
+  const block = root.querySelector(`[data-lp-block='${blockType}']`) as HTMLElement | null;
+  expect(block).toBeTruthy();
+  const field = block?.querySelector("textarea.lp-textarea[data-lp-response]") as HTMLTextAreaElement | null;
+  expect(field).toBeTruthy();
+  expect(field?.getAttribute("data-lp-min-chars")).toBeTruthy();
+  expect(block?.querySelector("[data-lp-char-count]")).toBeTruthy();
+  expect(block?.querySelector("[data-lp-char-count]")?.textContent).toMatch(/\d+ \/ \d+ characters minimum/);
+  // HTML Content text uses a Check button; React TextResponse uses Save response.
+  expect(within(block as HTMLElement).getByRole("button", { name: "Save response" })).toBeTruthy();
+  expect(block?.querySelector("[data-lp-check]")).toBeNull();
+}
 
 describe("L2E presentation", () => {
   it("puts Weeks 1 to 3 on the home page as the teaching starting points", () => {
-    render(<HomePage root="." pkg={content} />);
+    render(<HomePage root="." livePackage={null} />);
     expect(screen.getByRole("link", { name: "Open Week 1" }).getAttribute("href")).toBe("./week-1/");
     expect(screen.getByRole("link", { name: "Open Week 2" }).getAttribute("href")).toBe("./week-2/");
     expect(screen.getByRole("link", { name: "Open Week 3" }).getAttribute("href")).toBe("./week-3/");
@@ -117,7 +135,7 @@ describe("L2E presentation", () => {
     });
   });
 
-  it("renders Week 1 single-choice and classification through React, with reflection on HTML", () => {
+  it("renders Week 1 single-choice and classification through React, with React reflection", () => {
     const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
     const welcome = container.querySelector('[data-lp-activity="week-1-welcome"]') as HTMLElement;
     const classify = container.querySelector('[data-lp-activity="week-1-digital-technology"]') as HTMLElement;
@@ -128,11 +146,10 @@ describe("L2E presentation", () => {
     expect(within(classify).getByRole("button", { name: "Check types" })).toBeTruthy();
     expect(classify.querySelector("[data-lp-block='classification']")).toBeTruthy();
     expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
-    expect(reflection.querySelector("textarea[data-lp-response]")).toBeTruthy();
-    expect(reflection.querySelector("[data-lp-block='reflection']")).toBeTruthy();
+    expectReactTextBlock(reflection, "reflection");
   });
 
-  it("renders Week 2 single-choice and classification through React, with short-response on HTML", () => {
+  it("renders Week 2 single-choice and classification through React, with React short-response", () => {
     const { container } = render(<WeekPage weekId="week-2" root=".." pkg={content} />);
     const starter = container.querySelector('[data-lp-activity="week-2-starter"]') as HTMLElement;
     const classify = container.querySelector('[data-lp-activity="week-2-iot-sectors"]') as HTMLElement;
@@ -142,11 +159,10 @@ describe("L2E presentation", () => {
     expect(starter.querySelector("[data-lp-block='option-cards']")).toBeTruthy();
     expect(within(classify).getByRole("button", { name: "Check types" })).toBeTruthy();
     expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
-    expect(written.querySelector("textarea[data-lp-response]")).toBeTruthy();
-    expect(written.querySelector("[data-lp-block='short-response']")).toBeTruthy();
+    expectReactTextBlock(written, "short-response");
   });
 
-  it("renders Week 3 single-choice and classification through React, with short-response on HTML", () => {
+  it("renders Week 3 single-choice and classification through React, with React short-response", () => {
     const { container } = render(<WeekPage weekId="week-3" root=".." pkg={content} />);
     const starter = container.querySelector('[data-lp-activity="week-3-starter"]') as HTMLElement;
     const classify = container.querySelector('[data-lp-activity="week-3-local-vs-cloud"]') as HTMLElement;
@@ -156,8 +172,36 @@ describe("L2E presentation", () => {
     expect(classify.querySelector("[data-lp-block='classification']")).toBeTruthy();
     expect(classify.querySelector("[data-lp-sort-board]")).toBeNull();
     expect(within(classify).getByRole("button", { name: "Check types" })).toBeTruthy();
-    expect(written.querySelector("textarea[data-lp-response]")).toBeTruthy();
-    expect(written.querySelector("[data-lp-block='short-response']")).toBeTruthy();
+    expectReactTextBlock(written, "short-response");
+  });
+
+  it("persists React text results as trimmed strings, not empty objects", () => {
+    expect(persistableResponse(
+      { id: "note", type: "short-response" },
+      { completed: true, correct: null, attempts: 1, responses: "  typed answer  " }
+    )).toBe("typed answer");
+    expect(persistableResponse(
+      { id: "journal", type: "reflection" },
+      { completed: true, correct: null, attempts: 1, responses: "reflection text" }
+    )).toBe("reflection text");
+    expect(persistableResponse(
+      { id: "choice", type: "single-choice" },
+      { completed: true, correct: true, attempts: 1, responses: { optionId: "a" } }
+    )).toBe("a");
+    expect(persistableResponse(
+      { id: "sort", type: "classification" },
+      { completed: true, correct: true, attempts: 1, responses: { one: "rfid" } }
+    )).toEqual({ one: "rfid" });
+  });
+
+  it("blocks paste on React reflection fields and keeps unscored Save response", () => {
+    const { container } = render(<WeekPage weekId="week-1" root=".." pkg={content} />);
+    const reflection = container.querySelector('[data-lp-activity="week-1-exit-ticket"]') as HTMLElement;
+    const field = reflection.querySelector("textarea[data-lp-response]") as HTMLTextAreaElement;
+    fireEvent.paste(field, { clipboardData: { getData: () => "pasted" } });
+    expect(reflection.querySelector("[data-lp-paste-notice]")?.textContent).toMatch(/Paste is disabled/i);
+    expect(field.value).toBe("");
+    expect(within(reflection).getByRole("button", { name: "Save response" })).toBeTruthy();
   });
 
   it("builds breadcrumbs for week pages from the content package", () => {

@@ -1,19 +1,15 @@
+import { WeekAccessLink } from "@learning-platform/ui";
 import type { ReactNode } from "react";
-import { APP_CONFIG } from "../config";
-import { navigationItems } from "../paths";
+import { liveContentPackage } from "../curriculum/apply-runtime";
+import { buildL2eCourseSections } from "../paths";
 
 type CourseSidebarProps = {
   currentPage: string;
   root: string;
 };
 
-const COURSE_SECTION_IDS = APP_CONFIG.courseSectionIds as readonly string[];
-
 export function CourseSidebar({ currentPage, root }: CourseSidebarProps) {
-  const sections = navigationItems(
-    APP_CONFIG.navigation.filter((item) => COURSE_SECTION_IDS.includes(item.id)),
-    root
-  );
+  const sections = buildL2eCourseSections(root, liveContentPackage());
 
   return (
     <aside className="course-navigation" aria-labelledby="course-navigation-title">
@@ -26,14 +22,35 @@ export function CourseSidebar({ currentPage, root }: CourseSidebarProps) {
             const displayLabel = item.id === "home" ? "Course home" : item.label;
             return (
               <li className="course-navigation__item" key={item.id}>
-                <a
-                  className="course-navigation__link"
-                  href={item.path}
-                  aria-current={isCurrent ? "page" : undefined}
-                >
-                  <span>{displayLabel}</span>
-                  {phaseBadge}
-                </a>
+                {item.runtimeWeek ? (
+                  <WeekAccessLink
+                    week={item.runtimeWeek}
+                    href={item.path}
+                    className="course-navigation__link"
+                    lockedClassName="course-navigation__link course-navigation__link--locked"
+                    renderLink={({ href, children, className }) => (
+                      <a
+                        className={className}
+                        href={href}
+                        aria-current={isCurrent ? "page" : undefined}
+                      >
+                        <span>{displayLabel}</span>
+                        {isCurrent ? phaseBadge : null}
+                      </a>
+                    )}
+                  >
+                    {displayLabel}
+                  </WeekAccessLink>
+                ) : (
+                  <a
+                    className="course-navigation__link"
+                    href={item.path}
+                    aria-current={isCurrent ? "page" : undefined}
+                  >
+                    <span>{displayLabel}</span>
+                    {phaseBadge}
+                  </a>
+                )}
               </li>
             );
           })}
