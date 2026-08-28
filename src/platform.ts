@@ -23,10 +23,9 @@ function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
   const requestInit: RequestInit = { ...init };
   if (url.includes("published_curriculum_package")) {
     requestInit.cache = "no-store";
-    requestInit.headers = {
-      ...(init?.headers || {}),
-      "Cache-Control": "no-cache"
-    };
+    const headers = new Headers(init?.headers);
+    headers.set("Cache-Control", "no-cache");
+    requestInit.headers = headers;
   }
   return fetch(input, requestInit).then(async (response) => {
     if (url.includes("published_curriculum_package") && !response.ok) {
