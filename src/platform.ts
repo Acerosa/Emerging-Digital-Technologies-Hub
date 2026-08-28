@@ -2,8 +2,21 @@ import { createPlatform } from "@learning-platform/core";
 import { createClient } from "@supabase/supabase-js";
 import { validatePackage } from "@learning-platform/content";
 import { APP_CONFIG } from "./config";
+import { configureBundledPackage } from "./curriculum/runtime-weeks";
 import { createSitePath } from "./paths";
 import { SUPABASE_CONFIG } from "./supabase-config";
+
+let bundledReady: Promise<import("./curriculum/from-package").ContentPackage> | null = null;
+
+export function ensureBundledConfigured() {
+  if (!bundledReady) {
+    bundledReady = import("../content/l2e-exploring-emerging-digital-technologies/package.json").then((mod) => {
+      configureBundledPackage(mod.default as import("./curriculum/from-package").ContentPackage);
+      return mod.default as import("./curriculum/from-package").ContentPackage;
+    });
+  }
+  return bundledReady;
+}
 
 function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
   const url = String(typeof input === "string" ? input : input instanceof URL ? input.href : input.url);
@@ -31,6 +44,7 @@ function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
 }
 
 export function createHubPlatform(root: string, createPlatformFn = createPlatform) {
+  ensureBundledConfigured();
   const client = createClient(SUPABASE_CONFIG.projectUrl, SUPABASE_CONFIG.publishableKey, {
     auth: {
       persistSession: true,

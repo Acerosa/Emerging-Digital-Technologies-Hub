@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import bundledPackage from "../../content/l2e-exploring-emerging-digital-technologies/package.json";
 import { getContentEngine } from "../content/engine";
-import { applyL2eCurriculum, loadL2eCurriculum, type CurriculumRuntime } from "../curriculum/apply-runtime";
+import {
+  applyL2eCurriculum,
+  loadL2eCurriculum,
+  type CurriculumRuntime
+} from "../curriculum/apply-runtime";
 import type { ContentPackage } from "../curriculum/from-package";
+import { configureBundledPackage } from "../curriculum/runtime-weeks";
+import { ensureBundledConfigured } from "../platform";
 
 type CurriculumHost = {
   curriculum?: {
@@ -11,6 +17,7 @@ type CurriculumHost = {
 };
 
 async function loadBundledFallback(): Promise<CurriculumRuntime> {
+  await ensureBundledConfigured();
   return applyL2eCurriculum({
     source: "bundled",
     package: bundledPackage as ContentPackage,
@@ -24,6 +31,7 @@ export function useContentPackage(platform?: CurriculumHost | null) {
   const [source, setSource] = useState<string>("none");
 
   useEffect(() => {
+    configureBundledPackage(bundledPackage as ContentPackage);
     const engine = getContentEngine();
     let cancelled = false;
 

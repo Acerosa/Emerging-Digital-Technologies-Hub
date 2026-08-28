@@ -1,11 +1,19 @@
 import { validatePackage } from "@learning-platform/content";
-import { afterEach, describe, expect, it } from "vitest";
-import { activityFromPackage, homeWeeksFromPackage, weekPageFromPackage } from "./from-package";
+import { afterEach, beforeAll, describe, expect, it } from "vitest";
+import { activityFromPackage, homeWeeksFromPackage, weekPageFromPackage, type ContentPackage } from "./from-package";
 import { applyL2eCurriculum } from "./apply-runtime";
+import { configureBundledPackage } from "./runtime-weeks";
 import pkg from "../../content/l2e-exploring-emerging-digital-technologies/package.json";
+
+const bundled = pkg as ContentPackage;
+
+beforeAll(() => {
+  configureBundledPackage(bundled);
+});
 
 afterEach(() => {
   delete window.__lpPackage;
+  delete window.__lpLivePackage;
   delete window.__lpPublishedCurriculum;
   document.body.removeAttribute("data-curriculum-source");
 });
@@ -98,7 +106,7 @@ describe("L2E package hydration", () => {
   });
 
   it("applies a mutated published title without reading another hub", () => {
-    const edited = structuredClone(pkg);
+    const edited = structuredClone(bundled);
     const activity = edited.activities.find((item) => item.id === "week-1-welcome");
     if (!activity) throw new Error("missing activity");
     activity.metadata.title = "Admin edited retrieval title";
@@ -109,6 +117,9 @@ describe("L2E package hydration", () => {
     }, window);
     expect(window.__lpPublishedCurriculum).toBe(true);
     expect(document.body.dataset.curriculumSource).toBe("published");
-    expect(window.__lpPackage).toBe(edited);
+    expect(window.__lpLivePackage).toBe(edited);
+    expect(activityFromPackage(window.__lpPackage as ContentPackage, "week-1-welcome")?.title)
+      .toBe("Admin edited retrieval title");
+    expect((window.__lpPackage as ContentPackage).hub?.id).toBe("l2e-exploring-emerging-digital-technologies");
   });
 });

@@ -16,9 +16,16 @@
   }
 
   function shouldSkipHtmlBlockBind(blockRoot, type) {
-    // React OptionCards / Classification own FeedbackPanel; do not restore or mark via HTML.
+    // React OptionCards / Classification / TextResponse own their UX; do not restore or mark via HTML.
     if (blockRoot.getAttribute("data-lp-block") === "option-cards") return true;
     if (type === "classification" && !blockRoot.querySelector("[data-lp-sort-board]")) return true;
+    // React text already mounts char-count / minChars; HTML text does not until enhance runs.
+    if (
+      (type === "short-response" || type === "reflection") &&
+      blockRoot.querySelector("[data-lp-char-count], textarea[data-lp-min-chars]")
+    ) {
+      return true;
+    }
     return false;
   }
 

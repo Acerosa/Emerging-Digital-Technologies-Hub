@@ -1,5 +1,6 @@
 import { getContentEngine } from "../content/engine";
 import { activityFromPackage, type ContentPackage } from "./from-package";
+import { runtimeContentPackage } from "./runtime-weeks";
 
 export type CurriculumRuntime = {
   source?: string;
@@ -12,8 +13,12 @@ export function applyL2eCurriculum(
   runtime: CurriculumRuntime,
   target: Window & typeof globalThis = window
 ) {
-  const pkg = runtime.package || null;
   const source = runtime.source || "none";
+  const livePackage = source === "published" ? (runtime.package || null) : null;
+  const pkg = livePackage
+    ? runtimeContentPackage(livePackage)
+    : (source === "bundled" ? runtimeContentPackage(null) : null);
+  target.__lpLivePackage = livePackage || undefined;
   target.__lpPackage = pkg || undefined;
   target.__lpPublishedCurriculum = source === "published";
   if (target.document?.body) {
@@ -35,7 +40,14 @@ export function applyL2eCurriculum(
       course: runtime.publication?.course || null
     });
   }
-  return runtime;
+  return { ...runtime, package: pkg, livePackage };
+}
+
+export function liveContentPackage(): ContentPackage | null {
+  if (typeof window !== "undefined" && window.__lpLivePackage) {
+    return window.__lpLivePackage as ContentPackage;
+  }
+  return null;
 }
 
 export function activeContentPackage(pkg?: ContentPackage | null): ContentPackage | null {
@@ -51,11 +63,14 @@ export function activityFromPublishedPackage(pkg: ContentPackage | null | undefi
   return activityFromPackage(pkg, activityId);
 }
 
+import { ensureBundledConfigured } from "../platform";
+
 export async function loadL2eCurriculum(platform: {
   curriculum: {
     loadLatest: () => Promise<unknown>;
   };
 }) {
+  await ensureBundledConfigured();
   const runtime = await platform.curriculum.loadLatest() as CurriculumRuntime;
   return applyL2eCurriculum(runtime, window);
 }

@@ -1,3 +1,23 @@
+declare module "@learning-platform/core/curriculum-runtime" {
+  export type RuntimeWeekRecord = {
+    id: string;
+    teachingWeek: number;
+    status: string;
+    available: boolean;
+    title: string;
+  };
+
+  export function isWeekAvailable(status?: string | null): boolean;
+  export function overlayLiveWeekMetadata<T extends Record<string, unknown>>(
+    base: T | null | undefined,
+    live: T | null | undefined
+  ): T | null | undefined;
+  export function weeksFromPublication<T extends Record<string, unknown>>(
+    basePackage: T | null | undefined,
+    livePackage?: T | null
+  ): RuntimeWeekRecord[];
+}
+
 declare module "@learning-platform/core" {
   export type ThemePreference = "light" | "dark" | "system";
 
@@ -26,16 +46,7 @@ declare module "@learning-platform/core" {
   export interface PlatformFacade {
     config: { hubName: string; accountPath: string };
     theme: ThemeService;
-    auth: {
-      signOut: () => Promise<void>;
-      isSignedIn?: () => boolean;
-      subscribe?: (
-        listener: (state: {
-          status: string;
-          session?: { user?: { id?: string } } | null;
-        }) => void
-      ) => () => void;
-    };
+    auth: { signOut: () => Promise<void>; subscribe?: (listener: (state: { status: string; session?: { user?: { id?: string } } }) => void) => () => void };
     learner: {
       subscribe: (listener: (state: LearnerState) => void) => () => void;
     };
@@ -43,6 +54,7 @@ declare module "@learning-platform/core" {
       subscribe: (listener: (snapshot: { status: string }) => void) => () => void;
     };
     onboarding: unknown;
+    progress?: { getProgress?: () => Promise<unknown> };
     assignments?: unknown;
     assignment?: unknown;
     enrolments?: unknown;
@@ -51,9 +63,6 @@ declare module "@learning-platform/core" {
     flags?: unknown;
     initialise: () => Promise<unknown>;
     destroy: () => void;
-    submission?: {
-      submit: (payload: unknown) => Promise<unknown>;
-    };
     curriculum: {
       loadLatest: () => Promise<{
         source?: string;
@@ -76,7 +85,4 @@ declare module "@learning-platform/core" {
 declare module "*.js";
 declare module "@learning-platform/content" {
   export function validatePackage(pkg: unknown): { valid: boolean; issues?: unknown[] };
-  export function renderActivity(activity: unknown, options?: { root?: string }): string;
-  export function renderBlock(block: unknown, options?: { root?: string }): string;
 }
-declare module "@learning-platform/core/theme.css";

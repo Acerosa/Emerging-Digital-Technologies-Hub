@@ -1,7 +1,10 @@
-import { HubShell, LearnerHeader } from "@learning-platform/ui";
+import { LearnerHeader } from "@learning-platform/ui";
+import { useMemo } from "react";
 import { CourseLayout } from "./components/CourseSidebar";
+import { L2eHubShell } from "./components/L2eHubShell";
 import { APP_CONFIG } from "./config";
 import { ContentPackageProvider, useLoadedContent } from "./content/ContentPackageProvider";
+import { liveContentPackage } from "./curriculum/apply-runtime";
 import { useHubPlatform } from "./hooks/useHubPlatform";
 import { currentIds, type PageContext } from "./page-context";
 import { breadcrumbs, pageHeader } from "./page-copy";
@@ -9,14 +12,16 @@ import { CourseGuidePage } from "./pages/CourseGuidePage";
 import { HomePage } from "./pages/HomePage";
 import { AccountPage, HelpPage, ResourcesPage } from "./pages/StaticPages";
 import { WeekPage } from "./pages/WeekPage";
-import { createSitePath, navigationItems } from "./paths";
+import { buildL2eNavigation, buildL2eNavigationFallback, createSitePath } from "./paths";
 
 function PageBody({
   context,
-  platform
+  platform,
+  contentReady
 }: {
   context: PageContext;
   platform?: unknown;
+  contentReady: boolean;
 }) {
   const { pkg } = useLoadedContent();
   if (context.page === "course-guide") return <CourseGuidePage root={context.root} pkg={pkg} />;
@@ -26,7 +31,7 @@ function PageBody({
   if (context.page === "resources") return <ResourcesPage root={context.root} />;
   if (context.page === "help") return <HelpPage />;
   if (context.page === "account") return <AccountPage />;
-  return <HomePage root={context.root} pkg={pkg} />;
+  return <HomePage root={context.root} livePackage={contentReady ? liveContentPackage() : null} />;
 }
 
 export function App({ context }: { context: PageContext }) {
@@ -45,15 +50,22 @@ function HubApp({
   context: PageContext;
   hub: ReturnType<typeof useHubPlatform>;
 }) {
-  const { pkg } = useLoadedContent();
+  const { pkg, source } = useLoadedContent();
   const { learner, theme, accountDialog, platform } = hub;
+  const contentReady = Boolean(pkg) && source !== "none";
   const header = pageHeader(context, pkg);
+  const navigation = useMemo(
+    () => (contentReady
+      ? buildL2eNavigation(context.root, liveContentPackage())
+      : buildL2eNavigationFallback(context.root)),
+    [context.root, contentReady, source]
+  );
 
   return (
-    <HubShell
+    <L2eHubShell
       brandTitle={APP_CONFIG.shortName}
       brandTagline={APP_CONFIG.qualification}
-      navigation={navigationItems([...APP_CONFIG.navigation], context.root)}
+      navigation={navigation}
       currentId={context.section}
       currentIds={currentIds(context)}
       theme={theme}
@@ -102,8 +114,8 @@ function HubApp({
       }}
     >
       <CourseLayout currentPage={context.section} root={context.root}>
-        <PageBody context={context} platform={platform} />
+        <PageBody context={context} platform={platform} contentReady={contentReady} />
       </CourseLayout>
-    </HubShell>
+    </L2eHubShell>
   );
 }

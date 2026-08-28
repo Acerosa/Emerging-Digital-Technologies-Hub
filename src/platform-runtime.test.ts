@@ -1,14 +1,20 @@
-import { afterEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeAll, describe, expect, it, vi } from "vitest";
 import pkg from "../content/l2e-exploring-emerging-digital-technologies/package.json";
 import { getContentEngine } from "./content/engine";
 import { applyL2eCurriculum } from "./curriculum/apply-runtime";
 import type { ContentPackage } from "./curriculum/from-package";
 import { weekPageFromPackage } from "./curriculum/from-package";
+import { configureBundledPackage } from "./curriculum/runtime-weeks";
 
 const bundled = pkg as ContentPackage;
 
+beforeAll(() => {
+  configureBundledPackage(bundled);
+});
+
 afterEach(() => {
   delete window.__lpPackage;
+  delete window.__lpLivePackage;
   delete window.__lpPublishedCurriculum;
   document.body.removeAttribute("data-curriculum-source");
   document.body.removeAttribute("data-publication-state");
@@ -60,11 +66,13 @@ describe("published curriculum and learner submissions", () => {
     });
     expect(runtime.source).toBe("published");
     expect(runtime.state.state).toBe("PUBLISHED");
-    expect(window.__lpPackage).toBe(runtime.package);
+    expect(window.__lpLivePackage).toBe(runtime.package);
     expect(document.body.dataset.curriculumSource).toBe("published");
-    expect((window.__lpPackage as ContentPackage).weeks?.[0]?.metadata?.title).toBe("Published title v1.0.1");
+    expect((window.__lpLivePackage as ContentPackage).weeks?.[0]?.metadata?.title).toBe("Published title v1.0.1");
+    expect((window.__lpPackage as ContentPackage).weeks?.[0]?.metadata?.title)
+      .toBe("Introduction to New and Emerging Digital Technologies");
     expect(weekPageFromPackage(window.__lpPackage as ContentPackage, "week-1")?.week.title)
-      .toBe("Published title v1.0.1");
+      .toBe("Introduction to New and Emerging Digital Technologies");
   });
 
   it("falls back to the bundled package when publication lookup fails", async () => {
@@ -90,7 +98,7 @@ describe("published curriculum and learner submissions", () => {
     });
     expect(runtime.source).toBe("bundled");
     expect(runtime.state.allowsSubmission).toBe(false);
-    expect(window.__lpPackage).toBe(bundled);
+    expect((window.__lpPackage as ContentPackage).hub?.id).toBe(bundled.hub?.id);
     expect(document.body.dataset.curriculumSource).toBe("bundled");
   });
 
@@ -274,8 +282,9 @@ describe("published curriculum and learner submissions", () => {
       state: second.state
     });
     expect(second.source).toBe("published");
-    expect((window.__lpPackage as ContentPackage).weeks?.[0]?.metadata?.title).toBe("Published title v2");
-    expect((window.__lpPackage as ContentPackage).weeks?.[0]?.metadata?.title).not.toBe("Published title v1");
+    expect((window.__lpLivePackage as ContentPackage).weeks?.[0]?.metadata?.title).toBe("Published title v2");
+    expect((window.__lpPackage as ContentPackage).weeks?.[0]?.metadata?.title)
+      .not.toBe("Published title v1");
   });
 
   it("marks and submits every Week 1 interactive type without prohibited fields", async () => {
