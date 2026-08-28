@@ -107,8 +107,8 @@ describe("L2E package hydration", () => {
 
   it("applies a mutated published title without reading another hub", () => {
     const edited = structuredClone(bundled);
-    const activity = edited.activities.find((item) => item.id === "week-1-welcome");
-    if (!activity) throw new Error("missing activity");
+    const activity = edited.activities?.find((item) => item.id === "week-1-welcome");
+    if (!activity?.metadata) throw new Error("missing activity");
     activity.metadata.title = "Admin edited retrieval title";
     applyL2eCurriculum({
       source: "published",
