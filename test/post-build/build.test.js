@@ -26,4 +26,11 @@ test("the Vite production build is a static GitHub Pages site", function () {
   const assets = path.join(dist, "assets");
   const files = fs.readdirSync(assets).filter(function (name) { return name.endsWith(".js"); });
   assert.ok(files.length >= 1);
+  const authoring = fs.readFileSync(path.resolve(__dirname, "../../content/l2e-exploring-emerging-digital-technologies/package.json"), "utf8");
+  const bundled = fs.readFileSync(path.join(dist, "content/l2e-exploring-emerging-digital-technologies/package.json"), "utf8");
+  assert.match(authoring, /"correctOptionId"/);
+  assert.doesNotMatch(bundled, /"correctOptionId"\s*:/);
+  files.forEach(function (name) {
+    assert.doesNotMatch(fs.readFileSync(path.join(assets, name), "utf8"), /"correctOptionId"\s*:/);
+  });
 });
