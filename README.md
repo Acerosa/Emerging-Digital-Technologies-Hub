@@ -31,6 +31,8 @@ npm run dev
 npm test
 ```
 
+This hub conforms to Hub Security Baseline v1. See `learning-platform-core` `docs/hub-security-baseline-v1.md`.
+
 Dependencies use `file:` siblings. CI checks out the same packages at reviewed tags before `npm ci`.
 
 ## After creation
