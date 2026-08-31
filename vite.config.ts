@@ -1,5 +1,6 @@
 import react from "@vitejs/plugin-react";
-import { cpSync, readdirSync, statSync, writeFileSync } from "node:fs";
+import { copyLearnerSafeTree, learnerSafeContentPlugin } from "@learning-platform/content/learner-safe";
+import { readdirSync, statSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { defineConfig } from "vite";
 
@@ -30,7 +31,10 @@ function pagesAssets() {
     name: "learning-platform-pages-assets",
     closeBundle() {
       const dist = resolve("dist");
-      cpSync(resolve("content/l2e-exploring-emerging-digital-technologies"), resolve(dist, "content/l2e-exploring-emerging-digital-technologies"), { recursive: true });
+      copyLearnerSafeTree(
+        resolve("content/l2e-exploring-emerging-digital-technologies"),
+        resolve(dist, "content/l2e-exploring-emerging-digital-technologies")
+      );
       writeFileSync(resolve(dist, ".nojekyll"), "");
     }
   };
@@ -38,7 +42,7 @@ function pagesAssets() {
 
 export default defineConfig({
   base: "./",
-  plugins: [react(), pagesAssets()],
+  plugins: [react(), learnerSafeContentPlugin(), pagesAssets()],
   resolve: {
     alias: {
       "@learning-platform/core/curriculum-runtime": resolve(coreRoot, "dist/curriculum-runtime.esm.js")
