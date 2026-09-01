@@ -169,19 +169,6 @@ body {
   min-width: 0;
 }
 
-.lp-week .lp-session[open] > .lp-session__content {
-  max-height: min(65vh, 36rem);
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-gutter: stable;
-  padding-right: 0.35rem;
-}
-
-.lp-week .lp-session[open] > .lp-session__content:focus-visible {
-  outline: 0.2rem solid var(--lp-focus);
-  outline-offset: 0.15rem;
-}
-
 .study-stack {
   display: grid;
   gap: 1rem;
