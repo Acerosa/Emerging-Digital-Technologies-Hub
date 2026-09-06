@@ -2,7 +2,7 @@ import { validatePackage } from "@learning-platform/content";
 import { afterEach, beforeAll, describe, expect, it } from "vitest";
 import { activityFromPackage, homeWeeksFromPackage, weekPageFromPackage, type ContentPackage } from "./from-package";
 import { applyL2eCurriculum } from "./apply-runtime";
-import { configureBundledPackage } from "./runtime-weeks";
+import { configureBundledPackage, runtimeContentPackage } from "./runtime-weeks";
 import pkg from "../../content/l2e-exploring-emerging-digital-technologies/package.json";
 
 const bundled = pkg as ContentPackage;
@@ -107,6 +107,16 @@ describe("L2E package hydration", () => {
     expect(page?.sessions[0].accessible).toBe(false);
     expect(page?.sessions[0].activities).toEqual([]);
     expect(page?.sessions[0].summary).toBe("Not released yet");
+  });
+
+  it("keeps a bundled available session when live publication omits session status", () => {
+    const live = structuredClone(bundled);
+    for (const session of live.sessions || []) {
+      if (session.metadata) delete session.metadata.status;
+    }
+    const page = weekPageFromPackage(runtimeContentPackage(live), "week-1");
+    expect(page?.sessions[0].accessible).toBe(true);
+    expect(page?.sessions[0].activities.length).toBeGreaterThan(0);
   });
 
   it("does not expose an available session inside a planned week", () => {

@@ -29,7 +29,7 @@ export function runtimeContentPackage(live?: ContentPackage | null): ContentPack
     ...(live.hub ? { hub: live.hub } : {}),
     ...(live.curriculum ? { curriculum: live.curriculum } : {}),
     activities: live.activities?.length ? live.activities : bundled.activities,
-    sessions: live.sessions?.length ? live.sessions : bundled.sessions,
+    sessions: bundled.sessions,
     learningOutcomes: live.learningOutcomes?.length ? live.learningOutcomes : bundled.learningOutcomes
   };
   return overlayLiveWeekMetadata(teaching, live) as ContentPackage;
