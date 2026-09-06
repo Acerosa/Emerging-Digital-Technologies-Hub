@@ -535,6 +535,7 @@ const week2Session = sessions.find((item) => item.id === "week-2-session");
 if (!week2Session) throw new Error("week-2-session missing");
 week2Session.metadata.summary =
   "One 1.5-hour session: IoT, connected devices, RFID, NFC, wearables, benefits, risks and privacy (AC1.1).";
+if (!week2Session.metadata.status) week2Session.metadata.status = "available";
 week2Session.relationships.activities = activityIds;
 fs.writeFileSync(sessionsPath, `${JSON.stringify(sessions, null, 2)}\n`);
 

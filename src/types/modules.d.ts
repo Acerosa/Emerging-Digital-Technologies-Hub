@@ -8,6 +8,9 @@ declare module "@learning-platform/core/curriculum-runtime" {
   };
 
   export function isWeekAvailable(status?: string | null): boolean;
+  export function isSessionAvailable(status?: string | null): boolean;
+  export function isSessionAccessible(weekStatus?: string | null, sessionStatus?: string | null): boolean;
+  export const SESSION_NOT_RELEASED_COPY: string;
   export function overlayLiveWeekMetadata<T extends Record<string, unknown>>(
     base: T | null | undefined,
     live: T | null | undefined

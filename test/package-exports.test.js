@@ -46,6 +46,8 @@ test("shared package exports resolve for L2E week visibility", async () => {
   const core = await import("@learning-platform/core/curriculum-runtime");
 
   assert.equal(typeof core.isWeekAvailable, "function");
+  assert.equal(typeof core.isSessionAvailable, "function");
+  assert.equal(typeof core.isSessionAccessible, "function");
   assert.equal(typeof core.overlayLiveWeekMetadata, "function");
   assert.equal(typeof core.weeksFromPublication, "function");
 

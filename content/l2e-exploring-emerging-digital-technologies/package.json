@@ -142,7 +142,8 @@
         "kind": "session",
         "summary": "One 1.5-hour interactive session: define digital technology, tell current from emerging, and outline mobile, intelligent computing, IoT and cloud.",
         "sortOrder": 1,
-        "defaultOpen": true
+        "defaultOpen": true,
+        "status": "available"
       },
       "relationships": {
         "week": "week-1",
@@ -171,7 +172,8 @@
         "kind": "session",
         "summary": "One 1.5-hour session: IoT, connected devices, RFID, NFC, wearables, benefits, risks and privacy (AC1.1).",
         "sortOrder": 1,
-        "defaultOpen": true
+        "defaultOpen": true,
+        "status": "available"
       },
       "relationships": {
         "week": "week-2",
@@ -202,7 +204,8 @@
         "kind": "session",
         "summary": "One 1.5-hour session: cloud technology, SaaS, IaaS, PaaS, DaaS, benefits, dependencies and a cloud profile (AC1.1).",
         "sortOrder": 1,
-        "defaultOpen": true
+        "defaultOpen": true,
+        "status": "available"
       },
       "relationships": {
         "week": "week-3",
