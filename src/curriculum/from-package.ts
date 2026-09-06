@@ -1,3 +1,5 @@
+import { isSessionAccessible, SESSION_NOT_RELEASED_COPY } from "@learning-platform/core/curriculum-runtime";
+
 type ContentBlock = {
   id?: string;
   type?: string;
@@ -41,6 +43,7 @@ type ContentSession = {
     kind?: string;
     summary?: string;
     defaultOpen?: boolean;
+    status?: string;
   };
   relationships?: {
     activities?: string[];
@@ -88,6 +91,7 @@ export type WeekPageModel = {
     kind: string;
     summary: string;
     defaultOpen: boolean;
+    accessible: boolean;
     activities: Array<{
       id: string;
       title: string;
@@ -128,29 +132,34 @@ export function weekPageFromPackage(pkg: ContentPackage, weekId: string): WeekPa
   const week = (pkg.weeks || []).find((item) => item.id === weekId);
   if (!week) return null;
   const teachingWeek = Number(week.metadata?.teachingWeek || 0);
+  const weekStatus = String(week.metadata?.status ?? "");
   const sessions = (week.relationships?.sessions || []).map((sessionId) => {
     const session = (pkg.sessions || []).find((item) => item.id === sessionId);
+    const accessible = isSessionAccessible(weekStatus, session?.metadata?.status);
     return {
       id: sessionId,
       title: session?.metadata?.title || sessionId,
       kind: session?.metadata?.kind || "session",
-      summary: session?.metadata?.summary || "",
-      defaultOpen: session?.metadata?.defaultOpen === true,
-      activities: (session?.relationships?.activities || []).map((activityId) => {
-        const activity = (pkg.activities || []).find((item) => item.id === activityId);
-        const minutes = activity?.metadata?.estimatedDurationMinutes;
-        return {
-          id: activityId,
-          title: activity?.metadata?.title || activityId,
-          description: activity?.metadata?.summary || "",
-          activityType: activity?.metadata?.activityType || "Activity",
-          duration: minutes ? `${minutes} minutes` : "",
-          status: "Available",
-          badge: true,
-          badgeStatus: activity?.metadata?.status || "available",
-          headingLevel: 3 as const
-        };
-      })
+      summary: accessible ? (session?.metadata?.summary || "") : SESSION_NOT_RELEASED_COPY,
+      defaultOpen: accessible && session?.metadata?.defaultOpen === true,
+      accessible,
+      activities: accessible
+        ? (session?.relationships?.activities || []).map((activityId) => {
+          const activity = (pkg.activities || []).find((item) => item.id === activityId);
+          const minutes = activity?.metadata?.estimatedDurationMinutes;
+          return {
+            id: activityId,
+            title: activity?.metadata?.title || activityId,
+            description: activity?.metadata?.summary || "",
+            activityType: activity?.metadata?.activityType || "Activity",
+            duration: minutes ? `${minutes} minutes` : "",
+            status: "Available",
+            badge: true,
+            badgeStatus: activity?.metadata?.status || "available",
+            headingLevel: 3 as const
+          };
+        })
+        : []
     };
   });
   const learningOutcomes = (week.relationships?.learningOutcomes || []).map((outcomeId) => {

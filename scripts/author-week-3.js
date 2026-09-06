@@ -598,6 +598,7 @@ const week3Session = sessions.find((item) => item.id === "week-3-session");
 if (!week3Session) throw new Error("week-3-session missing");
 week3Session.metadata.summary =
   "One 1.5-hour session: cloud technology, SaaS, IaaS, PaaS, DaaS, benefits, dependencies and a cloud profile (AC1.1).";
+if (!week3Session.metadata.status) week3Session.metadata.status = "available";
 week3Session.relationships.activities = activityIds;
 fs.writeFileSync(sessionsPath, `${JSON.stringify(sessions, null, 2)}\n`);
 

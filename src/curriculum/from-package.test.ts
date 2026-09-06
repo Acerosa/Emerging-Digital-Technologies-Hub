@@ -98,6 +98,27 @@ describe("L2E package hydration", () => {
     }
   });
 
+  it("hides planned session content while keeping the session placeholder", () => {
+    const edited = structuredClone(bundled);
+    const session = edited.sessions?.find((item) => item.id === "week-2-session");
+    if (!session?.metadata) throw new Error("missing week-2-session");
+    session.metadata.status = "planned";
+    const page = weekPageFromPackage(edited, "week-2");
+    expect(page?.sessions[0].accessible).toBe(false);
+    expect(page?.sessions[0].activities).toEqual([]);
+    expect(page?.sessions[0].summary).toBe("Not released yet");
+  });
+
+  it("does not expose an available session inside a planned week", () => {
+    const edited = structuredClone(bundled);
+    const week = edited.weeks?.find((item) => item.id === "week-2");
+    if (!week?.metadata) throw new Error("missing week-2");
+    week.metadata.status = "planned";
+    const page = weekPageFromPackage(edited, "week-2");
+    expect(page?.sessions[0].accessible).toBe(false);
+    expect(page?.sessions[0].activities).toEqual([]);
+  });
+
   it("restores Week 1 starter questions from published blocks", () => {
     const restored = activityFromPackage(pkg, "week-1-welcome");
     expect(restored?.title).toBe("Welcome and starter");
