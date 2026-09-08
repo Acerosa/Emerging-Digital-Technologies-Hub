@@ -25,6 +25,7 @@ function PageBody({
   platform,
   pkg,
   contentReady,
+  adaptersReady,
   platformState,
   accountDialog,
   onJoined
@@ -33,6 +34,7 @@ function PageBody({
   platform?: unknown;
   pkg?: ContentPackage | null;
   contentReady: boolean;
+  adaptersReady: boolean;
   platformState: string;
   accountDialog?: { open: (trigger?: EventTarget | null) => void; showOnboarding?: () => void } | null;
   onJoined?: () => void;
@@ -56,6 +58,7 @@ function PageBody({
           root={context.root}
           pkg={pkg}
           platform={platform}
+          adaptersReady={adaptersReady}
           platformState={platformState}
         />
       </>
@@ -186,6 +189,7 @@ export function App({ context }: { context: PageContext }) {
           platform={guardedPlatform}
           pkg={pkg}
           contentReady={contentReady}
+          adaptersReady={adaptersReady}
           platformState={platformState}
           accountDialog={accountDialog}
           onJoined={() => { void refreshAfterJoin(); }}

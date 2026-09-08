@@ -126,7 +126,6 @@ export function useHubPlatform(root: string) {
     document.body.appendChild(dialog.element);
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
-
     void (async () => {
       const runtime = await loadL2eCurriculum(platform) as CurriculumRuntime & {
         package?: ContentPackage | null;
