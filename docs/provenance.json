@@ -1,7 +1,7 @@
 {
   "generator": "@learning-platform/cli",
   "generatorVersion": "0.1.0",
-  "coreVersion": "0.2.8",
+  "coreVersion": "0.2.10",
   "uiVersion": "0.1.8",
   "contentVersion": "0.1.2",
   "profile": "week-based",
@@ -10,9 +10,9 @@
   "packages": {
     "core": {
       "name": "@learning-platform/core",
-      "version": "0.2.8",
+      "version": "0.2.10",
       "repository": "Acerosa/learning-platform-core",
-      "tag": "v0.2.8"
+      "tag": "v0.2.10"
     },
     "ui": {
       "name": "@learning-platform/ui",

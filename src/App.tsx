@@ -17,16 +17,26 @@ import { buildL2eNavigation, buildL2eNavigationFallback, createSitePath } from "
 function PageBody({
   context,
   platform,
-  contentReady
+  contentReady,
+  adaptersReady
 }: {
   context: PageContext;
   platform?: unknown;
   contentReady: boolean;
+  adaptersReady: boolean;
 }) {
   const { pkg } = useLoadedContent();
   if (context.page === "course-guide") return <CourseGuidePage root={context.root} pkg={pkg} />;
   if (/^week-\d+$/.test(context.page)) {
-    return <WeekPage weekId={context.page} root={context.root} pkg={pkg} platform={platform} />;
+    return (
+      <WeekPage
+        weekId={context.page}
+        root={context.root}
+        pkg={pkg}
+        platform={platform}
+        adaptersReady={adaptersReady}
+      />
+    );
   }
   if (context.page === "resources") return <ResourcesPage root={context.root} />;
   if (context.page === "help") return <HelpPage />;
@@ -51,7 +61,7 @@ function HubApp({
   hub: ReturnType<typeof useHubPlatform>;
 }) {
   const { pkg, source } = useLoadedContent();
-  const { learner, theme, accountDialog, platform } = hub;
+  const { learner, theme, accountDialog, platform, adaptersReady } = hub;
   const contentReady = Boolean(pkg) && source !== "none";
   const header = pageHeader(context, pkg);
   const navigation = useMemo(
@@ -114,7 +124,7 @@ function HubApp({
       }}
     >
       <CourseLayout currentPage={context.section} root={context.root}>
-        <PageBody context={context} platform={platform} contentReady={contentReady} />
+        <PageBody context={context} platform={platform} contentReady={contentReady} adaptersReady={adaptersReady} />
       </CourseLayout>
     </L2eHubShell>
   );

@@ -17,10 +17,12 @@ export function useHubPlatform(root: string) {
   const [theme, setTheme] = useState<ThemeControl | null>(null);
   const [accountDialog, setAccountDialog] = useState<AccountDialog | null>(null);
   const [platformState, setPlatformState] = useState("loading");
+  const [adaptersReady, setAdaptersReady] = useState(false);
 
   useEffect(() => {
     let dialog: AccountDialog | null = null;
     const unsubscribers: Array<() => void> = [];
+    let cancelled = false;
     document.body.dataset.platformState = "loading";
 
     const stopAuth = platform.auth.subscribe?.((authState) => {
@@ -59,9 +61,13 @@ export function useHubPlatform(root: string) {
     document.body.appendChild(dialog.element);
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
-    void platform.initialise();
+    void (async () => {
+      await platform.initialise();
+      if (!cancelled) setAdaptersReady(true);
+    })();
 
     return () => {
+      cancelled = true;
       unsubscribers.forEach((stop) => stop());
       dialog?.element.remove();
       dialog?.destroy?.();
@@ -69,7 +75,7 @@ export function useHubPlatform(root: string) {
     };
   }, [platform]);
 
-  return { platform, learner, theme, accountDialog, platformState };
+  return { platform, learner, theme, accountDialog, platformState, adaptersReady };
 }
 
 export type { HubPlatform } from "../platform";
