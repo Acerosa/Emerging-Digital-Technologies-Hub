@@ -3,7 +3,9 @@ import { useEffect, useMemo, useState } from "react";
 import type { LearnerSummary, ThemeControl, ThemePreference } from "@learning-platform/ui";
 import { getContentEngine } from "../content/engine";
 import { APP_CONFIG } from "../config";
-import { createHubPlatform } from "../platform";
+import { loadL2eCurriculum, type CurriculumRuntime } from "../curriculum/apply-runtime";
+import type { ContentPackage } from "../curriculum/from-package";
+import { createHubPlatform, type HubPlatform } from "../platform";
 
 type AccountDialog = {
   element: HTMLElement;
@@ -11,16 +13,26 @@ type AccountDialog = {
   destroy?: () => void;
 };
 
+export type LoadedCurriculum = {
+  source: string;
+  package: ContentPackage | null;
+};
+
+const EMPTY_CURRICULUM: LoadedCurriculum = { source: "none", package: null };
+
 export function useHubPlatform(root: string) {
   const platform = useMemo(() => createHubPlatform(root), [root]);
   const [learner, setLearner] = useState<LearnerSummary | null>(null);
   const [theme, setTheme] = useState<ThemeControl | null>(null);
   const [accountDialog, setAccountDialog] = useState<AccountDialog | null>(null);
   const [platformState, setPlatformState] = useState("loading");
+  const [adaptersReady, setAdaptersReady] = useState(false);
+  const [curriculum, setCurriculum] = useState<LoadedCurriculum>(EMPTY_CURRICULUM);
 
   useEffect(() => {
     let dialog: AccountDialog | null = null;
     const unsubscribers: Array<() => void> = [];
+    let cancelled = false;
     document.body.dataset.platformState = "loading";
 
     const stopAuth = platform.auth.subscribe?.((authState) => {
@@ -59,9 +71,25 @@ export function useHubPlatform(root: string) {
     document.body.appendChild(dialog.element);
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
-    void platform.initialise();
+
+    void (async () => {
+      const runtime = await loadL2eCurriculum(platform) as CurriculumRuntime & {
+        package?: ContentPackage | null;
+      };
+      if (cancelled) return;
+      setCurriculum({
+        source: runtime.source || "none",
+        package: runtime.package || null
+      });
+      document.dispatchEvent(new CustomEvent("lp:content-ready", {
+        detail: { package: runtime.package || null, publication: runtime.state }
+      }));
+      await platform.initialise();
+      if (!cancelled) setAdaptersReady(true);
+    })();
 
     return () => {
+      cancelled = true;
       unsubscribers.forEach((stop) => stop());
       dialog?.element.remove();
       dialog?.destroy?.();
@@ -69,7 +97,7 @@ export function useHubPlatform(root: string) {
     };
   }, [platform]);
 
-  return { platform, learner, theme, accountDialog, platformState };
+  return { platform, learner, theme, accountDialog, platformState, adaptersReady, curriculum };
 }
 
-export type { HubPlatform } from "../platform";
+export type { HubPlatform };

@@ -3,8 +3,8 @@ import { useMemo } from "react";
 import { CourseLayout } from "./components/CourseSidebar";
 import { L2eHubShell } from "./components/L2eHubShell";
 import { APP_CONFIG } from "./config";
-import { ContentPackageProvider, useLoadedContent } from "./content/ContentPackageProvider";
 import { liveContentPackage } from "./curriculum/apply-runtime";
+import type { ContentPackage } from "./curriculum/from-package";
 import { useHubPlatform } from "./hooks/useHubPlatform";
 import { currentIds, type PageContext } from "./page-context";
 import { breadcrumbs, pageHeader } from "./page-copy";
@@ -17,13 +17,14 @@ import { buildL2eNavigation, buildL2eNavigationFallback, createSitePath } from "
 function PageBody({
   context,
   platform,
+  pkg,
   contentReady
 }: {
   context: PageContext;
   platform?: unknown;
+  pkg?: ContentPackage | null;
   contentReady: boolean;
 }) {
-  const { pkg } = useLoadedContent();
   if (context.page === "course-guide") return <CourseGuidePage root={context.root} pkg={pkg} />;
   if (/^week-\d+$/.test(context.page)) {
     return <WeekPage weekId={context.page} root={context.root} pkg={pkg} platform={platform} />;
@@ -35,30 +36,15 @@ function PageBody({
 }
 
 export function App({ context }: { context: PageContext }) {
-  const hub = useHubPlatform(context.root);
-  return (
-    <ContentPackageProvider platform={hub.platform}>
-      <HubApp context={context} hub={hub} />
-    </ContentPackageProvider>
-  );
-}
-
-function HubApp({
-  context,
-  hub
-}: {
-  context: PageContext;
-  hub: ReturnType<typeof useHubPlatform>;
-}) {
-  const { pkg, source } = useLoadedContent();
-  const { learner, theme, accountDialog, platform } = hub;
-  const contentReady = Boolean(pkg) && source !== "none";
+  const { learner, theme, accountDialog, platform, adaptersReady, curriculum } = useHubPlatform(context.root);
+  const pkg = curriculum.package;
+  const contentReady = Boolean(pkg) && curriculum.source !== "none" && adaptersReady;
   const header = pageHeader(context, pkg);
   const navigation = useMemo(
     () => (contentReady
       ? buildL2eNavigation(context.root, liveContentPackage())
       : buildL2eNavigationFallback(context.root)),
-    [context.root, contentReady, source]
+    [context.root, contentReady, curriculum.source]
   );
 
   return (
@@ -114,7 +100,12 @@ function HubApp({
       }}
     >
       <CourseLayout currentPage={context.section} root={context.root}>
-        <PageBody context={context} platform={platform} contentReady={contentReady} />
+        <PageBody
+          context={context}
+          platform={platform}
+          pkg={pkg}
+          contentReady={contentReady}
+        />
       </CourseLayout>
     </L2eHubShell>
   );
