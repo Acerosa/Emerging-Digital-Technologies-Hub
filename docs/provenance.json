@@ -3,7 +3,7 @@
   "generatorVersion": "0.1.0",
   "coreVersion": "0.2.9",
   "uiVersion": "0.1.8",
-  "contentVersion": "0.1.2",
+  "contentVersion": "0.1.4",
   "profile": "week-based",
   "contextType": "assignment",
   "useContentEngine": true,
@@ -22,9 +22,9 @@
     },
     "content": {
       "name": "@learning-platform/content",
-      "version": "0.1.2",
+      "version": "0.1.4",
       "repository": "Acerosa/learning-platform-content",
-      "tag": "v0.1.2"
+      "tag": "v0.1.4"
     }
   },
   "dependencyStrategy": "file-siblings",
