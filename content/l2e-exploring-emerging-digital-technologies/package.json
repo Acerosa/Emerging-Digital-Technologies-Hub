@@ -3678,7 +3678,7 @@
       "schema": "lp.content.activity",
       "schemaVersion": "0.1.0",
       "id": "week-2-reflection",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "metadata": {
         "title": "Portfolio reflection",
         "status": "available",
