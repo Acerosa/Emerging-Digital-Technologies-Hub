@@ -1,6 +1,6 @@
 import { createPlatform } from "@learning-platform/core";
 import { createClient } from "@supabase/supabase-js";
-import { validatePackage } from "@learning-platform/content";
+import { validateLearnerSafePackage } from "@learning-platform/content";
 import { APP_CONFIG } from "./config";
 import { configureBundledPackage } from "./curriculum/runtime-weeks";
 import { createSitePath } from "./paths";
@@ -73,7 +73,9 @@ export function createHubPlatform(root: string, createPlatformFn = createPlatfor
   }, {
     supabaseClient: client,
     localStorage: typeof window !== "undefined" ? window.localStorage : undefined,
-    validatePackage,
+    // Published packages are learner-safe (answer maps stripped). Authoring validatePackage
+    // must not gate hydration — that rejects stripped classification/choice blocks.
+    validatePackage: validateLearnerSafePackage,
     fetch: curriculumAwareFetch,
     loadBundled: () => import("../content/l2e-exploring-emerging-digital-technologies/package.json").then((mod) => mod.default)
   });

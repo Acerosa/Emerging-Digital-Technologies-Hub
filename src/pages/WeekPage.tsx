@@ -131,13 +131,15 @@ export function WeekPage({
   root,
   pkg,
   platform,
-  adaptersReady = true
+  adaptersReady = true,
+  platformState
 }: {
   weekId: string;
   root: string;
   pkg?: ContentPackage | null;
   platform?: unknown;
   adaptersReady?: boolean;
+  platformState?: string;
 }) {
   const mountRef = useRef<HTMLDivElement>(null);
   const dismissedRef = useRef(false);
@@ -232,7 +234,7 @@ export function WeekPage({
         };
       })
     }));
-  }, [content, model, platform, recordPracticeResult]);
+  }, [content, model, platform, recordPracticeResult, platformState]);
 
   // Wait for platform.initialise() so signed-in draft stores can hydrate from
   // the server. Re-bind after every commit. React can rewrite authored HTML
@@ -272,7 +274,12 @@ export function WeekPage({
 
   return (
     <WeekAccessGuard week={guardWeek}>
-      <div data-lp-mount="" data-lp-week-page="" ref={mountRef}>
+      <div
+        data-lp-mount=""
+        data-lp-week-page=""
+        data-lp-platform-state={platformState || ""}
+        ref={mountRef}
+      >
         <WeekView
           week={{
             id: model.week.id,

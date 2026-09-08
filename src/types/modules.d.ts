@@ -38,23 +38,35 @@ declare module "@learning-platform/core" {
     status: string;
     context?: {
       firstName?: string;
+      surname?: string;
+      studentNumber?: string;
       fullName?: string;
       displayName?: string;
       yearGroup?: string;
       academicYear?: string;
       contactEmail?: string;
+      groupCode?: string;
+      groupName?: string;
+      enrolments?: unknown[];
     } | null;
   }
 
   export interface PlatformFacade {
     config: { hubName: string; accountPath: string };
     theme: ThemeService;
-    auth: { signOut: () => Promise<void>; subscribe?: (listener: (state: { status: string; session?: { user?: { id?: string } } }) => void) => () => void };
+    auth: {
+      signOut: () => Promise<void>;
+      isSignedIn?: () => boolean;
+      subscribe?: (listener: (state: { status: string; session?: { user?: { id?: string } } }) => void) => () => void;
+    };
     learner: {
       subscribe: (listener: (state: LearnerState) => void) => () => void;
+      refresh?: () => Promise<unknown>;
+      getState?: () => LearnerState;
     };
     state: {
       subscribe: (listener: (snapshot: { status: string }) => void) => () => void;
+      getState?: () => { status: string };
     };
     onboarding: unknown;
     progress?: { getProgress?: () => Promise<unknown> };
@@ -82,10 +94,16 @@ declare module "@learning-platform/core" {
     authService: unknown;
     learnerContext: unknown;
     onboardingService: unknown;
-  }): { element: HTMLElement; open: (trigger?: EventTarget | null) => void; destroy?: () => void };
+  }): {
+    element: HTMLElement;
+    open: (trigger?: EventTarget | null) => void;
+    showOnboarding?: () => void;
+    destroy?: () => void;
+  };
 }
 
 declare module "*.js";
 declare module "@learning-platform/content" {
   export function validatePackage(pkg: unknown): { valid: boolean; issues?: unknown[] };
+  export function validateLearnerSafePackage(pkg: unknown): { valid: boolean; issues?: unknown[] };
 }

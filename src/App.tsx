@@ -1,10 +1,16 @@
 import { LearnerHeader } from "@learning-platform/ui";
 import { useMemo } from "react";
 import { CourseLayout } from "./components/CourseSidebar";
+import { JoinClassPanel } from "./components/JoinClassPanel";
 import { L2eHubShell } from "./components/L2eHubShell";
 import { APP_CONFIG } from "./config";
-import { ContentPackageProvider, useLoadedContent } from "./content/ContentPackageProvider";
 import { liveContentPackage } from "./curriculum/apply-runtime";
+import type { ContentPackage } from "./curriculum/from-package";
+import {
+  JOIN_CLASS_PROMPT,
+  needsJoinClass,
+  withEnrolmentGuardedMarking
+} from "./enrolment";
 import { useHubPlatform } from "./hooks/useHubPlatform";
 import { currentIds, type PageContext } from "./page-context";
 import { breadcrumbs, pageHeader } from "./page-copy";
@@ -17,59 +23,101 @@ import { buildL2eNavigation, buildL2eNavigationFallback, createSitePath } from "
 function PageBody({
   context,
   platform,
+  pkg,
   contentReady,
-  adaptersReady
+  adaptersReady,
+  platformState,
+  accountDialog,
+  onJoined
 }: {
   context: PageContext;
   platform?: unknown;
+  pkg?: ContentPackage | null;
   contentReady: boolean;
   adaptersReady: boolean;
+  platformState: string;
+  accountDialog?: { open: (trigger?: EventTarget | null) => void; showOnboarding?: () => void } | null;
+  onJoined?: () => void;
 }) {
-  const { pkg } = useLoadedContent();
   if (context.page === "course-guide") return <CourseGuidePage root={context.root} pkg={pkg} />;
   if (/^week-\d+$/.test(context.page)) {
     return (
-      <WeekPage
-        weekId={context.page}
-        root={context.root}
-        pkg={pkg}
-        platform={platform}
-        adaptersReady={adaptersReady}
-      />
+      <>
+        {needsJoinClass(platformState) || platformState === "signed-out" ? (
+          <JoinClassPanel
+            compact
+            root={context.root}
+            platformState={platformState}
+            platform={platform as never}
+            onSignIn={(trigger) => accountDialog?.open(trigger)}
+            onJoined={onJoined}
+          />
+        ) : null}
+        <WeekPage
+          weekId={context.page}
+          root={context.root}
+          pkg={pkg}
+          platform={platform}
+          adaptersReady={adaptersReady}
+          platformState={platformState}
+        />
+      </>
     );
   }
   if (context.page === "resources") return <ResourcesPage root={context.root} />;
   if (context.page === "help") return <HelpPage />;
-  if (context.page === "account") return <AccountPage />;
+  if (context.page === "account") {
+    return (
+      <AccountPage
+        root={context.root}
+        platformState={platformState}
+        platform={platform as never}
+        onSignIn={(trigger) => accountDialog?.open(trigger)}
+        onJoined={onJoined}
+      />
+    );
+  }
   return <HomePage root={context.root} livePackage={contentReady ? liveContentPackage() : null} />;
 }
 
 export function App({ context }: { context: PageContext }) {
-  const hub = useHubPlatform(context.root);
-  return (
-    <ContentPackageProvider platform={hub.platform}>
-      <HubApp context={context} hub={hub} />
-    </ContentPackageProvider>
-  );
-}
-
-function HubApp({
-  context,
-  hub
-}: {
-  context: PageContext;
-  hub: ReturnType<typeof useHubPlatform>;
-}) {
-  const { pkg, source } = useLoadedContent();
-  const { learner, theme, accountDialog, platform, adaptersReady } = hub;
-  const contentReady = Boolean(pkg) && source !== "none";
+  const {
+    learner,
+    theme,
+    accountDialog,
+    platform,
+    adaptersReady,
+    curriculum,
+    platformState,
+    authStatus
+  } = useHubPlatform(context.root);
+  const pkg = curriculum.package;
+  const contentReady = Boolean(pkg) && curriculum.source !== "none" && adaptersReady;
   const header = pageHeader(context, pkg);
   const navigation = useMemo(
     () => (contentReady
       ? buildL2eNavigation(context.root, liveContentPackage())
       : buildL2eNavigationFallback(context.root)),
-    [context.root, contentReady, source]
+    [context.root, contentReady, curriculum.source]
   );
+  const signedIn = authStatus === "authenticated" || Boolean(learner) || needsJoinClass(platformState);
+  const joinNeeded = needsJoinClass(platformState);
+  const guardedPlatform = useMemo(
+    () => withEnrolmentGuardedMarking(platform as never, () => platformState),
+    [platform, platformState]
+  );
+
+  function openAccount(trigger?: EventTarget | null) {
+    if (joinNeeded && typeof accountDialog?.showOnboarding === "function") {
+      accountDialog.showOnboarding();
+      return;
+    }
+    accountDialog?.open(trigger);
+  }
+
+  async function refreshAfterJoin() {
+    await platform.learner?.refresh?.();
+  }
 
   return (
     <L2eHubShell
@@ -81,13 +129,25 @@ function HubApp({
       theme={theme}
       actions={(
         <div className="student-account" data-student-account="">
-          {learner ? (
+          {signedIn ? (
             <>
-              <span className="student-account__name">{learner.displayName || learner.fullName || "Learner"}</span>
+              <span className="student-account__name">
+                {learner?.displayName || learner?.fullName || (joinNeeded ? "Finish joining your class" : "Learner")}
+              </span>
+              {joinNeeded ? (
+                <button
+                  className="lp-button"
+                  type="button"
+                  data-join-class-open=""
+                  onClick={(event) => openAccount(event.currentTarget)}
+                >
+                  {JOIN_CLASS_PROMPT}
+                </button>
+              ) : null}
               <button
                 className="lp-button lp-button--secondary"
                 type="button"
-                onClick={(event) => accountDialog?.open(event.currentTarget)}
+                onClick={(event) => openAccount(event.currentTarget)}
               >
                 Account
               </button>
@@ -124,7 +184,16 @@ function HubApp({
       }}
     >
       <CourseLayout currentPage={context.section} root={context.root}>
-        <PageBody context={context} platform={platform} contentReady={contentReady} adaptersReady={adaptersReady} />
+        <PageBody
+          context={context}
+          platform={guardedPlatform}
+          pkg={pkg}
+          contentReady={contentReady}
+          adaptersReady={adaptersReady}
+          platformState={platformState}
+          accountDialog={accountDialog}
+          onJoined={() => { void refreshAfterJoin(); }}
+        />
       </CourseLayout>
     </L2eHubShell>
   );

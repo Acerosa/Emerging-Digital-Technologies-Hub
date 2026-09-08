@@ -20,9 +20,10 @@ test("learner pages render from the loaded curriculum package, not a static impo
   assert.match(read("src/main.tsx"), /createRoot\(root\)\.render\(<App/);
   assert.doesNotMatch(read("src/main.tsx"), /StrictMode/);
   assert.doesNotMatch(read("src/pages/WeekPage.tsx"), /\[engine, content, model\]/);
-  assert.match(read("src/App.tsx"), /ContentPackageProvider/);
-  assert.match(read("src/App.tsx"), /useLoadedContent/);
-  assert.match(read("src/hooks/useContentPackage.ts"), /loadL2eCurriculum|loadLatest/);
+  assert.doesNotMatch(read("src/App.tsx"), /ContentPackageProvider/);
+  assert.doesNotMatch(read("src/App.tsx"), /useLoadedContent/);
+  assert.match(read("src/App.tsx"), /curriculum\.package/);
+  assert.match(read("src/hooks/useHubPlatform.ts"), /loadL2eCurriculum\(platform\)/);
 });
 
 test("activity check-answer is wired to the Unit 14 submission adapter", function () {
@@ -44,4 +45,13 @@ test("activity check-answer is wired to the Unit 14 submission adapter", functio
   assert.match(read("src/platform.ts"), /L2E_CURRICULUM_RPC_FAILED/);
   assert.match(read("src/platform.ts"), /new Headers\(init\?\.headers\)/);
   assert.match(read("src/curriculum/apply-runtime.ts"), /L2E_CURRICULUM_FALLBACK/);
+});
+
+test("platform hydrates published curriculum with learner-safe validation like T Level", function () {
+  const platform = read("src/platform.ts");
+  assert.match(platform, /validateLearnerSafePackage/);
+  assert.match(platform, /validatePackage:\s*validateLearnerSafePackage/);
+  assert.doesNotMatch(platform, /validatePackage,\s*$/m);
+  assert.match(platform, /loadBundled/);
+  assert.match(platform, /curriculumAwareFetch|published_curriculum_package/);
 });
