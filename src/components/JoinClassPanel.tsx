@@ -1,10 +1,13 @@
 import { FormEvent, useEffect, useState } from "react";
 import {
+  EXPECTED_GROUP_CODE,
   EXPECTED_REGISTRATION_KEY,
   JOIN_CLASS_PROMPT,
+  hasExpectedGroupEnrolment,
   needsJoinClass,
   normaliseRegistrationKey,
   optionLabel,
+  type EnrolmentRow,
   type RegistrationOption
 } from "../enrolment";
 import { createSitePath } from "../paths";
@@ -64,10 +67,12 @@ export function JoinClassPanel({
   onJoined,
   onSignIn
 }: JoinClassPanelProps) {
-  const accessNeedsJoin = needsJoinClass(platformState);
-  const enrolled = platformState === "ready" || platformState === "no-assignments";
-  const guest = platformState === "signed-out";
   const context = platform.learner?.getState?.()?.context;
+  const enrolments = (context?.enrolments || null) as EnrolmentRow[] | null;
+  const accessNeedsJoin = needsJoinClass(platformState, { enrolments });
+  const enrolled = (platformState === "ready" || platformState === "no-assignments")
+    && hasExpectedGroupEnrolment(enrolments, EXPECTED_GROUP_CODE);
+  const guest = platformState === "signed-out";
   const initial = profileFromPlatform(platform);
 
   const [firstName, setFirstName] = useState(initial.firstName);

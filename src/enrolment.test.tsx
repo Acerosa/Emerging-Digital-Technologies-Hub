@@ -39,15 +39,27 @@ describe("L2E normal learner enrolment", () => {
   });
 
   it("enrolled learner does not see join prompt and can mark", () => {
-    expect(needsJoinClass("ready")).toBe(false);
-    expect(canMarkActivity("ready")).toBe(true);
-    expect(markBlockedError("ready")).toBeNull();
+    const enrolments = [{ status: "active", groupCode: "L2E-DELIVERY-A" }];
+    expect(needsJoinClass("ready", { enrolments })).toBe(false);
+    expect(canMarkActivity("ready", { enrolments })).toBe(true);
+    expect(markBlockedError("ready", { enrolments })).toBeNull();
+  });
+
+  it("other-course ready state still requires L2E class join", () => {
+    const enrolments = [{ status: "active", groupCode: "TLEVEL-DSD-Y2" }];
+    expect(needsJoinClass("ready", { enrolments })).toBe(true);
+    expect(canMarkActivity("ready", { enrolments })).toBe(false);
+    const error = markBlockedError("ready", { enrolments }) as Error & { code?: string };
+    expect(error?.code).toBe("JOIN_CLASS_REQUIRED");
   });
 
   it("does not call mark_formative_response before valid enrolment", async () => {
     const markBlock = vi.fn(async (_input?: Record<string, unknown>) => ({ complete: true }));
     const platform = withEnrolmentGuardedMarking(
-      { marking: { markBlock } },
+      {
+        marking: { markBlock },
+        learner: { getState: () => ({ context: { enrolments: [] } }) }
+      },
       () => "onboarding-required"
     );
     await expect(platform.marking.markBlock({ activityKey: "week-1-welcome" })).rejects.toMatchObject({
@@ -57,10 +69,36 @@ describe("L2E normal learner enrolment", () => {
     expect(markBlock).not.toHaveBeenCalled();
   });
 
+  it("blocks mark when platform is ready but only other-course enrolments exist", async () => {
+    const markBlock = vi.fn(async () => ({ complete: true }));
+    const platform = withEnrolmentGuardedMarking(
+      {
+        marking: { markBlock },
+        learner: {
+          getState: () => ({
+            context: { enrolments: [{ status: "active", groupCode: "TLEVEL-DSD-Y2" }] }
+          })
+        }
+      },
+      () => "ready"
+    );
+    await expect(platform.marking.markBlock({ activityKey: "week-1-digital-technology" })).rejects.toMatchObject({
+      code: "JOIN_CLASS_REQUIRED"
+    });
+    expect(markBlock).not.toHaveBeenCalled();
+  });
+
   it("enrolled learner can immediately mark through the guarded platform", async () => {
     const markBlock = vi.fn(async (_input?: Record<string, unknown>) => ({ complete: true, correct: true }));
     const platform = withEnrolmentGuardedMarking(
-      { marking: { markBlock } },
+      {
+        marking: { markBlock },
+        learner: {
+          getState: () => ({
+            context: { enrolments: [{ status: "active", groupCode: "L2E-DELIVERY-A" }] }
+          })
+        }
+      },
       () => "ready"
     );
     await expect(platform.marking.markBlock({ activityKey: "week-1-welcome" })).resolves.toMatchObject({
@@ -183,7 +221,8 @@ describe("L2E normal learner enrolment", () => {
               context: {
                 yearGroup: "Year 1",
                 groupName: "L2E Gateway Delivery Group A",
-                groupCode: "L2E-DELIVERY-A"
+                groupCode: "L2E-DELIVERY-A",
+                enrolments: [{ status: "active", groupCode: "L2E-DELIVERY-A" }]
               }
             })
           }

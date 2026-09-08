@@ -39,9 +39,12 @@ function PageBody({
 }) {
   if (context.page === "course-guide") return <CourseGuidePage root={context.root} pkg={pkg} />;
   if (/^week-\d+$/.test(context.page)) {
+    const enrolments = (platform as { learner?: { getState?: () => { context?: { enrolments?: unknown[] } | null } } })
+      ?.learner?.getState?.()?.context?.enrolments as import("./enrolment").EnrolmentRow[] | undefined;
+    const joinGate = needsJoinClass(platformState, { enrolments }) || platformState === "signed-out";
     return (
       <>
-        {needsJoinClass(platformState) || platformState === "signed-out" ? (
+        {joinGate ? (
           <JoinClassPanel
             compact
             root={context.root}
@@ -97,8 +100,9 @@ export function App({ context }: { context: PageContext }) {
       : buildL2eNavigationFallback(context.root)),
     [context.root, contentReady, curriculum.source]
   );
-  const signedIn = authStatus === "authenticated" || Boolean(learner) || needsJoinClass(platformState);
-  const joinNeeded = needsJoinClass(platformState);
+  const enrolments = (learner as { enrolments?: import("./enrolment").EnrolmentRow[] } | null)?.enrolments;
+  const signedIn = authStatus === "authenticated" || Boolean(learner) || needsJoinClass(platformState, { enrolments });
+  const joinNeeded = needsJoinClass(platformState, { enrolments });
   const guardedPlatform = useMemo(
     () => withEnrolmentGuardedMarking(platform as never, () => platformState),
     [platform, platformState]
