@@ -130,12 +130,14 @@ export function WeekPage({
   weekId,
   root,
   pkg,
-  platform
+  platform,
+  platformState
 }: {
   weekId: string;
   root: string;
   pkg?: ContentPackage | null;
   platform?: unknown;
+  platformState?: string;
 }) {
   const mountRef = useRef<HTMLDivElement>(null);
   const dismissedRef = useRef(false);
@@ -230,7 +232,7 @@ export function WeekPage({
         };
       })
     }));
-  }, [content, model, platform, recordPracticeResult]);
+  }, [content, model, platform, recordPracticeResult, platformState]);
 
   // Re-bind after every commit. React can rewrite authored HTML nodes on a
   // later render and wipe data-lp-bound / listeners without changing sessions identity.
@@ -269,7 +271,12 @@ export function WeekPage({
 
   return (
     <WeekAccessGuard week={guardWeek}>
-      <div data-lp-mount="" data-lp-week-page="" ref={mountRef}>
+      <div
+        data-lp-mount=""
+        data-lp-week-page=""
+        data-lp-platform-state={platformState || ""}
+        ref={mountRef}
+      >
         <WeekView
           week={{
             id: model.week.id,
