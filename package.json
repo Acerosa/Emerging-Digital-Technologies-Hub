@@ -15,7 +15,9 @@
     "test:app": "vitest run",
     "check:hub-security": "node ./node_modules/@learning-platform/core/dist/hub-security.mjs",
     "check:learner-bundle": "node ./node_modules/@learning-platform/content/scripts/check-learner-bundle.js",
-    "check": "npm run typecheck && npm test"
+    "check:catalogue-alignment": "node ./scripts/check-catalogue-alignment.mjs",
+    "check": "npm run typecheck && npm test",
+    "pretest": "npm run check:catalogue-alignment"
   },
   "dependencies": {
     "@learning-platform/core": "file:../learning-platform-core",
