@@ -103,6 +103,9 @@ describe("L2E feedback runtime lifecycle (T Level equivalent)", () => {
     });
     await waitFor(() => {
       expectCorrectVisible();
+      expect(screen.getByText("That matches the expected option.")).toBeTruthy();
+      expect(screen.queryByText(/could not be checked/i)).toBeNull();
+      expect(screen.queryByText(/ACTIVITY_NOT_ASSIGNED/i)).toBeNull();
       expect(markBlock).toHaveBeenCalledTimes(1);
     });
 

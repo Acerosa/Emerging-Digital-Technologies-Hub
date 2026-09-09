@@ -1,4 +1,5 @@
 import { createPlatform } from "@learning-platform/core";
+import { createSupabaseClient } from "@learning-platform/core/advanced";
 import { createClient } from "@supabase/supabase-js";
 import { validateLearnerSafePackage } from "@learning-platform/content";
 import { APP_CONFIG } from "./config";
@@ -44,13 +45,15 @@ function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
 
 export function createHubPlatform(root: string, createPlatformFn = createPlatform) {
   ensureBundledConfigured();
-  const client = createClient(SUPABASE_CONFIG.projectUrl, SUPABASE_CONFIG.publishableKey, {
-    auth: {
-      persistSession: true,
-      autoRefreshToken: true,
-      detectSessionInUrl: true
-    },
-    global: { fetch: curriculumAwareFetch }
+  const client = createSupabaseClient({
+    projectUrl: SUPABASE_CONFIG.projectUrl,
+    publishableKey: SUPABASE_CONFIG.publishableKey,
+    hubCode: APP_CONFIG.hubId
+  }, {
+    createClient: (url: string, key: string, options?: Record<string, unknown>) => createClient(url, key, {
+      ...options,
+      global: { fetch: curriculumAwareFetch }
+    })
   });
   const platform = createPlatformFn({
     hubCode: APP_CONFIG.hubId,

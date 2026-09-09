@@ -54,4 +54,22 @@ test("platform hydrates published curriculum with learner-safe validation like T
   assert.doesNotMatch(platform, /validatePackage,\s*$/m);
   assert.match(platform, /loadBundled/);
   assert.match(platform, /curriculumAwareFetch|published_curriculum_package/);
+  assert.match(platform, /createSupabaseClient/);
+  assert.match(platform, /hubCode:\s*APP_CONFIG\.hubId/);
+});
+
+test("hub platform uses Core hub-scoped Auth persistence", async function () {
+  const source = read("src/platform.ts");
+  assert.match(source, /createSupabaseClient/);
+  assert.match(source, /hubCode:\s*APP_CONFIG\.hubId/);
+  assert.doesNotMatch(source, /persistSession:\s*true/);
+  const { createAuthStorageKey } = await import("@learning-platform/core/advanced");
+  assert.equal(
+    createAuthStorageKey("https://hubwpkrqndorznwzvaer.supabase.co", "l2e-exploring-emerging-digital-technologies"),
+    "sb-hubwpkrqndorznwzvaer-auth-token--l2e-exploring-emerging-digital-technologies"
+  );
+  assert.equal(
+    createAuthStorageKey("https://hubwpkrqndorznwzvaer.supabase.co", "tlevel-software-development"),
+    "sb-hubwpkrqndorznwzvaer-auth-token--tlevel-software-development"
+  );
 });
