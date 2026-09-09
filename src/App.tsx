@@ -129,7 +129,7 @@ export function App({ context }: { context: PageContext }) {
           {signedIn ? (
             <>
               <span className="student-account__name">
-                {learner?.displayName || learner?.fullName || (joinNeeded ? "Finish joining your class" : "Learner")}
+                {learner?.displayName || learner?.fullName || (joinNeeded ? "Finish setting up your account" : "Learner")}
               </span>
               {joinNeeded ? (
                 <button

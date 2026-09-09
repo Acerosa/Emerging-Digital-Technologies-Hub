@@ -1,10 +1,9 @@
-/** Enrolment / join-class helpers for the L2E hub learner UX. */
+/** Enrolment helpers for the L2E hub. Class membership is server-assigned via open_auto. */
 
 export const SIGN_IN_TO_CONTINUE = "Sign in to continue.";
 export const JOIN_CLASS_MESSAGE =
-  "You need to join your class before this activity can be checked.";
-export const JOIN_CLASS_PROMPT = "Join your class to continue";
-export const EXPECTED_REGISTRATION_KEY = "l2e-year-1-delivery";
+  "Finish setting up your account before this activity can be checked.";
+export const JOIN_CLASS_PROMPT = "Finish setting up your account";
 export const EXPECTED_GROUP_CODE = "L2E-DELIVERY-A";
 
 export type EnrolmentAccess =
@@ -70,24 +69,4 @@ export function withEnrolmentGuardedMarking<T extends { marking?: { markBlock?: 
       }
     }
   };
-}
-
-export type RegistrationOption = {
-  registrationKey: string;
-  yearGroup?: string;
-  groupName?: string;
-  groupCode?: string;
-  courseTitle?: string;
-  academicYear?: string;
-};
-
-export function optionLabel(option: RegistrationOption): string {
-  const group = option.groupName || option.groupCode || "Class group";
-  const year = option.yearGroup || "";
-  const course = option.courseTitle || "";
-  return [year, group, course].filter(Boolean).join(" — ");
-}
-
-export function normaliseRegistrationKey(value: string): string {
-  return String(value || "").trim().toLowerCase();
 }

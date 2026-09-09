@@ -82,7 +82,7 @@ export function AccountPage({
       <section className="study-card" aria-labelledby="account-overview-heading">
         <h2 id="account-overview-heading">Your account</h2>
         {platformState === "signed-out" ? (
-          <p>You are signed out. Sign in to join your class and save checked answers to your learning record.</p>
+          <p>You are signed out. Sign in with your existing learning-hub email to save checked answers to your learning record.</p>
         ) : (
           <dl className="account-summary">
             <div>
@@ -116,7 +116,7 @@ export function AccountPage({
       ) : (
         <section className="study-card">
           <h2>Sign in or register</h2>
-          <p>Use the Sign in control in the header to create an account and join your class.</p>
+          <p>Use the Sign in control in the header to create an account or sign in with an existing one.</p>
         </section>
       )}
     </div>

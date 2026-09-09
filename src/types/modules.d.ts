@@ -61,16 +61,20 @@ declare module "@learning-platform/core" {
     };
     learner: {
       subscribe: (listener: (state: LearnerState) => void) => () => void;
-      refresh?: () => Promise<unknown>;
+      refresh?: (options?: { preferredGroupCode?: string }) => Promise<unknown>;
       getState?: () => LearnerState;
+      getContext: () => NonNullable<LearnerState["context"]> | null;
     };
     state: {
       subscribe: (listener: (snapshot: { status: string }) => void) => () => void;
-      getState?: () => { status: string };
+      getState: () => { status: string };
     };
-    onboarding: unknown;
-    progress?: { getProgress?: () => Promise<unknown> };
-    assignments?: unknown;
+    onboarding: {
+      complete: (details: Record<string, string>) => Promise<unknown>;
+    };
+    assignments?: {
+      getHubAssignments?: (hubCode: string) => Promise<unknown>;
+    };
     assignment?: unknown;
     enrolments?: unknown;
     enrolment?: unknown;

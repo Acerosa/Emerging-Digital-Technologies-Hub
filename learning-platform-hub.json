@@ -11,13 +11,13 @@
   ],
   "compatibility": {
     "required": {
-      "coreVersion": "0.2.9",
+      "coreVersion": "0.2.14",
       "learnerApiContractVersion": "0.1.0",
       "submissionContractVersion": "0.1.0"
     },
     "testedCombinations": [
       {
-        "coreVersion": "0.2.9",
+        "coreVersion": "0.2.14",
         "learnerApiContractVersion": "0.1.0",
         "submissionContractVersion": "0.1.0"
       }
