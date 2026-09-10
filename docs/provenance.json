@@ -2,7 +2,7 @@
   "generator": "@learning-platform/cli",
   "generatorVersion": "0.1.0",
   "coreVersion": "0.2.20",
-  "uiVersion": "0.1.8",
+  "uiVersion": "0.1.12",
   "contentVersion": "0.1.4",
   "profile": "week-based",
   "contextType": "assignment",
@@ -16,9 +16,9 @@
     },
     "ui": {
       "name": "@learning-platform/ui",
-      "version": "0.1.8",
+      "version": "0.1.12",
       "repository": "Acerosa/Acerosa-learning-platform-ui",
-      "tag": "v0.1.8"
+      "tag": "v0.1.12"
     },
     "content": {
       "name": "@learning-platform/content",
