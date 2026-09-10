@@ -6,7 +6,7 @@ export const APP_CONFIG = Object.freeze({
   shortName: "L2E Computing Hub",
   qualification: "Gateway Level 2 Digital and IT Skills",
   unitCode: "M/618/3683",
-  coreVersion: "0.2.14",
+  coreVersion: "0.2.17",
   learnerApiContractVersion: "0.1.0",
   submissionContractVersion: "0.1.0",
   schemaVersion: "0.1.0",
@@ -19,7 +19,8 @@ export const APP_CONFIG = Object.freeze({
     Object.freeze({ id: "week-3", label: "Week 3: Cloud technology - SaaS, IaaS, PaaS, DaaS", path: "week-3/" }),
     Object.freeze({ id: "course-guide", label: "Course Guide", path: "course-guide/" }),
     Object.freeze({ id: "resources", label: "Resources", path: "resources/" }),
-    Object.freeze({ id: "help", label: "Help", path: "help/" })
+    Object.freeze({ id: "help", label: "Help", path: "help/" }),
+    Object.freeze({ id: "account", label: "Account", path: "account/" })
   ]),
   courseSectionIds: Object.freeze([
     "home",
