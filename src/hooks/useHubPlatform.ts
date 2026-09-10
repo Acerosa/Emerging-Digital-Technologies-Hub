@@ -75,20 +75,44 @@ export function useHubPlatform(root: string) {
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
 
+    // Match Unit 3 / T Level: start Auth+learner resolve immediately. Do not
+    // block initialise on curriculum fetch (that delayed hub access and made
+    // ET look like it needed identity onboarding after other hubs already worked).
     void (async () => {
-      const runtime = await loadL2eCurriculum(platform) as CurriculumRuntime & {
-        package?: ContentPackage | null;
-      };
-      if (cancelled) return;
-      setCurriculum({
-        source: runtime.source || "none",
-        package: runtime.package || null
-      });
-      document.dispatchEvent(new CustomEvent("lp:content-ready", {
-        detail: { package: runtime.package || null, publication: runtime.state }
-      }));
-      await platform.initialise();
-      if (!cancelled) setAdaptersReady(true);
+      const ready = platform.initialise();
+      try {
+        const runtime = await loadL2eCurriculum(platform) as CurriculumRuntime & {
+          package?: ContentPackage | null;
+        };
+        if (!cancelled) {
+          setCurriculum({
+            source: runtime.source || "none",
+            package: runtime.package || null
+          });
+          document.dispatchEvent(new CustomEvent("lp:content-ready", {
+            detail: { package: runtime.package || null, publication: runtime.state }
+          }));
+        }
+      } finally {
+        const snapshot = await ready;
+        if (!cancelled) {
+          const auth = platform.auth.getState?.();
+          const learnerState = platform.learner.getState?.();
+          console.info("L2E_PLATFORM_STARTUP", {
+            coreVersion: APP_CONFIG.coreVersion,
+            hubCode: APP_CONFIG.hubId,
+            authUserId: auth?.session?.user?.id || null,
+            authStatus: auth?.status || null,
+            platformStatus: snapshot?.status || platform.state.getState?.()?.status || null,
+            learnerStatus: learnerState?.status || null,
+            studentNumber: learnerState?.context?.studentNumber || null,
+            joinNeeded: learnerState?.status === "onboarding-required"
+              || snapshot?.status === "no-enrolment"
+              || snapshot?.status === "onboarding-required"
+          });
+          setAdaptersReady(true);
+        }
+      }
     })();
 
     return () => {

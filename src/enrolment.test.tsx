@@ -166,7 +166,55 @@ describe("L2E hub-bound enrolment", () => {
     expect(joinClass).toHaveBeenCalledWith(EXPECTED_REGISTRATION_KEY);
   });
 
-  it("does not re-run complete for an already linked learner who only needs JoinClass", async () => {
+  it("shows identity fields for true onboarding-required Auth users", () => {
+    render(
+      <JoinClassPanel
+        platformState="onboarding-required"
+        platform={{
+          onboarding: { getPending: () => null, complete: vi.fn(), joinClass: vi.fn() },
+          learner: { getState: () => ({ status: "onboarding-required", context: null }) }
+        }}
+      />
+    );
+    expect(screen.getByLabelText(/First name/i)).toBeTruthy();
+    expect(screen.getByLabelText(/Student ID/i)).toBeTruthy();
+    expect(screen.getByLabelText(/Class registration key/i)).toBeTruthy();
+  });
+
+  it("keeps Switch account available for Student ID ownership conflicts", async () => {
+    const joinClass = vi.fn(async () => {
+      throw Object.assign(new Error("STUDENT_NUMBER_ALREADY_LINKED"), {
+        code: "STUDENT_NUMBER_ALREADY_LINKED"
+      });
+    });
+    const onSwitchAccount = vi.fn();
+    render(
+      <JoinClassPanel
+        platformState="onboarding-required"
+        onSwitchAccount={onSwitchAccount}
+        platform={{
+          onboarding: {
+            getPending: () => null,
+            complete: vi.fn(async () => ({})),
+            joinClass
+          },
+          learner: { getState: () => ({ status: "onboarding-required", context: null }) }
+        }}
+      />
+    );
+    fireEvent.change(screen.getByLabelText(/First name/i), { target: { value: "Ada" } });
+    fireEvent.change(screen.getByLabelText(/Surname/i), { target: { value: "Lovelace" } });
+    fireEvent.change(screen.getByLabelText(/Student ID/i), { target: { value: "999" } });
+    fireEvent.change(screen.getByLabelText(/Class registration key/i), {
+      target: { value: EXPECTED_REGISTRATION_KEY }
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole("button", { name: "Join class" }));
+    });
+    await waitFor(() => expect(screen.getByRole("button", { name: /Switch account/i })).toBeTruthy());
+  });
+
+    it("does not re-run complete for an already linked learner who only needs JoinClass", async () => {
     const complete = vi.fn(async () => ({ student_number: "123456" }));
     const joinClass = vi.fn(async () => ({ groupCode: EXPECTED_GROUP_CODE, status: "enrolled" }));
     render(

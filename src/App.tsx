@@ -21,6 +21,7 @@ import { CourseGuidePage } from "./pages/CourseGuidePage";
 import { HomePage } from "./pages/HomePage";
 import { HelpPage, ResourcesPage } from "./pages/StaticPages";
 import { WeekPage } from "./pages/WeekPage";
+import { focusJoinClassPanel, shouldOpenCoreOnboarding } from "./focus-join-class";
 import { switchHubAccount } from "./switch-account";
 import { buildL2eNavigation, buildL2eNavigationFallback, createSitePath } from "./paths";
 
@@ -134,10 +135,11 @@ export function App({ context }: { context: PageContext }) {
 
   function openAccount(trigger?: EventTarget | null, options?: { mode?: "sign-in" | "register" }) {
     // Identity onboarding only when Auth has no learner profile. Returning
-    // learners needing a class key stay on JoinClass (class-key-only), not Core's
-    // complete_learner_onboarding form.
+    // learners (learnerStatus authenticated) stay on JoinClass — even if
+    // platformState briefly says onboarding-required after hub resolve.
+    const learnerStatus = platform.learner?.getState?.()?.status || null;
     if (
-      platformState === "onboarding-required"
+      shouldOpenCoreOnboarding(platformState, learnerStatus)
       && options?.mode !== "register"
       && typeof accountDialog?.showOnboarding === "function"
     ) {
@@ -145,6 +147,11 @@ export function App({ context }: { context: PageContext }) {
       return;
     }
     accountDialog?.open(trigger, options);
+  }
+
+  function openJoinClass(trigger?: EventTarget | null) {
+    if (focusJoinClassPanel()) return;
+    openAccount(trigger);
   }
 
   /** Guest / post-sign-out: always open Core Sign in (never onboarding). */
@@ -183,12 +190,22 @@ export function App({ context }: { context: PageContext }) {
     const action = accountPageAutoOpenAction(
       context.page,
       platformState,
-      didAutoOpenAccount.current
+      didAutoOpenAccount.current,
+      platform.learner?.getState?.()?.status || null
     );
     if (!action || !accountDialog) return;
     didAutoOpenAccount.current = true;
-    if (action === "onboarding" && typeof accountDialog.showOnboarding === "function") {
+    const learnerStatus = platform.learner?.getState?.()?.status || null;
+    if (
+      action === "onboarding"
+      && shouldOpenCoreOnboarding(platformState, learnerStatus)
+      && typeof accountDialog.showOnboarding === "function"
+    ) {
       accountDialog.showOnboarding();
+      return;
+    }
+    if (action === "onboarding") {
+      focusJoinClassPanel();
       return;
     }
     if (action === "sign-in") accountDialog.open();
@@ -218,7 +235,7 @@ export function App({ context }: { context: PageContext }) {
                   className="lp-button"
                   type="button"
                   data-join-class-open=""
-                  onClick={(event) => openAccount(event.currentTarget)}
+                  onClick={(event) => openJoinClass(event.currentTarget)}
                 >
                   {JOIN_CLASS_PROMPT}
                 </button>
