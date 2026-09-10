@@ -2,6 +2,7 @@ import { createPlatform } from "@learning-platform/core";
 import { createSupabaseClient } from "@learning-platform/core/advanced";
 import { createClient } from "@supabase/supabase-js";
 import { validateLearnerSafePackage } from "@learning-platform/content";
+import { createAuthGatedFetch } from "./auth-gated-fetch";
 import { APP_CONFIG } from "./config";
 import { configureBundledPackage } from "./curriculum/runtime-weeks";
 import { createSitePath } from "./paths";
@@ -21,10 +22,13 @@ export function ensureBundledConfigured() {
 
 function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
   const url = String(typeof input === "string" ? input : input instanceof URL ? input.href : input.url);
-  const requestInit: RequestInit = { ...init };
+  const requestInit: RequestInit = { ...(init || {}) };
   if (url.includes("published_curriculum_package")) {
     requestInit.cache = "no-store";
-    const headers = new Headers(init?.headers);
+    // Preserve Authorization from Request when init.headers is absent.
+    const headers = new Headers(
+      init?.headers || (input instanceof Request ? input.headers : undefined)
+    );
     headers.set("Cache-Control", "no-cache");
     requestInit.headers = headers;
   }
@@ -45,6 +49,10 @@ function curriculumAwareFetch(input: RequestInfo | URL, init?: RequestInit) {
 
 export function createHubPlatform(root: string, createPlatformFn = createPlatform) {
   ensureBundledConfigured();
+  // Late-bound client so the auth gate can await getSession during restore.
+  let clientRef: { auth: { getSession: () => Promise<{ data: { session: { access_token?: string } | null } }> } } | null = null;
+  const gatedFetch = createAuthGatedFetch(() => clientRef, curriculumAwareFetch);
+
   const client = createSupabaseClient({
     projectUrl: SUPABASE_CONFIG.projectUrl,
     publishableKey: SUPABASE_CONFIG.publishableKey,
@@ -52,9 +60,11 @@ export function createHubPlatform(root: string, createPlatformFn = createPlatfor
   }, {
     createClient: (url: string, key: string, options?: Record<string, unknown>) => createClient(url, key, {
       ...options,
-      global: { fetch: curriculumAwareFetch }
+      global: { fetch: gatedFetch }
     })
   });
+  clientRef = client as typeof clientRef;
+
   const platform = createPlatformFn({
     hubCode: APP_CONFIG.hubId,
     courseKey: APP_CONFIG.courseKey,
@@ -79,12 +89,66 @@ export function createHubPlatform(root: string, createPlatformFn = createPlatfor
     // Published packages are learner-safe (answer maps stripped). Authoring validatePackage
     // must not gate hydration — that rejects stripped classification/choice blocks.
     validatePackage: validateLearnerSafePackage,
-    fetch: curriculumAwareFetch,
+    fetch: gatedFetch,
     loadBundled: () => import("../content/l2e-exploring-emerging-digital-technologies/package.json").then((mod) => mod.default)
   });
 
+  /**
+   * After Core initialise, Auth may have published authenticated while the first
+   * learner.refresh still used a publishable-only probe. Re-confirm session and
+   * refresh so onboarding-required cannot stick from a pre-auth empty profile.
+   */
+  async function recoverLearnerAfterAuthRestore() {
+    const auth = platform.auth.getState?.();
+    if (auth?.status !== "authenticated") return;
+    try {
+      await client.auth.getSession();
+    } catch {
+      return;
+    }
+    try {
+      await platform.learner.refresh?.();
+    } catch {
+      // Keep whatever state Core published; UI gates still avoid identity flash.
+    }
+    const learner = platform.learner.getState?.();
+    if (learner?.status !== "onboarding-required") return;
+    await new Promise((resolve) => setTimeout(resolve, 150));
+    try {
+      await client.auth.getSession();
+      await platform.learner.refresh?.();
+    } catch {
+      // Final state stands.
+    }
+  }
+
+  const coreInitialise = platform.initialise.bind(platform);
+  async function initialise() {
+    const started = Date.now();
+    const snapshot = await coreInitialise();
+    await recoverLearnerAfterAuthRestore();
+    const auth = platform.auth.getState?.();
+    const learner = platform.learner.getState?.();
+    const platformStatus = platform.state.getState?.()?.status || snapshot?.status || null;
+    console.info("L2E_PLATFORM_STARTUP", {
+      coreVersion: APP_CONFIG.coreVersion,
+      hubCode: APP_CONFIG.hubId,
+      elapsedMs: Date.now() - started,
+      authUserId: auth?.session?.user?.id || null,
+      authStatus: auth?.status || null,
+      platformStatus,
+      learnerStatus: learner?.status || null,
+      studentNumber: learner?.context?.studentNumber || null,
+      joinNeeded: learner?.status === "onboarding-required"
+        || platformStatus === "no-enrolment"
+        || platformStatus === "onboarding-required"
+    });
+    return platform.state.getState?.() || snapshot;
+  }
+
   return Object.freeze({
     ...platform,
+    initialise,
     client,
     assignment: platform.assignments || platform.assignment,
     enrolment: platform.enrolments || platform.enrolment,

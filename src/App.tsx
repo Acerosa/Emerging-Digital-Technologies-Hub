@@ -31,6 +31,7 @@ function PageBody({
   pkg,
   contentReady,
   platformState,
+  authStatus,
   onJoined,
   onOpenSignIn,
   onOpenCreateAccount,
@@ -41,6 +42,7 @@ function PageBody({
   pkg?: ContentPackage | null;
   contentReady: boolean;
   platformState: string;
+  authStatus?: string | null;
   onJoined?: () => void;
   onOpenSignIn?: (trigger?: EventTarget | null) => void;
   onOpenCreateAccount?: (trigger?: EventTarget | null) => void;
@@ -60,6 +62,7 @@ function PageBody({
       compact
       root={context.root}
       platformState={platformState}
+      authStatus={authStatus}
       platform={platform as never}
       onSignIn={(trigger) => onOpenSignIn?.(trigger)}
       onSwitchAccount={onSwitchAccount}
@@ -89,6 +92,7 @@ function PageBody({
       <AccountPage
         root={context.root}
         platformState={platformState}
+        authStatus={authStatus}
         platform={platform as never}
         onSignIn={(trigger) => onOpenSignIn?.(trigger)}
         onCreateAccount={(trigger) => onOpenCreateAccount?.(trigger)}

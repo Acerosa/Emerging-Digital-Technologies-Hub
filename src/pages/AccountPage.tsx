@@ -33,6 +33,7 @@ type HubPlatform = {
 type AccountPageProps = {
   root?: string;
   platformState?: string;
+  authStatus?: string | null;
   platform?: HubPlatform;
   onSignIn: (trigger?: EventTarget | null) => void;
   onCreateAccount?: (trigger?: EventTarget | null) => void;
@@ -43,6 +44,7 @@ type AccountPageProps = {
 export function AccountPage({
   root = ".",
   platformState = "signed-out",
+  authStatus = null,
   platform,
   onSignIn,
   onCreateAccount,
@@ -166,6 +168,7 @@ export function AccountPage({
       {platform ? (
         <JoinClassPanel
           platformState={platformState}
+          authStatus={authStatus}
           platform={platform as never}
           root={root}
           onSignIn={onSignIn}

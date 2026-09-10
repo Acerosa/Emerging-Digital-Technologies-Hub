@@ -75,9 +75,8 @@ export function useHubPlatform(root: string) {
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
 
-    // Match Unit 3 / T Level: start Auth+learner resolve immediately. Do not
-    // block initialise on curriculum fetch (that delayed hub access and made
-    // ET look like it needed identity onboarding after other hubs already worked).
+    // Match Unit 3 / T Level: start Auth+learner resolve immediately. Platform
+    // initialise also recovers if a pre-auth empty profile probe raced Auth restore.
     void (async () => {
       const ready = platform.initialise();
       try {
@@ -94,24 +93,8 @@ export function useHubPlatform(root: string) {
           }));
         }
       } finally {
-        const snapshot = await ready;
-        if (!cancelled) {
-          const auth = platform.auth.getState?.();
-          const learnerState = platform.learner.getState?.();
-          console.info("L2E_PLATFORM_STARTUP", {
-            coreVersion: APP_CONFIG.coreVersion,
-            hubCode: APP_CONFIG.hubId,
-            authUserId: auth?.session?.user?.id || null,
-            authStatus: auth?.status || null,
-            platformStatus: snapshot?.status || platform.state.getState?.()?.status || null,
-            learnerStatus: learnerState?.status || null,
-            studentNumber: learnerState?.context?.studentNumber || null,
-            joinNeeded: learnerState?.status === "onboarding-required"
-              || snapshot?.status === "no-enrolment"
-              || snapshot?.status === "onboarding-required"
-          });
-          setAdaptersReady(true);
-        }
+        await ready;
+        if (!cancelled) setAdaptersReady(true);
       }
     })();
 

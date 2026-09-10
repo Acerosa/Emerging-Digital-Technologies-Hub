@@ -170,6 +170,7 @@ describe("L2E hub-bound enrolment", () => {
     render(
       <JoinClassPanel
         platformState="onboarding-required"
+        authStatus="authenticated"
         platform={{
           onboarding: { getPending: () => null, complete: vi.fn(), joinClass: vi.fn() },
           learner: { getState: () => ({ status: "onboarding-required", context: null }) }
@@ -191,6 +192,7 @@ describe("L2E hub-bound enrolment", () => {
     render(
       <JoinClassPanel
         platformState="onboarding-required"
+        authStatus="authenticated"
         onSwitchAccount={onSwitchAccount}
         platform={{
           onboarding: {

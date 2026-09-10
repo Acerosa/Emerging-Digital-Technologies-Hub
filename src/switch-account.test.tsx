@@ -52,6 +52,7 @@ describe("JoinClass Switch account UX", () => {
     render(
       <JoinClassPanel
         platformState="onboarding-required"
+        authStatus="authenticated"
         platform={platform}
         onSignIn={onSignIn}
         onSwitchAccount={onSwitchAccount}

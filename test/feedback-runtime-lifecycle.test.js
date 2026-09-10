@@ -19,7 +19,9 @@ test("L2E hub lifecycle matches Unit 3: initialise in parallel with curriculum l
   assert.match(hook, /await ready/);
   assert.match(hook, /setCurriculum\(/);
   assert.match(hook, /adaptersReady/);
-  assert.match(hook, /L2E_PLATFORM_STARTUP/);
+  assert.match(read("src/platform.ts"), /L2E_PLATFORM_STARTUP/);
+  assert.match(read("src/platform.ts"), /createAuthGatedFetch/);
+  assert.match(read("src/platform.ts"), /recoverLearnerAfterAuthRestore/);
   // Auth/learner resolve must start before awaiting curriculum (Unit 3 parity).
   assert.ok(
     hook.indexOf("const ready = platform.initialise()") < hook.indexOf("loadL2eCurriculum(platform)"),
