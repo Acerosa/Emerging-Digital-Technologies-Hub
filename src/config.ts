@@ -6,7 +6,7 @@ export const APP_CONFIG = Object.freeze({
   shortName: "L2E Computing Hub",
   qualification: "Gateway Level 2 Digital and IT Skills",
   unitCode: "M/618/3683",
-  coreVersion: "0.2.17",
+  coreVersion: "0.2.18",
   learnerApiContractVersion: "0.1.0",
   submissionContractVersion: "0.1.0",
   schemaVersion: "0.1.0",
