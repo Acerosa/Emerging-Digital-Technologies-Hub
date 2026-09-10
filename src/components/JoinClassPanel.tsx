@@ -15,6 +15,7 @@ import {
   shouldCompleteProfileBeforeJoin
 } from "../join-class-errors";
 import { createSitePath } from "../paths";
+import { hasSiblingHubAuthSession } from "../sibling-hub-session";
 
 type ProfileFields = {
   firstName: string;
@@ -109,6 +110,11 @@ export function JoinClassPanel({
       <section className="join-class panel" data-lp-join-class="guest" aria-labelledby="join-class-heading">
         <h2 id="join-class-heading">{SIGN_IN_TO_CONTINUE}</h2>
         <p>Sign in to join your L2E class and check answers against your learning record.</p>
+        {typeof window !== "undefined" && hasSiblingHubAuthSession(window.localStorage) ? (
+          <p data-join-class-sibling-session="">
+            You may already be signed in on another learning hub. Each hub keeps its own sign-in — use the same email and password here.
+          </p>
+        ) : null}
         <div className="join-class__actions">
           <button
             className="lp-button"
