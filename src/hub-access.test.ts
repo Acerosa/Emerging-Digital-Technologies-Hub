@@ -95,10 +95,10 @@ describe("L2E hub access", () => {
     document.body.replaceChildren();
   });
 
-  it("auto-enrols a T Level-enrolled learner into L2E-DELIVERY-A through open_auto", async () => {
+  it("does not treat a T Level enrolment as L2E authority — learner must join with class key", async () => {
     const client = fakeClient({
       enrolments: [{ status: "active", group_code: "TLEVEL-DSD-Y2", year_group: "Year 2" }],
-      access: { status: "enrolled_created", group_code: "L2E-DELIVERY-A", year_group: "Year 1" },
+      access: { status: "no_enrolment" },
       hubAssignments: [{ activity_key: "week-1-digital-technology" }]
     });
     const platform = createPlatform(L2E_CONFIG, {
@@ -110,23 +110,15 @@ describe("L2E hub access", () => {
     });
     await platform.initialise();
     await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(platform.state.getState().status).toBe("ready");
-    expect(platform.learner.getContext()?.groupCode).toBe("L2E-DELIVERY-A");
-    expect(client.calls.find((call) => call.type === "rpc" && call.name === "resolve_learner_hub_access")?.payload).toEqual({
-      p_hub_code: "l2e-exploring-emerging-digital-technologies",
-      p_course_key: "gateway-level-2-digital-it-skills"
-    });
-    expect(JSON.stringify(client.calls.find((call) => call.type === "rpc" && call.name === "resolve_learner_hub_access")?.payload)).not.toMatch(/group|year|registration/);
-    expect(await platform.assignments?.getHubAssignments?.("l2e-exploring-emerging-digital-technologies")).toEqual([
-      { activity_key: "week-1-digital-technology" }
-    ]);
+    expect(platform.state.getState().status).toBe("no-enrolment");
+    expect(client.calls.some((call) => call.type === "rpc" && call.name === "my_hub_assignments")).toBe(false);
     platform.destroy();
   });
 
-  it("auto-enrols a Cyber-enrolled learner into L2E-DELIVERY-A through open_auto", async () => {
+  it("does not treat a Cyber enrolment as L2E authority — learner must join with class key", async () => {
     const client = fakeClient({
       enrolments: [{ status: "active", group_code: "CYBER-TEST-A", year_group: "Year 1" }],
-      access: { status: "enrolled_created", group_code: "L2E-DELIVERY-A", year_group: "Year 1" },
+      access: { status: "no_enrolment" },
       hubAssignments: [{ activity_key: "week-1-digital-technology" }]
     });
     const platform = createPlatform(L2E_CONFIG, {
@@ -138,8 +130,8 @@ describe("L2E hub access", () => {
     });
     await platform.initialise();
     await new Promise((resolve) => setTimeout(resolve, 0));
-    expect(platform.state.getState().status).toBe("ready");
-    expect(platform.learner.getContext()?.groupCode).toBe("L2E-DELIVERY-A");
+    expect(platform.state.getState().status).toBe("no-enrolment");
+    expect(client.calls.some((call) => call.type === "rpc" && call.name === "my_hub_assignments")).toBe(false);
     platform.destroy();
   });
 
@@ -239,38 +231,7 @@ describe("L2E hub access", () => {
     expect(dialog.element.querySelector("select")).toBeNull();
     expect(dialog.element.textContent).toContain("Enter your learner details to finish setting up your account.");
     expect(dialog.element.textContent).not.toContain("Choose a year and group");
-    expect(dialog.element.textContent).not.toContain("Class registration key");
     dialog.destroy?.();
-    platform.destroy();
-  });
-
-  it("complete() then resolve() without a browser-chosen group", async () => {
-    const client = fakeClient({
-      enrolments: [],
-      access: { status: "enrolled_created", group_code: "L2E-DELIVERY-A", year_group: "Year 1" }
-    });
-    const platform = createPlatform(L2E_CONFIG, {
-      supabaseClient: client,
-      sessionStorage: memoryStorage(),
-      localStorage: memoryStorage(),
-      document: null,
-      window: null
-    });
-    await platform.initialise();
-    await platform.onboarding.complete({
-      firstName: "Ada",
-      surname: "Lovelace",
-      studentNumber: "000123"
-    });
-    const completeCall = client.calls.find((call) => call.type === "rpc" && call.name === "complete_learner_onboarding");
-    expect(completeCall?.payload).toMatchObject({
-      p_first_name: "Ada",
-      p_surname: "Lovelace",
-      p_student_number: "000123",
-      p_registration_option: ""
-    });
-    expect(client.calls.filter((call) => call.type === "rpc" && call.name === "resolve_learner_hub_access").length).toBeGreaterThanOrEqual(2);
-    expect(platform.learner.getContext()?.groupCode).toBe("L2E-DELIVERY-A");
     platform.destroy();
   });
 

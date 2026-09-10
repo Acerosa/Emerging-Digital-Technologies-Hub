@@ -166,8 +166,8 @@ describe("EDT learner account dialog", () => {
     dialog.element.querySelector("form")?.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
     await new Promise((resolve) => setTimeout(resolve, 20));
     const status = dialog.element.querySelector(".lp-form__status")?.textContent || "";
-    expect(status).toMatch(/An account with this email already exists/i);
-    expect(status).not.toMatch(/confirmation email|check your inbox/i);
+    expect(status).toMatch(/already created an account on another learning hub|sign in using the same email/i);
+    expect(status).not.toMatch(/An account with this email already exists/i);
     platform.destroy();
   });
 });

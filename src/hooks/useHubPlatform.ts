@@ -9,7 +9,7 @@ import { createHubPlatform, type HubPlatform } from "../platform";
 
 type AccountDialog = {
   element: HTMLElement;
-  open: (trigger?: EventTarget | null) => void;
+  open: (trigger?: EventTarget | null, options?: { mode?: "sign-in" | "register" }) => void;
   showOnboarding?: () => void;
   destroy?: () => void;
 };
@@ -35,7 +35,6 @@ export function useHubPlatform(root: string) {
     let dialog: AccountDialog | null = null;
     const unsubscribers: Array<() => void> = [];
     let cancelled = false;
-    let promptedJoin = false;
     document.body.dataset.platformState = "loading";
 
     const stopAuth = platform.auth.subscribe?.((authState) => {
@@ -56,19 +55,6 @@ export function useHubPlatform(root: string) {
     unsubscribers.push(platform.state.subscribe((snapshot) => {
       setPlatformState(snapshot.status);
       document.body.dataset.platformState = snapshot.status;
-      if (
-        !cancelled
-        && !promptedJoin
-        && (snapshot.status === "onboarding-required" || snapshot.status === "no-enrolment")
-      ) {
-        promptedJoin = true;
-        // Existing Core dialog opens onboarding for onboarding-required; showOnboarding also covers no-enrolment.
-        queueMicrotask(() => {
-          if (typeof dialog?.showOnboarding === "function") dialog.showOnboarding();
-          else dialog?.open();
-        });
-      }
-      if (snapshot.status === "signed-out" || snapshot.status === "ready") promptedJoin = false;
     }));
     if (platform.theme) {
       unsubscribers.push(platform.theme.subscribe((snapshot) => {
@@ -80,49 +66,11 @@ export function useHubPlatform(root: string) {
       }));
     }
 
-    const rawDialog = createAccountDialog({
+    dialog = createAccountDialog({
       authService: platform.auth,
       learnerContext: platform.learner,
       onboardingService: platform.onboarding
-    });
-
-    function learnerNeedsJoin() {
-      const learnerState = platform.learner.getState?.() || { status: "", context: null };
-      const platformStatus = platform.state.getState?.()?.status;
-      const enrolments = (learnerState.context as { enrolments?: unknown[] } | null)?.enrolments;
-      return learnerState.status === "onboarding-required"
-        || platformStatus === "no-enrolment"
-        || (learnerState.status === "authenticated" && Array.isArray(enrolments) && enrolments.length === 0);
-    }
-
-    function openNativeDialog(trigger?: EventTarget | null) {
-      const el = rawDialog.element as HTMLDialogElement;
-      if (trigger && "focus" in (trigger as HTMLElement)) {
-        // Preserve return focus when possible; Core modal tracks this internally on open().
-      }
-      if (typeof el.showModal === "function") {
-        if (!el.open) el.showModal();
-      } else {
-        el.setAttribute("open", "");
-      }
-    }
-
-    dialog = {
-      element: rawDialog.element,
-      open(trigger) {
-        if (platform.auth.isSignedIn?.() && learnerNeedsJoin() && typeof rawDialog.showOnboarding === "function") {
-          rawDialog.showOnboarding();
-          openNativeDialog(trigger);
-          return;
-        }
-        rawDialog.open(trigger);
-      },
-      showOnboarding() {
-        rawDialog.showOnboarding?.();
-        openNativeDialog();
-      },
-      destroy: rawDialog.destroy
-    };
+    }) as AccountDialog;
     document.body.appendChild(dialog.element);
     setAccountDialog(dialog);
     window.LearningPlatform = { platform, coreVersion: APP_CONFIG.coreVersion };
