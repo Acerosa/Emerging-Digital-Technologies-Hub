@@ -41,10 +41,10 @@ test("L2E JoinClass uses open_explicit class registration key gate", () => {
   assert.match(hook, /createAccountDialog/);
 });
 
-test("CI and runtime pin reviewed Core v0.2.19", () => {
+test("CI and runtime pin reviewed Core v0.2.20", () => {
   const workflow = read(".github/workflows/pages.yml");
-  assert.match(workflow, /learning-platform-core[\s\S]*ref: v0\.2\.19/);
-  assert.match(read("src/config.ts"), /coreVersion: "0\.2\.19"/);
+  assert.match(workflow, /learning-platform-core[\s\S]*ref: v0\.2\.20/);
+  assert.match(read("src/config.ts"), /coreVersion: "0\.2\.20"/);
   assert.match(read("src/platform.ts"), /createSupabaseClient/);
   assert.match(read("src/platform.ts"), /hubCode:\s*APP_CONFIG\.hubId/);
 });
