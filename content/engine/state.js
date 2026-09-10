@@ -66,6 +66,7 @@
       completedAt: null,
       responses: {},
       checked: {},
+      results: {},
       completed: false,
       submission: { status: "local" }
     };
@@ -76,6 +77,7 @@
 
   ns.createDraftStore = function (activity, options) {
     var storage = safeStorage(options && options.storage);
+    var remote = null;
 
     function currentKey() {
       return storageKey(activity.id, options);
@@ -103,26 +105,93 @@
       var stored = read();
       if (!stored || stored.activityId !== activity.id) return emptyDraft(activity);
       if (stored.activityVersion !== ns.resolvedActivityVersion(activity)) return emptyDraft(activity);
+      if (!stored.results || typeof stored.results !== "object") stored.results = {};
       return stored;
     }
 
-    function save(draft) {
+    function resolvePlatform() {
+      return (options && options.platform)
+        || (root.LearningPlatform && root.LearningPlatform.platform)
+        || null;
+    }
+
+    function resolveRemote() {
+      var platform = resolvePlatform();
+      if (!platform || !platform.auth || typeof platform.auth.isSignedIn !== "function"
+          || !platform.auth.isSignedIn()
+          || !platform.progress || typeof platform.progress.createStore !== "function") {
+        return null;
+      }
+      if (!remote) {
+        try {
+          remote = platform.progress.createStore({
+            activityKey: activity.id,
+            activityVersion: ns.resolvedActivityVersion(activity),
+            storage: storage,
+            legacyKeys: [
+              currentKey(),
+              storageKey(activity.id, { learnerKey: "guest" }),
+              storageKey(activity.id, { learnerKey: "authenticated" })
+            ]
+          });
+        } catch (error) {
+          remote = null;
+        }
+      }
+      return remote;
+    }
+
+    function save(draft, saveOptions) {
+      var current = resolveRemote();
+      if (!draft.results || typeof draft.results !== "object") draft.results = {};
       write(draft);
+      if (current && typeof current.save === "function") {
+        try { current.save(draft, saveOptions || {}); } catch (error) {}
+      }
       return draft;
     }
 
     function reset() {
+      var current = resolveRemote();
       try { storage.removeItem(currentKey()); } catch (error) {}
       var draft = emptyDraft(activity);
       write(draft);
+      if (current && typeof current.clear === "function") {
+        try { current.clear(); } catch (error) {}
+      }
       return draft;
+    }
+
+    function hydrate() {
+      var current = resolveRemote();
+      if (!current || typeof current.hydrate !== "function") {
+        return Promise.resolve(load());
+      }
+      return current.hydrate(load()).then(function (resolved) {
+        var hasResponses = resolved && resolved.responses && Object.keys(resolved.responses).length;
+        var hasChecked = resolved && resolved.checked && Object.keys(resolved.checked).length;
+        var hasWork = Boolean(hasResponses || hasChecked);
+        if (hasWork) {
+          if (!resolved.results || typeof resolved.results !== "object") resolved.results = {};
+          write(resolved);
+        }
+        return hasWork ? resolved : load();
+      }).catch(function () {
+        return load();
+      });
     }
 
     return {
       get key() { return currentKey(); },
       load: load,
       save: save,
-      reset: reset
+      reset: reset,
+      hydrate: hydrate,
+      flush: function () {
+        var current = resolveRemote();
+        if (current && typeof current.flush === "function") return current.flush();
+        return Promise.resolve(null);
+      }
     };
   };
 
@@ -147,7 +216,8 @@
   function draftHasWork(draft) {
     if (!draft || typeof draft !== "object") return false;
     if (draft.submission && draft.submission.status === "submitted") return true;
-    return Boolean(draft.responses && Object.keys(draft.responses).length);
+    if (draft.responses && Object.keys(draft.responses).length) return true;
+    return Boolean(draft.checked && Object.keys(draft.checked).length);
   }
 
   ns.migrateGuestDrafts = function (options) {

@@ -15,7 +15,8 @@ import {
   type ActivityBlockDocument,
   type ActivityDocument,
   type ActivityResult,
-  type PracticeProgressAggregate
+  type PracticeProgressAggregate,
+  type RestoredActivityResult
 } from "@learning-platform/ui";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { getContentEngine } from "../content/engine";
@@ -106,6 +107,50 @@ function draftResponsesFor(activity: ActivityDocument): Record<string, unknown> 
   }
 }
 
+type ActivityDraftSlice = {
+  responses: Record<string, unknown>;
+  checked: Record<string, boolean>;
+  results: Record<string, RestoredActivityResult>;
+};
+
+function emptyDraftSlice(): ActivityDraftSlice {
+  return { responses: {}, checked: {}, results: {} };
+}
+
+function asRecord(value: unknown): Record<string, unknown> {
+  return value && typeof value === "object" && !Array.isArray(value)
+    ? value as Record<string, unknown>
+    : {};
+}
+
+function asBooleanRecord(value: unknown): Record<string, boolean> {
+  const source = asRecord(value);
+  const next: Record<string, boolean> = {};
+  for (const [key, item] of Object.entries(source)) {
+    next[key] = Boolean(item);
+  }
+  return next;
+}
+
+function asResultsRecord(value: unknown): Record<string, RestoredActivityResult> {
+  return asRecord(value) as Record<string, RestoredActivityResult>;
+}
+
+function draftSliceFromStore(activity: ActivityDocument, platform?: unknown): ActivityDraftSlice {
+  const engine = getContentEngine();
+  if (!engine.createDraftStore) return emptyDraftSlice();
+  try {
+    const draft = engine.createDraftStore(activity, { platform }).load();
+    return {
+      responses: asRecord(draft?.responses),
+      checked: asBooleanRecord(draft?.checked),
+      results: asResultsRecord(draft?.results)
+    };
+  } catch {
+    return emptyDraftSlice();
+  }
+}
+
 function adjacentWeekLink(
   root: string,
   teachingWeek: number,
@@ -146,6 +191,7 @@ export function WeekPage({
     aggregatePracticeProgress(emptyPracticeProgress(), { requiredBlocks: 0, scorableTotal: 0 })
   );
   const [completionOpen, setCompletionOpen] = useState(false);
+  const [draftByActivity, setDraftByActivity] = useState<Record<string, ActivityDraftSlice>>({});
   const livePackage = liveContentPackage();
   const content = activeContentPackage(pkg);
   const runtimeWeek = useMemo(
@@ -198,6 +244,34 @@ export function WeekPage({
     }
   }, [requiredTotal, scorableTotal]);
 
+  useEffect(() => {
+    if (!content || !model) return;
+    let cancelled = false;
+    const engine = getContentEngine();
+    const activities = (model.sessions || []).flatMap((session) => (
+      session.activities.map((item) => content.activities?.find((entry) => entry.id === item.id)).filter(Boolean)
+    )) as ActivityDocument[];
+    void Promise.all(activities.map(async (activity) => {
+      try {
+        if (!engine.createDraftStore) {
+          return [activity.id, emptyDraftSlice()] as const;
+        }
+        const store = engine.createDraftStore(activity, { platform });
+        const draft = store.hydrate ? await store.hydrate() : store.load();
+        return [activity.id, {
+          responses: asRecord(draft?.responses),
+          checked: asBooleanRecord(draft?.checked),
+          results: asResultsRecord(draft?.results)
+        }] as const;
+      } catch {
+        return [activity.id, emptyDraftSlice()] as const;
+      }
+    })).then((entries) => {
+      if (!cancelled) setDraftByActivity(Object.fromEntries(entries));
+    });
+    return () => { cancelled = true; };
+  }, [content, model, platform, platformState, weekId]);
+
   const sessions = useMemo(() => {
     if (!content || !model) return [];
     const engine = getContentEngine();
@@ -206,12 +280,15 @@ export function WeekPage({
       activities: session.activities.map((item) => {
         const activity = content.activities?.find((entry) => entry.id === item.id) as ActivityDocument | undefined;
         if (!activity) return { html: "" };
+        const draft = draftByActivity[activity.id] || draftSliceFromStore(activity, platform);
         return {
           children: (
             <InteractiveActivity
               activity={activity}
               platform={platform}
-              initialResponses={draftResponsesFor(activity)}
+              initialResponses={Object.keys(draft.responses).length ? draft.responses : draftResponsesFor(activity)}
+              initialChecked={draft.checked}
+              initialResults={draft.results}
               renderFallback={(block) => (
                 <AuthoredHtml html={engine.renderBlock(block)} />
               )}
@@ -222,7 +299,13 @@ export function WeekPage({
                   detail: {
                     questionId: questionIdFor(block),
                     response: persistableResponse(block, result),
-                    completed: result.completed
+                    completed: result.completed,
+                    result: {
+                      correct: result.correct ?? null,
+                      canRetry: result.canRetry,
+                      status: result.status,
+                      requiresReview: result.requiresReview
+                    }
                   }
                 }));
                 recordPracticeResult(result, block);
@@ -232,7 +315,7 @@ export function WeekPage({
         };
       })
     }));
-  }, [content, model, platform, recordPracticeResult, platformState]);
+  }, [content, draftByActivity, model, platform, recordPracticeResult, platformState]);
 
   // Re-bind after every commit. React can rewrite authored HTML nodes on a
   // later render and wipe data-lp-bound / listeners without changing sessions identity.
