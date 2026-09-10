@@ -192,6 +192,8 @@ describe("L2E hub-bound enrolment", () => {
         }}
       />
     );
+    expect(screen.queryByLabelText(/First name/i)).toBeNull();
+    expect(screen.queryByLabelText(/Student ID/i)).toBeNull();
     fireEvent.change(screen.getByLabelText(/Class registration key/i), {
       target: { value: EXPECTED_REGISTRATION_KEY }
     });
@@ -199,6 +201,34 @@ describe("L2E hub-bound enrolment", () => {
       fireEvent.click(screen.getByRole("button", { name: "Join class" }));
     });
     await waitFor(() => expect(joinClass).toHaveBeenCalledTimes(1));
+    expect(complete).not.toHaveBeenCalled();
+  });
+
+  it("returning learner with empty local profile fields still uses class-key only", async () => {
+    const complete = vi.fn(async () => ({ student_number: "123456" }));
+    const joinClass = vi.fn(async () => ({ groupCode: EXPECTED_GROUP_CODE, status: "enrolled_created" }));
+    render(
+      <JoinClassPanel
+        platformState="no-enrolment"
+        platform={{
+          onboarding: { getPending: () => null, complete, joinClass },
+          learner: {
+            getState: () => ({
+              status: "authenticated",
+              context: { firstName: "", surname: "", studentNumber: "123456", enrolments: [] }
+            })
+          }
+        }}
+      />
+    );
+    expect(screen.queryByLabelText(/First name/i)).toBeNull();
+    fireEvent.change(screen.getByLabelText(/Class registration key/i), {
+      target: { value: EXPECTED_REGISTRATION_KEY }
+    });
+    await act(async () => {
+      fireEvent.click(screen.getByRole("button", { name: "Join class" }));
+    });
+    await waitFor(() => expect(joinClass).toHaveBeenCalledWith(EXPECTED_REGISTRATION_KEY));
     expect(complete).not.toHaveBeenCalled();
   });
 
