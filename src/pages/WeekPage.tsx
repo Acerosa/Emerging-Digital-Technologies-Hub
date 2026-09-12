@@ -106,6 +106,24 @@ function draftResponsesFor(activity: ActivityDocument): Record<string, unknown> 
   }
 }
 
+function draftSliceFromState(draft: { responses?: unknown; checked?: unknown } | null | undefined) {
+  return {
+    responses: draft?.responses && typeof draft.responses === "object" ? draft.responses as Record<string, unknown> : {},
+    checked: draft?.checked && typeof draft.checked === "object" ? draft.checked as Record<string, boolean> : {}
+  };
+}
+
+function sameDraftSlice(
+  current: { responses: Record<string, unknown>; checked: Record<string, boolean> } | undefined,
+  next: { responses: Record<string, unknown>; checked: Record<string, boolean> }
+) {
+  return Boolean(
+    current
+    && JSON.stringify(current.responses) === JSON.stringify(next.responses)
+    && JSON.stringify(current.checked) === JSON.stringify(next.checked)
+  );
+}
+
 function adjacentWeekLink(
   root: string,
   teachingWeek: number,
@@ -146,8 +164,12 @@ export function WeekPage({
     aggregatePracticeProgress(emptyPracticeProgress(), { requiredBlocks: 0, scorableTotal: 0 })
   );
   const [completionOpen, setCompletionOpen] = useState(false);
+  const [draftByActivity, setDraftByActivity] = useState<Record<string, {
+    responses: Record<string, unknown>;
+    checked: Record<string, boolean>;
+  }>>({});
   const livePackage = liveContentPackage();
-  const content = activeContentPackage(pkg);
+  const content = useMemo(() => activeContentPackage(pkg), [pkg]);
   const runtimeWeek = useMemo(
     () => runtimeWeekForId(livePackage, weekId),
     [livePackage, weekId]
@@ -198,6 +220,43 @@ export function WeekPage({
     }
   }, [requiredTotal, scorableTotal]);
 
+  useEffect(() => {
+    if (!content || !model) return;
+    let cancelled = false;
+    const unsubscribers: Array<() => void> = [];
+    const engine = getContentEngine();
+    const activities = (model.sessions || []).flatMap((session) => (
+      session.activities.map((item) => content.activities?.find((entry) => entry.id === item.id)).filter(Boolean)
+    )) as ActivityDocument[];
+    void Promise.all(activities.map(async (activity) => {
+      try {
+        if (!engine.createDraftStore) {
+          return [activity.id, { responses: {}, checked: {} }] as const;
+        }
+        const store = engine.createDraftStore(activity, { platform });
+        if (typeof store.subscribe === "function") {
+          unsubscribers.push(store.subscribe((state: { responses?: unknown; checked?: unknown }) => {
+            if (cancelled) return;
+            const next = draftSliceFromState(state);
+            setDraftByActivity((prev) => (
+              sameDraftSlice(prev[activity.id], next) ? prev : { ...prev, [activity.id]: next }
+            ));
+          }));
+        }
+        const draft = store.hydrate ? await store.hydrate() : store.load();
+        return [activity.id, draftSliceFromState(draft)] as const;
+      } catch {
+        return [activity.id, { responses: {}, checked: {} }] as const;
+      }
+    })).then((entries) => {
+      if (!cancelled) setDraftByActivity(Object.fromEntries(entries));
+    });
+    return () => {
+      cancelled = true;
+      unsubscribers.forEach((unsubscribe) => unsubscribe());
+    };
+  }, [content, model, platform, weekId]);
+
   const sessions = useMemo(() => {
     if (!content || !model) return [];
     const engine = getContentEngine();
@@ -206,12 +265,15 @@ export function WeekPage({
       activities: session.activities.map((item) => {
         const activity = content.activities?.find((entry) => entry.id === item.id) as ActivityDocument | undefined;
         if (!activity) return { html: "" };
+        const draft = draftByActivity[activity.id];
         return {
+          id: activity.id,
           children: (
             <InteractiveActivity
               activity={activity}
               platform={platform}
-              initialResponses={draftResponsesFor(activity)}
+              initialResponses={draft?.responses || draftResponsesFor(activity)}
+              initialChecked={draft?.checked}
               renderFallback={(block) => (
                 <AuthoredHtml html={engine.renderBlock(block)} />
               )}
@@ -232,19 +294,23 @@ export function WeekPage({
         };
       })
     }));
-  }, [content, model, platform, recordPracticeResult, platformState]);
+  }, [content, draftByActivity, model, platform, recordPracticeResult]);
 
-  // Re-bind after every commit. React can rewrite authored HTML nodes on a
-  // later render and wipe data-lp-bound / listeners without changing sessions identity.
+  const activityBindKey = useMemo(
+    () => (model?.sessions || []).map((session) => session.activities.map((item) => item.id).join(",")).join("|"),
+    [model]
+  );
+
+  // Re-bind when session articles change. Do not re-bind because one activity's restored draft changed.
   useLayoutEffect(() => {
     const rootEl = mountRef.current;
-    if (!content || !rootEl || !sessions.length) return;
+    if (!content || !rootEl || !activityBindKey) return;
 
     getContentEngine().bindInteractive(rootEl, content, {
       sourcePage: window.location.pathname,
       platform: platform || (typeof window !== "undefined" ? window.LearningPlatform?.platform : undefined)
     });
-  });
+  }, [activityBindKey, content, platform, weekId]);
 
   if (!content) {
     return <LoadingState message="Loading this week's sessions" />;

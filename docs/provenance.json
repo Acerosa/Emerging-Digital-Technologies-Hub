@@ -1,8 +1,8 @@
 {
   "generator": "@learning-platform/cli",
   "generatorVersion": "0.1.0",
-  "coreVersion": "0.2.20",
-  "uiVersion": "0.1.12",
+  "coreVersion": "0.2.22",
+  "uiVersion": "0.1.14",
   "contentVersion": "0.1.4",
   "profile": "week-based",
   "contextType": "assignment",
@@ -10,15 +10,15 @@
   "packages": {
     "core": {
       "name": "@learning-platform/core",
-      "version": "0.2.20",
+      "version": "0.2.22",
       "repository": "Acerosa/learning-platform-core",
-      "tag": "v0.2.20"
+      "tag": "v0.2.22"
     },
     "ui": {
       "name": "@learning-platform/ui",
-      "version": "0.1.12",
+      "version": "0.1.14",
       "repository": "Acerosa/Acerosa-learning-platform-ui",
-      "tag": "v0.1.12"
+      "tag": "v0.1.14"
     },
     "content": {
       "name": "@learning-platform/content",
