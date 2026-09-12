@@ -20,7 +20,7 @@ test("hub config matches the canonical manifest", function () {
   assert.equal(provenance.generator, "@learning-platform/cli");
   assert.equal(provenance.generatorVersion, "0.1.0");
   assert.equal(provenance.coreVersion, "0.2.22");
-  assert.equal(provenance.uiVersion, "0.1.13");
+  assert.equal(provenance.uiVersion, "0.1.14");
   assert.equal(provenance.contentVersion, "0.1.4");
   assert.equal(provenance.useContentEngine, true);
   assert.equal(provenance.packages.core.tag, "v0.2.22");
