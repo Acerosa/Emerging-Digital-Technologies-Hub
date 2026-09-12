@@ -507,6 +507,39 @@
     });
     updateActivityStatus(article, activity, draft);
 
+    function restoreDraft(next) {
+      if (!next) return;
+      if (
+        draft && draft.responses && Object.keys(draft.responses).length &&
+        (!next.responses || !Object.keys(next.responses).length)
+      ) {
+        return;
+      }
+      draft = next;
+      activityInteractiveBlocks(activity).forEach(function (block) {
+        var blockRoot = article.querySelector('[data-lp-block-id="' + block.id + '"]');
+        var qid = questionId(block);
+        if (!blockRoot) return;
+        restoreResponse(blockRoot, block, draft.responses[qid]);
+        if (draft.checked[qid]) setFeedback(blockRoot, block, draft.responses[qid], true);
+      });
+      updateActivityStatus(article, activity, draft);
+    }
+
+    if (store.hydrate) {
+      store.hydrate().then(restoreDraft);
+    }
+    if (article._lpRemoteUnsub) {
+      try { article._lpRemoteUnsub(); } catch (error) {}
+      article._lpRemoteUnsub = null;
+    }
+    if (typeof store.subscribe === "function") {
+      article._lpRemoteUnsub = store.subscribe(function (next) {
+        if (!article.isConnected) return;
+        restoreDraft(next);
+      });
+    }
+
     article.addEventListener("lp-block-result", function (event) {
       var detail = event.detail || {};
       var qid = detail.questionId;

@@ -16,7 +16,7 @@ test("learner pages render from the loaded curriculum package, not a static impo
   assert.doesNotMatch(read("src/page-copy.ts"), /package\.json/);
   assert.match(read("src/pages/WeekPage.tsx"), /activeContentPackage/);
   assert.match(read("src/pages/WeekPage.tsx"), /useLayoutEffect/);
-  assert.match(read("src/pages/WeekPage.tsx"), /Re-bind after every commit/);
+  assert.match(read("src/pages/WeekPage.tsx"), /Re-bind when session articles change/);
   assert.match(read("src/main.tsx"), /createRoot\(root\)\.render\(<App/);
   assert.doesNotMatch(read("src/main.tsx"), /StrictMode/);
   assert.doesNotMatch(read("src/pages/WeekPage.tsx"), /\[engine, content, model\]/);
