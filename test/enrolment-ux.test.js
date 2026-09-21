@@ -48,3 +48,11 @@ test("CI and runtime pin reviewed Core v0.2.22", () => {
   assert.match(read("src/platform.ts"), /createSupabaseClient/);
   assert.match(read("src/platform.ts"), /hubCode:\s*APP_CONFIG\.hubId/);
 });
+
+test("recoverLearnerAfterAuthRestore stays on 0.2.22 because the probe race is not proven gone", () => {
+  const source = read("src/platform.ts");
+  assert.match(source, /recoverLearnerAfterAuthRestore/);
+  assert.match(source, /platform\.learner\.refresh/);
+  assert.match(source, /onboarding-required/);
+  assert.doesNotMatch(source, /learner\?\.status === "authenticated" && learner\.context/);
+});
