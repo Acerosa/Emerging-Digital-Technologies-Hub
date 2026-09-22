@@ -70,9 +70,9 @@ async function hydrateWeek(ns, platform, activities, storage) {
   )));
 }
 
-test("production pin remains Core v0.2.22 which already interns get_activity_state", () => {
-  assert.match(read(".github/workflows/pages.yml"), /ref: v0\.2\.22/);
-  assert.match(read("src/config.ts"), /coreVersion: "0\.2\.22"/);
+test("production pin is Core v0.2.26 which interns get_activity_state", () => {
+  assert.match(read(".github/workflows/pages.yml"), /ref: v0\.2\.26/);
+  assert.match(read("src/config.ts"), /coreVersion: "0\.2\.26"/);
   assert.doesNotMatch(read("content/engine/state.js"), /completedHydrates|inflightHydrates|resetDraftHydrateDedupe/);
   assert.match(read("content/engine/state.js"), /current\.hydrate\(load\(\)\)/);
   assert.doesNotMatch(read("content/engine/state.js"), /hydrate\(\s*\{\s*fresh/);
@@ -82,7 +82,7 @@ test("production pin remains Core v0.2.22 which already interns get_activity_sta
     "node_modules/@learning-platform/core/src/core/progress/activity-state.js"
   ), "utf8");
   assert.match(coreIntern, /const completedReads = new Set\(\)/);
-  assert.match(coreIntern, /else if \(completedReads\.has\(dedupeKey\)\)/);
+  assert.match(coreIntern, /completedReads\.has\(dedupeKey\) && !retrievalFailed/);
 });
 
 test("opening a week with N activities hydrates each activity once via Core intern", async () => {
@@ -120,4 +120,11 @@ test("saved evidence still restores through Core-interned hydrate", async () => 
   ).hydrate();
   assert.equal(draft.responses.q1, "saved-evidence");
   assert.equal(draft.checked.q1, true);
+});
+
+test("WeekPage does not start remote hydration until platform identity is ready", () => {
+  const source = read("src/pages/WeekPage.tsx");
+  assert.match(source, /canHydrateRemote = platformState === "ready" \|\| platformState === "no-assignments"/);
+  assert.match(source, /if \(!canHydrateRemote\) return;/);
+  assert.match(source, /\[content, model, platform, platformState, weekId\]/);
 });

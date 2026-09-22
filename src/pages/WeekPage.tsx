@@ -222,6 +222,8 @@ export function WeekPage({
 
   useEffect(() => {
     if (!content || !model) return;
+    const canHydrateRemote = platformState === "ready" || platformState === "no-assignments";
+    if (!canHydrateRemote) return;
     let cancelled = false;
     const unsubscribers: Array<() => void> = [];
     const engine = getContentEngine();
@@ -255,7 +257,7 @@ export function WeekPage({
       cancelled = true;
       unsubscribers.forEach((unsubscribe) => unsubscribe());
     };
-  }, [content, model, platform, weekId]);
+  }, [content, model, platform, platformState, weekId]);
 
   const sessions = useMemo(() => {
     if (!content || !model) return [];
