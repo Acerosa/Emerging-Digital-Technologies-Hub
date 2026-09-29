@@ -94,5 +94,48 @@
         "week-3-exit"
       ]
     }
+  },
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-4-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 4 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: AI and intelligent computing, smart devices, robots, neural networks, benefits, limitations and applied scenarios (AC1.1).",
+      "sortOrder": 1,
+      "defaultOpen": true,
+      "status": "available"
+    },
+    "relationships": {
+      "week": "week-4",
+      "activities": [
+        "week-4-starter",
+        "week-4-ai-intro",
+        "week-4-ai-examples",
+        "week-4-ai-or-not",
+        "week-4-smart-devices",
+        "week-4-smart-flow",
+        "week-4-iot-and-ai",
+        "week-4-robots",
+        "week-4-robot-parts",
+        "week-4-automation-vs-ai",
+        "week-4-robot-types",
+        "week-4-neural-networks",
+        "week-4-nn-flow",
+        "week-4-nn-training",
+        "week-4-nn-applications",
+        "week-4-benefits-limitations",
+        "week-4-limitations-check",
+        "week-4-game-npc",
+        "week-4-smart-gaming",
+        "week-4-warehouse-robot",
+        "week-4-image-recognition",
+        "week-4-knowledge-check",
+        "week-4-reflection",
+        "week-4-exit"
+      ]
+    }
   }
 ]

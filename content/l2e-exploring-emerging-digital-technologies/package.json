@@ -31,7 +31,8 @@
       "weeks": [
         "week-1",
         "week-2",
-        "week-3"
+        "week-3",
+        "week-4"
       ]
     }
   },
@@ -127,6 +128,29 @@
         "assignment": "formative-practice",
         "sessions": [
           "week-3-session"
+        ]
+      }
+    },
+    {
+      "schema": "lp.content.week",
+      "schemaVersion": "0.1.0",
+      "id": "week-4",
+      "version": "0.1.0",
+      "metadata": {
+        "teachingWeek": 4,
+        "title": "AI and Intelligent Computing: Smart Devices, Robots and Neural Networks",
+        "status": "planned",
+        "professionalPractice": "LO1 / AC 1.1 - outline AI and intelligent computing: smart devices, robots and neural networks",
+        "route": "week-4/"
+      },
+      "relationships": {
+        "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "sessions": [
+          "week-4-session"
         ]
       }
     }
@@ -225,6 +249,49 @@
           "week-3-extension",
           "week-3-profile",
           "week-3-exit"
+        ]
+      }
+    },
+    {
+      "schema": "lp.content.session",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-session",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Week 4 session",
+        "kind": "session",
+        "summary": "One 1.5-hour session: AI and intelligent computing, smart devices, robots, neural networks, benefits, limitations and applied scenarios (AC1.1).",
+        "sortOrder": 1,
+        "defaultOpen": true,
+        "status": "available"
+      },
+      "relationships": {
+        "week": "week-4",
+        "activities": [
+          "week-4-starter",
+          "week-4-ai-intro",
+          "week-4-ai-examples",
+          "week-4-ai-or-not",
+          "week-4-smart-devices",
+          "week-4-smart-flow",
+          "week-4-iot-and-ai",
+          "week-4-robots",
+          "week-4-robot-parts",
+          "week-4-automation-vs-ai",
+          "week-4-robot-types",
+          "week-4-neural-networks",
+          "week-4-nn-flow",
+          "week-4-nn-training",
+          "week-4-nn-applications",
+          "week-4-benefits-limitations",
+          "week-4-limitations-check",
+          "week-4-game-npc",
+          "week-4-smart-gaming",
+          "week-4-warehouse-robot",
+          "week-4-image-recognition",
+          "week-4-knowledge-check",
+          "week-4-reflection",
+          "week-4-exit"
         ]
       }
     }
@@ -5656,6 +5723,3978 @@
               {
                 "id": "c",
                 "label": "Confident. I can define each and give a use plus a risk."
+              }
+            ],
+            "correctOptionId": "c",
+            "feedback": {
+              "correct": "Use this rating to decide what to revise before Assignment 1 practice.",
+              "incorrect": "Use this rating to decide what to revise before Assignment 1 practice."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-starter",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Welcome to Week 4",
+        "status": "available",
+        "summary": "Recap the Week 3 cloud models, then set the focus for AI and intelligent computing (AC1.1).",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Starter",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-starter-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Welcome to Week 4",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-starter-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "This week you outline artificial intelligence (AI) and intelligent computing: smart devices, robots and neural networks (AC1.1)."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-starter-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "By the end of this week",
+            "text": "You will be able to explain what AI is and is not. You will describe how smart devices and robots sense, decide and act. You will outline how a neural network learns from examples. You will weigh up the benefits and limitations of AI in real situations."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-starter-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "First, a quick recap of Week 3. Ask what the customer is getting: a ready app (SaaS), a platform to build apps (PaaS), rented infrastructure (IaaS) or a remote desktop (DaaS)."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-starter-q1",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-starter-q1",
+            "prompt": "Match each Week 3 example to its cloud service model.",
+            "categories": [
+              {
+                "id": "saas",
+                "label": "SaaS"
+              },
+              {
+                "id": "paas",
+                "label": "PaaS"
+              },
+              {
+                "id": "iaas",
+                "label": "IaaS"
+              },
+              {
+                "id": "daas",
+                "label": "DaaS"
+              }
+            ],
+            "items": [
+              {
+                "id": "r1",
+                "text": "A class uses a browser-based spreadsheet with nothing to install",
+                "correctCategoryId": "saas"
+              },
+              {
+                "id": "r2",
+                "text": "Developers upload their app code to a hosted build-and-run environment",
+                "correctCategoryId": "paas"
+              },
+              {
+                "id": "r3",
+                "text": "An IT team rents virtual servers and installs its own operating system",
+                "correctCategoryId": "iaas"
+              },
+              {
+                "id": "r4",
+                "text": "Staff log in to a full Windows desktop that runs on a provider's servers",
+                "correctCategoryId": "daas"
+              }
+            ],
+            "feedback": {
+              "correct": "Well recalled. SaaS gives you a ready app, PaaS gives developers a platform, IaaS rents raw infrastructure such as virtual servers, and DaaS delivers a whole desktop.",
+              "incorrect": "Not quite. Ask what is being provided. A ready-to-use app is SaaS. A place to build and run your own code is PaaS. Rented servers you manage yourself are IaaS. A complete remote desktop is DaaS."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-starter-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-starter-q2",
+            "prompt": "Many AI services, such as voice assistants, send your request to powerful remote servers to be processed. Which Week 3 idea does this link to?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Cloud computing: processing happens on remote servers reached over the internet"
+              },
+              {
+                "id": "b",
+                "label": "Local storage: everything happens only on the device"
+              },
+              {
+                "id": "c",
+                "label": "DaaS: the assistant gives you a full remote desktop"
+              },
+              {
+                "id": "d",
+                "label": "IaaS: the speaker rents you your own virtual server to manage"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Many AI features rely on the cloud because training and running AI can need more computing power than a phone or speaker has.",
+              "incorrect": "Not quite. The request is sent over the internet to cloud servers, where the heavy processing happens. You are not given a desktop (DaaS) or a server to manage (IaaS), and the work does not stay only on the device."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-ai-intro",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "What is AI?",
+        "status": "available",
+        "summary": "Define artificial intelligence and compare it with rule-based software.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "What is AI?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Artificial intelligence (AI) lets computers do tasks that normally need human intelligence. Examples are recognising a face, understanding speech or predicting what might happen next."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Rule-based software is different. It follows fixed instructions written by a programmer: \"if this happens, do that\". It does the same thing every time and cannot improve on its own. A calculator and a timer are rule-based."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Many AI systems use machine learning. The programmer does not write every rule. Instead, the system is trained on lots of examples and finds patterns in them. It can then deal with new data it has not seen before."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AI can be very good at spotting patterns, but it does not think, understand or feel like a person."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Not all software is AI",
+            "text": "Most software is rule-based. Software only counts as AI when it recognises patterns, learns from data or makes predictions. Being automatic or clever-looking is not enough."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ai-q1",
+            "prompt": "Which statement best defines artificial intelligence?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Any program that runs on a computer"
+              },
+              {
+                "id": "b",
+                "label": "Technology that lets computers do tasks that normally need human intelligence, such as recognising patterns or making predictions"
+              },
+              {
+                "id": "c",
+                "label": "A computer that has feelings and thinks exactly like a person"
+              },
+              {
+                "id": "d",
+                "label": "Software that only follows a fixed list of instructions"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. AI is about carrying out tasks that usually need human intelligence, such as recognising patterns, understanding language or making predictions.",
+              "incorrect": "Not quite. Not every program is AI, and AI does not have feelings or think like a person. A fixed list of instructions describes rule-based software. AI handles tasks that normally need human intelligence, such as spotting patterns or making predictions."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ai-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ai-q2",
+            "prompt": "A spam filter improves over time as it sees thousands of emails that people mark as spam. A different filter only blocks emails containing the exact word \"prize\". Which is the better description?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Both filters are AI because they both block emails"
+              },
+              {
+                "id": "b",
+                "label": "The first filter learns from examples (AI); the second follows one fixed rule (rule-based)"
+              },
+              {
+                "id": "c",
+                "label": "The second filter is AI because it has a rule"
+              },
+              {
+                "id": "d",
+                "label": "Neither filter is software"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. The first filter learns patterns from labelled examples, which is machine learning. The second follows a fixed rule a programmer wrote, so it is rule-based software.",
+              "incorrect": "Not quite. Doing a useful job does not make software AI. The filter that learns from thousands of labelled emails is AI (machine learning). The filter that only checks for one exact word follows a fixed rule, so it is rule-based."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-ai-examples",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "AI in everyday life",
+        "status": "available",
+        "summary": "Recognise everyday examples of AI: recommendations, voice assistants, image recognition, navigation, spam detection and game AI.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 3,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AI in everyday life",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "You probably use AI every day without noticing. Here are six common examples."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Recommendations: streaming and shopping sites suggest films or products based on what you, and people like you, chose before."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Voice assistants: smart speakers and phones recognise spoken words and work out what you want."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Image recognition: phones group photos by faces, and apps can identify a plant from a picture."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Navigation: map apps use data from thousands of journeys to predict traffic and suggest faster routes."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p6",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Spam detection: email services learn what junk mail usually looks like and filter it out."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-p7",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Game AI: some computer-controlled characters learn from how you play and change their tactics."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ex-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ex-q1",
+            "prompt": "A map app suggests a new route because it predicts heavy traffic ahead, based on data from thousands of other journeys. What is the AI doing?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Recognising patterns in large amounts of data to make a prediction"
+              },
+              {
+                "id": "b",
+                "label": "Printing a paper map"
+              },
+              {
+                "id": "c",
+                "label": "Following one fixed route that never changes"
+              },
+              {
+                "id": "d",
+                "label": "Storing the map on a USB stick"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. The app spots patterns in lots of journey data and predicts where traffic will build up. Pattern recognition and prediction are typical AI tasks.",
+              "incorrect": "Not quite. A route that never changes would be rule-based. The app is using lots of journey data to spot patterns and predict traffic, which is what makes it AI."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-ai-or-not",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "AI or not AI?",
+        "status": "available",
+        "summary": "Classify examples as AI or not AI to show that not all software is AI.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 4,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-aon-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AI or not AI?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-aon-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Ask: does it learn from data, recognise patterns or make predictions? If it only follows fixed steps that a programmer set, it is not AI, even if it happens automatically."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-aon-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-aon-q",
+            "prompt": "For each example, choose AI or Not AI.",
+            "categories": [
+              {
+                "id": "ai",
+                "label": "AI"
+              },
+              {
+                "id": "not-ai",
+                "label": "Not AI (fixed rules)"
+              }
+            ],
+            "items": [
+              {
+                "id": "a1",
+                "text": "A phone unlocks after recognising the owner's face",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "a2",
+                "text": "A calculator app adds two numbers",
+                "correctCategoryId": "not-ai"
+              },
+              {
+                "id": "a3",
+                "text": "A music app builds a playlist from your listening habits",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "a4",
+                "text": "A microwave turns off when its timer reaches zero",
+                "correctCategoryId": "not-ai"
+              },
+              {
+                "id": "a5",
+                "text": "A translation app listens to a spoken sentence and translates it",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "a6",
+                "text": "A spreadsheet totals a column using the SUM formula",
+                "correctCategoryId": "not-ai"
+              },
+              {
+                "id": "a7",
+                "text": "A voice assistant understands a spoken question",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "a8",
+                "text": "Street lights switch on at 7pm every evening on a timer",
+                "correctCategoryId": "not-ai"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Face unlock, playlists, translation and voice assistants all recognise patterns or learn from data. Calculators, timers, formulas and fixed schedules just follow set rules.",
+              "incorrect": "Some are not right yet. Being automatic is not the same as being AI. Timers, formulas and fixed schedules follow rules set by a person. AI recognises patterns or learns from data, such as recognising a face or a voice."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-smart-devices",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "How smart devices work",
+        "status": "available",
+        "summary": "Describe the smart system flow: sensors, data, processing, then a decision or action.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "How smart devices work",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A smart device senses the world around it and responds. Most follow the same four-step flow: Sensors → Data → Processing → Decision or action."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "1. Sensors measure something, such as temperature, movement, sound, light or heart rate."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "2. The measurements are stored as data (usually numbers)."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "3. Processing: the device, or a cloud service, checks the data and works out what it means."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "4. Decision or action: the device does something, such as turning the heating on or sending an alert."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-p6",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Examples: a smart thermostat, a smartwatch, a smart speaker, a smart doorbell camera and smart lighting."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Smart does not always mean AI",
+            "text": "Some smart devices follow a simple rule, such as a light that switches off after ten minutes with no movement. Others use AI, such as a thermostat that learns your weekly routine. Ask: does it only follow a rule, or does it learn or recognise patterns?"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-sd-q1",
+            "prompt": "In a smart thermostat, which part is the sensor?",
+            "options": [
+              {
+                "id": "a",
+                "label": "The temperature sensor that measures how warm the room is"
+              },
+              {
+                "id": "b",
+                "label": "The boiler turning on"
+              },
+              {
+                "id": "c",
+                "label": "The app on your phone"
+              },
+              {
+                "id": "d",
+                "label": "The heating schedule saved in the thermostat"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. The temperature sensor measures the room. Its readings become data that the thermostat processes before deciding whether to switch the heating on.",
+              "incorrect": "Not quite. The boiler turning on is the action at the end of the flow, and a saved schedule is stored data. The sensor is the part that measures the world: here, the temperature sensor."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sd-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-sd-q2",
+            "prompt": "A smart light switches off when nobody has moved in a room for ten minutes. Which part of the flow is \"switching off\"?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Sensor"
+              },
+              {
+                "id": "b",
+                "label": "Data"
+              },
+              {
+                "id": "c",
+                "label": "Processing"
+              },
+              {
+                "id": "d",
+                "label": "Decision or action"
+              }
+            ],
+            "correctOptionId": "d",
+            "feedback": {
+              "correct": "Correct. Switching off is the action. This light follows one simple rule (no movement for ten minutes means switch off), so it is smart but does not need AI.",
+              "incorrect": "Not quite. The motion sensor detects movement (sensor), its readings are stored (data), and they are checked (processing). Switching the light off is the final decision or action."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-smart-flow",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Order the smart system flow",
+        "status": "available",
+        "summary": "Put the steps of a smart system in the correct order.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 3,
+        "activityType": "Ordering",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sf-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Order the smart system flow",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sf-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A smartwatch warns its wearer when their heart rate is unusually high while they are sitting still. The four things the watch does are listed below in the wrong order."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sf-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-sf-q",
+            "prompt": "Put the watch's actions in order. For each one, choose Step 1 (happens first) to Step 4 (happens last). Use each step once.",
+            "categories": [
+              {
+                "id": "step-1",
+                "label": "Step 1"
+              },
+              {
+                "id": "step-2",
+                "label": "Step 2"
+              },
+              {
+                "id": "step-3",
+                "label": "Step 3"
+              },
+              {
+                "id": "step-4",
+                "label": "Step 4"
+              }
+            ],
+            "items": [
+              {
+                "id": "f4",
+                "text": "The watch vibrates and shows a warning on the screen",
+                "correctCategoryId": "step-4"
+              },
+              {
+                "id": "f1",
+                "text": "A light on the back of the watch detects the wearer's pulse",
+                "correctCategoryId": "step-1"
+              },
+              {
+                "id": "f3",
+                "text": "The watch checks the numbers against the wearer's usual resting heart rate",
+                "correctCategoryId": "step-3"
+              },
+              {
+                "id": "f2",
+                "text": "Each pulse measurement is saved as a number, such as 118 beats per minute",
+                "correctCategoryId": "step-2"
+              }
+            ],
+            "feedback": {
+              "correct": "Correct order. The watch senses the pulse, saves it as data, processes it by comparing with normal, then acts with a warning. That is Sensors → Data → Processing → Decision or action.",
+              "incorrect": "Not in the right order yet. A smart system must sense something before it has any data. It can only check data it has already saved. The warning is the action, so it comes last."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-iot-and-ai",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "IoT and AI: not the same thing",
+        "status": "available",
+        "summary": "Link to Week 2: IoT and AI can work together, but they are not the same thing.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ia-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "IoT and AI: not the same thing",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ia-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "In Week 2 you met the Internet of Things (IoT): everyday devices that connect to the internet and share data. IoT is about connecting and sharing."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ia-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AI is about learning from data, recognising patterns and making predictions."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ia-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A device can be IoT without any AI, such as a smart plug you switch on from an app. When IoT and AI work together, the connected devices collect the data and AI makes sense of it."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ia-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ia-q1",
+            "prompt": "Which statement about IoT and AI is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "IoT and AI mean exactly the same thing"
+              },
+              {
+                "id": "b",
+                "label": "Every IoT device uses AI"
+              },
+              {
+                "id": "c",
+                "label": "IoT connects devices to share data; AI can analyse that data. They can work together but are different"
+              },
+              {
+                "id": "d",
+                "label": "AI only works without the internet"
+              }
+            ],
+            "correctOptionId": "c",
+            "feedback": {
+              "correct": "Correct. IoT is about connected devices sharing data. AI is about learning from data and making decisions. Together, IoT can collect the data and AI can find patterns in it.",
+              "incorrect": "Not quite. Many IoT devices simply send readings or respond to app commands with no AI at all. IoT connects and shares data; AI learns from data. They often work together, but they are not the same."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ia-q2",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ia-q2",
+            "prompt": "For each connected device, choose IoT only or IoT and AI together.",
+            "categories": [
+              {
+                "id": "iot",
+                "label": "IoT only (connects and shares data)"
+              },
+              {
+                "id": "both",
+                "label": "IoT and AI together (also learns or recognises)"
+              }
+            ],
+            "items": [
+              {
+                "id": "i1",
+                "text": "A smart plug you switch on remotely from a phone app",
+                "correctCategoryId": "iot"
+              },
+              {
+                "id": "i2",
+                "text": "A thermostat that learns your weekly routine and adjusts the heating",
+                "correctCategoryId": "both"
+              },
+              {
+                "id": "i3",
+                "text": "A fridge that sends its temperature reading to your phone",
+                "correctCategoryId": "iot"
+              },
+              {
+                "id": "i4",
+                "text": "A doorbell camera that recognises the difference between a person and a parcel",
+                "correctCategoryId": "both"
+              },
+              {
+                "id": "i5",
+                "text": "A fitness tracker that uploads your step count to an app",
+                "correctCategoryId": "iot"
+              },
+              {
+                "id": "i6",
+                "text": "A smart speaker that understands a spoken request",
+                "correctCategoryId": "both"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Sending readings or responding to app commands is IoT. Learning routines, recognising images or understanding speech adds AI.",
+              "incorrect": "Some are not right yet. Ask: does the device only connect and share data, or does it also learn, recognise or predict? Uploading a step count is IoT only. Recognising a person in a camera image needs AI."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-robots",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "What is a robot?",
+        "status": "available",
+        "summary": "Describe robots in terms of sensors, a controller and actuators, and compare programmed and AI-enabled behaviour.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "What is a robot?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A robot is a machine that can sense its surroundings and carry out physical actions. Most robots have three main parts."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Sensors take information in, for example cameras, bump sensors and distance sensors."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "The controller is the robot's computer. It runs the program and decides what to do."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Actuators make the robot move or do physical work, for example motors, wheels, grippers and arms."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Programmed behaviour means the robot follows fixed steps, such as a factory arm welding the same spot on every car. AI-enabled behaviour means the robot can recognise things and adapt, such as a delivery robot spotting an obstacle and finding a way round it."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-p6",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Robots are used in manufacturing, warehouses, homes (robot vacuums), deliveries, self-driving vehicles and hospitals, where they can help surgeons or carry medicines between wards."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "A robot is not automatically AI",
+            "text": "Many robots just repeat programmed movements very accurately. A robot only uses AI if it can learn, recognise or adapt, for example by recognising objects with a camera."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-rb-q1",
+            "prompt": "Which part of a robot makes it physically move, for example its wheels or gripper?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Sensor"
+              },
+              {
+                "id": "b",
+                "label": "Controller"
+              },
+              {
+                "id": "c",
+                "label": "Actuator"
+              },
+              {
+                "id": "d",
+                "label": "Data"
+              }
+            ],
+            "correctOptionId": "c",
+            "feedback": {
+              "correct": "Correct. Actuators, such as motors, wheels and grippers, turn the controller's decisions into physical movement.",
+              "incorrect": "Not quite. Sensors gather information and the controller decides what to do. The parts that actually move, such as motors, wheels and grippers, are actuators."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rb-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-rb-q2",
+            "prompt": "A factory robot arm places a lid on every jar in exactly the same way, all day. Which is true?",
+            "options": [
+              {
+                "id": "a",
+                "label": "It must be AI because it is a robot"
+              },
+              {
+                "id": "b",
+                "label": "It is a robot following programmed behaviour, so it does not need AI"
+              },
+              {
+                "id": "c",
+                "label": "It is not a robot because it does not walk"
+              },
+              {
+                "id": "d",
+                "label": "It is IoT because it is in a factory"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Repeating the same programmed movement is robotics without AI. Robots only use AI when they need to recognise, learn or adapt.",
+              "incorrect": "Not quite. Being a robot does not make something AI, and robots do not need to walk. This arm follows the same programmed steps each time, so it is robotics without AI."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-robot-parts",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Match robot parts to their role",
+        "status": "available",
+        "summary": "Match robot components to sensor, controller or actuator.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 3,
+        "activityType": "Matching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rp-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Match robot parts to their role",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rp-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A robot vacuum cleaner has several parts. Sensors take information in, the controller decides, and actuators act."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rp-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-rp-q",
+            "prompt": "Match each robot vacuum part to its role: Sensor, Controller or Actuator.",
+            "categories": [
+              {
+                "id": "sensor",
+                "label": "Sensor"
+              },
+              {
+                "id": "controller",
+                "label": "Controller"
+              },
+              {
+                "id": "actuator",
+                "label": "Actuator"
+              }
+            ],
+            "items": [
+              {
+                "id": "p1",
+                "text": "Bump sensor on the front edge",
+                "correctCategoryId": "sensor"
+              },
+              {
+                "id": "p2",
+                "text": "Motors that turn the wheels",
+                "correctCategoryId": "actuator"
+              },
+              {
+                "id": "p3",
+                "text": "Onboard computer running the cleaning program",
+                "correctCategoryId": "controller"
+              },
+              {
+                "id": "p4",
+                "text": "Cliff sensor that detects the top of the stairs",
+                "correctCategoryId": "sensor"
+              },
+              {
+                "id": "p5",
+                "text": "Spinning brush that sweeps up dust",
+                "correctCategoryId": "actuator"
+              },
+              {
+                "id": "p6",
+                "text": "Camera that detects objects in the room",
+                "correctCategoryId": "sensor"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Bump, cliff and camera sensors take information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
+              "incorrect": "Some are not right yet. If a part gathers information, it is a sensor (a camera is a sensor too). If it decides, it is the controller. If it moves or does physical work, it is an actuator."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-automation-vs-ai",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Predetermined automation or AI-enabled?",
+        "status": "available",
+        "summary": "Classify behaviours as predetermined automation or AI-enabled behaviour.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ava-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Predetermined automation or AI-enabled?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ava-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Automation means a machine or program does a job without a person doing it by hand."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ava-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Predetermined means decided in advance. Predetermined automation follows steps that a person set up, and does the same thing every time the same thing happens."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ava-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AI-enabled behaviour can cope with new situations by recognising patterns or learning from data."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ava-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Automation is not the same as AI",
+            "text": "A machine can be fully automatic and still use no AI at all. Using a sensor does not make something AI either: automatic doors use a sensor but always do the same thing."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ava-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ava-q",
+            "prompt": "For each behaviour, choose Predetermined automation or AI-enabled behaviour.",
+            "categories": [
+              {
+                "id": "auto",
+                "label": "Predetermined automation"
+              },
+              {
+                "id": "ai",
+                "label": "AI-enabled behaviour"
+              }
+            ],
+            "items": [
+              {
+                "id": "v1",
+                "text": "A car-wash machine runs the same wash cycle for every car",
+                "correctCategoryId": "auto"
+              },
+              {
+                "id": "v2",
+                "text": "A delivery robot recognises a dog on the pavement and steers around it",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "v3",
+                "text": "A bottling machine fills each bottle with exactly 500 ml",
+                "correctCategoryId": "auto"
+              },
+              {
+                "id": "v4",
+                "text": "A robot vacuum builds a map of your home and learns the fastest cleaning route",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "v5",
+                "text": "Automatic doors open whenever the motion sensor is triggered",
+                "correctCategoryId": "auto"
+              },
+              {
+                "id": "v6",
+                "text": "A hospital robot recognises which ward it is in from camera images",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "v7",
+                "text": "A traffic light changes colour every 60 seconds on a fixed timer",
+                "correctCategoryId": "auto"
+              },
+              {
+                "id": "v8",
+                "text": "A self-driving car predicts that a cyclist is about to turn and slows down",
+                "correctCategoryId": "ai"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Fixed cycles, set amounts and timers are predetermined. Recognising objects, learning a map and predicting what people will do are AI-enabled.",
+              "incorrect": "Some are not right yet. Ask: would it behave exactly the same way every time? If yes, it is predetermined, even if it uses a sensor like the automatic doors. AI-enabled behaviour recognises, learns or predicts, like spotting a dog and steering around it."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-robot-types",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Extension: Automation, robotics, AI or a combination?",
+        "status": "available",
+        "summary": "Classify examples as automation, robotics, AI or a combination of robotics and AI.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 7,
+        "activityType": "Extension",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Extension: Automation, robotics, AI or a combination?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "This board has four groups:"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Automation only: software that follows fixed rules. No robot and no AI."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Robotics only: a physical robot that follows programmed steps. No AI."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AI only: software that learns or recognises patterns. No robot body."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Robotics and AI combined: a physical robot that also uses AI."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Two questions to ask",
+            "text": "1. Is there a physical machine that moves? 2. Does it learn, recognise or predict? Yes and yes means combined. No and no means automation only."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-rt-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-rt-q",
+            "prompt": "For each example, choose one of the four groups.",
+            "categories": [
+              {
+                "id": "automation",
+                "label": "Automation only"
+              },
+              {
+                "id": "robotics",
+                "label": "Robotics only"
+              },
+              {
+                "id": "ai",
+                "label": "AI only"
+              },
+              {
+                "id": "combination",
+                "label": "Robotics and AI combined"
+              }
+            ],
+            "items": [
+              {
+                "id": "t1",
+                "text": "Payroll software pays staff every Friday using fixed rules",
+                "correctCategoryId": "automation"
+              },
+              {
+                "id": "t2",
+                "text": "A robot lawnmower drives back and forth inside a boundary wire",
+                "correctCategoryId": "robotics"
+              },
+              {
+                "id": "t3",
+                "text": "A photo app groups pictures by recognising faces",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "t4",
+                "text": "A farm drone uses its camera to spot unhealthy crops and flies over to them",
+                "correctCategoryId": "combination"
+              },
+              {
+                "id": "t5",
+                "text": "An email system sends an automatic \"out of office\" reply",
+                "correctCategoryId": "automation"
+              },
+              {
+                "id": "t6",
+                "text": "A basic robot vacuum that bumps into walls and turns in a random direction",
+                "correctCategoryId": "robotics"
+              },
+              {
+                "id": "t7",
+                "text": "A chatbot on a website understands typed questions",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "t8",
+                "text": "A warehouse robot uses a camera to recognise items and pick the right one",
+                "correctCategoryId": "combination"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Payroll and auto-replies are software following rules. The lawnmower and basic vacuum are robots without AI. Face grouping and chatbots are AI without a robot body. The farm drone and item-picking robot combine both.",
+              "incorrect": "Some are not right yet. Check two things: is there a physical machine that moves (robotics)? Does it learn, recognise or predict (AI)? If both, it is a combination. If neither, it is automation only."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-neural-networks",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "What is a neural network?",
+        "status": "available",
+        "summary": "Outline a neural network as inputs passing through connected nodes to produce an output.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "What is a neural network?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A neural network is a type of AI that is especially good at recognising patterns, such as spotting a cat in a photo."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "It is made of many small processing units called nodes. The nodes are connected to each other and arranged in rows called layers."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "It works in three stages: Inputs → Connected nodes → Output."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Inputs: the data goes in. For a photo, this is the colour of each tiny dot (pixel) in the picture."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Connected nodes: the data passes through the layers. Early layers pick out simple patterns, such as edges. Later layers combine these into bigger features, such as ears or whiskers."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p6",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Output: the network gives its answer, such as \"cat: 92% likely\"."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-p7",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A network can only do this after it has been trained on lots of examples. You will see how training works shortly."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Common misconception",
+            "text": "The idea of connected nodes was loosely inspired by brain cells, but a neural network is not a brain. It does not understand, think or feel like a person. It finds patterns in data, and only the kinds of patterns it has been trained on."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-nn-q1",
+            "prompt": "Which description best matches a neural network?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Inputs pass through layers of connected nodes to produce an output"
+              },
+              {
+                "id": "b",
+                "label": "A cable network that connects computers in an office"
+              },
+              {
+                "id": "c",
+                "label": "A human brain placed inside a computer"
+              },
+              {
+                "id": "d",
+                "label": "A list of fixed if-then rules written by a programmer"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. A neural network takes inputs, passes them through layers of connected nodes that pick out patterns, and produces an output.",
+              "incorrect": "Not quite. Despite the word \"network\", it has nothing to do with cables between computers, and it is not a real brain. It is also not a list of fixed rules: it learns patterns from examples. The structure is inputs → connected nodes → output."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nn-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-nn-q2",
+            "prompt": "A friend says: \"Neural networks think and understand just like humans do.\" What is the best response?",
+            "options": [
+              {
+                "id": "a",
+                "label": "That is true; they have feelings too"
+              },
+              {
+                "id": "b",
+                "label": "That is not accurate: they find patterns in data they have been trained on but do not think or understand like people"
+              },
+              {
+                "id": "c",
+                "label": "That is true, but only on smartphones"
+              },
+              {
+                "id": "d",
+                "label": "Neural networks cannot do anything useful"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Neural networks are loosely inspired by the brain, but they are pattern-finding tools. They do not understand meaning, have feelings or use human judgement.",
+              "incorrect": "Not quite. Neural networks are useful, but they do not think, understand or feel. They find patterns in the data they were trained on, and can get things badly wrong outside that data."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-nn-flow",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Order the neural network flow",
+        "status": "available",
+        "summary": "Order the steps a trained neural network follows when it identifies a new photo.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 3,
+        "activityType": "Ordering",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nf-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Order the neural network flow",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nf-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A neural network that has already been trained to recognise animals is given a new photo. What happens inside it is listed below in the wrong order."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nf-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-nf-q",
+            "prompt": "Put the stages in order. For each one, choose Step 1 (happens first) to Step 4 (happens last). Use each step once.",
+            "categories": [
+              {
+                "id": "step-1",
+                "label": "Step 1"
+              },
+              {
+                "id": "step-2",
+                "label": "Step 2"
+              },
+              {
+                "id": "step-3",
+                "label": "Step 3"
+              },
+              {
+                "id": "step-4",
+                "label": "Step 4"
+              }
+            ],
+            "items": [
+              {
+                "id": "n3",
+                "text": "Later layers combine those patterns into features such as ears and whiskers",
+                "correctCategoryId": "step-3"
+              },
+              {
+                "id": "n1",
+                "text": "The colour of each pixel in the photo goes in as input data",
+                "correctCategoryId": "step-1"
+              },
+              {
+                "id": "n4",
+                "text": "The network gives its answer: \"cat: 92% likely\"",
+                "correctCategoryId": "step-4"
+              },
+              {
+                "id": "n2",
+                "text": "Early layers of connected nodes pick out simple patterns, such as edges",
+                "correctCategoryId": "step-2"
+              }
+            ],
+            "feedback": {
+              "correct": "Correct order. Inputs, then connected nodes finding simple patterns, then bigger features, then the output. The answer always comes last.",
+              "incorrect": "Not in the right order yet. The photo has to go in as input data first. Simple patterns such as edges are found before bigger features such as ears. The answer (the output) comes last."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-nn-training",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "How a neural network learns",
+        "status": "available",
+        "summary": "Explain training with a cat and dog example, and why good data matters.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 7,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "How a neural network learns",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Training is how a neural network learns. Imagine teaching one to tell cats from dogs."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "1. People collect thousands of photos and label each one \"cat\" or \"dog\"."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "2. The network looks at a photo and guesses. At first, its guesses are almost random."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "3. It is told the correct label and adjusts its connections a little, so it is more likely to be right next time. This repeats thousands of times."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "4. It is tested on photos it has never seen. If it does well, it has learned general patterns, not just memorised the training photos."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Data matters, and mistakes still happen",
+            "text": "A network can only learn from the examples it is given. If the training photos are limited or unbalanced, its answers will be too. Even a well-trained network still gets some answers wrong, for example a fluffy dog in a dark photo."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-q1",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-nt-q1",
+            "prompt": "Put the training stages in order. For each one, choose Step 1 (happens first) to Step 4 (happens last). Use each step once.",
+            "categories": [
+              {
+                "id": "step-1",
+                "label": "Step 1"
+              },
+              {
+                "id": "step-2",
+                "label": "Step 2"
+              },
+              {
+                "id": "step-3",
+                "label": "Step 3"
+              },
+              {
+                "id": "step-4",
+                "label": "Step 4"
+              }
+            ],
+            "items": [
+              {
+                "id": "t4",
+                "text": "It is given photos it has never seen, to check how well it has learned",
+                "correctCategoryId": "step-4"
+              },
+              {
+                "id": "t2",
+                "text": "It is shown a photo and guesses whether it is a cat or a dog",
+                "correctCategoryId": "step-2"
+              },
+              {
+                "id": "t1",
+                "text": "Lots of animal photos are gathered and each one is labelled",
+                "correctCategoryId": "step-1"
+              },
+              {
+                "id": "t3",
+                "text": "It finds out the right answer and adjusts its connections slightly",
+                "correctCategoryId": "step-3"
+              }
+            ],
+            "feedback": {
+              "correct": "Correct order. Labelled data first, then guess, compare and adjust (repeated many times), then test on unseen photos.",
+              "incorrect": "Not in the right order yet. You cannot train without labelled examples, so collecting them comes first. Testing on new photos comes last, to check the network learned general patterns."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-nt-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-nt-q2",
+            "prompt": "A network was trained only on photos of ginger cats. It then fails to recognise a black cat. What is the most likely reason?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Black cats are not really cats"
+              },
+              {
+                "id": "b",
+                "label": "The training data was too limited, so it never learned what other cats look like"
+              },
+              {
+                "id": "c",
+                "label": "The network was switched off"
+              },
+              {
+                "id": "d",
+                "label": "Neural networks cannot recognise animals"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. The network only learned from ginger cats, so it did not learn that cats can be other colours. Varied, balanced training data leads to better results.",
+              "incorrect": "Not quite. Neural networks can recognise animals, but only from patterns in their training data. With only ginger cats to learn from, the network has never seen what a black cat looks like."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-nn-applications",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Extension: Where neural networks are used",
+        "status": "available",
+        "summary": "Match real uses to neural network applications: image, speech, handwriting, recommendations and fraud detection.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Extension",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Extension: Where neural networks are used",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Neural networks are used wherever there are patterns in large amounts of data. Five common uses are:"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Image recognition: identifying objects or people in pictures, such as a plant-identifying app."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Speech recognition: working out which words someone has spoken, such as live captions on a video call."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Handwriting recognition: reading handwritten letters and numbers, such as a tablet turning your notes into typed text."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Recommendations: suggesting what you might like next, based on past choices, such as a music app."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-p6",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Fraud detection: spotting activity that looks unusual and might be criminal, such as a bank checking card payments."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-na-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-na-q",
+            "prompt": "Match each real use to one of the five types of application.",
+            "categories": [
+              {
+                "id": "image",
+                "label": "Image recognition"
+              },
+              {
+                "id": "speech",
+                "label": "Speech recognition"
+              },
+              {
+                "id": "handwriting",
+                "label": "Handwriting recognition"
+              },
+              {
+                "id": "recommend",
+                "label": "Recommendations"
+              },
+              {
+                "id": "fraud",
+                "label": "Fraud detection"
+              }
+            ],
+            "items": [
+              {
+                "id": "u1",
+                "text": "A phone unlocks when it recognises its owner's face",
+                "correctCategoryId": "image"
+              },
+              {
+                "id": "u2",
+                "text": "A voice assistant turns spoken words into text",
+                "correctCategoryId": "speech"
+              },
+              {
+                "id": "u3",
+                "text": "A postal machine reads handwritten postcodes on envelopes",
+                "correctCategoryId": "handwriting"
+              },
+              {
+                "id": "u4",
+                "text": "An online shop suggests products similar to your past purchases",
+                "correctCategoryId": "recommend"
+              },
+              {
+                "id": "u5",
+                "text": "A bank blocks an unusual card payment made abroad at 3am",
+                "correctCategoryId": "fraud"
+              },
+              {
+                "id": "u6",
+                "text": "A hospital system highlights possible problems on X-ray images for a doctor to check",
+                "correctCategoryId": "image"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Faces and X-rays are image recognition, spoken words are speech recognition, postcodes are handwriting recognition, product suggestions are recommendations, and unusual payments are fraud detection.",
+              "incorrect": "Some are not right yet. Ask what kind of data is being analysed: pictures (image), voices (speech), written letters and numbers (handwriting), past choices (recommendations) or unusual payment patterns (fraud)."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-benefits-limitations",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Benefits and limitations of AI",
+        "status": "available",
+        "summary": "Classify benefits and limitations of AI and intelligent computing.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 7,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Benefits and limitations of AI",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Benefits. AI can:"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "work very fast; automate repetitive tasks; analyse huge amounts of data (often called big data); give consistent results; spot patterns people might miss; and work day and night without breaks."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Limitations. AI:"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "is only as good as its data; can make mistakes; can be biased, meaning unfair to some groups, if its training data was unbalanced; can be expensive to build and run; can raise privacy concerns because it often collects personal data; and lacks human judgement, empathy and common sense."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Spotting patterns is not the same as judgement",
+            "text": "An AI can recognise patterns very well and still make a poor decision in an unusual situation, because it does not understand people's circumstances the way a person does."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-bl-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-bl-q",
+            "prompt": "For each statement, choose Benefit or Limitation.",
+            "categories": [
+              {
+                "id": "benefit",
+                "label": "Benefit"
+              },
+              {
+                "id": "limitation",
+                "label": "Limitation"
+              }
+            ],
+            "items": [
+              {
+                "id": "b1",
+                "text": "Checks thousands of bank transactions per second",
+                "correctCategoryId": "benefit"
+              },
+              {
+                "id": "b2",
+                "text": "Gives unfair results if its training data was biased",
+                "correctCategoryId": "limitation"
+              },
+              {
+                "id": "b3",
+                "text": "Can run 24 hours a day without getting tired",
+                "correctCategoryId": "benefit"
+              },
+              {
+                "id": "b4",
+                "text": "May collect personal data such as voice recordings",
+                "correctCategoryId": "limitation"
+              },
+              {
+                "id": "b5",
+                "text": "Spots patterns in medical scans that people might miss",
+                "correctCategoryId": "benefit"
+              },
+              {
+                "id": "b6",
+                "text": "Can be expensive to develop, train and maintain",
+                "correctCategoryId": "limitation"
+              },
+              {
+                "id": "b7",
+                "text": "Checks every product on a production line to the same standard, without getting bored",
+                "correctCategoryId": "benefit"
+              },
+              {
+                "id": "b8",
+                "text": "Cannot use empathy or common sense in unusual situations",
+                "correctCategoryId": "limitation"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Speed, working continuously, pattern recognition and consistency are benefits. Bias, privacy, cost and lack of human judgement are limitations.",
+              "incorrect": "Some are not right yet. Benefits are things AI does well: speed, consistency, continuous work and finding patterns. Limitations are risks or weaknesses: bias from data, privacy, cost and no real human judgement."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-limitations-check",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Extension: Limitations in practice",
+        "status": "available",
+        "summary": "Apply ideas about bias, errors, privacy and human judgement to short scenarios.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 4,
+        "activityType": "Extension",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-lc-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Extension: Limitations in practice",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-lc-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Each scenario shows one limitation. Choose the limitation it shows best."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-lc-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-lc-q1",
+            "prompt": "A face recognition system works well for some groups of people but often fails for others. Its training photos mostly showed one group. Which limitation does this show?",
+            "options": [
+              {
+                "id": "a",
+                "label": "High cost"
+              },
+              {
+                "id": "b",
+                "label": "Bias caused by unbalanced training data"
+              },
+              {
+                "id": "c",
+                "label": "Privacy"
+              },
+              {
+                "id": "d",
+                "label": "Lack of empathy"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. The training data did not represent everyone fairly, so the AI is less accurate for some groups. That is bias, and it comes from the data.",
+              "incorrect": "Not quite. The clue is that the system fails for groups that were missing from its training photos. Unfair results caused by unbalanced data are called bias."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-lc-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-lc-q2",
+            "prompt": "A smart speaker is always listening for its wake word, and some recordings are stored on the provider's servers. Which limitation is this?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Bias"
+              },
+              {
+                "id": "b",
+                "label": "Privacy"
+              },
+              {
+                "id": "c",
+                "label": "High cost"
+              },
+              {
+                "id": "d",
+                "label": "It can make mistakes"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Collecting and storing voice recordings raises privacy concerns about who can access personal data and how it is used.",
+              "incorrect": "Not quite. Nothing here is unfair to a group (bias) or about money (cost). The concern is that recordings of people's voices are being collected and stored, which is a privacy issue."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-lc-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-lc-q3",
+            "prompt": "An AI system suggests refusing a customer's refund. The customer's situation is unusual and upsetting. Why should a person review the decision?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Because AI is always wrong"
+              },
+              {
+                "id": "b",
+                "label": "Because AI lacks human judgement and empathy, and may not handle unusual cases well"
+              },
+              {
+                "id": "c",
+                "label": "Because people are always faster than AI"
+              },
+              {
+                "id": "d",
+                "label": "Because AI cannot read numbers"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. AI can be helpful, but it lacks human judgement and empathy. Unusual or sensitive cases often need a person to review the decision.",
+              "incorrect": "Not quite. AI is not always wrong and it is usually faster than people. The issue is that it lacks human judgement and empathy, which matter most in unusual or sensitive cases."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-game-npc",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Scenario: a game character that adapts",
+        "status": "available",
+        "summary": "Decide whether two adapting game characters use AI, and what data an AI character learns from.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 4,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-npc-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Scenario: a game character that adapts",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-npc-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A non-player character (NPC) is a character in a game that the computer controls. Two fighting games both have an enemy NPC that changes as you play."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-npc-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Game A: the designers wrote a rule. If you lose three fights in a row, the enemy's health drops by 20%."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-npc-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Game B: over many fights, the enemy notices that you usually attack from the left. It starts guarding its left side and tries new tactics you have not seen before."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-npc-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-npc-q1",
+            "prompt": "Both enemies change as you play. Which one shows AI-enabled behaviour?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Game A, because it changes the difficulty automatically"
+              },
+              {
+                "id": "b",
+                "label": "Game B, because it recognises patterns in how you play and adapts to them"
+              },
+              {
+                "id": "c",
+                "label": "Both, because anything that adapts is AI"
+              },
+              {
+                "id": "d",
+                "label": "Neither, because games cannot use AI"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Game B spots a pattern in your play and responds to it. Game A only follows a rule the designers wrote in advance, so it is automatic but not AI.",
+              "incorrect": "Not quite. Changing automatically is not the same as AI. Game A follows one fixed rule the designers wrote (three losses means less health). Game B recognises a pattern in how you fight and adapts, which is AI-enabled behaviour."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-npc-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-npc-q2",
+            "prompt": "What data does the Game B enemy need to learn from?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Records of your moves in past fights, such as which side you attack from"
+              },
+              {
+                "id": "b",
+                "label": "The game's fixed rule about losing three fights"
+              },
+              {
+                "id": "c",
+                "label": "Your screen brightness setting"
+              },
+              {
+                "id": "d",
+                "label": "The make of your games console"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. To spot your habits, the enemy needs data about what you actually do in fights, collected over many games.",
+              "incorrect": "Not quite. A fixed rule is what Game A uses, not something to learn from, and screen settings or the console make say nothing about how you fight. To learn your habits, the enemy needs records of your moves."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-smart-gaming",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Extension: Scenario: a smart gaming setup",
+        "status": "available",
+        "summary": "Select which data a smart gaming setup needs and identify a privacy concern.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 11,
+        "activityType": "Extension",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Extension: Scenario: a smart gaming setup",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A smart gaming setup has three jobs:"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "1. Change the colour of the room lights to match what is happening in the game."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-p3",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "2. Dim the lights when the room is bright."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-p4",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "3. Turn the game volume down when someone speaks to the player."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-p5",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A well-designed device should only collect the data it needs for its jobs. Collecting extra personal data creates privacy risks."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-q1",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-sg-q1",
+            "prompt": "Which data does the setup need? For each item, choose Needed if one of the three jobs cannot work without it, or Not needed if none of the jobs uses it.",
+            "categories": [
+              {
+                "id": "needed",
+                "label": "Needed"
+              },
+              {
+                "id": "not-needed",
+                "label": "Not needed"
+              }
+            ],
+            "items": [
+              {
+                "id": "g1",
+                "text": "Game events, such as an explosion or a boss battle starting",
+                "correctCategoryId": "needed"
+              },
+              {
+                "id": "g2",
+                "text": "Light level readings from a light sensor in the room",
+                "correctCategoryId": "needed"
+              },
+              {
+                "id": "g3",
+                "text": "Microphone input to detect when someone starts speaking",
+                "correctCategoryId": "needed"
+              },
+              {
+                "id": "g4",
+                "text": "The player's heart rate from a smartwatch",
+                "correctCategoryId": "not-needed"
+              },
+              {
+                "id": "g5",
+                "text": "Full recordings of everything said in the room, stored online",
+                "correctCategoryId": "not-needed"
+              },
+              {
+                "id": "g6",
+                "text": "The player's location from their phone's GPS",
+                "correctCategoryId": "not-needed"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Game events, light readings and detecting speech are each needed for one job. Heart rate and location are not used by any job, and the setup only needs to notice that someone is speaking, not record and store what they say.",
+              "incorrect": "Some are not right yet. Link each item to a job: game events for the colours, the light sensor for dimming, the microphone for the volume. Heart rate and location are not used by any job, and detecting speech does not require storing full recordings online."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-sg-q2",
+          "version": "0.1.0",
+          "type": "short-response",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-sg-q2",
+            "prompt": "The setup uses a microphone that is always on. Describe one privacy concern and one way to reduce it.",
+            "guidance": "Write at least 200 characters. Name one privacy concern and one sensible way to reduce it, for example a mute button or processing sound only on the device. Paste is disabled.",
+            "minChars": 200
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-warehouse-robot",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Scenario: a warehouse robot",
+        "status": "available",
+        "summary": "Identify the sensors and inputs, processing and actions of a warehouse robot.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-wr-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Scenario: a warehouse robot",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-wr-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "An online shop uses robots in its warehouse. Each robot drives to a shelf, uses a camera to recognise the correct item, picks it up with a gripper and carries it to a packing station. It slows down if a worker walks in front of it."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-wr-q1",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-wr-q1",
+            "prompt": "For each part of the robot's work, choose Sensor or input, Processing, or Action.",
+            "categories": [
+              {
+                "id": "input",
+                "label": "Sensor or input"
+              },
+              {
+                "id": "processing",
+                "label": "Processing"
+              },
+              {
+                "id": "action",
+                "label": "Action"
+              }
+            ],
+            "items": [
+              {
+                "id": "w1",
+                "text": "A camera captures images of items on the shelf",
+                "correctCategoryId": "input"
+              },
+              {
+                "id": "w2",
+                "text": "A distance sensor detects a worker in the path",
+                "correctCategoryId": "input"
+              },
+              {
+                "id": "w3",
+                "text": "AI software recognises which item matches the order",
+                "correctCategoryId": "processing"
+              },
+              {
+                "id": "w4",
+                "text": "The controller plans the quickest safe route to the packing station",
+                "correctCategoryId": "processing"
+              },
+              {
+                "id": "w5",
+                "text": "The gripper picks up the item",
+                "correctCategoryId": "action"
+              },
+              {
+                "id": "w6",
+                "text": "The wheels slow down and stop",
+                "correctCategoryId": "action"
+              }
+            ],
+            "feedback": {
+              "correct": "Well done. Cameras and distance sensors provide the inputs. Recognising items and planning routes is processing. Gripping and slowing down are actions carried out by actuators.",
+              "incorrect": "Some are not right yet. Inputs come from sensors such as cameras. Processing is the thinking step, such as recognising the item or planning a route. Actions are physical movements, such as gripping or stopping."
+            }
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-wr-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-wr-q2",
+            "prompt": "Which part of the warehouse robot's work is AI-enabled rather than simple programmed movement?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Recognising the correct item from camera images"
+              },
+              {
+                "id": "b",
+                "label": "Driving forward when told to"
+              },
+              {
+                "id": "c",
+                "label": "Opening and closing the gripper"
+              },
+              {
+                "id": "d",
+                "label": "Stopping when its battery is empty"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Recognising items from camera images needs pattern recognition, which is AI. Driving, gripping and stopping can all be simple programmed actions.",
+              "incorrect": "Not quite. Driving, gripping and stopping on low battery can all be programmed with fixed rules. Recognising the correct item from images needs AI pattern recognition."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-image-recognition",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Scenario: spotting prohibited objects",
+        "status": "available",
+        "summary": "Apply image recognition to screening bags for prohibited objects, including benefits and limitations.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 12,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ir-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Scenario: spotting prohibited objects",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ir-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A concert venue scans bags with an X-ray machine. An image recognition system checks each scan and flags any bag that might contain a prohibited object, such as a knife or a glass bottle. Security staff then check every flagged bag by hand."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ir-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ir-q1",
+            "prompt": "What is the input to the image recognition system?",
+            "options": [
+              {
+                "id": "a",
+                "label": "The X-ray image of each bag"
+              },
+              {
+                "id": "b",
+                "label": "The warning on screen that a bag might contain a knife"
+              },
+              {
+                "id": "c",
+                "label": "The security guard's decision after checking the bag"
+              },
+              {
+                "id": "d",
+                "label": "The list of prohibited items printed at the entrance"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. The X-ray image goes in (input). The warning on screen is the output, and the guard's check happens afterwards.",
+              "incorrect": "Not quite. The input is what goes into the system: the X-ray image of each bag. The on-screen warning is the output, and the guard's decision comes after the system has finished."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ir-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ir-q2",
+            "prompt": "Why must the system be trained on thousands of scans showing prohibited objects in many different positions?",
+            "options": [
+              {
+                "id": "a",
+                "label": "So that it can recognise objects even when they are turned, hidden or partly covered"
+              },
+              {
+                "id": "b",
+                "label": "So that it runs without electricity"
+              },
+              {
+                "id": "c",
+                "label": "So that it never needs updating"
+              },
+              {
+                "id": "d",
+                "label": "So that it can read the owner's name"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Varied training examples help the system recognise objects from different angles and positions, instead of only the exact examples it has seen.",
+              "incorrect": "Not quite. Training data is about accuracy. The system needs many varied examples so it can still recognise a knife or bottle when it is turned, hidden or partly covered."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ir-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ir-q3",
+            "prompt": "Why do security staff still check flagged bags by hand?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Because the system can make mistakes, such as flagging a harmless object or missing a real one"
+              },
+              {
+                "id": "b",
+                "label": "Because AI is never useful"
+              },
+              {
+                "id": "c",
+                "label": "Because staff are faster than the system at scanning every bag"
+              },
+              {
+                "id": "d",
+                "label": "Because image recognition cannot see inside bags"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Image recognition can make errors in both directions. A person checks the flagged bags so decisions are not left to the AI alone.",
+              "incorrect": "Not quite. The system is useful and fast, but it can make errors: flagging a harmless umbrella, or missing a real knife. Human checks add judgement and catch mistakes."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ir-q4",
+          "version": "0.1.0",
+          "type": "short-response",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ir-q4",
+            "prompt": "Give one benefit and one limitation of using image recognition to screen bags at the venue.",
+            "guidance": "Write at least 200 characters. Give one benefit, such as speed or consistency, and one limitation, such as errors, bias or cost. Explain each briefly. Paste is disabled.",
+            "minChars": 200
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-knowledge-check",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Mixed knowledge check",
+        "status": "available",
+        "summary": "Apply everything from Week 4 to new situations.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 8,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Mixed knowledge check",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "These questions mix ideas from the whole week. Read each situation carefully and apply what you have learned."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-kc-q1",
+            "prompt": "A school's online booking form checks that every email address contains an @ symbol before it is accepted. Is this AI?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Yes, because it checks data automatically"
+              },
+              {
+                "id": "b",
+                "label": "No, it follows one fixed rule written by a programmer"
+              },
+              {
+                "id": "c",
+                "label": "Yes, because it runs online"
+              },
+              {
+                "id": "d",
+                "label": "Yes, because it uses the cloud"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Checking for an @ symbol is a single fixed rule. Being automatic or online does not make software AI.",
+              "incorrect": "Not quite. Working automatically, online or in the cloud does not make software AI. Checking for an @ symbol is one fixed rule, so it is rule-based."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-kc-q2",
+            "prompt": "A smart doorbell notices movement, records a short clip, recognises that the visitor is a delivery driver and sends you a notification. Which part is the processing step?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Noticing the movement"
+              },
+              {
+                "id": "b",
+                "label": "Recording the clip"
+              },
+              {
+                "id": "c",
+                "label": "Recognising that the visitor is a delivery driver"
+              },
+              {
+                "id": "d",
+                "label": "Sending the notification"
+              }
+            ],
+            "correctOptionId": "c",
+            "feedback": {
+              "correct": "Correct. Recognising who is at the door is the processing step, and it uses AI image recognition. Movement is sensed, the clip is data, and the notification is the action.",
+              "incorrect": "Not quite. Follow the flow: noticing movement is the sensor, the clip is the data, and the notification is the action. Recognising the visitor is the processing step."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-kc-q3",
+            "prompt": "A hospital uses a robot that follows lines on the floor to carry medicines between wards. It stops when its bump sensor is pressed. Which best describes it?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A robot using programmed behaviour, not AI"
+              },
+              {
+                "id": "b",
+                "label": "AI software with no robot body"
+              },
+              {
+                "id": "c",
+                "label": "A neural network"
+              },
+              {
+                "id": "d",
+                "label": "A DaaS service"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. It has sensors and actuators, so it is a robot, but following lines and stopping on a bump are fixed rules. It does not need AI.",
+              "incorrect": "Not quite. It is a physical machine with sensors and actuators, so it is a robot. Following lines and stopping when bumped are fixed rules, so it uses programmed behaviour rather than AI."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-q4",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-kc-q4",
+            "prompt": "A company wants a neural network to spot fraudulent card payments. What does it need first?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Lots of past payment records, each labelled as fraudulent or genuine"
+              },
+              {
+                "id": "b",
+                "label": "One fixed rule, such as \"block every payment over £100\""
+              },
+              {
+                "id": "c",
+                "label": "A robot to watch the bank's cash machines"
+              },
+              {
+                "id": "d",
+                "label": "Only customers' names and home addresses"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. A neural network learns from labelled examples. Past payments marked as fraudulent or genuine let it learn the patterns of fraud.",
+              "incorrect": "Not quite. A single fixed rule would be rule-based, not a neural network, and names or addresses alone show no payment patterns. A neural network learns from labelled examples: many past payments marked as fraudulent or genuine."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-q5",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-kc-q5",
+            "prompt": "Fridge 1 sends a photo of its shelves to your phone when you ask. Fridge 2 also recognises which foods are running low and adds them to your shopping list. Which statement is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Both fridges use AI because they are both connected to the internet"
+              },
+              {
+                "id": "b",
+                "label": "Fridge 1 is IoT only; Fridge 2 is IoT and AI working together"
+              },
+              {
+                "id": "c",
+                "label": "Neither fridge is IoT because fridges are not computers"
+              },
+              {
+                "id": "d",
+                "label": "Fridge 1 uses AI because it takes a photo"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Both are IoT because they connect and share data. Only Fridge 2 recognises what is in the photo and makes a decision, so only Fridge 2 adds AI.",
+              "incorrect": "Not quite. Being connected makes a device IoT, not AI, and taking a photo is just sensing. Fridge 2 recognises the foods in the image and acts on it, which is where the AI comes in."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-kc-q6",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-kc-q6",
+            "prompt": "A bank discovers that its loan AI was trained mostly on data from one age group, and it is refusing more loans to older customers. What is the best thing for the bank to do?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Keep using it unchanged, because AI decisions are always fair"
+              },
+              {
+                "id": "b",
+                "label": "Retrain it with data that represents all age groups, and have a person review refused applications"
+              },
+              {
+                "id": "c",
+                "label": "Make the AI run faster so it can process more applications"
+              },
+              {
+                "id": "d",
+                "label": "Stop telling customers that AI is used"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. Better, more balanced data tackles the cause of the bias, and a human review adds judgement for important decisions about people.",
+              "incorrect": "Not quite. AI is not automatically fair: it copies patterns from its data, including unfair ones. Speed does not fix bias, and hiding it makes things worse. The bank should retrain with balanced data and have people review refusals."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-reflection",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Extension: AI technology profile",
+        "status": "available",
+        "summary": "Write a short profile of one AI-enabled device or system.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 13,
+        "activityType": "Extension",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ref-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Extension: AI technology profile",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ref-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Independent task: build a short profile you could reuse when outlining technologies for AC1.1 practice. This is formative, not Gateway assignment evidence."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-ref-q",
+          "version": "0.1.0",
+          "type": "reflection",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-ref-q",
+            "prompt": "Choose one AI-enabled device or system, such as a smart speaker, robot vacuum, self-driving car or recommendation system. Explain what it does, what data or sensors it uses, what the AI part does, one benefit and one limitation.",
+            "minChars": 500,
+            "guidance": "Cover what it does, the data or sensors, what the AI does, one benefit and one limitation. Write at least 500 characters. Paste is disabled."
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-4-exit",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Exit ticket",
+        "status": "available",
+        "summary": "Quick check that you can outline AI, smart devices, robots and neural networks, and rate your confidence.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 2,
+        "activityType": "Exit ticket",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-exit-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Exit ticket",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-exit-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-exit-q1",
+            "prompt": "Which statement is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Every robot uses AI"
+              },
+              {
+                "id": "b",
+                "label": "Every program is AI"
+              },
+              {
+                "id": "c",
+                "label": "A robot can follow programmed steps without AI, and AI can run with no robot body"
+              },
+              {
+                "id": "d",
+                "label": "Neural networks think exactly like humans"
+              }
+            ],
+            "correctOptionId": "c",
+            "feedback": {
+              "correct": "Correct. Robotics and AI are different things that can work together. Many robots follow fixed programs, and much AI is software only.",
+              "incorrect": "Not quite. Not every robot or program uses AI, and neural networks do not think like humans. Robots can run without AI, and AI can run without a robot body."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-4-exit-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-4-exit-q2",
+            "prompt": "How confident are you outlining AI, smart devices, robots and neural networks?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Not yet. I need another look at the definitions."
+              },
+              {
+                "id": "b",
+                "label": "Getting there. I can give an example for most of them."
+              },
+              {
+                "id": "c",
+                "label": "Confident. I can explain each one and give a benefit and a limitation."
               }
             ],
             "correctOptionId": "c",
