@@ -67,5 +67,28 @@
         "week-3-session"
       ]
     }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-4",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 4,
+      "title": "AI and Intelligent Computing: Smart Devices, Robots and Neural Networks",
+      "status": "planned",
+      "professionalPractice": "LO1 / AC 1.1 - outline AI and intelligent computing: smart devices, robots and neural networks",
+      "route": "week-4/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-4-session"
+      ]
+    }
   }
 ]

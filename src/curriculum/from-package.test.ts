@@ -24,13 +24,14 @@ describe("L2E package hydration", () => {
     expect(result.valid).toBe(true);
   });
 
-  it("exposes Weeks 1 to 3 for the learner home and week pages", () => {
+  it("exposes Weeks 1 to 4 for the learner home and week pages", () => {
     const weeks = homeWeeksFromPackage(pkg);
-    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3"]);
-    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/"]);
+    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4"]);
+    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/"]);
     expect(weeks[0].title).toBe("Introduction to New and Emerging Digital Technologies");
     expect(weeks[1].title).toBe("Internet of Things, RFID, NFC and Wearables");
     expect(weeks[2].title).toBe("Cloud Technology, SaaS, IaaS, PaaS and DaaS");
+    expect(weeks[3].title).toBe("AI and Intelligent Computing: Smart Devices, Robots and Neural Networks");
     expect(weeks[0].current).toBe(true);
     const week1 = weekPageFromPackage(pkg, "week-1");
     expect(week1?.sessions.map((item) => item.id)).toEqual(["week-1-session"]);
@@ -96,6 +97,77 @@ describe("L2E package hydration", () => {
       }
       expect([...types].sort(), weekId).toEqual([...required].sort());
     }
+  });
+
+  it("wires the Week 4 AI session with unique ids and a mixed knowledge check before the exit", () => {
+    const published = structuredClone(bundled);
+    const week4 = published.weeks?.find((item) => item.id === "week-4");
+    if (!week4?.metadata) throw new Error("missing week-4");
+    week4.metadata.status = "available";
+    const page = weekPageFromPackage(published, "week-4");
+    const ids = page?.sessions[0]?.activities.map((item) => item.id) || [];
+    expect(page?.sessions.map((item) => item.id)).toEqual(["week-4-session"]);
+    expect(ids).toEqual([
+      "week-4-starter",
+      "week-4-ai-intro",
+      "week-4-ai-examples",
+      "week-4-ai-or-not",
+      "week-4-smart-devices",
+      "week-4-smart-flow",
+      "week-4-iot-and-ai",
+      "week-4-robots",
+      "week-4-robot-parts",
+      "week-4-automation-vs-ai",
+      "week-4-robot-types",
+      "week-4-neural-networks",
+      "week-4-nn-flow",
+      "week-4-nn-training",
+      "week-4-nn-applications",
+      "week-4-benefits-limitations",
+      "week-4-limitations-check",
+      "week-4-game-npc",
+      "week-4-smart-gaming",
+      "week-4-warehouse-robot",
+      "week-4-image-recognition",
+      "week-4-knowledge-check",
+      "week-4-reflection",
+      "week-4-exit"
+    ]);
+
+    const activities = ids.map((id) => pkg.activities.find((item) => item.id === id));
+    expect(activities.every(Boolean)).toBe(true);
+    const extensions = activities.filter((activity) => activity?.metadata?.activityType === "Extension");
+    expect(extensions.map((activity) => activity?.id)).toEqual([
+      "week-4-robot-types",
+      "week-4-nn-applications",
+      "week-4-limitations-check",
+      "week-4-smart-gaming",
+      "week-4-reflection"
+    ]);
+    expect(extensions.every((activity) => activity?.metadata?.title?.startsWith("Extension: "))).toBe(true);
+    const types = new Set(activities.flatMap((activity) => (activity?.blocks || []).map((block) => String(block.type))));
+    for (const type of ["single-choice", "classification", "short-response", "reflection"]) {
+      expect(types.has(type), type).toBe(true);
+    }
+    for (const activity of activities) {
+      for (const block of activity?.blocks || []) {
+        const content = (block.content || {}) as { correctOptionId?: string; options?: Array<{ id: string }>; items?: Array<{ correctCategoryId: string }>; categories?: Array<{ id: string }> };
+        if (block.type === "single-choice") {
+          expect(content.options?.some((option) => option.id === content.correctOptionId), block.id).toBe(true);
+        }
+        if (block.type === "classification") {
+          const categoryIds = new Set((content.categories || []).map((category) => category.id));
+          expect(content.items?.every((item) => categoryIds.has(item.correctCategoryId)), block.id).toBe(true);
+        }
+      }
+    }
+
+    const allIds = pkg.activities.map((item) => item.id);
+    expect(new Set(allIds).size).toBe(allIds.length);
+    const questionIds = pkg.activities.flatMap((item) => (item.blocks || [])
+      .map((block) => (block.content as { questionId?: string } | undefined)?.questionId)
+      .filter(Boolean));
+    expect(new Set(questionIds).size).toBe(questionIds.length);
   });
 
   it("hides planned session content while keeping the session placeholder", () => {

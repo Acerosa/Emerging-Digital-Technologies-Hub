@@ -35,6 +35,7 @@ describe("L2E presentation", () => {
     expect(screen.getByRole("link", { name: "Open Week 1" }).getAttribute("href")).toBe("./week-1/");
     expect(screen.getByRole("link", { name: "Open Week 2" }).getAttribute("href")).toBe("./week-2/");
     expect(screen.getByRole("link", { name: "Open Week 3" }).getAttribute("href")).toBe("./week-3/");
+    expect(screen.queryByRole("link", { name: "Open Week 4" })).toBeNull();
     expect(screen.queryByRole("link", { name: /Task 1/i })).toBeNull();
     expect(screen.queryByRole("link", { name: /Foundations/i })).toBeNull();
     expect(screen.getAllByText(/Gateway/i).length).toBeGreaterThan(0);
