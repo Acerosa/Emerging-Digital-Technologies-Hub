@@ -7859,14 +7859,19 @@
               "correctCategoryId": "needed"
             },
             {
+              "id": "g3",
+              "text": "Microphone input to detect when someone starts speaking",
+              "correctCategoryId": "needed"
+            },
+            {
               "id": "g5",
               "text": "Full recordings of everything said in the room, stored online",
               "correctCategoryId": "not-needed"
             }
           ],
           "feedback": {
-            "correct": "Well done. Game events and light readings are needed for the lighting jobs. Storing full recordings online is not needed for any job and creates a privacy risk.",
-            "incorrect": "Some are not right yet. Link each item to a job: game events for the colours and the light sensor for dimming. Detecting speech does not require storing full recordings online."
+            "correct": "Well done. Game events, light readings and detecting speech are each needed for one job. Storing full recordings online is not needed and creates a privacy risk.",
+            "incorrect": "Some are not right yet. Link each item to a job: game events for the colours, the light sensor for dimming, and the microphone for the volume. Detecting speech does not require storing full recordings online."
           }
         }
       },
