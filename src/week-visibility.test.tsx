@@ -169,7 +169,7 @@ describe("L2E shared week visibility", () => {
     const { container } = render(<WeekPage weekId="week-4" root=".." pkg={runtimeContentPackage(live)} />);
     expect(screen.queryByRole("heading", { name: "Week not available yet" })).toBeNull();
     expect(screen.getByRole("heading", { name: "Week 4 session" })).toBeTruthy();
-    expect(container.querySelectorAll("[data-lp-activity^='week-4-']").length).toBe(24);
+    expect(container.querySelectorAll("[data-lp-activity^='week-4-']").length).toBe(21);
 
     const article = await waitFor(() => {
       const node = container.querySelector('[data-lp-activity="week-4-ai-intro"]');

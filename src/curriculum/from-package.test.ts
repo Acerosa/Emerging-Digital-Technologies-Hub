@@ -118,13 +118,10 @@ describe("L2E package hydration", () => {
       "week-4-robots",
       "week-4-robot-parts",
       "week-4-automation-vs-ai",
-      "week-4-robot-types",
       "week-4-neural-networks",
       "week-4-nn-flow",
       "week-4-nn-training",
-      "week-4-nn-applications",
       "week-4-benefits-limitations",
-      "week-4-limitations-check",
       "week-4-game-npc",
       "week-4-smart-gaming",
       "week-4-warehouse-robot",
@@ -138,10 +135,6 @@ describe("L2E package hydration", () => {
     expect(activities.every(Boolean)).toBe(true);
     const extensions = activities.filter((activity) => activity?.metadata?.activityType === "Extension");
     expect(extensions.map((activity) => activity?.id)).toEqual([
-      "week-4-robot-types",
-      "week-4-nn-applications",
-      "week-4-limitations-check",
-      "week-4-smart-gaming",
       "week-4-reflection"
     ]);
     expect(extensions.every((activity) => activity?.metadata?.title?.startsWith("Extension: "))).toBe(true);

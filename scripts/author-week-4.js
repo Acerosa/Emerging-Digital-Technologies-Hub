@@ -146,13 +146,11 @@ const week4Activities = [
         ],
         [
           { id: "r1", text: "A class uses a browser-based spreadsheet with nothing to install", correctCategoryId: "saas" },
-          { id: "r2", text: "Developers upload their app code to a hosted build-and-run environment", correctCategoryId: "paas" },
-          { id: "r3", text: "An IT team rents virtual servers and installs its own operating system", correctCategoryId: "iaas" },
-          { id: "r4", text: "Staff log in to a full Windows desktop that runs on a provider's servers", correctCategoryId: "daas" }
+          { id: "r3", text: "An IT team rents virtual servers and installs its own operating system", correctCategoryId: "iaas" }
         ],
         {
-          correct: "Well recalled. SaaS gives you a ready app, PaaS gives developers a platform, IaaS rents raw infrastructure such as virtual servers, and DaaS delivers a whole desktop.",
-          incorrect: "Not quite. Ask what is being provided. A ready-to-use app is SaaS. A place to build and run your own code is PaaS. Rented servers you manage yourself are IaaS. A complete remote desktop is DaaS."
+          correct: "Well recalled. SaaS gives you a ready app. IaaS rents raw infrastructure such as virtual servers that you manage yourself.",
+          incorrect: "Not quite. Ask what is being provided. A ready-to-use app is SaaS. Rented servers you manage yourself are IaaS."
         }
       ),
       sc(
@@ -262,16 +260,11 @@ const week4Activities = [
         [
           { id: "a1", text: "A phone unlocks after recognising the owner's face", correctCategoryId: "ai" },
           { id: "a2", text: "A calculator app adds two numbers", correctCategoryId: "not-ai" },
-          { id: "a3", text: "A music app builds a playlist from your listening habits", correctCategoryId: "ai" },
-          { id: "a4", text: "A microwave turns off when its timer reaches zero", correctCategoryId: "not-ai" },
-          { id: "a5", text: "A translation app listens to a spoken sentence and translates it", correctCategoryId: "ai" },
-          { id: "a6", text: "A spreadsheet totals a column using the SUM formula", correctCategoryId: "not-ai" },
-          { id: "a7", text: "A voice assistant understands a spoken question", correctCategoryId: "ai" },
-          { id: "a8", text: "Street lights switch on at 7pm every evening on a timer", correctCategoryId: "not-ai" }
+          { id: "a3", text: "A music app builds a playlist from your listening habits", correctCategoryId: "ai" }
         ],
         {
-          correct: "Well done. Face unlock, playlists, translation and voice assistants all recognise patterns or learn from data. Calculators, timers, formulas and fixed schedules just follow set rules.",
-          incorrect: "Some are not right yet. Being automatic is not the same as being AI. Timers, formulas and fixed schedules follow rules set by a person. AI recognises patterns or learns from data, such as recognising a face or a voice."
+          correct: "Well done. Face unlock and playlists recognise patterns or learn from data. A calculator just follows set rules.",
+          incorrect: "Some are not right yet. Being automatic is not the same as being AI. A calculator follows rules set by a person. AI recognises patterns or learns from data, such as recognising a face."
         }
       )
     ],
@@ -376,14 +369,11 @@ const week4Activities = [
         [
           { id: "i1", text: "A smart plug you switch on remotely from a phone app", correctCategoryId: "iot" },
           { id: "i2", text: "A thermostat that learns your weekly routine and adjusts the heating", correctCategoryId: "both" },
-          { id: "i3", text: "A fridge that sends its temperature reading to your phone", correctCategoryId: "iot" },
-          { id: "i4", text: "A doorbell camera that recognises the difference between a person and a parcel", correctCategoryId: "both" },
-          { id: "i5", text: "A fitness tracker that uploads your step count to an app", correctCategoryId: "iot" },
-          { id: "i6", text: "A smart speaker that understands a spoken request", correctCategoryId: "both" }
+          { id: "i4", text: "A doorbell camera that recognises the difference between a person and a parcel", correctCategoryId: "both" }
         ],
         {
-          correct: "Well done. Sending readings or responding to app commands is IoT. Learning routines, recognising images or understanding speech adds AI.",
-          incorrect: "Some are not right yet. Ask: does the device only connect and share data, or does it also learn, recognise or predict? Uploading a step count is IoT only. Recognising a person in a camera image needs AI."
+          correct: "Well done. Responding to app commands is IoT only. Learning routines or recognising images adds AI.",
+          incorrect: "Some are not right yet. Ask: does the device only connect and share data, or does it also learn, recognise or predict? A remote plug is IoT only. Recognising a person in a camera image needs AI."
         }
       )
     ],
@@ -449,13 +439,11 @@ const week4Activities = [
           { id: "p1", text: "Bump sensor on the front edge", correctCategoryId: "sensor" },
           { id: "p2", text: "Motors that turn the wheels", correctCategoryId: "actuator" },
           { id: "p3", text: "Onboard computer running the cleaning program", correctCategoryId: "controller" },
-          { id: "p4", text: "Cliff sensor that detects the top of the stairs", correctCategoryId: "sensor" },
-          { id: "p5", text: "Spinning brush that sweeps up dust", correctCategoryId: "actuator" },
-          { id: "p6", text: "Camera that detects objects in the room", correctCategoryId: "sensor" }
+          { id: "p5", text: "Spinning brush that sweeps up dust", correctCategoryId: "actuator" }
         ],
         {
-          correct: "Well done. Bump, cliff and camera sensors take information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
-          incorrect: "Some are not right yet. If a part gathers information, it is a sensor (a camera is a sensor too). If it decides, it is the controller. If it moves or does physical work, it is an actuator."
+          correct: "Well done. The bump sensor takes information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
+          incorrect: "Some are not right yet. If a part gathers information, it is a sensor. If it decides, it is the controller. If it moves or does physical work, it is an actuator."
         }
       )
     ],
@@ -482,62 +470,18 @@ const week4Activities = [
         [
           { id: "v1", text: "A car-wash machine runs the same wash cycle for every car", correctCategoryId: "auto" },
           { id: "v2", text: "A delivery robot recognises a dog on the pavement and steers around it", correctCategoryId: "ai" },
-          { id: "v3", text: "A bottling machine fills each bottle with exactly 500 ml", correctCategoryId: "auto" },
-          { id: "v4", text: "A robot vacuum builds a map of your home and learns the fastest cleaning route", correctCategoryId: "ai" },
           { id: "v5", text: "Automatic doors open whenever the motion sensor is triggered", correctCategoryId: "auto" },
-          { id: "v6", text: "A hospital robot recognises which ward it is in from camera images", correctCategoryId: "ai" },
-          { id: "v7", text: "A traffic light changes colour every 60 seconds on a fixed timer", correctCategoryId: "auto" },
           { id: "v8", text: "A self-driving car predicts that a cyclist is about to turn and slows down", correctCategoryId: "ai" }
         ],
         {
-          correct: "Well done. Fixed cycles, set amounts and timers are predetermined. Recognising objects, learning a map and predicting what people will do are AI-enabled.",
-          incorrect: "Some are not right yet. Ask: would it behave exactly the same way every time? If yes, it is predetermined, even if it uses a sensor like the automatic doors. AI-enabled behaviour recognises, learns or predicts, like spotting a dog and steering around it."
+          correct: "Well done. Fixed cycles and sensor-triggered doors are predetermined. Recognising objects and predicting what people will do are AI-enabled.",
+          incorrect: "Some are not right yet. Ask: would it behave exactly the same way every time? If yes, it is predetermined, even if it uses a sensor like the automatic doors. AI-enabled behaviour recognises, learns or predicts."
         }
       )
     ],
     6
   ),
-  activity(
-    "week-4-robot-types",
-    "Extension: Automation, robotics, AI or a combination?",
-    "Classify examples as automation, robotics, AI or a combination of robotics and AI.",
-    "Extension",
-    [
-      heading("week-4-rt-h", "Extension: Automation, robotics, AI or a combination?"),
-      para("week-4-rt-p1", "This board has four groups:"),
-      para("week-4-rt-p2", "Automation only: software that follows fixed rules. No robot and no AI."),
-      para("week-4-rt-p3", "Robotics only: a physical robot that follows programmed steps. No AI."),
-      para("week-4-rt-p4", "AI only: software that learns or recognises patterns. No robot body."),
-      para("week-4-rt-p5", "Robotics and AI combined: a physical robot that also uses AI."),
-      callout("week-4-rt-c", "Two questions to ask", "1. Is there a physical machine that moves? 2. Does it learn, recognise or predict? Yes and yes means combined. No and no means automation only."),
-      classify(
-        "week-4-rt-q",
-        "For each example, choose one of the four groups.",
-        [
-          { id: "automation", label: "Automation only" },
-          { id: "robotics", label: "Robotics only" },
-          { id: "ai", label: "AI only" },
-          { id: "combination", label: "Robotics and AI combined" }
-        ],
-        [
-          { id: "t1", text: "Payroll software pays staff every Friday using fixed rules", correctCategoryId: "automation" },
-          { id: "t2", text: "A robot lawnmower drives back and forth inside a boundary wire", correctCategoryId: "robotics" },
-          { id: "t3", text: "A photo app groups pictures by recognising faces", correctCategoryId: "ai" },
-          { id: "t4", text: "A farm drone uses its camera to spot unhealthy crops and flies over to them", correctCategoryId: "combination" },
-          { id: "t5", text: "An email system sends an automatic \"out of office\" reply", correctCategoryId: "automation" },
-          { id: "t6", text: "A basic robot vacuum that bumps into walls and turns in a random direction", correctCategoryId: "robotics" },
-          { id: "t7", text: "A chatbot on a website understands typed questions", correctCategoryId: "ai" },
-          { id: "t8", text: "A warehouse robot uses a camera to recognise items and pick the right one", correctCategoryId: "combination" }
-        ],
-        {
-          correct: "Well done. Payroll and auto-replies are software following rules. The lawnmower and basic vacuum are robots without AI. Face grouping and chatbots are AI without a robot body. The farm drone and item-picking robot combine both.",
-          incorrect: "Some are not right yet. Check two things: is there a physical machine that moves (robotics)? Does it learn, recognise or predict (AI)? If both, it is a combination. If neither, it is automation only."
-        }
-      )
-    ],
-    7
-  ),
-
+  
   // E. Neural networks
   activity(
     "week-4-neural-networks",
@@ -622,21 +566,6 @@ const week4Activities = [
       para("week-4-nt-p4", "3. It is told the correct label and adjusts its connections a little, so it is more likely to be right next time. This repeats thousands of times."),
       para("week-4-nt-p5", "4. It is tested on photos it has never seen. If it does well, it has learned general patterns, not just memorised the training photos."),
       callout("week-4-nt-c", "Data matters, and mistakes still happen", "A network can only learn from the examples it is given. If the training photos are limited or unbalanced, its answers will be too. Even a well-trained network still gets some answers wrong, for example a fluffy dog in a dark photo."),
-      classify(
-        "week-4-nt-q1",
-        "Put the training stages in order. For each one, choose Step 1 (happens first) to Step 4 (happens last). Use each step once.",
-        steps(4),
-        [
-          { id: "t4", text: "It is given photos it has never seen, to check how well it has learned", correctCategoryId: "step-4" },
-          { id: "t2", text: "It is shown a photo and guesses whether it is a cat or a dog", correctCategoryId: "step-2" },
-          { id: "t1", text: "Lots of animal photos are gathered and each one is labelled", correctCategoryId: "step-1" },
-          { id: "t3", text: "It finds out the right answer and adjusts its connections slightly", correctCategoryId: "step-3" }
-        ],
-        {
-          correct: "Correct order. Labelled data first, then guess, compare and adjust (repeated many times), then test on unseen photos.",
-          incorrect: "Not in the right order yet. You cannot train without labelled examples, so collecting them comes first. Testing on new photos comes last, to check the network learned general patterns."
-        }
-      ),
       sc(
         "week-4-nt-q2",
         "A network was trained only on photos of ginger cats. It then fails to recognise a black cat. What is the most likely reason?",
@@ -651,48 +580,9 @@ const week4Activities = [
         "Not quite. Neural networks can recognise animals, but only from patterns in their training data. With only ginger cats to learn from, the network has never seen what a black cat looks like."
       )
     ],
-    7
+    5
   ),
-  activity(
-    "week-4-nn-applications",
-    "Extension: Where neural networks are used",
-    "Match real uses to neural network applications: image, speech, handwriting, recommendations and fraud detection.",
-    "Extension",
-    [
-      heading("week-4-na-h", "Extension: Where neural networks are used"),
-      para("week-4-na-p1", "Neural networks are used wherever there are patterns in large amounts of data. Five common uses are:"),
-      para("week-4-na-p2", "Image recognition: identifying objects or people in pictures, such as a plant-identifying app."),
-      para("week-4-na-p3", "Speech recognition: working out which words someone has spoken, such as live captions on a video call."),
-      para("week-4-na-p4", "Handwriting recognition: reading handwritten letters and numbers, such as a tablet turning your notes into typed text."),
-      para("week-4-na-p5", "Recommendations: suggesting what you might like next, based on past choices, such as a music app."),
-      para("week-4-na-p6", "Fraud detection: spotting activity that looks unusual and might be criminal, such as a bank checking card payments."),
-      classify(
-        "week-4-na-q",
-        "Match each real use to one of the five types of application.",
-        [
-          { id: "image", label: "Image recognition" },
-          { id: "speech", label: "Speech recognition" },
-          { id: "handwriting", label: "Handwriting recognition" },
-          { id: "recommend", label: "Recommendations" },
-          { id: "fraud", label: "Fraud detection" }
-        ],
-        [
-          { id: "u1", text: "A phone unlocks when it recognises its owner's face", correctCategoryId: "image" },
-          { id: "u2", text: "A voice assistant turns spoken words into text", correctCategoryId: "speech" },
-          { id: "u3", text: "A postal machine reads handwritten postcodes on envelopes", correctCategoryId: "handwriting" },
-          { id: "u4", text: "An online shop suggests products similar to your past purchases", correctCategoryId: "recommend" },
-          { id: "u5", text: "A bank blocks an unusual card payment made abroad at 3am", correctCategoryId: "fraud" },
-          { id: "u6", text: "A hospital system highlights possible problems on X-ray images for a doctor to check", correctCategoryId: "image" }
-        ],
-        {
-          correct: "Well done. Faces and X-rays are image recognition, spoken words are speech recognition, postcodes are handwriting recognition, product suggestions are recommendations, and unusual payments are fraud detection.",
-          incorrect: "Some are not right yet. Ask what kind of data is being analysed: pictures (image), voices (speech), written letters and numbers (handwriting), past choices (recommendations) or unusual payment patterns (fraud)."
-        }
-      )
-    ],
-    6
-  ),
-
+  
   // F. Benefits and limitations
   activity(
     "week-4-benefits-limitations",
@@ -715,90 +605,44 @@ const week4Activities = [
         ],
         [
           { id: "b1", text: "Checks thousands of bank transactions per second", correctCategoryId: "benefit" },
-          { id: "b2", text: "Gives unfair results if its training data was biased", correctCategoryId: "limitation" },
-          { id: "b3", text: "Can run 24 hours a day without getting tired", correctCategoryId: "benefit" },
-          { id: "b4", text: "May collect personal data such as voice recordings", correctCategoryId: "limitation" },
-          { id: "b5", text: "Spots patterns in medical scans that people might miss", correctCategoryId: "benefit" },
-          { id: "b6", text: "Can be expensive to develop, train and maintain", correctCategoryId: "limitation" },
-          { id: "b7", text: "Checks every product on a production line to the same standard, without getting bored", correctCategoryId: "benefit" },
-          { id: "b8", text: "Cannot use empathy or common sense in unusual situations", correctCategoryId: "limitation" }
+          { id: "b2", text: "Gives unfair results if its training data was biased", correctCategoryId: "limitation" }
         ],
         {
-          correct: "Well done. Speed, working continuously, pattern recognition and consistency are benefits. Bias, privacy, cost and lack of human judgement are limitations.",
-          incorrect: "Some are not right yet. Benefits are things AI does well: speed, consistency, continuous work and finding patterns. Limitations are risks or weaknesses: bias from data, privacy, cost and no real human judgement."
+          correct: "Well done. Speed is a benefit. Bias from unfair training data is a limitation.",
+          incorrect: "Some are not right yet. Benefits are things AI does well, such as speed. Limitations include bias from data."
         }
       )
     ],
     7
   ),
-  activity(
-    "week-4-limitations-check",
-    "Extension: Limitations in practice",
-    "Apply ideas about bias, errors, privacy and human judgement to short scenarios.",
-    "Extension",
-    [
-      heading("week-4-lc-h", "Extension: Limitations in practice"),
-      para("week-4-lc-p", "Each scenario shows one limitation. Choose the limitation it shows best."),
-      sc(
-        "week-4-lc-q1",
-        "A face recognition system works well for some groups of people but often fails for others. Its training photos mostly showed one group. Which limitation does this show?",
-        ["High cost", "Bias caused by unbalanced training data", "Privacy", "Lack of empathy"],
-        "b",
-        "Correct. The training data did not represent everyone fairly, so the AI is less accurate for some groups. That is bias, and it comes from the data.",
-        "Not quite. The clue is that the system fails for groups that were missing from its training photos. Unfair results caused by unbalanced data are called bias."
-      ),
-      sc(
-        "week-4-lc-q2",
-        "A smart speaker is always listening for its wake word, and some recordings are stored on the provider's servers. Which limitation is this?",
-        ["Bias", "Privacy", "High cost", "It can make mistakes"],
-        "b",
-        "Correct. Collecting and storing voice recordings raises privacy concerns about who can access personal data and how it is used.",
-        "Not quite. Nothing here is unfair to a group (bias) or about money (cost). The concern is that recordings of people's voices are being collected and stored, which is a privacy issue."
-      ),
-      sc(
-        "week-4-lc-q3",
-        "An AI system suggests refusing a customer's refund. The customer's situation is unusual and upsetting. Why should a person review the decision?",
-        [
-          "Because AI is always wrong",
-          "Because AI lacks human judgement and empathy, and may not handle unusual cases well",
-          "Because people are always faster than AI",
-          "Because AI cannot read numbers"
-        ],
-        "b",
-        "Correct. AI can be helpful, but it lacks human judgement and empathy. Unusual or sensitive cases often need a person to review the decision.",
-        "Not quite. AI is not always wrong and it is usually faster than people. The issue is that it lacks human judgement and empathy, which matter most in unusual or sensitive cases."
-      )
-    ],
-    4
-  ),
-
+  
   // G. Applied scenarios
   activity(
     "week-4-game-npc",
-    "Scenario: a game character that adapts",
-    "Decide whether two adapting game characters use AI, and what data an AI character learns from.",
+    "Scenario: Pixel Forge Games – an NPC that adapts",
+    "Decide whether two adapting Pixel Forge Games characters use AI, and what data an AI character learns from.",
     "Application",
     [
-      heading("week-4-npc-h", "Scenario: a game character that adapts"),
-      para("week-4-npc-p1", "A non-player character (NPC) is a character in a game that the computer controls. Two fighting games both have an enemy NPC that changes as you play."),
-      para("week-4-npc-p2", "Game A: the designers wrote a rule. If you lose three fights in a row, the enemy's health drops by 20%."),
-      para("week-4-npc-p3", "Game B: over many fights, the enemy notices that you usually attack from the left. It starts guarding its left side and tries new tactics you have not seen before."),
+      heading("week-4-npc-h", "Scenario: Pixel Forge Games – an NPC that adapts"),
+      para("week-4-npc-p1", "Pixel Forge Games is designing a fighting game. A non-player character (NPC) is controlled by the computer. Two trial versions both have an enemy NPC that changes as you play."),
+      para("week-4-npc-p2", "Version A: the designers wrote a rule. If you lose three fights in a row, the enemy's health drops by 20%."),
+      para("week-4-npc-p3", "Version B: over many fights, the enemy notices that you usually attack from the left. It starts guarding its left side and tries new tactics you have not seen before."),
       sc(
         "week-4-npc-q1",
         "Both enemies change as you play. Which one shows AI-enabled behaviour?",
         [
-          "Game A, because it changes the difficulty automatically",
-          "Game B, because it recognises patterns in how you play and adapts to them",
+          "Version A, because it changes the difficulty automatically",
+          "Version B, because it recognises patterns in how you play and adapts to them",
           "Both, because anything that adapts is AI",
           "Neither, because games cannot use AI"
         ],
         "b",
-        "Correct. Game B spots a pattern in your play and responds to it. Game A only follows a rule the designers wrote in advance, so it is automatic but not AI.",
-        "Not quite. Changing automatically is not the same as AI. Game A follows one fixed rule the designers wrote (three losses means less health). Game B recognises a pattern in how you fight and adapts, which is AI-enabled behaviour."
+        "Correct. Version B spots a pattern in your play and responds to it. Version A only follows a rule the designers wrote in advance, so it is automatic but not AI.",
+        "Not quite. Changing automatically is not the same as AI. Version A follows one fixed rule the designers wrote (three losses means less health). Version B recognises a pattern in how you fight and adapts, which is AI-enabled behaviour."
       ),
       sc(
         "week-4-npc-q2",
-        "What data does the Game B enemy need to learn from?",
+        "What data does the Version B enemy need to learn from?",
         [
           "Records of your moves in past fights, such as which side you attack from",
           "The game's fixed rule about losing three fights",
@@ -807,19 +651,19 @@ const week4Activities = [
         ],
         "a",
         "Correct. To spot your habits, the enemy needs data about what you actually do in fights, collected over many games.",
-        "Not quite. A fixed rule is what Game A uses, not something to learn from, and screen settings or the console make say nothing about how you fight. To learn your habits, the enemy needs records of your moves."
+        "Not quite. A fixed rule is what Version A uses, not something to learn from, and screen settings or the console make say nothing about how you fight. To learn your habits, the enemy needs records of your moves."
       )
     ],
     4
   ),
   activity(
     "week-4-smart-gaming",
-    "Extension: Scenario: a smart gaming setup",
-    "Select which data a smart gaming setup needs and identify a privacy concern.",
-    "Extension",
+    "Scenario: Pixel Forge Games – a smart gaming setup",
+    "Select which data a Pixel Forge Games smart setup needs and identify a privacy concern.",
+    "Application",
     [
-      heading("week-4-sg-h", "Extension: Scenario: a smart gaming setup"),
-      para("week-4-sg-p1", "A smart gaming setup has three jobs:"),
+      heading("week-4-sg-h", "Scenario: Pixel Forge Games – a smart gaming setup"),
+      para("week-4-sg-p1", "Pixel Forge Games is testing a smart gaming setup with three jobs:"),
       para("week-4-sg-p2", "1. Change the colour of the room lights to match what is happening in the game."),
       para("week-4-sg-p3", "2. Dim the lights when the room is bright."),
       para("week-4-sg-p4", "3. Turn the game volume down when someone speaks to the player."),
@@ -834,14 +678,11 @@ const week4Activities = [
         [
           { id: "g1", text: "Game events, such as an explosion or a boss battle starting", correctCategoryId: "needed" },
           { id: "g2", text: "Light level readings from a light sensor in the room", correctCategoryId: "needed" },
-          { id: "g3", text: "Microphone input to detect when someone starts speaking", correctCategoryId: "needed" },
-          { id: "g4", text: "The player's heart rate from a smartwatch", correctCategoryId: "not-needed" },
-          { id: "g5", text: "Full recordings of everything said in the room, stored online", correctCategoryId: "not-needed" },
-          { id: "g6", text: "The player's location from their phone's GPS", correctCategoryId: "not-needed" }
+          { id: "g5", text: "Full recordings of everything said in the room, stored online", correctCategoryId: "not-needed" }
         ],
         {
-          correct: "Well done. Game events, light readings and detecting speech are each needed for one job. Heart rate and location are not used by any job, and the setup only needs to notice that someone is speaking, not record and store what they say.",
-          incorrect: "Some are not right yet. Link each item to a job: game events for the colours, the light sensor for dimming, the microphone for the volume. Heart rate and location are not used by any job, and detecting speech does not require storing full recordings online."
+          correct: "Well done. Game events and light readings are needed for the lighting jobs. Storing full recordings online is not needed for any job and creates a privacy risk.",
+          incorrect: "Some are not right yet. Link each item to a job: game events for the colours and the light sensor for dimming. Detecting speech does not require storing full recordings online."
         }
       ),
       short(
@@ -851,37 +692,17 @@ const week4Activities = [
         200
       )
     ],
-    11
+    8
   ),
   activity(
     "week-4-warehouse-robot",
     "Scenario: a warehouse robot",
-    "Identify the sensors and inputs, processing and actions of a warehouse robot.",
+    "Identify which part of a warehouse robot's work is AI-enabled.",
     "Application",
     [
       heading("week-4-wr-h", "Scenario: a warehouse robot"),
-      para("week-4-wr-p", "An online shop uses robots in its warehouse. Each robot drives to a shelf, uses a camera to recognise the correct item, picks it up with a gripper and carries it to a packing station. It slows down if a worker walks in front of it."),
-      classify(
-        "week-4-wr-q1",
-        "For each part of the robot's work, choose Sensor or input, Processing, or Action.",
-        [
-          { id: "input", label: "Sensor or input" },
-          { id: "processing", label: "Processing" },
-          { id: "action", label: "Action" }
-        ],
-        [
-          { id: "w1", text: "A camera captures images of items on the shelf", correctCategoryId: "input" },
-          { id: "w2", text: "A distance sensor detects a worker in the path", correctCategoryId: "input" },
-          { id: "w3", text: "AI software recognises which item matches the order", correctCategoryId: "processing" },
-          { id: "w4", text: "The controller plans the quickest safe route to the packing station", correctCategoryId: "processing" },
-          { id: "w5", text: "The gripper picks up the item", correctCategoryId: "action" },
-          { id: "w6", text: "The wheels slow down and stop", correctCategoryId: "action" }
-        ],
-        {
-          correct: "Well done. Cameras and distance sensors provide the inputs. Recognising items and planning routes is processing. Gripping and slowing down are actions carried out by actuators.",
-          incorrect: "Some are not right yet. Inputs come from sensors such as cameras. Processing is the thinking step, such as recognising the item or planning a route. Actions are physical movements, such as gripping or stopping."
-        }
-      ),
+      para("week-4-wr-p1", "An online shop uses robots in its warehouse. Each robot drives to a shelf, uses a camera to recognise the correct item, picks it up with a gripper and carries it to a packing station. It slows down if a worker walks in front of it."),
+      para("week-4-wr-p2", "Sensors (camera and distance sensor) provide the inputs. The controller processes the data. Actuators (gripper and wheels) carry out the actions."),
       sc(
         "week-4-wr-q2",
         "Which part of the warehouse robot's work is AI-enabled rather than simple programmed movement?",
@@ -896,7 +717,7 @@ const week4Activities = [
         "Not quite. Driving, gripping and stopping on low battery can all be programmed with fixed rules. Recognising the correct item from images needs AI pattern recognition."
       )
     ],
-    6
+    4
   ),
   activity(
     "week-4-image-recognition",
@@ -932,19 +753,6 @@ const week4Activities = [
         "Correct. Varied training examples help the system recognise objects from different angles and positions, instead of only the exact examples it has seen.",
         "Not quite. Training data is about accuracy. The system needs many varied examples so it can still recognise a knife or bottle when it is turned, hidden or partly covered."
       ),
-      sc(
-        "week-4-ir-q3",
-        "Why do security staff still check flagged bags by hand?",
-        [
-          "Because the system can make mistakes, such as flagging a harmless object or missing a real one",
-          "Because AI is never useful",
-          "Because staff are faster than the system at scanning every bag",
-          "Because image recognition cannot see inside bags"
-        ],
-        "a",
-        "Correct. Image recognition can make errors in both directions. A person checks the flagged bags so decisions are not left to the AI alone.",
-        "Not quite. The system is useful and fast, but it can make errors: flagging a harmless umbrella, or missing a real knife. Human checks add judgement and catch mistakes."
-      ),
       short(
         "week-4-ir-q4",
         "Give one benefit and one limitation of using image recognition to screen bags at the venue.",
@@ -952,7 +760,7 @@ const week4Activities = [
         200
       )
     ],
-    12
+    8
   ),
 
   // Mixed knowledge check
@@ -1028,22 +836,9 @@ const week4Activities = [
         "b",
         "Correct. Both are IoT because they connect and share data. Only Fridge 2 recognises what is in the photo and makes a decision, so only Fridge 2 adds AI.",
         "Not quite. Being connected makes a device IoT, not AI, and taking a photo is just sensing. Fridge 2 recognises the foods in the image and acts on it, which is where the AI comes in."
-      ),
-      sc(
-        "week-4-kc-q6",
-        "A bank discovers that its loan AI was trained mostly on data from one age group, and it is refusing more loans to older customers. What is the best thing for the bank to do?",
-        [
-          "Keep using it unchanged, because AI decisions are always fair",
-          "Retrain it with data that represents all age groups, and have a person review refused applications",
-          "Make the AI run faster so it can process more applications",
-          "Stop telling customers that AI is used"
-        ],
-        "b",
-        "Correct. Better, more balanced data tackles the cause of the bias, and a human review adds judgement for important decisions about people.",
-        "Not quite. AI is not automatically fair: it copies patterns from its data, including unfair ones. Speed does not fix bias, and hiding it makes things worse. The bank should retrain with balanced data and have people review refusals."
       )
     ],
-    8
+    6
   ),
   activity(
     "week-4-reflection",
@@ -1052,7 +847,7 @@ const week4Activities = [
     "Extension",
     [
       heading("week-4-ref-h", "Extension: AI technology profile"),
-      para("week-4-ref-p", "Independent task: build a short profile you could reuse when outlining technologies for AC1.1 practice. This is formative, not Gateway assignment evidence."),
+      para("week-4-ref-p", "Optional homework or research: build a short profile you could reuse when outlining technologies for AC1.1 practice. This is formative, not Gateway assignment evidence."),
       reflection(
         "week-4-ref-q",
         "Choose one AI-enabled device or system, such as a smart speaker, robot vacuum, self-driving car or recommendation system. Explain what it does, what data or sensors it uses, what the AI part does, one benefit and one limitation.",
@@ -1082,17 +877,7 @@ const week4Activities = [
         "Correct. Robotics and AI are different things that can work together. Many robots follow fixed programs, and much AI is software only.",
         "Not quite. Not every robot or program uses AI, and neural networks do not think like humans. Robots can run without AI, and AI can run without a robot body."
       ),
-      sc(
-        "week-4-exit-q2",
-        "How confident are you outlining AI, smart devices, robots and neural networks?",
-        [
-          "Not yet. I need another look at the definitions.",
-          "Getting there. I can give an example for most of them.",
-          "Confident. I can explain each one and give a benefit and a limitation."
-        ],
-        "c",
-        "Use this rating to decide what to revise before Assignment 1 practice."
-      )
+      para("week-4-exit-p", "Before you finish, tell your tutor how confident you feel outlining AI, smart devices, robots and neural networks.")
     ],
     2
   )
