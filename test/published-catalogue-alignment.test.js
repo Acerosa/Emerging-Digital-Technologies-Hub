@@ -41,7 +41,7 @@ test("Week 4 activities produce marking keys for choice and classification block
     path.join(root, "content/l2e-exploring-emerging-digital-technologies/package.json")
   );
   const week4 = pkg.activities.filter((a) => a.id.startsWith("week-4-"));
-  assert.equal(week4.length, 24);
+  assert.equal(week4.length, 21);
   assert.ok(week4.every((a) => a.version === "0.1.0"));
 
   const { rows, issues } = checkCatalogueAlignment(pkg);
@@ -49,10 +49,11 @@ test("Week 4 activities produce marking keys for choice and classification block
   const keys = new Set(rows.map((r) => r.questionId));
   assert.ok(keys.has("week-4-starter-q1:r1"));
   assert.ok(keys.has("week-4-aon-q:a1"));
-  assert.ok(keys.has("week-4-rt-q:t8"));
   assert.ok(keys.has("week-4-ai-q1"));
-  assert.ok(keys.has("week-4-kc-q6"));
+  assert.ok(keys.has("week-4-kc-q5"));
   assert.ok(keys.has("week-4-ref-q"));
+  assert.equal(keys.has("week-4-rt-q:t8"), false);
+  assert.equal(keys.has("week-4-kc-q6"), false);
 });
 
 test("stale catalogue activity ids are not used by the learner package", function () {
