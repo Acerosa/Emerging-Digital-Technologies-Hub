@@ -161,16 +161,16 @@ const week5Activities = [
       ),
       sc(
         "week-5-starter-q2",
-        "Why might a VR headset send some of its processing to remote servers?",
+        "Which four technologies will you outline this week for AC1.1?",
         [
-          "Because VR never needs any computing power",
-          "Because cloud servers can provide extra computing power over the internet",
-          "Because VR only works without the internet",
-          "Because remote servers replace the headset screen"
+          "Email, spreadsheets, passwords and printers only",
+          "Virtual reality, augmented reality, 3D printing and 4D printing",
+          "Only robots and RFID tags",
+          "Only cloud storage and Wi-Fi routers"
         ],
         "b",
-        "Correct. Like many AI and game systems, VR can use cloud computing when a task needs more power than the headset alone can provide.",
-        "Not quite. VR still needs computing power. Sending hard tasks to remote servers is a cloud idea from Week 3, not a replacement for the headset display."
+        "Correct. This week focuses on VR, AR, 3D printing and 4D printing so you can outline them for AC1.1.",
+        "Not quite. Read the welcome text again. This week is about VR, AR, 3D printing and 4D printing."
       )
     ],
     5
@@ -378,26 +378,26 @@ const week5Activities = [
         "Which is a practical use of VR outside entertainment?",
         [
           "Training someone in a safe virtual environment before they try the real task",
-          "Replacing all classroom teachers with paper worksheets",
-          "Making a microwave cook food faster by renaming it VR",
-          "Turning off the internet permanently"
+          "Editing a spreadsheet with no display",
+          "Sending a text message with no graphics",
+          "Printing a paper poster with no headset"
         ],
         "a",
         "Correct. Safe training simulations are a real and useful VR application.",
-        "Not quite. VR can support training and virtual visits. Renaming a microwave or turning off the internet is not a VR use."
+        "Not quite. VR can support training and virtual visits. Spreadsheets, plain texts and paper posters alone are not VR uses."
       ),
       sc(
         "week-5-vr-uses-q2",
         "A design team wants to check how a new shop layout feels before building it. How can VR help?",
         [
           "By letting the team walk through a virtual version of the shop",
-          "By automatically pouring concrete",
-          "By printing the finished shop overnight with no design file",
-          "By deleting the team's drawings"
+          "By replacing the design drawings with a paper calculator",
+          "By turning the shop plan into an email attachment only",
+          "By hiding the design so nobody can review it"
         ],
         "a",
         "Correct. A virtual walkthrough lets people review a design before expensive building work begins.",
-        "Not quite. VR helps people experience a design digitally. It does not pour concrete or invent a finished building with no design."
+        "Not quite. VR helps people experience a design digitally so they can review it before building."
       )
     ],
     5
@@ -469,7 +469,7 @@ const week5Activities = [
       short(
         "week-5-vr-limits-q2",
         "In two or three sentences, give one benefit and one limitation of using VR for training.",
-        "Name one clear benefit (for example safe practice) and one clear limitation (for example cost or sickness). Write at least 200 characters.",
+        "Sentence starters: One benefit of VR for training is... One limitation is... Write at least 200 characters.",
         200
       )
     ],
@@ -602,22 +602,22 @@ const week5Activities = [
         "Which is a practical AR use?",
         [
           "Showing a virtual sofa in your real living room through a phone camera",
-          "Deleting the real living room and replacing it with a beach for every task",
-          "Printing a house from sand with no design file",
-          "Turning off all cameras forever"
+          "Blocking out the whole room with a fully virtual beach for every task",
+          "Building a physical house with no design file and no camera",
+          "Editing a spreadsheet with the camera switched off"
         ],
         "a",
         "Correct. Product preview in a real room is a common AR use.",
-        "Not quite. AR adds digital content to a real scene. Replacing the whole world is closer to VR, and printing a house with no design is not AR."
+        "Not quite. AR adds digital content to a real scene. Fully replacing the view is closer to VR."
       ),
       sc(
         "week-5-ar-uses-q2",
         "A tutor wants learners to see labels on a real classroom 3D printer. How can AR help?",
         [
           "By overlaying names of parts on the live camera view of the printer",
-          "By hiding the printer so nobody can see it",
-          "By forcing every learner to ignore safety rules",
-          "By converting the printer into a cloud spreadsheet"
+          "By hiding the printer completely behind a virtual wall",
+          "By removing all safety guidance from the lesson",
+          "By turning the printer into a text-only email"
         ],
         "a",
         "Correct. AR can place labels on top of the real printer through a camera view.",
@@ -750,31 +750,31 @@ const week5Activities = [
   ),
   activity(
     "week-5-compare-sort",
-    "Sort VR and AR examples",
-    "Classify scenarios as VR or AR.",
+    "Sort benefits and limitations",
+    "Classify statements as a benefit or a limitation for VR or AR.",
     "Classification",
     [
-      heading("week-5-compare-sort-h", "Sort VR and AR examples"),
+      heading("week-5-compare-sort-h", "Sort benefits and limitations"),
       para(
         "week-5-compare-sort-p",
-        "Use the key test: fully virtual world (VR) or real world plus digital extras (AR)."
+        "You already know the VR versus AR difference. Now sort each statement as a Benefit or a Limitation. Use what you learned about cost, safety, immersion and staying aware of real surroundings."
       ),
       classify(
         "week-5-compare-sort-q",
-        "Sort each scenario as VR or AR.",
+        "Sort each statement as Benefit or Limitation.",
         [
-          { id: "vr", label: "VR" },
-          { id: "ar", label: "AR" }
+          { id: "benefit", label: "Benefit" },
+          { id: "limit", label: "Limitation" }
         ],
         [
-          { id: "c1", text: "A firefighter trainee wears a headset and practises inside a fully virtual burning building", correctCategoryId: "vr" },
-          { id: "c2", text: "A mechanic sees torque settings overlaid on a real engine through AR glasses", correctCategoryId: "ar" },
-          { id: "c3", text: "A player explores a completely virtual space station with a headset", correctCategoryId: "vr" },
-          { id: "c4", text: "A shopper places a virtual chair into their real bedroom using a phone", correctCategoryId: "ar" }
+          { id: "c1", text: "VR lets trainees practise risky tasks without real danger", correctCategoryId: "benefit" },
+          { id: "c2", text: "Some VR users feel motion sickness and headsets can be expensive", correctCategoryId: "limit" },
+          { id: "c3", text: "AR can keep the real workplace visible while adding helpful labels", correctCategoryId: "benefit" },
+          { id: "c4", text: "AR overlays can sit in the wrong place if tracking or lighting is poor", correctCategoryId: "limit" }
         ],
         {
-          correct: "Well sorted. Fully virtual practice and worlds are VR. Overlays on real engines or bedrooms are AR.",
-          incorrect: "Check again. If the real place stays visible with extras, choose AR. If the person is inside a computer-made world, choose VR."
+          correct: "Well sorted. Safe practice and in-context labels are benefits. Cost, sickness and tracking errors are limitations.",
+          incorrect: "Ask whether the statement helps the user or organisation, or whether it is a drawback such as cost, sickness or tracking errors."
         }
       )
     ],
@@ -810,8 +810,8 @@ const week5Activities = [
         [
           "VR, so learners can enter a virtual version of the planned building",
           "AR overlays on an empty field with no virtual building model",
-          "RFID tags on books only",
-          "A toaster timer"
+          "3D printing a single brick with no practice scenario",
+          "Cloud storage that only saves files with no building view"
         ],
         "a",
         "Correct. When the real building is not there yet, a virtual world (VR) can provide a safe practice space.",
@@ -1044,7 +1044,7 @@ const week5Activities = [
       short(
         "week-5-3d-limits-q2",
         "Explain one benefit and one limitation of 3D printing for a small business making prototypes.",
-        "Mention one benefit (for example speed or custom shapes) and one limitation (for example print time or strength). Write at least 200 characters.",
+        "Sentence starters: One benefit for a small business is... One limitation is... Write at least 200 characters.",
         200
       )
     ],
@@ -1228,16 +1228,16 @@ const week5Activities = [
       ),
       sc(
         "week-5-4d-future-q2",
-        "A learner says a 4D water bottle will refill itself with milk every morning with no design or material science. What is wrong?",
+        "A learner claims a 4D object will change usefully with no designed material and no trigger. What is wrong?",
         [
           "The claim is speculative and ignores how designs, materials and triggers actually work",
-          "Nothing: every 4D object can invent milk",
-          "4D printing always creates food automatically",
-          "VR headsets refill bottles"
+          "Nothing is wrong because every printed object is automatically 4D",
+          "4D printing never needs a digital design",
+          "4D printing is the same as watching a flat video"
         ],
         "a",
-        "Correct. Good Level 2 answers stay realistic. Designed material change is not magic food creation.",
-        "Not quite. Outline real ideas carefully. Do not invent impossible everyday products."
+        "Correct. Good Level 2 answers stay realistic. Designed material change needs a plan and a trigger.",
+        "Not quite. Outline real ideas carefully. Do not invent change with no design or trigger."
       )
     ],
     5
@@ -1253,10 +1253,14 @@ const week5Activities = [
       heading("week-5-pf-immersive-h", "Pixel Forge Games: VR and AR choices"),
       para(
         "week-5-pf-immersive-p1",
-        "Pixel Forge Games is exploring new ways for players to enjoy its titles. The studio is comparing immersive headset experiences with phone-based games that mix digital objects into real streets."
+        "Pixel Forge Games is a fictional games development company used across this course. The studio designs digital games and is now exploring emerging technologies that could improve how players experience those games."
       ),
       para(
         "week-5-pf-immersive-p2",
+        "This week the design team is comparing two ideas. Idea A is a headset game where players feel fully inside a fantasy arena. Idea B is a phone game where digital creatures appear on real pavements through the camera."
+      ),
+      para(
+        "week-5-pf-immersive-p3",
         "Both ideas can be valuable. The team must match the technology to the player experience they want."
       ),
       sc(
@@ -1264,8 +1268,8 @@ const week5Activities = [
         "Pixel Forge wants players to feel fully inside a fantasy arena. Which technology fits best?",
         [
           "VR with a headset so the player is surrounded by the virtual arena",
-          "AR labels on a paper manual only",
-          "3D printing a single plastic coin",
+          "AR labels on a paper instruction sheet only",
+          "3D printing a single plastic coin for the desk",
           "A spreadsheet of enemy names with no graphics"
         ],
         "a",
@@ -1277,9 +1281,9 @@ const week5Activities = [
         "Pixel Forge wants a mobile game where creatures appear on real pavements through the phone camera. Which technology fits best?",
         [
           "AR that keeps the real street visible and adds digital creatures",
-          "VR that hides the street completely",
-          "4D printing the pavement overnight",
-          "RFID tags replacing the phone screen"
+          "VR that hides the street completely behind a headset view",
+          "3D printing that builds a pavement model with no camera view",
+          "Cloud storage that only saves files without showing the street"
         ],
         "a",
         "Correct. Digital creatures on a live camera view of real streets is AR.",
@@ -1297,11 +1301,15 @@ const week5Activities = [
       heading("week-5-pf-print-h", "Pixel Forge Games: 3D and 4D making"),
       para(
         "week-5-pf-print-p1",
-        "The hardware team wants physical prototypes of a new controller grip and a small model of a game character for a marketing desk."
+        "Remember: Pixel Forge Games is the same fictional studio. Alongside digital games, its hardware team sometimes makes physical objects to test how controllers feel and to show characters on marketing desks."
       ),
       para(
         "week-5-pf-print-p2",
-        "A researcher also suggests an experimental accessory that changes stiffness when warmed by a player's hand. That idea would need specialist 4D materials and careful testing."
+        "Today the team needs a prototype controller grip and a small character model. Those jobs suit everyday 3D printing from a digital design."
+      ),
+      para(
+        "week-5-pf-print-p3",
+        "A researcher also suggests an experimental accessory that changes stiffness when warmed by a player's hand. That idea would need specialist 4D materials and careful testing. It is not a normal school print."
       ),
       sc(
         "week-5-pf-print-q1",
@@ -1309,12 +1317,12 @@ const week5Activities = [
         [
           "Printing a prototype controller grip from a digital design so the shape can be tested",
           "Printing a finished million-unit factory run with no design review",
-          "Replacing all game code with plastic parts",
-          "Turning every headset into a toaster"
+          "Replacing all game software with plastic parts",
+          "Using a headset to hide the real workshop completely"
         ],
         "a",
         "Correct. Prototyping a grip is a realistic 3D printing use.",
-        "Not quite. Prototypes and models are practical now. Magic factory runs without design review are not."
+        "Not quite. Prototypes and models are practical now. Huge unreviewed factory runs are not a sensible first step."
       ),
       sc(
         "week-5-pf-print-q2",
@@ -1340,8 +1348,12 @@ const week5Activities = [
     [
       heading("week-5-pf-choose-h", "Pixel Forge Games: pick the right technology"),
       para(
+        "week-5-pf-choose-p1",
+        "Pixel Forge Games is deciding which emerging technology fits each job. Use what you have learned: VR for fully virtual worlds, AR for digital extras on the real world, 3D printing for stable physical prototypes, and 4D printing only for experimental designed change after printing."
+      ),
+      para(
         "week-5-pf-choose-p",
-        "Match each need to the best technology from this week. Prefer practical options first. Mark futuristic ideas as experimental when needed."
+        "Match each need to the best technology. Prefer practical options first. Mark futuristic ideas as experimental when needed."
       ),
       classify(
         "week-5-pf-choose-q",
@@ -1377,29 +1389,29 @@ const week5Activities = [
       heading("week-5-kc-h", "Knowledge check"),
       sc(
         "week-5-kc-q1",
-        "A learner cannot see their classroom because a headset shows only a virtual forest. Which technology is this?",
+        "A training company wants staff to practise a dangerous drill before using real equipment. Which technology is the best fit?",
         [
-          "VR",
-          "AR",
-          "3D printing",
-          "RFID"
+          "VR, so staff can practise inside a safe virtual environment",
+          "AR labels on a blank wall with no practise scenario",
+          "3D printing a poster with no interactive practice",
+          "4D printing with no designed training task"
         ],
         "a",
-        "Correct. A fully virtual view through a headset is VR.",
-        "Not quite. If the real classroom is replaced by a virtual scene, choose VR."
+        "Correct. Safe practice of a dangerous drill is a strong VR use.",
+        "Not quite. When people need a controlled practice world, VR is usually the better fit."
       ),
       sc(
         "week-5-kc-q2",
-        "Digital arrows appear over a live camera view of a real corridor. Which technology is this?",
+        "A warehouse needs digital shelf labels while staff still see the real aisle. Which technology is the best fit?",
         [
-          "AR",
-          "VR",
-          "4D printing",
-          "DaaS"
+          "AR overlays that keep the real aisle visible",
+          "VR that hides the warehouse completely",
+          "3D printing that replaces every shelf overnight",
+          "4D printing with no warehouse task"
         ],
         "a",
-        "Correct. Live overlays on the real corridor are AR.",
-        "Not quite. Real world plus digital extras means AR."
+        "Correct. Staff still need the real aisle, so AR overlays are the better fit.",
+        "Not quite. Keeping the real workplace visible with digital help points to AR."
       ),
       sc(
         "week-5-kc-q3",
@@ -1470,7 +1482,7 @@ const week5Activities = [
           "AR glasses or a carefully placed AR display that keeps the real machine visible",
           "VR that hides the machine completely",
           "3D printing a new machine during the repair",
-          "Deleting the safety instructions"
+          "Removing all step labels from the job"
         ],
         "a",
         "Correct. Hands-free guidance on a real machine points to AR.",
@@ -1520,7 +1532,7 @@ const week5Activities = [
         "week-5-ref-q",
         "Choose one technology from this week (VR, AR, 3D printing or 4D printing). Explain what it is, give one practical example, one benefit, one limitation, and say whether your example is everyday, specialist or experimental.",
         500,
-        "Cover definition, example, benefit, limitation and how mature the example is. Write at least 500 characters. Paste is disabled."
+        "Sentence starters: The technology I chose is... It means... One practical example is... One benefit is... One limitation is... My example is everyday / specialist / experimental because... Write at least 500 characters. Paste is disabled."
       )
     ],
     13
@@ -1534,16 +1546,16 @@ const week5Activities = [
       heading("week-5-exit-h", "Exit ticket"),
       sc(
         "week-5-exit-q1",
-        "Which statement is correct?",
+        "Which short summary is correct?",
         [
-          "VR surrounds you in a virtual world; AR adds digital content to the real world; 3D printing builds physical objects; 4D printing adds planned change after printing",
+          "VR surrounds you; AR adds digital extras to the real world; 3D prints objects; 4D adds planned change later",
           "VR, AR, 3D printing and 4D printing are four names for the same phone app",
-          "3D printing means watching videos; VR means printing plastic",
+          "3D printing means watching videos and VR means printing plastic",
           "AR always hides the real world completely"
         ],
         "a",
-        "Correct. That summary captures the four ideas from this week.",
-        "Not quite. Keep the four definitions separate: surround (VR), overlay (AR), build layers (3D), planned change later (4D)."
+        "Correct. That short summary captures the four ideas from this week.",
+        "Not quite. Keep the four ideas separate: surround (VR), overlay (AR), build objects (3D), planned change later (4D)."
       ),
       para(
         "week-5-exit-p",

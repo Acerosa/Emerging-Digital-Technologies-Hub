@@ -8659,29 +8659,29 @@
         "content": {
           "formative": true,
           "questionId": "week-5-starter-q2",
-          "prompt": "Why might a VR headset send some of its processing to remote servers?",
+          "prompt": "Which four technologies will you outline this week for AC1.1?",
           "options": [
             {
               "id": "a",
-              "label": "Because VR never needs any computing power"
+              "label": "Email, spreadsheets, passwords and printers only"
             },
             {
               "id": "b",
-              "label": "Because cloud servers can provide extra computing power over the internet"
+              "label": "Virtual reality, augmented reality, 3D printing and 4D printing"
             },
             {
               "id": "c",
-              "label": "Because VR only works without the internet"
+              "label": "Only robots and RFID tags"
             },
             {
               "id": "d",
-              "label": "Because remote servers replace the headset screen"
+              "label": "Only cloud storage and Wi-Fi routers"
             }
           ],
           "correctOptionId": "b",
           "feedback": {
-            "correct": "Correct. Like many AI and game systems, VR can use cloud computing when a task needs more power than the headset alone can provide.",
-            "incorrect": "Not quite. VR still needs computing power. Sending hard tasks to remote servers is a cloud idea from Week 3, not a replacement for the headset display."
+            "correct": "Correct. This week focuses on VR, AR, 3D printing and 4D printing so you can outline them for AC1.1.",
+            "incorrect": "Not quite. Read the welcome text again. This week is about VR, AR, 3D printing and 4D printing."
           },
           "sourceType": "single"
         }
@@ -9341,21 +9341,21 @@
             },
             {
               "id": "b",
-              "label": "Replacing all classroom teachers with paper worksheets"
+              "label": "Editing a spreadsheet with no display"
             },
             {
               "id": "c",
-              "label": "Making a microwave cook food faster by renaming it VR"
+              "label": "Sending a text message with no graphics"
             },
             {
               "id": "d",
-              "label": "Turning off the internet permanently"
+              "label": "Printing a paper poster with no headset"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
             "correct": "Correct. Safe training simulations are a real and useful VR application.",
-            "incorrect": "Not quite. VR can support training and virtual visits. Renaming a microwave or turning off the internet is not a VR use."
+            "incorrect": "Not quite. VR can support training and virtual visits. Spreadsheets, plain texts and paper posters alone are not VR uses."
           },
           "sourceType": "single"
         }
@@ -9379,21 +9379,21 @@
             },
             {
               "id": "b",
-              "label": "By automatically pouring concrete"
+              "label": "By replacing the design drawings with a paper calculator"
             },
             {
               "id": "c",
-              "label": "By printing the finished shop overnight with no design file"
+              "label": "By turning the shop plan into an email attachment only"
             },
             {
               "id": "d",
-              "label": "By deleting the team's drawings"
+              "label": "By hiding the design so nobody can review it"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
             "correct": "Correct. A virtual walkthrough lets people review a design before expensive building work begins.",
-            "incorrect": "Not quite. VR helps people experience a design digitally. It does not pour concrete or invent a finished building with no design."
+            "incorrect": "Not quite. VR helps people experience a design digitally so they can review it before building."
           },
           "sourceType": "single"
         }
@@ -9626,7 +9626,7 @@
           "formative": true,
           "questionId": "week-5-vr-limits-q2",
           "prompt": "In two or three sentences, give one benefit and one limitation of using VR for training.",
-          "guidance": "Name one clear benefit (for example safe practice) and one clear limitation (for example cost or sickness). Write at least 200 characters.",
+          "guidance": "Sentence starters: One benefit of VR for training is... One limitation is... Write at least 200 characters.",
           "minChars": 200
         }
       }
@@ -10043,21 +10043,21 @@
             },
             {
               "id": "b",
-              "label": "Deleting the real living room and replacing it with a beach for every task"
+              "label": "Blocking out the whole room with a fully virtual beach for every task"
             },
             {
               "id": "c",
-              "label": "Printing a house from sand with no design file"
+              "label": "Building a physical house with no design file and no camera"
             },
             {
               "id": "d",
-              "label": "Turning off all cameras forever"
+              "label": "Editing a spreadsheet with the camera switched off"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
             "correct": "Correct. Product preview in a real room is a common AR use.",
-            "incorrect": "Not quite. AR adds digital content to a real scene. Replacing the whole world is closer to VR, and printing a house with no design is not AR."
+            "incorrect": "Not quite. AR adds digital content to a real scene. Fully replacing the view is closer to VR."
           },
           "sourceType": "single"
         }
@@ -10081,15 +10081,15 @@
             },
             {
               "id": "b",
-              "label": "By hiding the printer so nobody can see it"
+              "label": "By hiding the printer completely behind a virtual wall"
             },
             {
               "id": "c",
-              "label": "By forcing every learner to ignore safety rules"
+              "label": "By removing all safety guidance from the lesson"
             },
             {
               "id": "d",
-              "label": "By converting the printer into a cloud spreadsheet"
+              "label": "By turning the printer into a text-only email"
             }
           ],
           "correctOptionId": "a",
@@ -10490,9 +10490,9 @@
     "id": "week-5-compare-sort",
     "version": "0.1.0",
     "metadata": {
-      "title": "Sort VR and AR examples",
+      "title": "Sort benefits and limitations",
       "status": "available",
-      "summary": "Classify scenarios as VR or AR.",
+      "summary": "Classify statements as a benefit or a limitation for VR or AR.",
       "href": null,
       "difficulty": "standard",
       "estimatedDurationMinutes": 4,
@@ -10518,7 +10518,7 @@
         "relationships": {},
         "type": "heading",
         "content": {
-          "text": "Sort VR and AR examples",
+          "text": "Sort benefits and limitations",
           "level": 2
         }
       },
@@ -10531,7 +10531,7 @@
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Use the key test: fully virtual world (VR) or real world plus digital extras (AR)."
+          "text": "You already know the VR versus AR difference. Now sort each statement as a Benefit or a Limitation. Use what you learned about cost, safety, immersion and staying aware of real surroundings."
         }
       },
       {
@@ -10545,42 +10545,42 @@
         "content": {
           "formative": true,
           "questionId": "week-5-compare-sort-q",
-          "prompt": "Sort each scenario as VR or AR.",
+          "prompt": "Sort each statement as Benefit or Limitation.",
           "categories": [
             {
-              "id": "vr",
-              "label": "VR"
+              "id": "benefit",
+              "label": "Benefit"
             },
             {
-              "id": "ar",
-              "label": "AR"
+              "id": "limit",
+              "label": "Limitation"
             }
           ],
           "items": [
             {
               "id": "c1",
-              "text": "A firefighter trainee wears a headset and practises inside a fully virtual burning building",
-              "correctCategoryId": "vr"
+              "text": "VR lets trainees practise risky tasks without real danger",
+              "correctCategoryId": "benefit"
             },
             {
               "id": "c2",
-              "text": "A mechanic sees torque settings overlaid on a real engine through AR glasses",
-              "correctCategoryId": "ar"
+              "text": "Some VR users feel motion sickness and headsets can be expensive",
+              "correctCategoryId": "limit"
             },
             {
               "id": "c3",
-              "text": "A player explores a completely virtual space station with a headset",
-              "correctCategoryId": "vr"
+              "text": "AR can keep the real workplace visible while adding helpful labels",
+              "correctCategoryId": "benefit"
             },
             {
               "id": "c4",
-              "text": "A shopper places a virtual chair into their real bedroom using a phone",
-              "correctCategoryId": "ar"
+              "text": "AR overlays can sit in the wrong place if tracking or lighting is poor",
+              "correctCategoryId": "limit"
             }
           ],
           "feedback": {
-            "correct": "Well sorted. Fully virtual practice and worlds are VR. Overlays on real engines or bedrooms are AR.",
-            "incorrect": "Check again. If the real place stays visible with extras, choose AR. If the person is inside a computer-made world, choose VR."
+            "correct": "Well sorted. Safe practice and in-context labels are benefits. Cost, sickness and tracking errors are limitations.",
+            "incorrect": "Ask whether the statement helps the user or organisation, or whether it is a drawback such as cost, sickness or tracking errors."
           }
         }
       }
@@ -10697,11 +10697,11 @@
             },
             {
               "id": "c",
-              "label": "RFID tags on books only"
+              "label": "3D printing a single brick with no practice scenario"
             },
             {
               "id": "d",
-              "label": "A toaster timer"
+              "label": "Cloud storage that only saves files with no building view"
             }
           ],
           "correctOptionId": "a",
@@ -11444,7 +11444,7 @@
           "formative": true,
           "questionId": "week-5-3d-limits-q2",
           "prompt": "Explain one benefit and one limitation of 3D printing for a small business making prototypes.",
-          "guidance": "Mention one benefit (for example speed or custom shapes) and one limitation (for example print time or strength). Write at least 200 characters.",
+          "guidance": "Sentence starters: One benefit for a small business is... One limitation is... Write at least 200 characters.",
           "minChars": 200
         }
       }
@@ -12019,7 +12019,7 @@
         "content": {
           "formative": true,
           "questionId": "week-5-4d-future-q2",
-          "prompt": "A learner says a 4D water bottle will refill itself with milk every morning with no design or material science. What is wrong?",
+          "prompt": "A learner claims a 4D object will change usefully with no designed material and no trigger. What is wrong?",
           "options": [
             {
               "id": "a",
@@ -12027,21 +12027,21 @@
             },
             {
               "id": "b",
-              "label": "Nothing: every 4D object can invent milk"
+              "label": "Nothing is wrong because every printed object is automatically 4D"
             },
             {
               "id": "c",
-              "label": "4D printing always creates food automatically"
+              "label": "4D printing never needs a digital design"
             },
             {
               "id": "d",
-              "label": "VR headsets refill bottles"
+              "label": "4D printing is the same as watching a flat video"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
-            "correct": "Correct. Good Level 2 answers stay realistic. Designed material change is not magic food creation.",
-            "incorrect": "Not quite. Outline real ideas carefully. Do not invent impossible everyday products."
+            "correct": "Correct. Good Level 2 answers stay realistic. Designed material change needs a plan and a trigger.",
+            "incorrect": "Not quite. Outline real ideas carefully. Do not invent change with no design or trigger."
           },
           "sourceType": "single"
         }
@@ -12095,13 +12095,25 @@
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Pixel Forge Games is exploring new ways for players to enjoy its titles. The studio is comparing immersive headset experiences with phone-based games that mix digital objects into real streets."
+          "text": "Pixel Forge Games is a fictional games development company used across this course. The studio designs digital games and is now exploring emerging technologies that could improve how players experience those games."
         }
       },
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
         "id": "week-5-pf-immersive-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "This week the design team is comparing two ideas. Idea A is a headset game where players feel fully inside a fantasy arena. Idea B is a phone game where digital creatures appear on real pavements through the camera."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-immersive-p3",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
@@ -12129,11 +12141,11 @@
             },
             {
               "id": "b",
-              "label": "AR labels on a paper manual only"
+              "label": "AR labels on a paper instruction sheet only"
             },
             {
               "id": "c",
-              "label": "3D printing a single plastic coin"
+              "label": "3D printing a single plastic coin for the desk"
             },
             {
               "id": "d",
@@ -12167,15 +12179,15 @@
             },
             {
               "id": "b",
-              "label": "VR that hides the street completely"
+              "label": "VR that hides the street completely behind a headset view"
             },
             {
               "id": "c",
-              "label": "4D printing the pavement overnight"
+              "label": "3D printing that builds a pavement model with no camera view"
             },
             {
               "id": "d",
-              "label": "RFID tags replacing the phone screen"
+              "label": "Cloud storage that only saves files without showing the street"
             }
           ],
           "correctOptionId": "a",
@@ -12235,7 +12247,7 @@
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "The hardware team wants physical prototypes of a new controller grip and a small model of a game character for a marketing desk."
+          "text": "Remember: Pixel Forge Games is the same fictional studio. Alongside digital games, its hardware team sometimes makes physical objects to test how controllers feel and to show characters on marketing desks."
         }
       },
       {
@@ -12247,7 +12259,19 @@
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "A researcher also suggests an experimental accessory that changes stiffness when warmed by a player's hand. That idea would need specialist 4D materials and careful testing."
+          "text": "Today the team needs a prototype controller grip and a small character model. Those jobs suit everyday 3D printing from a digital design."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-print-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A researcher also suggests an experimental accessory that changes stiffness when warmed by a player's hand. That idea would need specialist 4D materials and careful testing. It is not a normal school print."
         }
       },
       {
@@ -12273,17 +12297,17 @@
             },
             {
               "id": "c",
-              "label": "Replacing all game code with plastic parts"
+              "label": "Replacing all game software with plastic parts"
             },
             {
               "id": "d",
-              "label": "Turning every headset into a toaster"
+              "label": "Using a headset to hide the real workshop completely"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
             "correct": "Correct. Prototyping a grip is a realistic 3D printing use.",
-            "incorrect": "Not quite. Prototypes and models are practical now. Magic factory runs without design review are not."
+            "incorrect": "Not quite. Prototypes and models are practical now. Huge unreviewed factory runs are not a sensible first step."
           },
           "sourceType": "single"
         }
@@ -12369,13 +12393,25 @@
       {
         "schema": "lp.content.block",
         "schemaVersion": "0.1.0",
+        "id": "week-5-pf-choose-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Pixel Forge Games is deciding which emerging technology fits each job. Use what you have learned: VR for fully virtual worlds, AR for digital extras on the real world, 3D printing for stable physical prototypes, and 4D printing only for experimental designed change after printing."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
         "id": "week-5-pf-choose-p",
         "version": "0.1.0",
         "metadata": {},
         "relationships": {},
         "type": "paragraph",
         "content": {
-          "text": "Match each need to the best technology from this week. Prefer practical options first. Mark futuristic ideas as experimental when needed."
+          "text": "Match each need to the best technology. Prefer practical options first. Mark futuristic ideas as experimental when needed."
         }
       },
       {
@@ -12487,29 +12523,29 @@
         "content": {
           "formative": true,
           "questionId": "week-5-kc-q1",
-          "prompt": "A learner cannot see their classroom because a headset shows only a virtual forest. Which technology is this?",
+          "prompt": "A training company wants staff to practise a dangerous drill before using real equipment. Which technology is the best fit?",
           "options": [
             {
               "id": "a",
-              "label": "VR"
+              "label": "VR, so staff can practise inside a safe virtual environment"
             },
             {
               "id": "b",
-              "label": "AR"
+              "label": "AR labels on a blank wall with no practise scenario"
             },
             {
               "id": "c",
-              "label": "3D printing"
+              "label": "3D printing a poster with no interactive practice"
             },
             {
               "id": "d",
-              "label": "RFID"
+              "label": "4D printing with no designed training task"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
-            "correct": "Correct. A fully virtual view through a headset is VR.",
-            "incorrect": "Not quite. If the real classroom is replaced by a virtual scene, choose VR."
+            "correct": "Correct. Safe practice of a dangerous drill is a strong VR use.",
+            "incorrect": "Not quite. When people need a controlled practice world, VR is usually the better fit."
           },
           "sourceType": "single"
         }
@@ -12525,29 +12561,29 @@
         "content": {
           "formative": true,
           "questionId": "week-5-kc-q2",
-          "prompt": "Digital arrows appear over a live camera view of a real corridor. Which technology is this?",
+          "prompt": "A warehouse needs digital shelf labels while staff still see the real aisle. Which technology is the best fit?",
           "options": [
             {
               "id": "a",
-              "label": "AR"
+              "label": "AR overlays that keep the real aisle visible"
             },
             {
               "id": "b",
-              "label": "VR"
+              "label": "VR that hides the warehouse completely"
             },
             {
               "id": "c",
-              "label": "4D printing"
+              "label": "3D printing that replaces every shelf overnight"
             },
             {
               "id": "d",
-              "label": "DaaS"
+              "label": "4D printing with no warehouse task"
             }
           ],
           "correctOptionId": "a",
           "feedback": {
-            "correct": "Correct. Live overlays on the real corridor are AR.",
-            "incorrect": "Not quite. Real world plus digital extras means AR."
+            "correct": "Correct. Staff still need the real aisle, so AR overlays are the better fit.",
+            "incorrect": "Not quite. Keeping the real workplace visible with digital help points to AR."
           },
           "sourceType": "single"
         }
@@ -12771,7 +12807,7 @@
             },
             {
               "id": "d",
-              "label": "Deleting the safety instructions"
+              "label": "Removing all step labels from the job"
             }
           ],
           "correctOptionId": "a",
@@ -12923,7 +12959,7 @@
           "questionId": "week-5-ref-q",
           "prompt": "Choose one technology from this week (VR, AR, 3D printing or 4D printing). Explain what it is, give one practical example, one benefit, one limitation, and say whether your example is everyday, specialist or experimental.",
           "minChars": 500,
-          "guidance": "Cover definition, example, benefit, limitation and how mature the example is. Write at least 500 characters. Paste is disabled."
+          "guidance": "Sentence starters: The technology I chose is... It means... One practical example is... One benefit is... One limitation is... My example is everyday / specialist / experimental because... Write at least 500 characters. Paste is disabled."
         }
       }
     ]
@@ -12977,11 +13013,11 @@
         "content": {
           "formative": true,
           "questionId": "week-5-exit-q1",
-          "prompt": "Which statement is correct?",
+          "prompt": "Which short summary is correct?",
           "options": [
             {
               "id": "a",
-              "label": "VR surrounds you in a virtual world; AR adds digital content to the real world; 3D printing builds physical objects; 4D printing adds planned change after printing"
+              "label": "VR surrounds you; AR adds digital extras to the real world; 3D prints objects; 4D adds planned change later"
             },
             {
               "id": "b",
@@ -12989,7 +13025,7 @@
             },
             {
               "id": "c",
-              "label": "3D printing means watching videos; VR means printing plastic"
+              "label": "3D printing means watching videos and VR means printing plastic"
             },
             {
               "id": "d",
@@ -12998,8 +13034,8 @@
           ],
           "correctOptionId": "a",
           "feedback": {
-            "correct": "Correct. That summary captures the four ideas from this week.",
-            "incorrect": "Not quite. Keep the four definitions separate: surround (VR), overlay (AR), build layers (3D), planned change later (4D)."
+            "correct": "Correct. That short summary captures the four ideas from this week.",
+            "incorrect": "Not quite. Keep the four ideas separate: surround (VR), overlay (AR), build objects (3D), planned change later (4D)."
           },
           "sourceType": "single"
         }
