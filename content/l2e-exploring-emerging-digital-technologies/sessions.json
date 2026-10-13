@@ -134,5 +134,56 @@
         "week-4-exit"
       ]
     }
+  },
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 5 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: VR, AR, 3D printing, 4D printing, benefits, limitations and Pixel Forge Games scenarios (AC1.1).",
+      "sortOrder": 1,
+      "defaultOpen": true,
+      "status": "available"
+    },
+    "relationships": {
+      "week": "week-5",
+      "activities": [
+        "week-5-starter",
+        "week-5-recap-ai",
+        "week-5-recap-tech",
+        "week-5-vr-intro",
+        "week-5-vr-kit",
+        "week-5-vr-uses",
+        "week-5-vr-or-not",
+        "week-5-vr-limits",
+        "week-5-ar-intro",
+        "week-5-ar-devices",
+        "week-5-ar-uses",
+        "week-5-ar-or-not",
+        "week-5-ar-limits",
+        "week-5-compare-intro",
+        "week-5-compare-sort",
+        "week-5-compare-choose",
+        "week-5-3d-intro",
+        "week-5-3d-process",
+        "week-5-3d-materials",
+        "week-5-3d-uses",
+        "week-5-3d-limits",
+        "week-5-4d-intro",
+        "week-5-4d-vs-3d",
+        "week-5-4d-triggers",
+        "week-5-4d-future",
+        "week-5-pf-immersive",
+        "week-5-pf-print",
+        "week-5-pf-choose",
+        "week-5-knowledge-check",
+        "week-5-knowledge-check-b",
+        "week-5-reflection",
+        "week-5-exit"
+      ]
+    }
   }
 ]

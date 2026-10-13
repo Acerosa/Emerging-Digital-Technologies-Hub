@@ -152,6 +152,27 @@ describe("L2E shared week visibility", () => {
     expect(screen.getByRole("heading", { name: "Week not available yet" })).toBeTruthy();
   });
 
+  it("H2 — Week 5 ships planned and stays locked until the publication makes it available", () => {
+    expect(bundled.weeks?.find((week) => week.id === "week-5")?.metadata?.status).toBe("planned");
+    const live = structuredClone(bundled);
+    live.weeks = (live.weeks || []).filter((week) => week.id !== "week-5");
+    applyLiveCurriculum(live);
+
+    render(<HomePage root="." livePackage={live} />);
+    expect(screen.queryByRole("link", { name: "Open Week 5" })).toBeNull();
+    expect(screen.getByText("Week 5")).toBeTruthy();
+    cleanup();
+
+    render(<L2eNavigation items={buildL2eNavigation(".", live)} brandTitle="L2E" />);
+    const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    expect(within(nav).queryByRole("link", { name: /Week 5/ })).toBeNull();
+    expect(within(nav).getByText(/Week 5/)).toBeTruthy();
+    cleanup();
+
+    render(<WeekPage weekId="week-5" root=".." pkg={runtimeContentPackage(live)} />);
+    expect(screen.getByRole("heading", { name: "Week not available yet" })).toBeTruthy();
+  });
+
   it("I — published Week 4 follows Week 3, loads its activities and gives formative feedback", async () => {
     const live = withWeekStatus(bundled, { "week-3": "available", "week-4": "available" });
     applyLiveCurriculum(live);
@@ -180,6 +201,37 @@ describe("L2E shared week visibility", () => {
     fireEvent.click(within(article).getAllByRole("button", { name: "Check answer" })[0]);
     await waitFor(() => {
       expect(within(article).getByText(/Not every program is AI/)).toBeTruthy();
+    });
+  });
+
+  it("I2 — published Week 5 follows Week 4, loads its activities and gives formative feedback", async () => {
+    const live = withWeekStatus(bundled, { "week-4": "available", "week-5": "available" });
+    applyLiveCurriculum(live);
+
+    render(<HomePage root="." livePackage={live} />);
+    expect(screen.getByRole("link", { name: "Open Week 5" }).getAttribute("href")).toBe("./week-5/");
+    cleanup();
+
+    render(<L2eNavigation items={buildL2eNavigation(".", live)} brandTitle="L2E" />);
+    const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    const weekLinks = within(nav).getAllByRole("link").map((link) => link.textContent || "").filter((text) => /Week \d/.test(text));
+    expect(weekLinks.findIndex((text) => /Week 5/.test(text))).toBe(weekLinks.findIndex((text) => /Week 4/.test(text)) + 1);
+    cleanup();
+
+    const { container } = render(<WeekPage weekId="week-5" root=".." pkg={runtimeContentPackage(live)} />);
+    expect(screen.queryByRole("heading", { name: "Week not available yet" })).toBeNull();
+    expect(screen.getByRole("heading", { name: "Week 5 session" })).toBeTruthy();
+    expect(container.querySelectorAll("[data-lp-activity^='week-5-']").length).toBe(32);
+
+    const article = await waitFor(() => {
+      const node = container.querySelector('[data-lp-activity="week-5-vr-intro"]');
+      expect(node?.getAttribute("data-lp-bound")).toBe("week-5-vr-intro");
+      return node as HTMLElement;
+    });
+    fireEvent.click(within(article).getAllByRole("radio", { name: /Any video watched on a phone screen/ })[0]);
+    fireEvent.click(within(article).getAllByRole("button", { name: "Check answer" })[0]);
+    await waitFor(() => {
+      expect(within(article).getByText(/Watching a normal video/)).toBeTruthy();
     });
   });
 

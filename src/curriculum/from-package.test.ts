@@ -24,14 +24,15 @@ describe("L2E package hydration", () => {
     expect(result.valid).toBe(true);
   });
 
-  it("exposes Weeks 1 to 4 for the learner home and week pages", () => {
+  it("exposes Weeks 1 to 5 for the learner home and week pages", () => {
     const weeks = homeWeeksFromPackage(pkg);
-    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4"]);
-    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/"]);
+    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4", "Week 5"]);
+    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/", "week-5/"]);
     expect(weeks[0].title).toBe("Introduction to New and Emerging Digital Technologies");
     expect(weeks[1].title).toBe("Internet of Things, RFID, NFC and Wearables");
     expect(weeks[2].title).toBe("Cloud Technology, SaaS, IaaS, PaaS and DaaS");
     expect(weeks[3].title).toBe("AI and Intelligent Computing: Smart Devices, Robots and Neural Networks");
+    expect(weeks[4].title).toBe("Virtual Reality, Augmented Reality, 3D Printing and 4D Printing");
     expect(weeks[0].current).toBe(true);
     const week1 = weekPageFromPackage(pkg, "week-1");
     expect(week1?.sessions.map((item) => item.id)).toEqual(["week-1-session"]);
@@ -161,6 +162,77 @@ describe("L2E package hydration", () => {
       .map((block) => (block.content as { questionId?: string } | undefined)?.questionId)
       .filter(Boolean));
     expect(new Set(questionIds).size).toBe(questionIds.length);
+  });
+
+  it("wires the Week 5 VR/AR/printing session with unique ids and extension homework before the exit", () => {
+    const published = structuredClone(bundled);
+    const week5 = published.weeks?.find((item) => item.id === "week-5");
+    if (!week5?.metadata) throw new Error("missing week-5");
+    week5.metadata.status = "available";
+    const page = weekPageFromPackage(published, "week-5");
+    const ids = page?.sessions[0]?.activities.map((item) => item.id) || [];
+    expect(page?.sessions.map((item) => item.id)).toEqual(["week-5-session"]);
+    expect(ids).toEqual([
+      "week-5-starter",
+      "week-5-recap-ai",
+      "week-5-recap-tech",
+      "week-5-vr-intro",
+      "week-5-vr-kit",
+      "week-5-vr-uses",
+      "week-5-vr-or-not",
+      "week-5-vr-limits",
+      "week-5-ar-intro",
+      "week-5-ar-devices",
+      "week-5-ar-uses",
+      "week-5-ar-or-not",
+      "week-5-ar-limits",
+      "week-5-compare-intro",
+      "week-5-compare-sort",
+      "week-5-compare-choose",
+      "week-5-3d-intro",
+      "week-5-3d-process",
+      "week-5-3d-materials",
+      "week-5-3d-uses",
+      "week-5-3d-limits",
+      "week-5-4d-intro",
+      "week-5-4d-vs-3d",
+      "week-5-4d-triggers",
+      "week-5-4d-future",
+      "week-5-pf-immersive",
+      "week-5-pf-print",
+      "week-5-pf-choose",
+      "week-5-knowledge-check",
+      "week-5-knowledge-check-b",
+      "week-5-reflection",
+      "week-5-exit"
+    ]);
+
+    const activities = ids.map((id) => pkg.activities.find((item) => item.id === id));
+    expect(activities.every(Boolean)).toBe(true);
+    const extensions = activities.filter((activity) => activity?.metadata?.activityType === "Extension");
+    expect(extensions.map((activity) => activity?.id)).toEqual(["week-5-reflection"]);
+    expect(extensions.every((activity) => activity?.metadata?.title?.startsWith("Extension: "))).toBe(true);
+    const types = new Set(activities.flatMap((activity) => (activity?.blocks || []).map((block) => String(block.type))));
+    for (const type of ["single-choice", "classification", "short-response", "reflection"]) {
+      expect(types.has(type), type).toBe(true);
+    }
+    for (const activity of activities) {
+      for (const block of activity?.blocks || []) {
+        const content = (block.content || {}) as {
+          correctOptionId?: string;
+          options?: Array<{ id: string }>;
+          items?: Array<{ correctCategoryId: string }>;
+          categories?: Array<{ id: string }>;
+        };
+        if (block.type === "single-choice") {
+          expect(content.options?.some((option) => option.id === content.correctOptionId), block.id).toBe(true);
+        }
+        if (block.type === "classification") {
+          const categoryIds = new Set((content.categories || []).map((category) => category.id));
+          expect(content.items?.every((item) => categoryIds.has(item.correctCategoryId)), block.id).toBe(true);
+        }
+      }
+    }
   });
 
   it("hides planned session content while keeping the session placeholder", () => {
