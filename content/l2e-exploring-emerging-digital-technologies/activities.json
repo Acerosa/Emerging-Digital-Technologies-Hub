@@ -8533,5 +8533,4489 @@
         }
       }
     ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-starter",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Welcome to Week 5",
+      "status": "available",
+      "summary": "Recap Week 4 AI ideas, then set the focus for VR, AR, 3D printing and 4D printing (AC1.1).",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Starter",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-starter-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Welcome to Week 5",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-starter-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "This week you outline four more emerging technologies: virtual reality (VR), augmented reality (AR), 3D printing and 4D printing (AC1.1)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-starter-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "By the end of this week",
+          "text": "You will be able to say what VR and AR are and how they differ. You will outline how 3D printing builds objects in layers. You will explain how 4D printing adds change over time. You will pick a suitable technology for simple Pixel Forge Games scenarios."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-starter-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "First, a quick check from Week 4. AI means software that learns from data, recognises patterns or makes predictions. Not every automatic program is AI."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-starter-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-starter-q1",
+          "prompt": "Which statement from Week 4 is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Every program that runs on a computer is AI"
+            },
+            {
+              "id": "b",
+              "label": "AI can recognise patterns or learn from data, but it does not think or feel like a person"
+            },
+            {
+              "id": "c",
+              "label": "A calculator is AI because it works quickly"
+            },
+            {
+              "id": "d",
+              "label": "Robots and AI are always the same thing"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. AI handles tasks that usually need human intelligence, such as spotting patterns. It does not think or feel like a person, and not every program or robot is AI.",
+            "incorrect": "Not quite. Not every program is AI, and a calculator usually follows fixed rules. Robots and AI can work together but they are not always the same thing."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-starter-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-starter-q2",
+          "prompt": "Why might a VR headset send some of its processing to remote servers?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Because VR never needs any computing power"
+            },
+            {
+              "id": "b",
+              "label": "Because cloud servers can provide extra computing power over the internet"
+            },
+            {
+              "id": "c",
+              "label": "Because VR only works without the internet"
+            },
+            {
+              "id": "d",
+              "label": "Because remote servers replace the headset screen"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. Like many AI and game systems, VR can use cloud computing when a task needs more power than the headset alone can provide.",
+            "incorrect": "Not quite. VR still needs computing power. Sending hard tasks to remote servers is a cloud idea from Week 3, not a replacement for the headset display."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-recap-ai",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Recap: smart systems and AI",
+      "status": "available",
+      "summary": "Refresh the smart-system flow and the difference between fixed rules and AI.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-ai-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Recap: smart systems and AI",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-ai-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A smart system often follows Sensors, Data, Processing, then Decision or action. AI is involved when the processing learns from data or recognises patterns, not when it only follows one fixed rule."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-ai-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-recap-ai-q",
+          "prompt": "Sort each example as Fixed rules or AI-style processing.",
+          "categories": [
+            {
+              "id": "rules",
+              "label": "Fixed rules"
+            },
+            {
+              "id": "ai",
+              "label": "AI-style processing"
+            }
+          ],
+          "items": [
+            {
+              "id": "r1",
+              "text": "A light turns off after ten minutes with no movement",
+              "correctCategoryId": "rules"
+            },
+            {
+              "id": "r2",
+              "text": "A phone groups photos by recognising faces",
+              "correctCategoryId": "ai"
+            },
+            {
+              "id": "r3",
+              "text": "A music app builds a playlist from your listening habits",
+              "correctCategoryId": "ai"
+            },
+            {
+              "id": "r4",
+              "text": "A microwave runs for the number of seconds you typed",
+              "correctCategoryId": "rules"
+            }
+          ],
+          "feedback": {
+            "correct": "Well sorted. Timers and simple on/off rules are fixed. Face grouping and playlists recognise patterns or learn from data.",
+            "incorrect": "Not quite yet. Ask whether the system only follows a set instruction, or whether it learns from data or recognises patterns."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-recap-tech",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Recap: linking earlier technologies",
+      "status": "available",
+      "summary": "Connect IoT, cloud and AI ideas to this week's immersive and making technologies.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-tech-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Linking earlier technologies",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-tech-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "VR, AR and 3D printing often use ideas you have already met. A headset can be a connected device (IoT). Heavy graphics or AI features can run in the cloud. Sensors on a headset track where you look and move."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-tech-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "You do not need to invent new words here. Use the ones you know: sensors collect data, processing makes sense of it, and an action or display updates what you see."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-tech-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-recap-tech-q1",
+          "prompt": "A VR headset tracks head movement and updates the scene. Which earlier idea does the tracking mainly use?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Sensors collecting data about movement"
+            },
+            {
+              "id": "b",
+              "label": "DaaS giving you a full remote desktop"
+            },
+            {
+              "id": "c",
+              "label": "RFID tags stuck on every wall"
+            },
+            {
+              "id": "d",
+              "label": "A calculator following only fixed sums"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Tracking uses sensors to collect movement data so the system can update what you see.",
+            "incorrect": "Not quite. Head tracking is about sensors and data. It is not a remote desktop (DaaS), RFID on walls, or a simple calculator sum."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-recap-tech-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-recap-tech-q2",
+          "prompt": "Which statement is most accurate?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR, AR and 3D printing replace the need for any earlier digital technologies"
+            },
+            {
+              "id": "b",
+              "label": "VR, AR and 3D printing can use sensors, cloud services and software ideas you already know"
+            },
+            {
+              "id": "c",
+              "label": "Cloud computing only works with email"
+            },
+            {
+              "id": "d",
+              "label": "IoT devices can never be used with VR or AR"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. These technologies build on sensors, networks, cloud services and software rather than replacing everything you have learned.",
+            "incorrect": "Not quite. New technologies usually combine earlier ideas. Cloud is not limited to email, and connected devices can support VR or AR."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-vr-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is virtual reality?",
+      "status": "available",
+      "summary": "Define VR in simple language and give a familiar example.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is virtual reality?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Virtual reality (VR) puts you inside a computer-made world. You usually wear a headset over your eyes. When you turn your head, the view changes as if you were really there."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "The word virtual means created by software, not built from bricks or wood. The world can look like a game level, a training room or a quiet beach."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A familiar example is a VR game where you stand in a virtual arena and look around. Another example is a training simulation where a learner practises a task in a safe virtual space."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Key term: immersive",
+          "text": "Immersive means the experience surrounds you so strongly that it feels as if you are inside it. VR aims to be immersive by filling your view and responding to your movement."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-intro-q1",
+          "prompt": "Which statement best defines virtual reality?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Any video watched on a phone screen"
+            },
+            {
+              "id": "b",
+              "label": "A computer-made world that surrounds you, usually through a headset"
+            },
+            {
+              "id": "c",
+              "label": "A printed poster stuck over a real object"
+            },
+            {
+              "id": "d",
+              "label": "A spreadsheet stored in the cloud"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. VR is a computer-made world that surrounds you. A headset is the usual way to enter that world.",
+            "incorrect": "Not quite. Watching a normal video or using a spreadsheet is not VR. VR surrounds you in a computer-made world, usually with a headset."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-intro-q2",
+          "prompt": "Why does turning your head matter in VR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It charges the headset battery"
+            },
+            {
+              "id": "b",
+              "label": "The view should update so the virtual world stays lined up with your movement"
+            },
+            {
+              "id": "c",
+              "label": "It prints a 3D object"
+            },
+            {
+              "id": "d",
+              "label": "It switches the headset into a calculator"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. Tracking your head lets the system update the view so the virtual world feels consistent as you look around.",
+            "incorrect": "Not quite. Head movement is tracked so the display updates. It does not print objects or turn the headset into a calculator."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-vr-kit",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "VR equipment and tracking",
+      "status": "available",
+      "summary": "Name common VR kit and explain what tracking does.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-kit-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "VR equipment and tracking",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-kit-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Common VR kit includes a headset (the display over your eyes), controllers (hand devices for pointing or grabbing), and sensors or cameras that track movement."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-kit-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Tracking means the system keeps checking where your head and hands are. Without tracking, the virtual world would not stay lined up with how you move."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-kit-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Some headsets need a powerful computer nearby. Others are standalone: the computing happens inside the headset. Both types still create a virtual world."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-kit-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-kit-q1",
+          "prompt": "What is the main job of VR tracking?",
+          "options": [
+            {
+              "id": "a",
+              "label": "To print plastic parts"
+            },
+            {
+              "id": "b",
+              "label": "To keep the virtual view lined up with the user's head and hand movement"
+            },
+            {
+              "id": "c",
+              "label": "To send emails automatically"
+            },
+            {
+              "id": "d",
+              "label": "To store paper documents"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. Tracking follows movement so the virtual view stays lined up with the user.",
+            "incorrect": "Not quite. Tracking is about movement and the display. Printing, email and paper storage are different jobs."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-kit-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-kit-q2",
+          "prompt": "A learner puts on a headset and holds two hand controllers. Which statement is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Only the headset matters; controllers are never used in VR"
+            },
+            {
+              "id": "b",
+              "label": "The headset shows the world; controllers can let the learner point, grab or select in that world"
+            },
+            {
+              "id": "c",
+              "label": "Controllers replace the need for any display"
+            },
+            {
+              "id": "d",
+              "label": "Tracking only works if the room has no light"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. The headset is the display. Controllers are common tools for interacting inside the virtual world.",
+            "incorrect": "Not quite. Controllers support interaction. They do not replace the display, and tracking does not require a pitch-dark room."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-vr-uses",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Where VR is used",
+      "status": "available",
+      "summary": "Outline practical VR applications beyond entertainment.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-uses-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Where VR is used",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-uses-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "VR is well known for games, but it is also used for training, design reviews and virtual visits. For example, a trainee can practise a safety drill without real danger."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-uses-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Designers can walk through a virtual building before it is built. Museums and schools can offer virtual tours of places that are hard to visit."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-uses-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "These uses are already happening in many organisations. They are practical applications, not science fiction."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-uses-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-uses-q1",
+          "prompt": "Which is a practical use of VR outside entertainment?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Training someone in a safe virtual environment before they try the real task"
+            },
+            {
+              "id": "b",
+              "label": "Replacing all classroom teachers with paper worksheets"
+            },
+            {
+              "id": "c",
+              "label": "Making a microwave cook food faster by renaming it VR"
+            },
+            {
+              "id": "d",
+              "label": "Turning off the internet permanently"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Safe training simulations are a real and useful VR application.",
+            "incorrect": "Not quite. VR can support training and virtual visits. Renaming a microwave or turning off the internet is not a VR use."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-uses-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-uses-q2",
+          "prompt": "A design team wants to check how a new shop layout feels before building it. How can VR help?",
+          "options": [
+            {
+              "id": "a",
+              "label": "By letting the team walk through a virtual version of the shop"
+            },
+            {
+              "id": "b",
+              "label": "By automatically pouring concrete"
+            },
+            {
+              "id": "c",
+              "label": "By printing the finished shop overnight with no design file"
+            },
+            {
+              "id": "d",
+              "label": "By deleting the team's drawings"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A virtual walkthrough lets people review a design before expensive building work begins.",
+            "incorrect": "Not quite. VR helps people experience a design digitally. It does not pour concrete or invent a finished building with no design."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-vr-or-not",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "VR or not VR?",
+      "status": "available",
+      "summary": "Classify examples as VR or not VR using the surround-and-headset idea.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-or-not-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "VR or not VR?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-or-not-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Ask: does the person enter a computer-made world that surrounds their view, usually with a headset? Looking at a normal flat screen in the real room is not the same as VR."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-or-not-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-or-not-q",
+          "prompt": "For each example, choose VR or Not VR.",
+          "categories": [
+            {
+              "id": "vr",
+              "label": "VR"
+            },
+            {
+              "id": "not",
+              "label": "Not VR"
+            }
+          ],
+          "items": [
+            {
+              "id": "v1",
+              "text": "A learner wears a headset and stands inside a virtual training kitchen",
+              "correctCategoryId": "vr"
+            },
+            {
+              "id": "v2",
+              "text": "A student watches a normal YouTube video on a laptop screen",
+              "correctCategoryId": "not"
+            },
+            {
+              "id": "v3",
+              "text": "A gamer looks around a fully virtual arena using a headset",
+              "correctCategoryId": "vr"
+            },
+            {
+              "id": "v4",
+              "text": "A tourist reads a paper map on a street corner",
+              "correctCategoryId": "not"
+            }
+          ],
+          "feedback": {
+            "correct": "Well sorted. Headset experiences that surround you are VR. A laptop video or paper map stays in the real world as a flat view.",
+            "incorrect": "Not quite. VR surrounds you in a computer-made world, usually with a headset. A normal laptop video or paper map is not VR."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-vr-limits",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "VR benefits and limitations",
+      "status": "available",
+      "summary": "Weigh up benefits and limitations of VR for learners and organisations.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-limits-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "VR benefits and limitations",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-limits-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Benefits of VR include safe practice, strong immersion and the chance to visit places that are hard to reach. Teams can also review designs together in a shared virtual space."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-limits-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Limitations include cost of headsets, the need for space to move safely, motion sickness for some users, and the time needed to build good virtual content."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-limits-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "VR is powerful, but it is not the right tool for every job. Sometimes a simple video or a real practice session is clearer and cheaper."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-limits-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-limits-q1",
+          "prompt": "Which statement is a limitation of VR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It can let people practise dangerous tasks safely"
+            },
+            {
+              "id": "b",
+              "label": "Some users feel motion sickness and headsets can be expensive"
+            },
+            {
+              "id": "c",
+              "label": "It can support immersive games"
+            },
+            {
+              "id": "d",
+              "label": "It can show a virtual building before it is built"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. Cost and motion sickness are real limitations. The other options are benefits or uses.",
+            "incorrect": "Not quite. Safe practice, immersion and virtual walkthroughs are benefits. Cost and sickness risk are limitations."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-vr-limits-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-vr-limits-q2",
+          "prompt": "In two or three sentences, give one benefit and one limitation of using VR for training.",
+          "guidance": "Name one clear benefit (for example safe practice) and one clear limitation (for example cost or sickness). Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-ar-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is augmented reality?",
+      "status": "available",
+      "summary": "Define AR and contrast it with replacing the real world.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is augmented reality?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Augmented reality (AR) adds digital objects on top of the real world. You still see your room, street or classroom. Extra labels, characters or arrows appear over what the camera sees."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Augmented means added to. AR does not usually replace the whole view with a virtual world. It layers helpful digital information onto reality."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A familiar example is a phone app that places a virtual character on your living-room floor through the camera. Another example is an app that shows directions as arrows over the street view."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Remember",
+          "text": "VR surrounds you in a virtual world. AR keeps the real world and adds digital extras on top."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-intro-q1",
+          "prompt": "Which statement best defines augmented reality?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A headset that blocks out the real world completely"
+            },
+            {
+              "id": "b",
+              "label": "Digital information or objects added on top of the real world"
+            },
+            {
+              "id": "c",
+              "label": "A printer that builds plastic layers"
+            },
+            {
+              "id": "d",
+              "label": "A cloud folder used only for spreadsheets"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. AR adds digital content to what you already see in the real world.",
+            "incorrect": "Not quite. Blocking out the real world is closer to VR. Printing layers is 3D printing. AR adds digital extras to reality."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-intro-q2",
+          "prompt": "A learner points a phone camera at a desk and a virtual game character appears on the desk. Which technology is this?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR, because the desk disappears"
+            },
+            {
+              "id": "b",
+              "label": "AR, because the real desk stays visible and a digital object is added"
+            },
+            {
+              "id": "c",
+              "label": "4D printing, because the character is plastic"
+            },
+            {
+              "id": "d",
+              "label": "RFID, because the phone scanned a paper tag"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. The real desk remains visible while a digital character is added. That is AR.",
+            "incorrect": "Not quite. If the real scene stays and digital objects are layered on top, it is AR, not VR or printing."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-ar-devices",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Devices used for AR",
+      "status": "available",
+      "summary": "Identify phones, tablets and AR glasses as common AR devices.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-devices-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Devices used for AR",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-devices-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Most school and everyday AR uses a smartphone or tablet camera. The screen shows the real scene plus digital overlays."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-devices-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Some workplaces use AR glasses. These leave your hands free while labels or instructions appear in front of you."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-devices-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "You do not always need an expensive headset for AR. Many useful AR tools already run on devices learners know."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-devices-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-devices-q1",
+          "prompt": "Which device is commonly used for everyday AR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A smartphone or tablet camera and screen"
+            },
+            {
+              "id": "b",
+              "label": "A paper notebook with no camera"
+            },
+            {
+              "id": "c",
+              "label": "A toaster with no display"
+            },
+            {
+              "id": "d",
+              "label": "A wired keyboard with no internet and no camera"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Phones and tablets are the most common everyday AR devices.",
+            "incorrect": "Not quite. AR needs a camera view of the real world and a way to show digital overlays. Phones and tablets do that well."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-devices-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-devices-q2",
+          "prompt": "Why might a technician prefer AR glasses instead of holding a phone?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Glasses always print plastic parts"
+            },
+            {
+              "id": "b",
+              "label": "Hands-free overlays can show instructions while both hands stay on the job"
+            },
+            {
+              "id": "c",
+              "label": "Glasses remove the need for any training"
+            },
+            {
+              "id": "d",
+              "label": "Phones cannot show any digital information"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. AR glasses can keep instructions visible while hands stay free for the task.",
+            "incorrect": "Not quite. The advantage is hands-free guidance. Glasses do not print parts or replace all training, and phones can also show digital information."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-ar-uses",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Where AR is used",
+      "status": "available",
+      "summary": "Outline AR uses in learning, navigation and product preview.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-uses-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Where AR is used",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-uses-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "AR can label parts of a machine for training, show furniture in your room before you buy it, or add navigation arrows over a street view."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-uses-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "In education, AR can place a 3D model of a heart or engine on a desk so learners can walk around it. In retail, shoppers can preview products at home."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-uses-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "These are current, practical uses. They help people understand something in context without building a full virtual world."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-uses-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-uses-q1",
+          "prompt": "Which is a practical AR use?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Showing a virtual sofa in your real living room through a phone camera"
+            },
+            {
+              "id": "b",
+              "label": "Deleting the real living room and replacing it with a beach for every task"
+            },
+            {
+              "id": "c",
+              "label": "Printing a house from sand with no design file"
+            },
+            {
+              "id": "d",
+              "label": "Turning off all cameras forever"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Product preview in a real room is a common AR use.",
+            "incorrect": "Not quite. AR adds digital content to a real scene. Replacing the whole world is closer to VR, and printing a house with no design is not AR."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-uses-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-uses-q2",
+          "prompt": "A tutor wants learners to see labels on a real classroom 3D printer. How can AR help?",
+          "options": [
+            {
+              "id": "a",
+              "label": "By overlaying names of parts on the live camera view of the printer"
+            },
+            {
+              "id": "b",
+              "label": "By hiding the printer so nobody can see it"
+            },
+            {
+              "id": "c",
+              "label": "By forcing every learner to ignore safety rules"
+            },
+            {
+              "id": "d",
+              "label": "By converting the printer into a cloud spreadsheet"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. AR can place labels on top of the real printer through a camera view.",
+            "incorrect": "Not quite. AR supports learning by adding clear digital labels to the real object."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-ar-or-not",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "AR or not AR?",
+      "status": "available",
+      "summary": "Classify examples as AR or not AR.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-or-not-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "AR or not AR?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-or-not-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Ask: does the person still see the real world, with digital extras added? If the real world is fully replaced by a virtual scene, it is not AR."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-or-not-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-or-not-q",
+          "prompt": "For each example, choose AR or Not AR.",
+          "categories": [
+            {
+              "id": "ar",
+              "label": "AR"
+            },
+            {
+              "id": "not",
+              "label": "Not AR"
+            }
+          ],
+          "items": [
+            {
+              "id": "a1",
+              "text": "A phone shows arrows over the live street to guide you to a shop",
+              "correctCategoryId": "ar"
+            },
+            {
+              "id": "a2",
+              "text": "A headset blocks the room and shows only a virtual desert",
+              "correctCategoryId": "not"
+            },
+            {
+              "id": "a3",
+              "text": "A catalogue app places a virtual lamp on your real table",
+              "correctCategoryId": "ar"
+            },
+            {
+              "id": "a4",
+              "text": "A learner reads a printed textbook with no camera overlay",
+              "correctCategoryId": "not"
+            }
+          ],
+          "feedback": {
+            "correct": "Well sorted. Live overlays on the real world are AR. A fully virtual headset scene or a plain textbook is not AR.",
+            "incorrect": "Not quite. AR keeps the real world and adds digital extras. A full virtual-only view is closer to VR."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-ar-limits",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "AR benefits and limitations",
+      "status": "available",
+      "summary": "Identify benefits and limitations of AR.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-limits-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "AR benefits and limitations",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-limits-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Benefits of AR include using familiar devices, keeping users aware of their real surroundings, and adding clear guidance in context."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-limits-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Limitations include needing a clear camera view, possible distraction, battery use, and overlays that can be inaccurate if tracking fails."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-limits-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-limits-q1",
+          "prompt": "Which statement is a benefit of AR compared with fully immersive VR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Users can often keep seeing the real room or workplace while digital help is added"
+            },
+            {
+              "id": "b",
+              "label": "AR always costs more than any other technology"
+            },
+            {
+              "id": "c",
+              "label": "AR never needs a camera"
+            },
+            {
+              "id": "d",
+              "label": "AR always blocks out the real world"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. AR usually keeps the real world visible, which can be safer and more practical for many tasks.",
+            "incorrect": "Not quite. A key AR benefit is seeing the real surroundings with digital extras. AR typically needs a camera view and does not block out reality."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ar-limits-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ar-limits-q2",
+          "prompt": "Which is a limitation of AR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It can label real objects for training"
+            },
+            {
+              "id": "b",
+              "label": "Poor lighting or tracking errors can make overlays sit in the wrong place"
+            },
+            {
+              "id": "c",
+              "label": "It can preview products at home"
+            },
+            {
+              "id": "d",
+              "label": "It can run on many smartphones"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. If tracking fails, overlays can look wrong. The other options are benefits or strengths.",
+            "incorrect": "Not quite. Labelling, product preview and phone support are strengths. Tracking and lighting problems are limitations."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-compare-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "VR and AR: the key difference",
+      "status": "available",
+      "summary": "Explain the core difference between VR and AR in plain language.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "VR and AR: the key difference",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "VR replaces what you see with a virtual world. AR keeps the real world and adds digital extras."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Both can be interactive and both can use sensors. The deciding question is: are you inside a computer-made world, or are you still looking at the real place with extras on top?"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-compare-intro-q1",
+          "prompt": "What is the clearest difference between VR and AR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR surrounds you in a virtual world; AR adds digital content to the real world"
+            },
+            {
+              "id": "b",
+              "label": "VR only works on paper; AR only works underwater"
+            },
+            {
+              "id": "c",
+              "label": "AR always needs a full headset that blocks reality; VR never uses a display"
+            },
+            {
+              "id": "d",
+              "label": "They are identical and the names are random"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. That surrounding-versus-overlay difference is the key idea for Level 2.",
+            "incorrect": "Not quite. Remember: VR surrounds you in a virtual world; AR overlays digital content on reality."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-compare-intro-q2",
+          "prompt": "A museum app shows dinosaur labels over exhibits through a phone camera. Is this closer to VR or AR?",
+          "options": [
+            {
+              "id": "a",
+              "label": "AR, because the real exhibits stay visible with digital labels added"
+            },
+            {
+              "id": "b",
+              "label": "VR, because the museum building disappears"
+            },
+            {
+              "id": "c",
+              "label": "4D printing, because labels are made of plastic"
+            },
+            {
+              "id": "d",
+              "label": "Neither, because phones cannot show digital text"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Real exhibits remain in view while labels are added. That is AR.",
+            "incorrect": "Not quite. If the real scene stays and digital labels are added, it is AR."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-compare-sort",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Sort VR and AR examples",
+      "status": "available",
+      "summary": "Classify scenarios as VR or AR.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-sort-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Sort VR and AR examples",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-sort-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Use the key test: fully virtual world (VR) or real world plus digital extras (AR)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-sort-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-compare-sort-q",
+          "prompt": "Sort each scenario as VR or AR.",
+          "categories": [
+            {
+              "id": "vr",
+              "label": "VR"
+            },
+            {
+              "id": "ar",
+              "label": "AR"
+            }
+          ],
+          "items": [
+            {
+              "id": "c1",
+              "text": "A firefighter trainee wears a headset and practises inside a fully virtual burning building",
+              "correctCategoryId": "vr"
+            },
+            {
+              "id": "c2",
+              "text": "A mechanic sees torque settings overlaid on a real engine through AR glasses",
+              "correctCategoryId": "ar"
+            },
+            {
+              "id": "c3",
+              "text": "A player explores a completely virtual space station with a headset",
+              "correctCategoryId": "vr"
+            },
+            {
+              "id": "c4",
+              "text": "A shopper places a virtual chair into their real bedroom using a phone",
+              "correctCategoryId": "ar"
+            }
+          ],
+          "feedback": {
+            "correct": "Well sorted. Fully virtual practice and worlds are VR. Overlays on real engines or bedrooms are AR.",
+            "incorrect": "Check again. If the real place stays visible with extras, choose AR. If the person is inside a computer-made world, choose VR."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-compare-choose",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Choose VR or AR for the job",
+      "status": "available",
+      "summary": "Select the more suitable technology for short workplace scenarios.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-choose-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Choose VR or AR for the job",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-choose-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Read each need carefully. If people must stay aware of a real place, AR is often better. If they need a fully controlled virtual environment, VR is often better."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-choose-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-compare-choose-q1",
+          "prompt": "Warehouse staff need labels on real shelves while they walk the aisle. Which technology fits better?",
+          "options": [
+            {
+              "id": "a",
+              "label": "AR overlays on a phone or glasses while the real aisle stays visible"
+            },
+            {
+              "id": "b",
+              "label": "VR that hides the warehouse completely"
+            },
+            {
+              "id": "c",
+              "label": "4D printing that turns shelves into water"
+            },
+            {
+              "id": "d",
+              "label": "A paper calculator with no display of the shelves"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Staff still need to see the real shelves, so AR overlays are the better fit.",
+            "incorrect": "Not quite. Hiding the warehouse would make picking harder. They need digital help on top of the real aisle."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-compare-choose-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-compare-choose-q2",
+          "prompt": "A team wants to practise evacuating a building that is still being designed and does not exist yet. Which technology fits better?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR, so learners can enter a virtual version of the planned building"
+            },
+            {
+              "id": "b",
+              "label": "AR overlays on an empty field with no virtual building model"
+            },
+            {
+              "id": "c",
+              "label": "RFID tags on books only"
+            },
+            {
+              "id": "d",
+              "label": "A toaster timer"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. When the real building is not there yet, a virtual world (VR) can provide a safe practice space.",
+            "incorrect": "Not quite. Practising in a building that does not exist yet usually needs a virtual environment, which is VR."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-3d-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is 3D printing?",
+      "status": "available",
+      "summary": "Define 3D printing as building a solid object from a digital design.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is 3D printing?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "3D printing builds a solid object from a digital design. The printer usually adds material layer by layer until the shape is complete."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "The digital design is often made in 3D modelling software. The printer then follows that design. Without a design file, the printer does not know what to build."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A familiar school example is printing a small plastic phone stand or a simple game-character model for a display."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Key idea",
+          "text": "3D printing is additive manufacturing: material is added in layers. That is different from carving material away from a block."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-intro-q1",
+          "prompt": "Which statement best defines 3D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Building a solid object from a digital design, usually layer by layer"
+            },
+            {
+              "id": "b",
+              "label": "Taking a photo of an object"
+            },
+            {
+              "id": "c",
+              "label": "Sending an email with an attachment"
+            },
+            {
+              "id": "d",
+              "label": "Watching a flat video on a phone"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. 3D printing turns a digital design into a physical object, usually by adding layers.",
+            "incorrect": "Not quite. Photos, emails and videos are not 3D printing. 3D printing builds a physical object from a design."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-intro-q2",
+          "prompt": "Why does a 3D printer need a digital design?",
+          "options": [
+            {
+              "id": "a",
+              "label": "So it knows the shape and size to build"
+            },
+            {
+              "id": "b",
+              "label": "So it can cook food"
+            },
+            {
+              "id": "c",
+              "label": "So it can replace the school Wi-Fi"
+            },
+            {
+              "id": "d",
+              "label": "So it can write essays automatically"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. The design tells the printer what to make.",
+            "incorrect": "Not quite. The design file guides the shape. Printing does not cook food, run Wi-Fi or write essays."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-3d-process",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "The basic 3D printing process",
+      "status": "available",
+      "summary": "Order the main steps from design to finished object.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Ordering",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-process-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "The basic 3D printing process",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-process-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A simple process is: create or download a 3D design, prepare the file for the printer, print layer by layer, then finish the object (for example remove supports and check the part)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-process-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-process-q",
+          "prompt": "Put the steps in order. Use each step once.",
+          "categories": [
+            {
+              "id": "step-1",
+              "label": "Step 1"
+            },
+            {
+              "id": "step-2",
+              "label": "Step 2"
+            },
+            {
+              "id": "step-3",
+              "label": "Step 3"
+            },
+            {
+              "id": "step-4",
+              "label": "Step 4"
+            }
+          ],
+          "items": [
+            {
+              "id": "p3",
+              "text": "The printer builds the object layer by layer",
+              "correctCategoryId": "step-3"
+            },
+            {
+              "id": "p1",
+              "text": "A digital 3D design is created or chosen",
+              "correctCategoryId": "step-1"
+            },
+            {
+              "id": "p4",
+              "text": "Supports are removed and the part is checked",
+              "correctCategoryId": "step-4"
+            },
+            {
+              "id": "p2",
+              "text": "The design is prepared as instructions the printer can follow",
+              "correctCategoryId": "step-2"
+            }
+          ],
+          "feedback": {
+            "correct": "Correct order. Design first, then prepare instructions, then print layers, then finish and check the part.",
+            "incorrect": "Not in the right order yet. You need a design before the printer can be instructed. Printing happens before finishing the part."
+          }
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-process-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-process-q2",
+          "prompt": "What does \"layer by layer\" mean in 3D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The printer adds thin layers of material one after another to build the shape"
+            },
+            {
+              "id": "b",
+              "label": "The printer deletes layers of a spreadsheet"
+            },
+            {
+              "id": "c",
+              "label": "The printer only prints flat posters"
+            },
+            {
+              "id": "d",
+              "label": "The printer paints an existing metal car"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Most school 3D printers build height by stacking thin layers of material.",
+            "incorrect": "Not quite. Layer by layer means adding material gradually to form the 3D shape."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-3d-materials",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Materials and school printers",
+      "status": "available",
+      "summary": "Outline common materials and safe classroom expectations.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-materials-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Materials and school printers",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-materials-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Many school printers use plastic filament that is heated and placed in layers. Other industrial printers can use resins, powders or even metal, but those systems are specialised."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-materials-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Different materials suit different jobs. A display model may use a cheap plastic. A stronger part may need a tougher material and a more advanced printer."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-materials-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Safety matters: hot nozzles, moving parts and fumes mean learners follow tutor rules and do not touch a printer mid-print without permission."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-materials-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-materials-q1",
+          "prompt": "Which material is common in many school 3D printers?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Plastic filament that is heated and laid down in layers"
+            },
+            {
+              "id": "b",
+              "label": "Liquid nitrogen used as ink for paper posters"
+            },
+            {
+              "id": "c",
+              "label": "Wet cement poured into a keyboard"
+            },
+            {
+              "id": "d",
+              "label": "Cloud storage folders"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Heated plastic filament is common in classroom printers.",
+            "incorrect": "Not quite. School printers usually melt and place plastic filament. Cloud folders are not a printing material."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-materials-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-materials-q2",
+          "prompt": "Why might an industrial metal 3D printer be unsuitable for a normal classroom?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It can need specialised equipment, training and safety controls beyond a typical school setup"
+            },
+            {
+              "id": "b",
+              "label": "Metal printing never exists anywhere"
+            },
+            {
+              "id": "c",
+              "label": "All metal printers fit in a pencil case"
+            },
+            {
+              "id": "d",
+              "label": "Metal printers only print emails"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Industrial metal systems are specialised. Schools usually start with safer plastic filament printers.",
+            "incorrect": "Not quite. Metal 3D printing exists in industry, but it is not a typical classroom starter technology."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-3d-uses",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Applications of 3D printing",
+      "status": "available",
+      "summary": "Identify practical 3D printing uses including prototypes.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-uses-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Applications of 3D printing",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-uses-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "3D printing is widely used for prototypes: early versions of a product made quickly so a design can be tested and improved."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-uses-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Other uses include custom tools, replacement parts, medical models for planning, and teaching aids. Some fashion and jewellery makers also print complex shapes."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-uses-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "3D printing is excellent for one-off or small-batch items. For millions of identical parts, traditional factory methods can still be faster and cheaper."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-uses-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-uses-q1",
+          "prompt": "What is a prototype in this context?",
+          "options": [
+            {
+              "id": "a",
+              "label": "An early physical version of a design made so it can be tested and improved"
+            },
+            {
+              "id": "b",
+              "label": "The final mass-produced product sold in every shop worldwide"
+            },
+            {
+              "id": "c",
+              "label": "A random file with no shape"
+            },
+            {
+              "id": "d",
+              "label": "A password for the school network"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Prototypes help teams test ideas before committing to expensive final production.",
+            "incorrect": "Not quite. A prototype is an early test version, not necessarily the final mass-produced item."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-uses-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-uses-q2",
+          "prompt": "When is 3D printing often a good choice?",
+          "options": [
+            {
+              "id": "a",
+              "label": "When you need a custom or small-batch part quickly from a digital design"
+            },
+            {
+              "id": "b",
+              "label": "When you need a billion identical screws at the lowest factory cost with no design changes"
+            },
+            {
+              "id": "c",
+              "label": "When you only need to send a text message"
+            },
+            {
+              "id": "d",
+              "label": "When you want to avoid having any design at all"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Custom and small-batch work suits 3D printing well.",
+            "incorrect": "Not quite. Huge identical runs often suit traditional manufacturing better. Printing still needs a design."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-3d-limits",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "3D printing benefits and limitations",
+      "status": "available",
+      "summary": "Balance speed and customisation against strength, time and cost limits.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-limits-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "3D printing benefits and limitations",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-limits-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Benefits include fast prototyping, custom shapes, less waste than some cutting methods, and the ability to make parts on demand."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-limits-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Limitations include print time for large objects, limited strength of some plastics, surface finish that may need sanding, and the cost of larger industrial machines."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-limits-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-limits-q1",
+          "prompt": "Which statement is a benefit of 3D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "You can turn a digital design into a custom physical prototype relatively quickly"
+            },
+            {
+              "id": "b",
+              "label": "Every printed plastic part is always stronger than steel"
+            },
+            {
+              "id": "c",
+              "label": "Printing never takes any time"
+            },
+            {
+              "id": "d",
+              "label": "You never need a design file"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Fast custom prototypes are a major benefit.",
+            "incorrect": "Not quite. Strength and time depend on the job. You still need a design, and plastic is not always stronger than steel."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-3d-limits-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-3d-limits-q2",
+          "prompt": "Explain one benefit and one limitation of 3D printing for a small business making prototypes.",
+          "guidance": "Mention one benefit (for example speed or custom shapes) and one limitation (for example print time or strength). Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-4d-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is 4D printing?",
+      "status": "available",
+      "summary": "Introduce 4D printing as printed objects that can change after printing.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is 4D printing?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "4D printing starts like 3D printing: an object is built from a digital design. The extra idea is that the finished object can change shape or behaviour later when conditions change."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "The \"fourth dimension\" here means time. After printing, the object may bend, unfold or stiffen when it meets heat, water or light."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "4D printing is still emerging. Some research and specialist projects already exist, but it is not as common in schools as basic 3D printing."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Be clear",
+          "text": "Treat everyday classroom plastic prints as 3D printing unless the material is designed to change later. Do not claim every 3D print is 4D."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-intro-q1",
+          "prompt": "What extra idea does 4D printing add to 3D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The printed object can change shape or behaviour over time when conditions change"
+            },
+            {
+              "id": "b",
+              "label": "The printer only prints in black and white"
+            },
+            {
+              "id": "c",
+              "label": "The object can never be touched"
+            },
+            {
+              "id": "d",
+              "label": "The design file is deleted automatically"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Time and change after printing are the key 4D idea.",
+            "incorrect": "Not quite. 4D printing is about designed change after printing, not about deleting files or forbidding touch."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-intro-q2",
+          "prompt": "Which statement is most accurate for Level 2 learners?",
+          "options": [
+            {
+              "id": "a",
+              "label": "4D printing is an emerging idea; some specialist examples exist, but school work usually starts with 3D printing"
+            },
+            {
+              "id": "b",
+              "label": "Every home already uses 4D printers for toast"
+            },
+            {
+              "id": "c",
+              "label": "4D printing replaced all factories in 1990"
+            },
+            {
+              "id": "d",
+              "label": "4D printing means drawing on paper with four pencils"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Keep 4D printing in the emerging-technology category while recognising real research and specialist uses.",
+            "incorrect": "Not quite. 4D printing is emerging and specialist. Everyday school making usually starts with 3D printing."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-4d-vs-3d",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "How 4D printing differs from 3D printing",
+      "status": "available",
+      "summary": "Compare 3D and 4D printing with clear examples.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-vs-3d-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "How 4D printing differs from 3D printing",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-vs-3d-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A normal 3D-printed phone stand keeps its shape after printing. That is 3D printing."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-vs-3d-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A 4D-printed object is made so that a later trigger, such as heat or water, causes a planned change. The change is designed, not an accident."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-vs-3d-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-vs-3d-q1",
+          "prompt": "A plastic keyring is printed and stays the same shape on a learner's bag. What is this?",
+          "options": [
+            {
+              "id": "a",
+              "label": "3D printing of a stable object"
+            },
+            {
+              "id": "b",
+              "label": "4D printing, because time always turns every object into 4D"
+            },
+            {
+              "id": "c",
+              "label": "VR, because the keyring is virtual"
+            },
+            {
+              "id": "d",
+              "label": "AR, because the keyring is a label"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A finished object that is meant to stay the same is a normal 3D print.",
+            "incorrect": "Not quite. Time passing alone does not make something 4D. 4D needs a designed change after printing."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-vs-3d-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-vs-3d-q2",
+          "prompt": "Which example is closer to 4D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "A printed strip designed to curl when placed in warm water"
+            },
+            {
+              "id": "b",
+              "label": "A printed cube that is sanded smooth and then left unchanged"
+            },
+            {
+              "id": "c",
+              "label": "A photo of a cube on a phone"
+            },
+            {
+              "id": "d",
+              "label": "A cloud backup of a spreadsheet"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A planned response to a trigger such as warm water matches the 4D idea.",
+            "incorrect": "Not quite. Sanding a stable cube is finishing a 3D print. Photos and spreadsheets are not 4D printing."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-4d-triggers",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Triggers that can change a 4D object",
+      "status": "available",
+      "summary": "Identify heat, water and light as example triggers.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-triggers-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Triggers that can change a 4D object",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-triggers-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Researchers often design materials that react to heat, water or light. The trigger is chosen to match the job. Not every material reacts to every trigger."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-triggers-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-triggers-q",
+          "prompt": "Sort each item as a possible 4D trigger example or Not a trigger example.",
+          "categories": [
+            {
+              "id": "trigger",
+              "label": "Possible trigger example"
+            },
+            {
+              "id": "not",
+              "label": "Not a trigger example"
+            }
+          ],
+          "items": [
+            {
+              "id": "t1",
+              "text": "Warm water that makes a printed strip curl",
+              "correctCategoryId": "trigger"
+            },
+            {
+              "id": "t2",
+              "text": "Heat that causes a designed fold to open",
+              "correctCategoryId": "trigger"
+            },
+            {
+              "id": "t3",
+              "text": "A random password with no effect on the material",
+              "correctCategoryId": "not"
+            },
+            {
+              "id": "t4",
+              "text": "Light that changes a specially designed material",
+              "correctCategoryId": "trigger"
+            }
+          ],
+          "feedback": {
+            "correct": "Well sorted. Heat, water and light can be designed triggers. A password does not change the material by itself.",
+            "incorrect": "Look for conditions that act on the material, such as heat, water or light. A password is not a physical trigger."
+          }
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-triggers-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-triggers-q2",
+          "prompt": "Why must a 4D trigger be planned in the design?",
+          "options": [
+            {
+              "id": "a",
+              "label": "So the change is controlled and useful, not a surprise failure"
+            },
+            {
+              "id": "b",
+              "label": "So the printer can send emails"
+            },
+            {
+              "id": "c",
+              "label": "So the object never needs a design file"
+            },
+            {
+              "id": "d",
+              "label": "So VR headsets become unnecessary forever"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. 4D printing is about designed change, not accidental melting or breaking.",
+            "incorrect": "Not quite. The point of a trigger is a planned, useful response built into the design."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-4d-future",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "4D printing: practical today and possible later",
+      "status": "available",
+      "summary": "Separate current specialist uses from speculative future ideas.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-future-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Practical today and possible later",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-future-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Today, 4D printing appears mainly in research labs and specialist projects. Examples include experimental medical devices and adaptive structures."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-future-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Possible future ideas include packaging that changes shape in transit, or adaptive sports equipment. These ideas need careful testing before everyday use."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-future-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "For AC1.1, you should be able to outline the idea and give a sensible example. You should also say clearly when something is still experimental."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-future-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-future-q1",
+          "prompt": "Which statement is fairest about 4D printing today?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It is an emerging technology with specialist and research examples, not a common school printer feature"
+            },
+            {
+              "id": "b",
+              "label": "Every supermarket already sells home 4D printers for toast"
+            },
+            {
+              "id": "c",
+              "label": "4D printing is imaginary and has never been researched"
+            },
+            {
+              "id": "d",
+              "label": "4D printing is identical to watching VR videos"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Keep your answer balanced: emerging and specialist, not everyday classroom kit.",
+            "incorrect": "Not quite. 4D printing is researched and specialist, but it is not everyday school equipment or the same as VR."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-4d-future-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-4d-future-q2",
+          "prompt": "A learner says a 4D water bottle will refill itself with milk every morning with no design or material science. What is wrong?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The claim is speculative and ignores how designs, materials and triggers actually work"
+            },
+            {
+              "id": "b",
+              "label": "Nothing: every 4D object can invent milk"
+            },
+            {
+              "id": "c",
+              "label": "4D printing always creates food automatically"
+            },
+            {
+              "id": "d",
+              "label": "VR headsets refill bottles"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Good Level 2 answers stay realistic. Designed material change is not magic food creation.",
+            "incorrect": "Not quite. Outline real ideas carefully. Do not invent impossible everyday products."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-pf-immersive",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Pixel Forge Games: VR and AR choices",
+      "status": "available",
+      "summary": "Apply VR and AR to Pixel Forge Games product ideas.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-immersive-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Pixel Forge Games: VR and AR choices",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-immersive-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Pixel Forge Games is exploring new ways for players to enjoy its titles. The studio is comparing immersive headset experiences with phone-based games that mix digital objects into real streets."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-immersive-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Both ideas can be valuable. The team must match the technology to the player experience they want."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-immersive-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-pf-immersive-q1",
+          "prompt": "Pixel Forge wants players to feel fully inside a fantasy arena. Which technology fits best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR with a headset so the player is surrounded by the virtual arena"
+            },
+            {
+              "id": "b",
+              "label": "AR labels on a paper manual only"
+            },
+            {
+              "id": "c",
+              "label": "3D printing a single plastic coin"
+            },
+            {
+              "id": "d",
+              "label": "A spreadsheet of enemy names with no graphics"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Feeling fully inside an arena is a VR goal.",
+            "incorrect": "Not quite. Full immersion in a virtual arena points to VR, not paper labels or a spreadsheet."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-immersive-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-pf-immersive-q2",
+          "prompt": "Pixel Forge wants a mobile game where creatures appear on real pavements through the phone camera. Which technology fits best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "AR that keeps the real street visible and adds digital creatures"
+            },
+            {
+              "id": "b",
+              "label": "VR that hides the street completely"
+            },
+            {
+              "id": "c",
+              "label": "4D printing the pavement overnight"
+            },
+            {
+              "id": "d",
+              "label": "RFID tags replacing the phone screen"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Digital creatures on a live camera view of real streets is AR.",
+            "incorrect": "Not quite. If the real street stays visible with digital extras, choose AR."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-pf-print",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Pixel Forge Games: 3D and 4D making",
+      "status": "available",
+      "summary": "Use 3D printing for prototypes and keep 4D ideas clearly experimental.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-print-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Pixel Forge Games: 3D and 4D making",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-print-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "The hardware team wants physical prototypes of a new controller grip and a small model of a game character for a marketing desk."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-print-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A researcher also suggests an experimental accessory that changes stiffness when warmed by a player's hand. That idea would need specialist 4D materials and careful testing."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-print-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-pf-print-q1",
+          "prompt": "Which job is a clear, practical use of 3D printing for Pixel Forge today?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Printing a prototype controller grip from a digital design so the shape can be tested"
+            },
+            {
+              "id": "b",
+              "label": "Printing a finished million-unit factory run with no design review"
+            },
+            {
+              "id": "c",
+              "label": "Replacing all game code with plastic parts"
+            },
+            {
+              "id": "d",
+              "label": "Turning every headset into a toaster"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Prototyping a grip is a realistic 3D printing use.",
+            "incorrect": "Not quite. Prototypes and models are practical now. Magic factory runs without design review are not."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-print-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-pf-print-q2",
+          "prompt": "How should the team describe the hand-warming accessory idea?",
+          "options": [
+            {
+              "id": "a",
+              "label": "As an experimental 4D-style concept that would need specialist materials and testing"
+            },
+            {
+              "id": "b",
+              "label": "As a standard school 3D print that every learner already makes each lesson"
+            },
+            {
+              "id": "c",
+              "label": "As proof that 4D printing is identical to AR"
+            },
+            {
+              "id": "d",
+              "label": "As a finished product already sold worldwide with no risks"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Keep speculative adaptive materials in the experimental category.",
+            "incorrect": "Not quite. Adaptive change after printing is closer to emerging 4D ideas and needs careful testing."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-pf-choose",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Pixel Forge Games: pick the right technology",
+      "status": "available",
+      "summary": "Select suitable technologies for mixed Pixel Forge scenarios.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-choose-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Pixel Forge Games: pick the right technology",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-choose-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Match each need to the best technology from this week. Prefer practical options first. Mark futuristic ideas as experimental when needed."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-pf-choose-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-pf-choose-q",
+          "prompt": "Match each Pixel Forge need to the best technology.",
+          "categories": [
+            {
+              "id": "vr",
+              "label": "VR"
+            },
+            {
+              "id": "ar",
+              "label": "AR"
+            },
+            {
+              "id": "p3d",
+              "label": "3D printing"
+            },
+            {
+              "id": "p4d",
+              "label": "4D printing (experimental)"
+            }
+          ],
+          "items": [
+            {
+              "id": "s1",
+              "text": "Playtest a headset game set entirely inside a virtual spaceship",
+              "correctCategoryId": "vr"
+            },
+            {
+              "id": "s2",
+              "text": "Let fans point a phone at a poster so a character appears on top of it",
+              "correctCategoryId": "ar"
+            },
+            {
+              "id": "s3",
+              "text": "Make a quick plastic prototype of a new controller shape",
+              "correctCategoryId": "p3d"
+            },
+            {
+              "id": "s4",
+              "text": "Research a material that softens when warmed by the player's hand",
+              "correctCategoryId": "p4d"
+            }
+          ],
+          "feedback": {
+            "correct": "Well matched. Virtual-only play is VR, poster overlays are AR, prototypes are 3D printing, and adaptive materials are experimental 4D ideas.",
+            "incorrect": "Try again. Ask whether the world is fully virtual, overlaid on reality, a stable printed object, or a designed change after printing."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-knowledge-check",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Knowledge check: VR, AR and printing",
+      "status": "available",
+      "summary": "Check key AC1.1 ideas from this week without repeating earlier wording.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 8,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kc-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Knowledge check",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kc-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kc-q1",
+          "prompt": "A learner cannot see their classroom because a headset shows only a virtual forest. Which technology is this?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR"
+            },
+            {
+              "id": "b",
+              "label": "AR"
+            },
+            {
+              "id": "c",
+              "label": "3D printing"
+            },
+            {
+              "id": "d",
+              "label": "RFID"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A fully virtual view through a headset is VR.",
+            "incorrect": "Not quite. If the real classroom is replaced by a virtual scene, choose VR."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kc-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kc-q2",
+          "prompt": "Digital arrows appear over a live camera view of a real corridor. Which technology is this?",
+          "options": [
+            {
+              "id": "a",
+              "label": "AR"
+            },
+            {
+              "id": "b",
+              "label": "VR"
+            },
+            {
+              "id": "c",
+              "label": "4D printing"
+            },
+            {
+              "id": "d",
+              "label": "DaaS"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Live overlays on the real corridor are AR.",
+            "incorrect": "Not quite. Real world plus digital extras means AR."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kc-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kc-q3",
+          "prompt": "Which statement about 3D printing is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It builds a physical object from a digital design, often layer by layer"
+            },
+            {
+              "id": "b",
+              "label": "It only edits cloud spreadsheets"
+            },
+            {
+              "id": "c",
+              "label": "It always creates food from light alone"
+            },
+            {
+              "id": "d",
+              "label": "It means watching a flat video"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Design to physical object, usually in layers, is the core 3D printing idea.",
+            "incorrect": "Not quite. 3D printing makes physical objects from designs."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kc-q4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kc-q4",
+          "prompt": "How does 4D printing differ from ordinary 3D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The object is designed to change later when conditions such as heat or water change"
+            },
+            {
+              "id": "b",
+              "label": "The object can never leave the computer screen"
+            },
+            {
+              "id": "c",
+              "label": "The printer refuses to use any digital design"
+            },
+            {
+              "id": "d",
+              "label": "It is another name for AR glasses"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Designed change after printing is the 4D difference.",
+            "incorrect": "Not quite. 4D printing still starts with a physical printed object, then adds planned change over time."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kc-q5",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kc-q5",
+          "prompt": "Pixel Forge needs a plastic desk model of a character for a marketing stand. Which technology is the most practical first choice?",
+          "options": [
+            {
+              "id": "a",
+              "label": "3D printing a prototype model from a digital design"
+            },
+            {
+              "id": "b",
+              "label": "4D printing that must change shape every minute to be useful on a desk"
+            },
+            {
+              "id": "c",
+              "label": "VR that only exists inside a headset"
+            },
+            {
+              "id": "d",
+              "label": "AR overlays with no physical model at all"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A stable physical marketing model is a classic 3D printing job.",
+            "incorrect": "Not quite. A desk model needs a physical object. Start with 3D printing."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-knowledge-check-b",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Knowledge check: benefits, limits and choices",
+      "status": "available",
+      "summary": "Apply benefits, limitations and technology choice to short cases.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kcb-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Knowledge check: benefits, limits and choices",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kcb-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kcb-q1",
+          "prompt": "Which pair correctly matches a benefit to a limitation?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR can support safe training; VR headsets can be costly and some users feel sick"
+            },
+            {
+              "id": "b",
+              "label": "AR never needs a camera; AR always blocks the real world"
+            },
+            {
+              "id": "c",
+              "label": "3D printing never needs a design; 3D printing always makes steel stronger than titanium"
+            },
+            {
+              "id": "d",
+              "label": "4D printing is identical to email; email is identical to VR"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Safe training is a VR benefit; cost and sickness risk are limitations.",
+            "incorrect": "Not quite. Look for a true benefit paired with a true limitation."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kcb-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kcb-q2",
+          "prompt": "Staff must keep both hands on a real machine while seeing step labels. Which choice is best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "AR glasses or a carefully placed AR display that keeps the real machine visible"
+            },
+            {
+              "id": "b",
+              "label": "VR that hides the machine completely"
+            },
+            {
+              "id": "c",
+              "label": "3D printing a new machine during the repair"
+            },
+            {
+              "id": "d",
+              "label": "Deleting the safety instructions"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Hands-free guidance on a real machine points to AR.",
+            "incorrect": "Not quite. Hiding the machine would make the job harder. They need overlays on reality."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kcb-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kcb-q3",
+          "prompt": "Why might a business still use factory moulds instead of 3D printing for a million identical parts?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Traditional methods can be faster and cheaper for very large identical runs"
+            },
+            {
+              "id": "b",
+              "label": "3D printing cannot make any physical object"
+            },
+            {
+              "id": "c",
+              "label": "Factories are not allowed to use digital designs"
+            },
+            {
+              "id": "d",
+              "label": "Million-part runs never need quality checks"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. 3D printing shines for custom and small batches; huge identical runs often suit other methods.",
+            "incorrect": "Not quite. Scale and cost matter. 3D printing is powerful, but not always best for huge identical runs."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-kcb-q4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-kcb-q4",
+          "prompt": "Which statement shows good Level 2 judgement about 4D printing?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It is emerging; outline the idea and keep speculative products clearly experimental"
+            },
+            {
+              "id": "b",
+              "label": "It already replaced all packaging worldwide last year"
+            },
+            {
+              "id": "c",
+              "label": "It means the same as watching a tutorial video"
+            },
+            {
+              "id": "d",
+              "label": "It only exists as a spelling mistake for 3D printing"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Balanced answers outline the idea without over-claiming.",
+            "incorrect": "Not quite. Treat 4D printing as emerging and specialist, not as science fiction or a typo."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-reflection",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Extension: technology profile homework",
+      "status": "available",
+      "summary": "Optional homework: build a short AC1.1-style profile of one Week 5 technology.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 13,
+      "activityType": "Extension",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ref-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Extension: technology profile homework",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ref-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Optional homework or research: choose VR, AR, 3D printing or 4D printing and write a short profile you could reuse when outlining technologies for AC1.1 practice. This is formative, not Gateway assignment evidence."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-ref-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "reflection",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-ref-q",
+          "prompt": "Choose one technology from this week (VR, AR, 3D printing or 4D printing). Explain what it is, give one practical example, one benefit, one limitation, and say whether your example is everyday, specialist or experimental.",
+          "minChars": 500,
+          "guidance": "Cover definition, example, benefit, limitation and how mature the example is. Write at least 500 characters. Paste is disabled."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-5-exit",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Exit ticket",
+      "status": "available",
+      "summary": "Quick check that you can outline VR, AR, 3D printing and 4D printing, and rate your confidence.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 2,
+      "activityType": "Exit ticket",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-exit-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Exit ticket",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-exit-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-5-exit-q1",
+          "prompt": "Which statement is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR surrounds you in a virtual world; AR adds digital content to the real world; 3D printing builds physical objects; 4D printing adds planned change after printing"
+            },
+            {
+              "id": "b",
+              "label": "VR, AR, 3D printing and 4D printing are four names for the same phone app"
+            },
+            {
+              "id": "c",
+              "label": "3D printing means watching videos; VR means printing plastic"
+            },
+            {
+              "id": "d",
+              "label": "AR always hides the real world completely"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. That summary captures the four ideas from this week.",
+            "incorrect": "Not quite. Keep the four definitions separate: surround (VR), overlay (AR), build layers (3D), planned change later (4D)."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-5-exit-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Before you finish, tell your tutor how confident you feel outlining VR, AR, 3D printing and 4D printing."
+        }
+      }
+    ]
   }
 ]

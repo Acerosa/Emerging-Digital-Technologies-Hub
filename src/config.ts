@@ -11,13 +11,14 @@ export const APP_CONFIG = Object.freeze({
   submissionContractVersion: "0.1.0",
   schemaVersion: "0.1.0",
   contentPackageVersion: "0.1.0",
-  currentPhase: "Weeks 1 to 4: LO1 / AC 1.1 formative teaching",
+  currentPhase: "Weeks 1 to 5: LO1 / AC 1.1 formative teaching",
   navigation: Object.freeze([
     Object.freeze({ id: "home", label: "Home", path: "" }),
     Object.freeze({ id: "week-1", label: "Week 1", path: "week-1/" }),
     Object.freeze({ id: "week-2", label: "Week 2: IoT, RFID, NFC and wearables", path: "week-2/" }),
     Object.freeze({ id: "week-3", label: "Week 3: Cloud technology - SaaS, IaaS, PaaS, DaaS", path: "week-3/" }),
     Object.freeze({ id: "week-4", label: "Week 4: AI - smart devices, robots and neural networks", path: "week-4/" }),
+    Object.freeze({ id: "week-5", label: "Week 5: VR, AR, 3D printing and 4D printing", path: "week-5/" }),
     Object.freeze({ id: "course-guide", label: "Course Guide", path: "course-guide/" }),
     Object.freeze({ id: "resources", label: "Resources", path: "resources/" }),
     Object.freeze({ id: "help", label: "Help", path: "help/" }),
@@ -29,6 +30,7 @@ export const APP_CONFIG = Object.freeze({
     "week-2",
     "week-3",
     "week-4",
+    "week-5",
     "course-guide"
   ]),
   features: Object.freeze({

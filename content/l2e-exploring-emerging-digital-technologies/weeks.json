@@ -90,5 +90,28 @@
         "week-4-session"
       ]
     }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-5",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 5,
+      "title": "Virtual Reality, Augmented Reality, 3D Printing and 4D Printing",
+      "status": "planned",
+      "professionalPractice": "LO1 / AC 1.1 - outline VR, AR, 3D printing and 4D printing",
+      "route": "week-5/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-5-session"
+      ]
+    }
   }
 ]

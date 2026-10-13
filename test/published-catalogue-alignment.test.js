@@ -15,7 +15,7 @@ test("learner package produces a coherent marking-spec manifest", async function
   );
   const result = checkCatalogueAlignment(pkg);
   assert.equal(result.ok, true, result.issues.join("\n"));
-  assert.ok(result.activityCount >= 39, `expected >=39 activities, got ${result.activityCount}`);
+  assert.ok(result.activityCount >= 71, `expected >=71 activities, got ${result.activityCount}`);
   assert.ok(result.markingQuestionCount > 50, "expected marking keys for interactive weeks");
 });
 
@@ -54,6 +54,29 @@ test("Week 4 activities produce marking keys for choice and classification block
   assert.ok(keys.has("week-4-ref-q"));
   assert.equal(keys.has("week-4-rt-q:t8"), false);
   assert.equal(keys.has("week-4-kc-q6"), false);
+});
+
+test("Week 5 activities produce marking keys for choice and classification blocks", async function () {
+  const { checkCatalogueAlignment } = await import(
+    path.join(root, "scripts/check-catalogue-alignment.mjs")
+  );
+  const pkg = requireEsm(
+    path.join(root, "content/l2e-exploring-emerging-digital-technologies/package.json")
+  );
+  const week5 = pkg.activities.filter((a) => a.id.startsWith("week-5-"));
+  assert.equal(week5.length, 32);
+  assert.ok(week5.every((a) => a.version === "0.1.0"));
+
+  const { rows, issues } = checkCatalogueAlignment(pkg);
+  assert.equal(issues.length, 0, issues.join("\n"));
+  const keys = new Set(rows.map((r) => r.questionId));
+  assert.ok(keys.has("week-5-starter-q1"));
+  assert.ok(keys.has("week-5-vr-or-not-q:v1"));
+  assert.ok(keys.has("week-5-compare-sort-q:c1"));
+  assert.ok(keys.has("week-5-3d-process-q:p1"));
+  assert.ok(keys.has("week-5-kc-q5"));
+  assert.ok(keys.has("week-5-ref-q"));
+  assert.equal(keys.has("week-5-kc-q6"), false);
 });
 
 test("stale catalogue activity ids are not used by the learner package", function () {
