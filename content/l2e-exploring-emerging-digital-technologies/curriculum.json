@@ -9,7 +9,8 @@
   },
   "relationships": {
     "learningOutcomes": [
-      "lo1"
+      "lo1",
+      "lo2"
     ],
     "assignments": [
       "formative-practice"
@@ -21,7 +22,8 @@
       "week-4",
       "week-5",
       "week-6",
-      "week-7"
+      "week-7",
+      "week-8"
     ]
   }
 }

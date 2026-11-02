@@ -159,5 +159,28 @@
         "week-7-session"
       ]
     }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-8",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 8,
+      "title": "Personal and Business Uses of Emerging Technologies",
+      "status": "planned",
+      "professionalPractice": "LO2 / AC 2.1 - explain personal and business uses of emerging technologies",
+      "route": "week-8/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo2"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-8-session"
+      ]
+    }
   }
 ]
