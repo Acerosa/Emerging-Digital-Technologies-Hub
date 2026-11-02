@@ -4037,7 +4037,7 @@
       "schema": "lp.content.activity",
       "schemaVersion": "0.1.0",
       "id": "week-2-reflection",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "metadata": {
         "title": "Portfolio reflection",
         "status": "available",
@@ -6675,7 +6675,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "A smart device senses the world around it and responds. Most follow the same four-step flow: Sensors → Data → Processing → Decision or action."
+            "text": "A smart device senses the world around it and responds. Most follow the same four-step flow: Sensors \u2192 Data \u2192 Processing \u2192 Decision or action."
           }
         },
         {
@@ -6933,7 +6933,7 @@
               }
             ],
             "feedback": {
-              "correct": "Correct order. The watch senses the pulse, saves it as data, processes it by comparing with normal, then acts with a warning. That is Sensors → Data → Processing → Decision or action.",
+              "correct": "Correct order. The watch senses the pulse, saves it as data, processes it by comparing with normal, then acts with a warning. That is Sensors \u2192 Data \u2192 Processing \u2192 Decision or action.",
               "incorrect": "Not in the right order yet. A smart system must sense something before it has any data. It can only check data it has already saved. The warning is the action, so it comes last."
             }
           }
@@ -7618,7 +7618,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "It works in three stages: Inputs → Connected nodes → Output."
+            "text": "It works in three stages: Inputs \u2192 Connected nodes \u2192 Output."
           }
         },
         {
@@ -7716,7 +7716,7 @@
             "correctOptionId": "a",
             "feedback": {
               "correct": "Correct. A neural network takes inputs, passes them through layers of connected nodes that pick out patterns, and produces an output.",
-              "incorrect": "Not quite. Despite the word \"network\", it has nothing to do with cables between computers, and it is not a real brain. It is also not a list of fixed rules: it learns patterns from examples. The structure is inputs → connected nodes → output."
+              "incorrect": "Not quite. Despite the word \"network\", it has nothing to do with cables between computers, and it is not a real brain. It is also not a list of fixed rules: it learns patterns from examples. The structure is inputs \u2192 connected nodes \u2192 output."
             },
             "sourceType": "single"
           }
@@ -8907,7 +8907,7 @@
               },
               {
                 "id": "b",
-                "label": "One fixed rule, such as \"block every payment over £100\""
+                "label": "One fixed rule, such as \"block every payment over \u00a3100\""
               },
               {
                 "id": "c",
