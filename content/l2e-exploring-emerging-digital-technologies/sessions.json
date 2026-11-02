@@ -234,5 +234,49 @@
         "week-6-exit"
       ]
     }
+  },
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-7-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 7 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: drones, social media, vlogs, Pixel Forge scenarios and AC1.1 consolidation.",
+      "sortOrder": 1,
+      "defaultOpen": true,
+      "status": "available"
+    },
+    "relationships": {
+      "week": "week-7",
+      "activities": [
+        "week-7-starter",
+        "week-7-recap-connect",
+        "week-7-drone-intro",
+        "week-7-drone-how",
+        "week-7-drone-uses",
+        "week-7-drone-limits",
+        "week-7-drone-apply",
+        "week-7-social-intro",
+        "week-7-social-algo",
+        "week-7-social-uses",
+        "week-7-social-limits",
+        "week-7-social-apply",
+        "week-7-vlog-intro",
+        "week-7-vlog-create",
+        "week-7-vlog-uses",
+        "week-7-vlog-apply",
+        "week-7-match-uses",
+        "week-7-pf-scenarios",
+        "week-7-consolidate-map",
+        "week-7-consolidate-check",
+        "week-7-consolidate-write",
+        "week-7-knowledge-check",
+        "week-7-knowledge-check-b",
+        "week-7-reflection",
+        "week-7-exit"
+      ]
+    }
   }
 ]
