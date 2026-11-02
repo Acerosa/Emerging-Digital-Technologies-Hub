@@ -126,6 +126,30 @@ test("Week 7 activities produce marking keys for choice and classification block
   assert.equal(keys.has("week-7-kc-q6"), false);
 });
 
+
+test("Week 8 activities produce marking keys for choice and classification blocks", async function () {
+  const { checkCatalogueAlignment } = await import(
+    path.join(root, "scripts/check-catalogue-alignment.mjs")
+  );
+  const pkg = requireEsm(
+    path.join(root, "content/l2e-exploring-emerging-digital-technologies/package.json")
+  );
+  const week8 = pkg.activities.filter((a) => a.id.startsWith("week-8-"));
+  assert.equal(week8.length, 25);
+  assert.ok(week8.every((a) => a.version === "0.1.0"));
+
+  const { rows, issues } = checkCatalogueAlignment(pkg);
+  assert.equal(issues.length, 0, issues.join("\n"));
+  const keys = new Set(rows.map((r) => r.questionId));
+  assert.ok(keys.has("week-8-starter-q1"));
+  assert.ok(keys.has("week-8-classify-context-q:x1"));
+  assert.ok(keys.has("week-8-match-apps-q:m1"));
+  assert.ok(keys.has("week-8-kc-q5"));
+  assert.ok(keys.has("week-8-personal-apply-q"));
+  assert.ok(keys.has("week-8-ref-q"));
+  assert.equal(keys.has("week-8-kc-q6"), false);
+});
+
 test("stale catalogue activity ids are not used by the learner package", function () {
   const pkg = requireEsm(
     path.join(root, "content/l2e-exploring-emerging-digital-technologies/package.json")
