@@ -288,7 +288,7 @@ const week6Activities = [
       callout(
         "week-6-5g-latency-c",
         "Simple example",
-        "Imagine sending a message from your phone to a game server. Latency is the wait before the server's reply reaches you. Shorter waits feel more responsive."
+        "Think about sending a message from your phone to a game server. Latency is the wait before the server's reply reaches you. Shorter waits feel more responsive."
       ),
       sc(
         "week-6-5g-latency-q1",
@@ -554,7 +554,7 @@ const week6Activities = [
           "IPv6 removes the need for any networks"
         ],
         "a",
-        "Correct. Remember address supply and networking design, not a magic speed boost.",
+        "Correct. Focus on address supply and networking design, not a magic speed boost.",
         "Not quite. Do not treat IPv6 as only a speed upgrade."
       ),
       sc(
@@ -773,7 +773,7 @@ const week6Activities = [
       ),
       callout(
         "week-6-serverless-intro-c",
-        "Remember",
+        "Note",
         "Serverless computing does not mean \"no computers\". It means \"you do not manage the servers yourself\"."
       ),
       sc(
@@ -1016,7 +1016,7 @@ const week6Activities = [
       heading("week-6-sdwan-pf-h", "Pixel Forge: linking several locations"),
       para(
         "week-6-sdwan-pf-p1",
-        "Imagine Pixel Forge Games with a main office, a development studio and another business location. Staff need to share files, join calls and reach internal systems securely and reliably."
+        "Suppose Pixel Forge Games has a main office, a development studio and another business location. Staff need to share files, join calls and reach internal systems securely and reliably."
       ),
       para(
         "week-6-sdwan-pf-p2",
@@ -1259,7 +1259,7 @@ const week6Activities = [
         ],
         "a",
         "Correct. The name is misleading if taken literally.",
-        "Not quite. Remember that servers still exist under the provider's care."
+        "Not quite. Servers still exist under the provider's care."
       ),
       sc(
         "week-6-kc-q3",

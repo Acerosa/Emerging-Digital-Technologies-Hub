@@ -152,7 +152,7 @@ const week7Activities = [
         ],
         "b",
         "Correct. IPv6 is mainly about address space, not a guaranteed speed boost.",
-        "Not quite. Remember the Week 6 outlines: IPv6 expands addresses; serverless still uses servers."
+        "Not quite. Keep the Week 6 outlines in mind. IPv6 expands addresses. Serverless still uses servers."
       ),
       sc(
         "week-7-starter-q2",
@@ -228,12 +228,12 @@ const week7Activities = [
       ),
       para(
         "week-7-drone-intro-p2",
-        "People often control drones from the ground with a remote controller or an app. Some drones can follow set routes more independently. You do not need deep engineering detail for AC1.1 — focus on what they are and what they are used for."
+        "People often control drones from the ground with a remote controller or an app. Some drones can follow set routes more independently. You do not need deep engineering detail for AC1.1. Focus on what they are and what they are used for."
       ),
       callout(
         "week-7-drone-intro-c",
         "Key term: UAV",
-        "UAV means Unmanned Aerial Vehicle — an aircraft without a human pilot on board."
+        "UAV means Unmanned Aerial Vehicle: an aircraft without a human pilot on board."
       ),
       sc(
         "week-7-drone-intro-q1",
@@ -277,7 +277,7 @@ const week7Activities = [
       ),
       para(
         "week-7-drone-how-p2",
-        "Some flights are mainly manual: a person steers carefully. Other modes are more autonomous: the drone follows a planned path or tracks a subject with less constant stick input. Either way, a responsible operator still plans the flight."
+        "Some flights are mainly manual, with a person steering carefully. Other modes are more autonomous, where the drone follows a planned path or tracks a subject with less constant stick input. Either way, a responsible operator still plans the flight."
       ),
       sc(
         "week-7-drone-how-q1",
@@ -469,7 +469,7 @@ const week7Activities = [
       heading("week-7-social-algo-h", "Algorithms and recommendations"),
       para(
         "week-7-social-algo-p1",
-        "An algorithm here means a set of rules or calculations used by software. Social media often uses algorithms to show personalised recommendations — posts the system predicts you may like based on what you watch, like or follow."
+        "An algorithm here means a set of rules or calculations used by software. Social media often uses algorithms to show personalised recommendations (posts the system predicts you may like based on what you watch, like or follow)."
       ),
       para(
         "week-7-social-algo-p2",
@@ -631,7 +631,7 @@ const week7Activities = [
         "week-7-vlog-intro-q1",
         "What is a vlog?",
         [
-          "A video blog — regular video updates shared online",
+          "A video blog: regular video updates shared online",
           "A paper-only diary locked in a drawer",
           "A type of UAV propeller",
           "A spreadsheet formula"
@@ -1089,7 +1089,7 @@ const week7Activities = [
         ],
         "a",
         "Correct. Real-world limits and rules still apply.",
-        "Not quite. Remember practical limits and responsibilities."
+        "Not quite. Keep practical limits and responsibilities in mind."
       ),
       sc(
         "week-7-kc-q5",

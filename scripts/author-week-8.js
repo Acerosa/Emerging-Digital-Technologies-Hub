@@ -124,7 +124,7 @@ const week8Activities = [
   activity(
     "week-8-starter",
     "Welcome to Week 8",
-    "Introduce AC2.1 personal and business uses; recap that Weeks 1–7 already outlined the technologies.",
+    "Introduce AC2.1 personal and business uses. Recap that Weeks 1 to 7 already outlined the technologies.",
     "Starter",
     [
       heading("week-8-starter-h", "Welcome to Week 8"),
@@ -1033,7 +1033,7 @@ const week8Activities = [
         "A learner says VR is only for fun. What should they add for AC2.1?",
         [
           "A business example such as staff training or immersive product demos",
-          "Nothing — one use is always enough for every criterion",
+          "Nothing: one use is always enough for every criterion",
           "A full AC2.2 cost spreadsheet only",
           "A claim that VR never has business uses"
         ],

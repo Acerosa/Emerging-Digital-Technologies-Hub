@@ -245,7 +245,7 @@ const week5Activities = [
           "IoT devices can never be used with VR or AR"
         ],
         "b",
-        "Correct. These technologies build on sensors, networks, cloud services and software rather than replacing everything you have learned.",
+        "Correct. These technologies build on sensors, networks, cloud services and software rather than replacing earlier digital tools.",
         "Not quite. New technologies usually combine earlier ideas. Cloud is not limited to email, and connected devices can support VR or AR."
       )
     ],
@@ -451,7 +451,7 @@ const week5Activities = [
       ),
       para(
         "week-5-vr-limits-p3",
-        "VR is powerful, but it is not the right tool for every job. Sometimes a simple video or a real practice session is clearer and cheaper."
+        "VR can be useful, but it is not the right tool for every job. Sometimes a simple video or a real practice session is clearer and cheaper."
       ),
       sc(
         "week-5-vr-limits-q1",
@@ -498,7 +498,7 @@ const week5Activities = [
       ),
       callout(
         "week-5-ar-intro-c",
-        "Remember",
+        "Note",
         "VR surrounds you in a virtual world. AR keeps the real world and adds digital extras on top."
       ),
       sc(
@@ -730,7 +730,7 @@ const week5Activities = [
         ],
         "a",
         "Correct. That surrounding-versus-overlay difference is the key idea for Level 2.",
-        "Not quite. Remember: VR surrounds you in a virtual world; AR overlays digital content on reality."
+        "Not quite. VR surrounds you in a virtual world. AR overlays digital content on reality."
       ),
       sc(
         "week-5-compare-intro-q2",
@@ -1301,7 +1301,7 @@ const week5Activities = [
       heading("week-5-pf-print-h", "Pixel Forge Games: 3D and 4D making"),
       para(
         "week-5-pf-print-p1",
-        "Remember: Pixel Forge Games is the same fictional studio. Alongside digital games, its hardware team sometimes makes physical objects to test how controllers feel and to show characters on marketing desks."
+        "Pixel Forge Games is the same fictional studio. Alongside digital games, its hardware team sometimes makes physical objects to test how controllers feel and to show characters on marketing desks."
       ),
       para(
         "week-5-pf-print-p2",
@@ -1349,7 +1349,7 @@ const week5Activities = [
       heading("week-5-pf-choose-h", "Pixel Forge Games: pick the right technology"),
       para(
         "week-5-pf-choose-p1",
-        "Pixel Forge Games is deciding which emerging technology fits each job. Use what you have learned: VR for fully virtual worlds, AR for digital extras on the real world, 3D printing for stable physical prototypes, and 4D printing only for experimental designed change after printing."
+        "Pixel Forge Games is deciding which emerging technology fits each job. Use the ideas from this week: VR for fully virtual worlds, AR for digital extras on the real world, 3D printing for stable physical prototypes, and 4D printing only for experimental designed change after printing."
       ),
       para(
         "week-5-pf-choose-p",
@@ -1498,8 +1498,8 @@ const week5Activities = [
           "Million-part runs never need quality checks"
         ],
         "a",
-        "Correct. 3D printing shines for custom and small batches; huge identical runs often suit other methods.",
-        "Not quite. Scale and cost matter. 3D printing is powerful, but not always best for huge identical runs."
+        "Correct. 3D printing suits custom and small batches. Huge identical runs often suit other methods.",
+        "Not quite. Scale and cost matter. 3D printing helps with custom work, but it is not always best for huge identical runs."
       ),
       sc(
         "week-5-kcb-q4",
