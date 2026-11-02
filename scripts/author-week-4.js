@@ -263,7 +263,7 @@ const week4Activities = [
           { id: "a3", text: "A music app builds a playlist from your listening habits", correctCategoryId: "ai" }
         ],
         {
-          correct: "Well done. Face unlock and playlists recognise patterns or learn from data. A calculator just follows set rules.",
+          correct: "Correct. Face unlock and playlists recognise patterns or learn from data. A calculator just follows set rules.",
           incorrect: "Some are not right yet. Being automatic is not the same as being AI. A calculator follows rules set by a person. AI recognises patterns or learns from data, such as recognising a face."
         }
       )
@@ -372,7 +372,7 @@ const week4Activities = [
           { id: "i4", text: "A doorbell camera that recognises the difference between a person and a parcel", correctCategoryId: "both" }
         ],
         {
-          correct: "Well done. Responding to app commands is IoT only. Learning routines or recognising images adds AI.",
+          correct: "Correct. Responding to app commands is IoT only. Learning routines or recognising images adds AI.",
           incorrect: "Some are not right yet. Ask: does the device only connect and share data, or does it also learn, recognise or predict? A remote plug is IoT only. Recognising a person in a camera image needs AI."
         }
       )
@@ -442,7 +442,7 @@ const week4Activities = [
           { id: "p5", text: "Spinning brush that sweeps up dust", correctCategoryId: "actuator" }
         ],
         {
-          correct: "Well done. The bump sensor takes information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
+          correct: "Correct. The bump sensor takes information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
           incorrect: "Some are not right yet. If a part gathers information, it is a sensor. If it decides, it is the controller. If it moves or does physical work, it is an actuator."
         }
       )
@@ -474,7 +474,7 @@ const week4Activities = [
           { id: "v8", text: "A self-driving car predicts that a cyclist is about to turn and slows down", correctCategoryId: "ai" }
         ],
         {
-          correct: "Well done. Fixed cycles and sensor-triggered doors are predetermined. Recognising objects and predicting what people will do are AI-enabled.",
+          correct: "Correct. Fixed cycles and sensor-triggered doors are predetermined. Recognising objects and predicting what people will do are AI-enabled.",
           incorrect: "Some are not right yet. Ask: would it behave exactly the same way every time? If yes, it is predetermined, even if it uses a sensor like the automatic doors. AI-enabled behaviour recognises, learns or predicts."
         }
       )
@@ -560,7 +560,7 @@ const week4Activities = [
     "Teaching",
     [
       heading("week-4-nt-h", "How a neural network learns"),
-      para("week-4-nt-p1", "Training is how a neural network learns. Imagine teaching one to tell cats from dogs."),
+      para("week-4-nt-p1", "Training is how a neural network learns. For example, you might teach one to tell cats from dogs."),
       para("week-4-nt-p2", "1. People collect thousands of photos and label each one \"cat\" or \"dog\"."),
       para("week-4-nt-p3", "2. The network looks at a photo and guesses. At first, its guesses are almost random."),
       para("week-4-nt-p4", "3. It is told the correct label and adjusts its connections a little, so it is more likely to be right next time. This repeats thousands of times."),
@@ -592,9 +592,9 @@ const week4Activities = [
     [
       heading("week-4-bl-h", "Benefits and limitations of AI"),
       para("week-4-bl-p1", "Benefits. AI can:"),
-      para("week-4-bl-p2", "work very fast; automate repetitive tasks; analyse huge amounts of data (often called big data); give consistent results; spot patterns people might miss; and work day and night without breaks."),
+      para("week-4-bl-p2", "work very fast, automate repetitive tasks, analyse huge amounts of data (often called big data), give consistent results, spot patterns people might miss, and work day and night without breaks."),
       para("week-4-bl-p3", "Limitations. AI:"),
-      para("week-4-bl-p4", "is only as good as its data; can make mistakes; can be biased, meaning unfair to some groups, if its training data was unbalanced; can be expensive to build and run; can raise privacy concerns because it often collects personal data; and lacks human judgement, empathy and common sense."),
+      para("week-4-bl-p4", "is only as good as its data, can make mistakes, and can be biased (unfair to some groups) if its training data was unbalanced. It can be expensive to build and run, and it can raise privacy concerns because it often collects personal data. It also lacks human judgement, empathy and common sense."),
       callout("week-4-bl-c", "Spotting patterns is not the same as judgement", "An AI can recognise patterns very well and still make a poor decision in an unusual situation, because it does not understand people's circumstances the way a person does."),
       classify(
         "week-4-bl-q",
@@ -608,7 +608,7 @@ const week4Activities = [
           { id: "b2", text: "Gives unfair results if its training data was biased", correctCategoryId: "limitation" }
         ],
         {
-          correct: "Well done. Speed is a benefit. Bias from unfair training data is a limitation.",
+          correct: "Correct. Speed is a benefit. Bias from unfair training data is a limitation.",
           incorrect: "Some are not right yet. Benefits are things AI does well, such as speed. Limitations include bias from data."
         }
       )
@@ -619,11 +619,11 @@ const week4Activities = [
   // G. Applied scenarios
   activity(
     "week-4-game-npc",
-    "Scenario: Pixel Forge Games – an NPC that adapts",
+    "Scenario: Pixel Forge Games: an NPC that adapts",
     "Decide whether two adapting Pixel Forge Games characters use AI, and what data an AI character learns from.",
     "Application",
     [
-      heading("week-4-npc-h", "Scenario: Pixel Forge Games – an NPC that adapts"),
+      heading("week-4-npc-h", "Scenario: Pixel Forge Games: an NPC that adapts"),
       para("week-4-npc-p1", "Pixel Forge Games is designing a fighting game. A non-player character (NPC) is controlled by the computer. Two trial versions both have an enemy NPC that changes as you play."),
       para("week-4-npc-p2", "Version A: the designers wrote a rule. If you lose three fights in a row, the enemy's health drops by 20%."),
       para("week-4-npc-p3", "Version B: over many fights, the enemy notices that you usually attack from the left. It starts guarding its left side and tries new tactics you have not seen before."),
@@ -658,11 +658,11 @@ const week4Activities = [
   ),
   activity(
     "week-4-smart-gaming",
-    "Scenario: Pixel Forge Games – a smart gaming setup",
+    "Scenario: Pixel Forge Games: a smart gaming setup",
     "Select which data a Pixel Forge Games smart setup needs and identify a privacy concern.",
     "Application",
     [
-      heading("week-4-sg-h", "Scenario: Pixel Forge Games – a smart gaming setup"),
+      heading("week-4-sg-h", "Scenario: Pixel Forge Games: a smart gaming setup"),
       para("week-4-sg-p1", "Pixel Forge Games is testing a smart gaming setup with three jobs:"),
       para("week-4-sg-p2", "1. Change the colour of the room lights to match what is happening in the game."),
       para("week-4-sg-p3", "2. Dim the lights when the room is bright."),
@@ -681,7 +681,7 @@ const week4Activities = [
           { id: "g5", text: "Full recordings of everything said in the room, stored online", correctCategoryId: "not-needed" }
         ],
         {
-          correct: "Well done. Game events and light readings are needed for the lighting jobs. Storing full recordings online is not needed for any job and creates a privacy risk.",
+          correct: "Correct. Game events and light readings are needed for the lighting jobs. Storing full recordings online is not needed for any job and creates a privacy risk.",
           incorrect: "Some are not right yet. Link each item to a job: game events for the colours and the light sensor for dimming. Detecting speech does not require storing full recordings online."
         }
       ),
@@ -771,7 +771,7 @@ const week4Activities = [
     "Knowledge check",
     [
       heading("week-4-kc-h", "Mixed knowledge check"),
-      para("week-4-kc-p", "These questions mix ideas from the whole week. Read each situation carefully and apply what you have learned."),
+      para("week-4-kc-p", "These questions mix ideas from the whole week. Read each situation carefully and use the ideas from earlier activities."),
       sc(
         "week-4-kc-q1",
         "A school's online booking form checks that every email address contains an @ symbol before it is accepted. Is this AI?",

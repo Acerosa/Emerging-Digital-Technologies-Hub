@@ -648,7 +648,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Digital technology changes quickly. Businesses that notice new tools early can improve service, cut cost or stay safe. This lesson is formative practice for LO1 / AC 1.1. It is not Gateway assignment evidence."
+            "text": "Digital technology changes quickly. Businesses that spot useful new tools early can improve service, cut cost or stay safe. This lesson is formative practice for LO1 / AC 1.1. It is not Gateway assignment evidence."
           }
         },
         {
@@ -662,7 +662,7 @@
           "content": {
             "tone": "info",
             "title": "By the end of this lesson",
-            "text": "Define digital technology; tell current from emerging; outline mobile, intelligent computing, IoT and cloud; and spot simple business uses."
+            "text": "Define digital technology. Tell current from emerging. Outline mobile, intelligent computing, IoT and cloud. Spot simple business uses."
           }
         },
         {
@@ -4037,7 +4037,7 @@
       "schema": "lp.content.activity",
       "schemaVersion": "0.1.0",
       "id": "week-2-reflection",
-      "version": "0.1.1",
+      "version": "0.1.0",
       "metadata": {
         "title": "Portfolio reflection",
         "status": "available",
@@ -6621,7 +6621,7 @@
               }
             ],
             "feedback": {
-              "correct": "Well done. Face unlock and playlists recognise patterns or learn from data. A calculator just follows set rules.",
+              "correct": "Correct. Face unlock and playlists recognise patterns or learn from data. A calculator just follows set rules.",
               "incorrect": "Some are not right yet. Being automatic is not the same as being AI. A calculator follows rules set by a person. AI recognises patterns or learns from data, such as recognising a face."
             }
           }
@@ -7092,7 +7092,7 @@
               }
             ],
             "feedback": {
-              "correct": "Well done. Responding to app commands is IoT only. Learning routines or recognising images adds AI.",
+              "correct": "Correct. Responding to app commands is IoT only. Learning routines or recognising images adds AI.",
               "incorrect": "Some are not right yet. Ask: does the device only connect and share data, or does it also learn, recognise or predict? A remote plug is IoT only. Recognising a person in a camera image needs AI."
             }
           }
@@ -7400,7 +7400,7 @@
               }
             ],
             "feedback": {
-              "correct": "Well done. The bump sensor takes information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
+              "correct": "Correct. The bump sensor takes information in. The onboard computer decides. Wheel motors and brushes carry out the actions.",
               "incorrect": "Some are not right yet. If a part gathers information, it is a sensor. If it decides, it is the controller. If it moves or does physical work, it is an actuator."
             }
           }
@@ -7540,7 +7540,7 @@
               }
             ],
             "feedback": {
-              "correct": "Well done. Fixed cycles and sensor-triggered doors are predetermined. Recognising objects and predicting what people will do are AI-enabled.",
+              "correct": "Correct. Fixed cycles and sensor-triggered doors are predetermined. Recognising objects and predicting what people will do are AI-enabled.",
               "incorrect": "Some are not right yet. Ask: would it behave exactly the same way every time? If yes, it is predetermined, even if it uses a sensor like the automatic doors. AI-enabled behaviour recognises, learns or predicts."
             }
           }
@@ -7918,7 +7918,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Training is how a neural network learns. Imagine teaching one to tell cats from dogs."
+            "text": "Training is how a neural network learns. For example, you might teach one to tell cats from dogs."
           }
         },
         {
@@ -8082,7 +8082,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "work very fast; automate repetitive tasks; analyse huge amounts of data (often called big data); give consistent results; spot patterns people might miss; and work day and night without breaks."
+            "text": "work very fast, automate repetitive tasks, analyse huge amounts of data (often called big data), give consistent results, spot patterns people might miss, and work day and night without breaks."
           }
         },
         {
@@ -8106,7 +8106,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "is only as good as its data; can make mistakes; can be biased, meaning unfair to some groups, if its training data was unbalanced; can be expensive to build and run; can raise privacy concerns because it often collects personal data; and lacks human judgement, empathy and common sense."
+            "text": "is only as good as its data, can make mistakes, and can be biased (unfair to some groups) if its training data was unbalanced. It can be expensive to build and run, and it can raise privacy concerns because it often collects personal data. It also lacks human judgement, empathy and common sense."
           }
         },
         {
@@ -8158,7 +8158,7 @@
               }
             ],
             "feedback": {
-              "correct": "Well done. Speed is a benefit. Bias from unfair training data is a limitation.",
+              "correct": "Correct. Speed is a benefit. Bias from unfair training data is a limitation.",
               "incorrect": "Some are not right yet. Benefits are things AI does well, such as speed. Limitations include bias from data."
             }
           }
@@ -8171,7 +8171,7 @@
       "id": "week-4-game-npc",
       "version": "0.1.0",
       "metadata": {
-        "title": "Scenario: Pixel Forge Games – an NPC that adapts",
+        "title": "Scenario: Pixel Forge Games: an NPC that adapts",
         "status": "available",
         "summary": "Decide whether two adapting Pixel Forge Games characters use AI, and what data an AI character learns from.",
         "href": null,
@@ -8199,7 +8199,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Scenario: Pixel Forge Games – an NPC that adapts",
+            "text": "Scenario: Pixel Forge Games: an NPC that adapts",
             "level": 2
           }
         },
@@ -8323,7 +8323,7 @@
       "id": "week-4-smart-gaming",
       "version": "0.1.0",
       "metadata": {
-        "title": "Scenario: Pixel Forge Games – a smart gaming setup",
+        "title": "Scenario: Pixel Forge Games: a smart gaming setup",
         "status": "available",
         "summary": "Select which data a Pixel Forge Games smart setup needs and identify a privacy concern.",
         "href": null,
@@ -8351,7 +8351,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Scenario: Pixel Forge Games – a smart gaming setup",
+            "text": "Scenario: Pixel Forge Games: a smart gaming setup",
             "level": 2
           }
         },
@@ -8455,7 +8455,7 @@
               }
             ],
             "feedback": {
-              "correct": "Well done. Game events and light readings are needed for the lighting jobs. Storing full recordings online is not needed for any job and creates a privacy risk.",
+              "correct": "Correct. Game events and light readings are needed for the lighting jobs. Storing full recordings online is not needed for any job and creates a privacy risk.",
               "incorrect": "Some are not right yet. Link each item to a job: game events for the colours and the light sensor for dimming. Detecting speech does not require storing full recordings online."
             }
           }
@@ -8771,7 +8771,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "These questions mix ideas from the whole week. Read each situation carefully and apply what you have learned."
+            "text": "These questions mix ideas from the whole week. Read each situation carefully and use the ideas from earlier activities."
           }
         },
         {
@@ -9512,7 +9512,7 @@
             ],
             "correctOptionId": "b",
             "feedback": {
-              "correct": "Correct. These technologies build on sensors, networks, cloud services and software rather than replacing everything you have learned.",
+              "correct": "Correct. These technologies build on sensors, networks, cloud services and software rather than replacing earlier digital tools.",
               "incorrect": "Not quite. New technologies usually combine earlier ideas. Cloud is not limited to email, and connected devices can support VR or AR."
             },
             "sourceType": "single"
@@ -10163,7 +10163,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "VR is powerful, but it is not the right tool for every job. Sometimes a simple video or a real practice session is clearer and cheaper."
+            "text": "VR can be useful, but it is not the right tool for every job. Sometimes a simple video or a real practice session is clearer and cheaper."
           }
         },
         {
@@ -10306,7 +10306,7 @@
           "relationships": {},
           "content": {
             "tone": "info",
-            "title": "Remember",
+            "title": "Note",
             "text": "VR surrounds you in a virtual world. AR keeps the real world and adds digital extras on top."
           }
         },
@@ -11029,7 +11029,7 @@
             "correctOptionId": "a",
             "feedback": {
               "correct": "Correct. That surrounding-versus-overlay difference is the key idea for Level 2.",
-              "incorrect": "Not quite. Remember: VR surrounds you in a virtual world; AR overlays digital content on reality."
+              "incorrect": "Not quite. VR surrounds you in a virtual world. AR overlays digital content on reality."
             },
             "sourceType": "single"
           }
@@ -12837,7 +12837,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Remember: Pixel Forge Games is the same fictional studio. Alongside digital games, its hardware team sometimes makes physical objects to test how controllers feel and to show characters on marketing desks."
+            "text": "Pixel Forge Games is the same fictional studio. Alongside digital games, its hardware team sometimes makes physical objects to test how controllers feel and to show characters on marketing desks."
           }
         },
         {
@@ -12989,7 +12989,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Pixel Forge Games is deciding which emerging technology fits each job. Use what you have learned: VR for fully virtual worlds, AR for digital extras on the real world, 3D printing for stable physical prototypes, and 4D printing only for experimental designed change after printing."
+            "text": "Pixel Forge Games is deciding which emerging technology fits each job. Use the ideas from this week: VR for fully virtual worlds, AR for digital extras on the real world, 3D printing for stable physical prototypes, and 4D printing only for experimental designed change after printing."
           }
         },
         {
@@ -13440,8 +13440,8 @@
             ],
             "correctOptionId": "a",
             "feedback": {
-              "correct": "Correct. 3D printing shines for custom and small batches; huge identical runs often suit other methods.",
-              "incorrect": "Not quite. Scale and cost matter. 3D printing is powerful, but not always best for huge identical runs."
+              "correct": "Correct. 3D printing suits custom and small batches. Huge identical runs often suit other methods.",
+              "incorrect": "Not quite. Scale and cost matter. 3D printing helps with custom work, but it is not always best for huge identical runs."
             },
             "sourceType": "single"
           }
@@ -14165,7 +14165,7 @@
           "content": {
             "tone": "info",
             "title": "Simple example",
-            "text": "Imagine sending a message from your phone to a game server. Latency is the wait before the server's reply reaches you. Shorter waits feel more responsive."
+            "text": "Think about sending a message from your phone to a game server. Latency is the wait before the server's reply reaches you. Shorter waits feel more responsive."
           }
         },
         {
@@ -15006,7 +15006,7 @@
             ],
             "correctOptionId": "a",
             "feedback": {
-              "correct": "Correct. Remember address supply and networking design, not a magic speed boost.",
+              "correct": "Correct. Focus on address supply and networking design, not a magic speed boost.",
               "incorrect": "Not quite. Do not treat IPv6 as only a speed upgrade."
             },
             "sourceType": "single"
@@ -15706,7 +15706,7 @@
           "relationships": {},
           "content": {
             "tone": "info",
-            "title": "Remember",
+            "title": "Note",
             "text": "Serverless computing does not mean \"no computers\". It means \"you do not manage the servers yourself\"."
           }
         },
@@ -16477,7 +16477,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Imagine Pixel Forge Games with a main office, a development studio and another business location. Staff need to share files, join calls and reach internal systems securely and reliably."
+            "text": "Suppose Pixel Forge Games has a main office, a development studio and another business location. Staff need to share files, join calls and reach internal systems securely and reliably."
           }
         },
         {
@@ -17176,7 +17176,7 @@
             "correctOptionId": "a",
             "feedback": {
               "correct": "Correct. The name is misleading if taken literally.",
-              "incorrect": "Not quite. Remember that servers still exist under the provider's care."
+              "incorrect": "Not quite. Servers still exist under the provider's care."
             },
             "sourceType": "single"
           }
@@ -17756,7 +17756,7 @@
             "correctOptionId": "b",
             "feedback": {
               "correct": "Correct. IPv6 is mainly about address space, not a guaranteed speed boost.",
-              "incorrect": "Not quite. Remember the Week 6 outlines: IPv6 expands addresses; serverless still uses servers."
+              "incorrect": "Not quite. Keep the Week 6 outlines in mind. IPv6 expands addresses. Serverless still uses servers."
             },
             "sourceType": "single"
           }
@@ -18000,7 +18000,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "People often control drones from the ground with a remote controller or an app. Some drones can follow set routes more independently. You do not need deep engineering detail for AC1.1 — focus on what they are and what they are used for."
+            "text": "People often control drones from the ground with a remote controller or an app. Some drones can follow set routes more independently. You do not need deep engineering detail for AC1.1. Focus on what they are and what they are used for."
           }
         },
         {
@@ -18014,7 +18014,7 @@
           "content": {
             "tone": "info",
             "title": "Key term: UAV",
-            "text": "UAV means Unmanned Aerial Vehicle — an aircraft without a human pilot on board."
+            "text": "UAV means Unmanned Aerial Vehicle: an aircraft without a human pilot on board."
           }
         },
         {
@@ -18154,7 +18154,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "Some flights are mainly manual: a person steers carefully. Other modes are more autonomous: the drone follows a planned path or tracks a subject with less constant stick input. Either way, a responsible operator still plans the flight."
+            "text": "Some flights are mainly manual, with a person steering carefully. Other modes are more autonomous, where the drone follows a planned path or tracks a subject with less constant stick input. Either way, a responsible operator still plans the flight."
           }
         },
         {
@@ -18770,7 +18770,7 @@
           "metadata": {},
           "relationships": {},
           "content": {
-            "text": "An algorithm here means a set of rules or calculations used by software. Social media often uses algorithms to show personalised recommendations — posts the system predicts you may like based on what you watch, like or follow."
+            "text": "An algorithm here means a set of rules or calculations used by software. Social media often uses algorithms to show personalised recommendations (posts the system predicts you may like based on what you watch, like or follow)."
           }
         },
         {
@@ -19288,7 +19288,7 @@
             "options": [
               {
                 "id": "a",
-                "label": "A video blog — regular video updates shared online"
+                "label": "A video blog: regular video updates shared online"
               },
               {
                 "id": "b",
@@ -20592,7 +20592,7 @@
             "correctOptionId": "a",
             "feedback": {
               "correct": "Correct. Real-world limits and rules still apply.",
-              "incorrect": "Not quite. Remember practical limits and responsibilities."
+              "incorrect": "Not quite. Keep practical limits and responsibilities in mind."
             },
             "sourceType": "single"
           }
@@ -20995,7 +20995,7 @@
       "metadata": {
         "title": "Welcome to Week 8",
         "status": "available",
-        "summary": "Introduce AC2.1 personal and business uses; recap that Weeks 1–7 already outlined the technologies.",
+        "summary": "Introduce AC2.1 personal and business uses. Recap that Weeks 1 to 7 already outlined the technologies.",
         "href": null,
         "difficulty": "standard",
         "estimatedDurationMinutes": 5,
@@ -23737,7 +23737,7 @@
               },
               {
                 "id": "b",
-                "label": "Nothing — one use is always enough for every criterion"
+                "label": "Nothing: one use is always enough for every criterion"
               },
               {
                 "id": "c",
