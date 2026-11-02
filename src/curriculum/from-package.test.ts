@@ -24,16 +24,17 @@ describe("L2E package hydration", () => {
     expect(result.valid).toBe(true);
   });
 
-  it("exposes Weeks 1 to 6 for the learner home and week pages", () => {
+  it("exposes Weeks 1 to 7 for the learner home and week pages", () => {
     const weeks = homeWeeksFromPackage(pkg);
-    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6"]);
-    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/", "week-5/", "week-6/"]);
+    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7"]);
+    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/", "week-5/", "week-6/", "week-7/"]);
     expect(weeks[0].title).toBe("Introduction to New and Emerging Digital Technologies");
     expect(weeks[1].title).toBe("Internet of Things, RFID, NFC and Wearables");
     expect(weeks[2].title).toBe("Cloud Technology, SaaS, IaaS, PaaS and DaaS");
     expect(weeks[3].title).toBe("AI and Intelligent Computing: Smart Devices, Robots and Neural Networks");
     expect(weeks[4].title).toBe("Virtual Reality, Augmented Reality, 3D Printing and 4D Printing");
     expect(weeks[5].title).toBe("5G, IPv6, Blockchain, Serverless Computing and SD-WAN");
+    expect(weeks[6].title).toBe("Drones, Social Media, Vlogs and Emerging Technologies Consolidation");
     expect(weeks[0].current).toBe(true);
     const week1 = weekPageFromPackage(pkg, "week-1");
     expect(week1?.sessions.map((item) => item.id)).toEqual(["week-1-session"]);
@@ -281,6 +282,78 @@ describe("L2E package hydration", () => {
     expect(activities.every(Boolean)).toBe(true);
     const extensions = activities.filter((activity) => activity?.metadata?.activityType === "Extension");
     expect(extensions.map((activity) => activity?.id)).toEqual(["week-6-reflection"]);
+    expect(extensions.every((activity) => activity?.metadata?.title?.startsWith("Extension: "))).toBe(true);
+    const types = new Set(activities.flatMap((activity) => (activity?.blocks || []).map((block) => String(block.type))));
+    for (const type of ["single-choice", "classification", "short-response", "reflection"]) {
+      expect(types.has(type), type).toBe(true);
+    }
+    for (const activity of activities) {
+      for (const block of activity?.blocks || []) {
+        const content = (block.content || {}) as {
+          correctOptionId?: string;
+          options?: Array<{ id: string }>;
+          items?: Array<{ correctCategoryId: string }>;
+          categories?: Array<{ id: string }>;
+        };
+        if (block.type === "single-choice") {
+          expect(content.options?.some((option) => option.id === content.correctOptionId), block.id).toBe(true);
+        }
+        if (block.type === "classification") {
+          const categoryIds = new Set((content.categories || []).map((category) => category.id));
+          expect(content.items?.every((item) => categoryIds.has(item.correctCategoryId)), block.id).toBe(true);
+        }
+      }
+    }
+
+    const allIds = pkg.activities.map((item) => item.id);
+    expect(new Set(allIds).size).toBe(allIds.length);
+    const questionIds = pkg.activities.flatMap((item) => (item.blocks || [])
+      .map((block) => (block.content as { questionId?: string } | undefined)?.questionId)
+      .filter(Boolean));
+    expect(new Set(questionIds).size).toBe(questionIds.length);
+  });
+
+
+  it("wires the Week 7 drones/media session with unique ids and extension homework before the exit", () => {
+    const published = structuredClone(bundled);
+    const week7 = published.weeks?.find((item) => item.id === "week-7");
+    if (!week7?.metadata) throw new Error("missing week-7");
+    week7.metadata.status = "available";
+    const page = weekPageFromPackage(published, "week-7");
+    const ids = page?.sessions[0]?.activities.map((item) => item.id) || [];
+    expect(page?.sessions.map((item) => item.id)).toEqual(["week-7-session"]);
+    expect(ids).toEqual([
+      "week-7-starter",
+      "week-7-recap-connect",
+      "week-7-drone-intro",
+      "week-7-drone-how",
+      "week-7-drone-uses",
+      "week-7-drone-limits",
+      "week-7-drone-apply",
+      "week-7-social-intro",
+      "week-7-social-algo",
+      "week-7-social-uses",
+      "week-7-social-limits",
+      "week-7-social-apply",
+      "week-7-vlog-intro",
+      "week-7-vlog-create",
+      "week-7-vlog-uses",
+      "week-7-vlog-apply",
+      "week-7-match-uses",
+      "week-7-pf-scenarios",
+      "week-7-consolidate-map",
+      "week-7-consolidate-check",
+      "week-7-consolidate-write",
+      "week-7-knowledge-check",
+      "week-7-knowledge-check-b",
+      "week-7-reflection",
+      "week-7-exit"
+    ]);
+
+    const activities = ids.map((id) => pkg.activities.find((item) => item.id === id));
+    expect(activities.every(Boolean)).toBe(true);
+    const extensions = activities.filter((activity) => activity?.metadata?.activityType === "Extension");
+    expect(extensions.map((activity) => activity?.id)).toEqual(["week-7-reflection"]);
     expect(extensions.every((activity) => activity?.metadata?.title?.startsWith("Extension: "))).toBe(true);
     const types = new Set(activities.flatMap((activity) => (activity?.blocks || []).map((block) => String(block.type))));
     for (const type of ["single-choice", "classification", "short-response", "reflection"]) {

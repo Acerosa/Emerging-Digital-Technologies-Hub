@@ -34,7 +34,8 @@
         "week-3",
         "week-4",
         "week-5",
-        "week-6"
+        "week-6",
+        "week-7"
       ]
     }
   },
@@ -199,6 +200,29 @@
         "assignment": "formative-practice",
         "sessions": [
           "week-6-session"
+        ]
+      }
+    },
+    {
+      "schema": "lp.content.week",
+      "schemaVersion": "0.1.0",
+      "id": "week-7",
+      "version": "0.1.0",
+      "metadata": {
+        "teachingWeek": 7,
+        "title": "Drones, Social Media, Vlogs and Emerging Technologies Consolidation",
+        "status": "planned",
+        "professionalPractice": "LO1 / AC 1.1 - outline drones, social media, vlogs and consolidate emerging technologies",
+        "route": "week-7/"
+      },
+      "relationships": {
+        "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "sessions": [
+          "week-7-session"
         ]
       }
     }
@@ -437,6 +461,50 @@
           "week-6-knowledge-check-b",
           "week-6-reflection",
           "week-6-exit"
+        ]
+      }
+    },
+    {
+      "schema": "lp.content.session",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-session",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Week 7 session",
+        "kind": "session",
+        "summary": "One 1.5-hour session: drones, social media, vlogs, Pixel Forge scenarios and AC1.1 consolidation.",
+        "sortOrder": 1,
+        "defaultOpen": true,
+        "status": "available"
+      },
+      "relationships": {
+        "week": "week-7",
+        "activities": [
+          "week-7-starter",
+          "week-7-recap-connect",
+          "week-7-drone-intro",
+          "week-7-drone-how",
+          "week-7-drone-uses",
+          "week-7-drone-limits",
+          "week-7-drone-apply",
+          "week-7-social-intro",
+          "week-7-social-algo",
+          "week-7-social-uses",
+          "week-7-social-limits",
+          "week-7-social-apply",
+          "week-7-vlog-intro",
+          "week-7-vlog-create",
+          "week-7-vlog-uses",
+          "week-7-vlog-apply",
+          "week-7-match-uses",
+          "week-7-pf-scenarios",
+          "week-7-consolidate-map",
+          "week-7-consolidate-check",
+          "week-7-consolidate-write",
+          "week-7-knowledge-check",
+          "week-7-knowledge-check-b",
+          "week-7-reflection",
+          "week-7-exit"
         ]
       }
     }
@@ -17496,6 +17564,3346 @@
           "relationships": {},
           "content": {
             "text": "Before you finish, tell your tutor how confident you feel outlining 5G, IPv6, blockchain, serverless computing and SD-WAN."
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-starter",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Welcome to Week 7",
+        "status": "available",
+        "summary": "Recap Week 6 ideas, then set the focus for drones, social media, vlogs and AC1.1 consolidation.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Starter",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-starter-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Welcome to Week 7",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-starter-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "This week you outline drones, social media and vlogs. You then consolidate emerging technologies from Weeks 1 to 6 for Assessment Criterion (AC) 1.1."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-starter-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "By the end of this week",
+            "text": "You will be able to say what drones, social media and vlogs are, give practical uses for each, and match earlier technologies to simple real-world examples. This is the last teaching week focused on AC1.1 before later learning outcomes."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-starter-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Quick check from Week 6: 5G is fifth-generation mobile network technology. IPv6 (Internet Protocol version 6) mainly expands IP addresses. Blockchain records linked shared history. Serverless computing still uses servers, but the provider manages much of the infrastructure. SD-WAN (Software-Defined Wide Area Network) manages links between sites."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-starter-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-starter-q1",
+            "prompt": "Which statement from Week 6 is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Serverless computing means no computers exist anywhere"
+              },
+              {
+                "id": "b",
+                "label": "IPv6 mainly provides a much larger address space; it is not simply a faster internet"
+              },
+              {
+                "id": "c",
+                "label": "SD-WAN deletes the need for any network security"
+              },
+              {
+                "id": "d",
+                "label": "5G only works on paper maps"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. IPv6 is mainly about address space, not a guaranteed speed boost.",
+              "incorrect": "Not quite. Remember the Week 6 outlines: IPv6 expands addresses; serverless still uses servers."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-starter-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-starter-q2",
+            "prompt": "What will you focus on this week for AC1.1?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Only spreadsheet formulas and paper filing"
+              },
+              {
+                "id": "b",
+                "label": "Drones, social media, vlogs, then consolidation of emerging technologies from earlier weeks"
+              },
+              {
+                "id": "c",
+                "label": "Only AC2.2 cost tables with no technology outlines"
+              },
+              {
+                "id": "d",
+                "label": "Only repairing physical network cables"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. This week adds three technologies and consolidates AC1.1 ideas from Weeks 1 to 6.",
+              "incorrect": "Not quite. Read the welcome text again."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-recap-connect",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Linking earlier technologies",
+        "status": "available",
+        "summary": "Connect networks, cloud, AI and media ideas to this week's drones, social media and vlogs.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 4,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-recap-connect-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Linking earlier technologies",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-recap-connect-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Drones can use cameras, sensors and wireless links. Social media and vlogs often run on cloud services and mobile networks. Artificial Intelligence (AI) may help recommend posts or edit video."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-recap-connect-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Pixel Forge Games already uses trailers, community posts and behind-the-scenes video. This week helps you outline those media tools alongside drones for promotional aerial clips."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-recap-connect-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-recap-connect-q1",
+            "prompt": "Which statement is most accurate?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Drones, social media and vlogs never use any earlier digital technologies"
+              },
+              {
+                "id": "b",
+                "label": "These technologies often combine cameras, networks, cloud services and software ideas you already know"
+              },
+              {
+                "id": "c",
+                "label": "Cloud computing only works with paper letters"
+              },
+              {
+                "id": "d",
+                "label": "AI recommendations are identical to 3D printing"
+              }
+            ],
+            "correctOptionId": "b",
+            "feedback": {
+              "correct": "Correct. New tools usually build on networks, devices and software you have already met.",
+              "incorrect": "Not quite. Think about how media and drones use cameras, networks and cloud services."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-recap-connect-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-recap-connect-q2",
+            "prompt": "Why might Pixel Forge care about this week?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Promotional footage, announcements and development diaries support player engagement"
+              },
+              {
+                "id": "b",
+                "label": "Games never use video or online communities"
+              },
+              {
+                "id": "c",
+                "label": "AC1.1 only covers printers"
+              },
+              {
+                "id": "d",
+                "label": "Drones replace the need for any game design"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Media and aerial clips can support marketing and community updates.",
+              "incorrect": "Not quite. Focus on promotion and player communication."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-drone-intro",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "What are drones?",
+        "status": "available",
+        "summary": "Define drones and Unmanned Aerial Vehicles (UAVs) in plain English.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-intro-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "What are drones?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-intro-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A drone is an aircraft that flies without a pilot on board. Many drones are also called Unmanned Aerial Vehicles (UAVs)."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-intro-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "People often control drones from the ground with a remote controller or an app. Some drones can follow set routes more independently. You do not need deep engineering detail for AC1.1 — focus on what they are and what they are used for."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-intro-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Key term: UAV",
+            "text": "UAV means Unmanned Aerial Vehicle — an aircraft without a human pilot on board."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-intro-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-intro-q1",
+            "prompt": "What is a drone in this unit?",
+            "options": [
+              {
+                "id": "a",
+                "label": "An aircraft that flies without a pilot on board"
+              },
+              {
+                "id": "b",
+                "label": "A type of spreadsheet formula"
+              },
+              {
+                "id": "c",
+                "label": "A paper newsletter only"
+              },
+              {
+                "id": "d",
+                "label": "A blockchain wallet password"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Drones are unmanned aircraft, often called UAVs.",
+              "incorrect": "Not quite. Keep the outline simple: aircraft without a pilot on board."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-intro-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-intro-q2",
+            "prompt": "What does UAV stand for?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Unmanned Aerial Vehicle"
+              },
+              {
+                "id": "b",
+                "label": "Ultra Audio Volume"
+              },
+              {
+                "id": "c",
+                "label": "User Account Validation"
+              },
+              {
+                "id": "d",
+                "label": "Urban Art Venue"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. UAV expands to Unmanned Aerial Vehicle.",
+              "incorrect": "Not quite. Expand each letter: Unmanned Aerial Vehicle."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-drone-how",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "How drones operate",
+        "status": "available",
+        "summary": "Outline cameras, sensors, remote control, and manual versus more autonomous flight.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-how-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "How drones operate",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-how-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Many drones carry cameras or other sensors. Sensors collect information such as position, height or images. A remote control or mobile app lets an operator steer the drone."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-how-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Some flights are mainly manual: a person steers carefully. Other modes are more autonomous: the drone follows a planned path or tracks a subject with less constant stick input. Either way, a responsible operator still plans the flight."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-how-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-how-q1",
+            "prompt": "What do drone cameras and sensors mainly do?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Collect images or other flight and environment data"
+              },
+              {
+                "id": "b",
+                "label": "Print plastic cases"
+              },
+              {
+                "id": "c",
+                "label": "Replace the need for electricity"
+              },
+              {
+                "id": "d",
+                "label": "Turn the drone into a spreadsheet"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Cameras and sensors gather useful data during flight.",
+              "incorrect": "Not quite. Think about collecting images and flight information."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-how-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-how-q2",
+            "prompt": "Which statement is accurate?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Drones can be steered manually or follow more automated routes, depending on the mode and design"
+              },
+              {
+                "id": "b",
+                "label": "Every drone always flies with no operator planning at all"
+              },
+              {
+                "id": "c",
+                "label": "Remote control is never used with drones"
+              },
+              {
+                "id": "d",
+                "label": "Autonomous always means the drone ignores all safety rules"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Control can be more manual or more automated, but planning still matters.",
+              "incorrect": "Not quite. Operators still plan flights even when some modes are assisted."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-drone-uses",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Where drones are used",
+        "status": "available",
+        "summary": "Outline practical drone applications including Pixel Forge promotional footage.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-uses-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Where drones are used",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-uses-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Drones are used for photography and film, delivery trials, agriculture surveys, inspections of roofs or towers, and some emergency-service views of hard-to-reach places."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-uses-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Pixel Forge Games might use a drone to capture aerial footage of a launch event or outdoor promo shoot for a trailer, when rules and permissions allow it."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-uses-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-uses-q1",
+            "prompt": "Which is a practical drone use?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Inspecting a tall structure safely from the air"
+              },
+              {
+                "id": "b",
+                "label": "Editing a spreadsheet with no camera"
+              },
+              {
+                "id": "c",
+                "label": "Sending only paper post with no aircraft"
+              },
+              {
+                "id": "d",
+                "label": "Turning off all wireless networks forever"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Inspections and aerial views are common practical uses.",
+              "incorrect": "Not quite. Look for an aerial imaging or survey-style use."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-uses-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-uses-q2",
+            "prompt": "How could Pixel Forge use a drone legally and carefully?",
+            "options": [
+              {
+                "id": "a",
+                "label": "To film aerial promotional clips of an outdoor event when permissions allow"
+              },
+              {
+                "id": "b",
+                "label": "To ignore all privacy rules near people's homes"
+              },
+              {
+                "id": "c",
+                "label": "To replace every programmer with a flying camera"
+              },
+              {
+                "id": "d",
+                "label": "To delete the need for any game art"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Promotional aerial footage is a realistic studio use when done responsibly.",
+              "incorrect": "Not quite. Focus on careful promotional filming, not rule-breaking."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-drone-limits",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Drone benefits, limits and safety",
+        "status": "available",
+        "summary": "Weigh advantages against safety, privacy and security considerations.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-limits-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Drone benefits, limits and safety",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-limits-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Benefits include useful aerial views, reaching difficult places, and capturing footage that would be hard from the ground. Limitations include battery life, weather, cost, training needs and flight rules."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-limits-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Safety, privacy and security matter. Operators must avoid harming people or property, respect private spaces, and follow local laws. A flying camera can raise privacy concerns if used carelessly."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-limits-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-limits-q1",
+            "prompt": "Which pair correctly matches a benefit and a limitation?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Benefit: aerial views of hard-to-reach places; limitation: weather and battery life can restrict flights"
+              },
+              {
+                "id": "b",
+                "label": "Benefit: unlimited flight with no rules; limitation: drones never carry cameras"
+              },
+              {
+                "id": "c",
+                "label": "Benefit: no training ever needed; limitation: drones cannot fly outdoors"
+              },
+              {
+                "id": "d",
+                "label": "Benefit: privacy is never a concern; limitation: images cannot be stored"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Aerial access is useful; weather and batteries are real limits.",
+              "incorrect": "Not quite. Pick a true benefit paired with a true limitation."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-limits-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-limits-q2",
+            "prompt": "Why do privacy and safety matter for drone use?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Careless flights can risk people, property or private spaces"
+              },
+              {
+                "id": "b",
+                "label": "Privacy rules never apply to cameras"
+              },
+              {
+                "id": "c",
+                "label": "Safety only matters for paper planes"
+              },
+              {
+                "id": "d",
+                "label": "Drones cannot collect any images"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Responsible use protects people and respects privacy.",
+              "incorrect": "Not quite. Think about harm, private spaces and responsible filming."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-drone-apply",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Apply: a drone use for Pixel Forge",
+        "status": "available",
+        "summary": "Identify a suitable drone use and note one safety or privacy point.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-apply-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Apply: a drone use for Pixel Forge",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-apply-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Choose a realistic promotional or filming use. Mention one safety or privacy point."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-drone-apply-q",
+          "version": "0.1.0",
+          "type": "short-response",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-drone-apply-q",
+            "prompt": "Describe one way Pixel Forge Games could use a drone and one safety or privacy point the team should remember.",
+            "guidance": "A satisfactory answer names a clear use (for example aerial promo footage) and one responsible point such as permissions, avoiding private gardens, or safe distance from people. Write at least 200 characters.",
+            "minChars": 200
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-social-intro",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "What is social media?",
+        "status": "available",
+        "summary": "Define social media platforms and how they support communication and sharing.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-intro-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "What is social media?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-intro-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Social media platforms are online services where people create, share and discuss content. Examples include short-video apps, image feeds and community pages."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-intro-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Social media has grown from simple status updates into rich media, live streams and business pages. Users communicate, follow creators and share news or entertainment."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-intro-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-intro-q1",
+            "prompt": "What are social media platforms?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Online services where people create, share and discuss content"
+              },
+              {
+                "id": "b",
+                "label": "Only paper noticeboards in one office"
+              },
+              {
+                "id": "c",
+                "label": "Only offline board games"
+              },
+              {
+                "id": "d",
+                "label": "Only 3D printers"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Social media is about creating and sharing content online.",
+              "incorrect": "Not quite. Focus on online sharing and discussion."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-intro-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-intro-q2",
+            "prompt": "How has social media mainly evolved?",
+            "options": [
+              {
+                "id": "a",
+                "label": "From simple updates toward richer media, communities and business use"
+              },
+              {
+                "id": "b",
+                "label": "By deleting the internet"
+              },
+              {
+                "id": "c",
+                "label": "By banning all images forever"
+              },
+              {
+                "id": "d",
+                "label": "By replacing electricity with candles only"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Platforms now support richer content and wider uses.",
+              "incorrect": "Not quite. Think about growth in media types and communities."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-social-algo",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Algorithms and recommendations",
+        "status": "available",
+        "summary": "Explain personalised recommendations in plain Level 2 language.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 4,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-algo-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Algorithms and recommendations",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-algo-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "An algorithm here means a set of rules or calculations used by software. Social media often uses algorithms to show personalised recommendations — posts the system predicts you may like based on what you watch, like or follow."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-algo-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "That can help people find useful content. It can also create filter bubbles or spread low-quality posts if users are not careful."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-algo-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-algo-q1",
+            "prompt": "What do personalised recommendations mainly try to do?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Show content the system predicts the user may engage with"
+              },
+              {
+                "id": "b",
+                "label": "Print every post onto paper overnight"
+              },
+              {
+                "id": "c",
+                "label": "Turn off the user's device permanently"
+              },
+              {
+                "id": "d",
+                "label": "Replace the need for any network"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Recommendations try to match content to predicted interests.",
+              "incorrect": "Not quite. Think about suggesting posts based on activity."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-algo-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-algo-q2",
+            "prompt": "Which statement is balanced?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Recommendations can help discovery, but users should still think carefully about what they trust and share"
+              },
+              {
+                "id": "b",
+                "label": "Algorithms always show only perfect true information"
+              },
+              {
+                "id": "c",
+                "label": "Algorithms never affect what people see"
+              },
+              {
+                "id": "d",
+                "label": "Social media cannot show any video"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Useful discovery still needs careful judgement.",
+              "incorrect": "Not quite. Keep benefits and risks in balance."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-social-uses",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Personal and business uses of social media",
+        "status": "available",
+        "summary": "Outline marketing, engagement and Pixel Forge community examples.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-uses-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Personal and business uses of social media",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-uses-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "People use social media to stay in touch, share hobbies and follow news. Businesses use it for marketing, customer engagement and support."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-uses-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Pixel Forge Games can announce releases, share trailers, collect community feedback and talk with players. Social media marketing means promoting a product or brand through these platforms."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-uses-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-uses-q1",
+            "prompt": "Which is a business use of social media?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Sharing a game trailer and answering player questions on a studio page"
+              },
+              {
+                "id": "b",
+                "label": "Only writing on sticky notes with no digital tools"
+              },
+              {
+                "id": "c",
+                "label": "Turning off all player communication"
+              },
+              {
+                "id": "d",
+                "label": "Printing a network cable"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Announcements and engagement are common business uses.",
+              "incorrect": "Not quite. Look for marketing or community communication."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-uses-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-uses-q2",
+            "prompt": "What does customer engagement mean here?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Building ongoing interaction with customers or players through replies, posts and shared content"
+              },
+              {
+                "id": "b",
+                "label": "Never answering any message"
+              },
+              {
+                "id": "c",
+                "label": "Deleting every community page"
+              },
+              {
+                "id": "d",
+                "label": "Replacing players with paper forms only"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Engagement is about ongoing, two-way interaction.",
+              "incorrect": "Not quite. Think about talking with and listening to players."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-social-limits",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Social media benefits, limits and safety",
+        "status": "available",
+        "summary": "Cover benefits plus privacy, misinformation and online safety.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-limits-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Social media benefits, limits and safety",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-limits-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Benefits include wide reach, fast updates and community building. Limitations include time cost, negative comments, platform rule changes and uneven reach."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-limits-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Privacy, misinformation and online safety matter. Misinformation means false or misleading information presented as if it were true. Users and studios should protect personal data, check sources and behave respectfully."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-limits-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-limits-q1",
+            "prompt": "What is misinformation?",
+            "options": [
+              {
+                "id": "a",
+                "label": "False or misleading information presented as if it were true"
+              },
+              {
+                "id": "b",
+                "label": "A type of drone propeller"
+              },
+              {
+                "id": "c",
+                "label": "A cloud storage folder name only"
+              },
+              {
+                "id": "d",
+                "label": "A printer ink colour"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Misinformation is false or misleading content.",
+              "incorrect": "Not quite. Focus on false or misleading information."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-limits-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-limits-q2",
+            "prompt": "Which safety practice is sensible for Pixel Forge staff?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Protect account access, avoid sharing private personal data, and check facts before posting"
+              },
+              {
+                "id": "b",
+                "label": "Post every password in public comments"
+              },
+              {
+                "id": "c",
+                "label": "Ignore all privacy settings forever"
+              },
+              {
+                "id": "d",
+                "label": "Assume every viral claim is automatically true"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Protect accounts, privacy and accuracy.",
+              "incorrect": "Not quite. Choose responsible online behaviour."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-social-apply",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Apply: social media for a game launch",
+        "status": "available",
+        "summary": "Explain one social media use for Pixel Forge and one risk to manage.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-apply-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Apply: social media for a game launch",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-apply-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Think about announcements, trailers or community feedback. Add one privacy, misinformation or safety point."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-social-apply-q",
+          "version": "0.1.0",
+          "type": "short-response",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-social-apply-q",
+            "prompt": "Describe one way Pixel Forge could use social media for a launch and one risk the team should manage.",
+            "guidance": "A satisfactory answer names a clear use (trailer, announcement or player replies) and one risk such as privacy, misinformation, harassment or account security. Write at least 200 characters.",
+            "minChars": 200
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-vlog-intro",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "What is a vlog?",
+        "status": "available",
+        "summary": "Define vlogs and contrast them with blogs.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 4,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-intro-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "What is a vlog?",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-intro-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "A vlog is a video blog: regular video updates shared online. A blog is usually written text posts. Both can inform or entertain, but a vlog uses video as the main format."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-intro-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Creators film, edit and upload episodes. Viewers watch on social platforms or video sites."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-intro-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-intro-q1",
+            "prompt": "What is a vlog?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A video blog — regular video updates shared online"
+              },
+              {
+                "id": "b",
+                "label": "A paper-only diary locked in a drawer"
+              },
+              {
+                "id": "c",
+                "label": "A type of UAV propeller"
+              },
+              {
+                "id": "d",
+                "label": "A spreadsheet formula"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Vlog means video blog.",
+              "incorrect": "Not quite. Focus on regular video updates shared online."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-intro-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-intro-q2",
+            "prompt": "How does a vlog mainly differ from a typical blog?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A vlog centres on video; a typical blog centres on written text"
+              },
+              {
+                "id": "b",
+                "label": "A vlog can never be shared online"
+              },
+              {
+                "id": "c",
+                "label": "A blog always requires a drone"
+              },
+              {
+                "id": "d",
+                "label": "They are identical in every way"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. The main difference is video versus written posts.",
+              "incorrect": "Not quite. Compare video format with written posts."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-vlog-create",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Creating and sharing video content",
+        "status": "available",
+        "summary": "Outline equipment, software, streaming and recorded video.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-create-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Creating and sharing video content",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-create-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Common equipment includes a camera or phone, microphone and lighting. Software is used to edit clips, add titles and export a finished file."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-create-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Recorded video is filmed first, then edited and uploaded later. Streaming means sending video live as it happens. Both can support tutorials or studio updates."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-create-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-create-q1",
+            "prompt": "What is the difference between streaming and recorded video?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Streaming is live as it happens; recorded video is filmed first and shared later"
+              },
+              {
+                "id": "b",
+                "label": "Streaming always means printing DVDs"
+              },
+              {
+                "id": "c",
+                "label": "Recorded video can never be edited"
+              },
+              {
+                "id": "d",
+                "label": "They both require a drone by law"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Live versus filmed-then-uploaded is the key difference.",
+              "incorrect": "Not quite. Think about live broadcast versus later upload."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-create-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-create-q2",
+            "prompt": "Why might creators use editing software?",
+            "options": [
+              {
+                "id": "a",
+                "label": "To cut clips, add titles and prepare a clearer finished video"
+              },
+              {
+                "id": "b",
+                "label": "To delete the need for any camera"
+              },
+              {
+                "id": "c",
+                "label": "To turn video into a WAN cable"
+              },
+              {
+                "id": "d",
+                "label": "To replace electricity"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Editing improves clarity and presentation.",
+              "incorrect": "Not quite. Editing shapes the finished video."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-vlog-uses",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Vlogs for games and studios",
+        "status": "available",
+        "summary": "Cover personal and business uses, including development diaries.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Teaching",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-uses-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Vlogs for games and studios",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-uses-p1",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Personal uses include sharing hobbies and daily stories. Business uses include tutorials, product demos and behind-the-scenes updates."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-uses-p2",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Gaming content creators and studios often publish development diaries, tutorials and promotional videos. Pixel Forge could film short diary episodes about a feature build, then upload them to engage players."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-uses-c",
+          "version": "0.1.0",
+          "type": "callout",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "tone": "info",
+            "title": "Responsible publishing",
+            "text": "Respect copyright (do not use other people's protected work without permission), protect privacy, and avoid sharing confidential studio information."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-uses-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-uses-q1",
+            "prompt": "Which is a suitable Pixel Forge vlog idea?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A short development diary showing progress on a new feature"
+              },
+              {
+                "id": "b",
+                "label": "Publishing every staff home address"
+              },
+              {
+                "id": "c",
+                "label": "Uploading a competitor's full game files without permission"
+              },
+              {
+                "id": "d",
+                "label": "A vlog that contains only blank audio with no purpose"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Development diaries are a common studio video format.",
+              "incorrect": "Not quite. Choose a responsible promotional or diary-style use."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-uses-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-uses-q2",
+            "prompt": "Why does copyright matter when publishing a vlog?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Creators should not use other people's protected work without permission"
+              },
+              {
+                "id": "b",
+                "label": "Copyright only applies to paper books from 1800"
+              },
+              {
+                "id": "c",
+                "label": "Copyright means drones cannot fly"
+              },
+              {
+                "id": "d",
+                "label": "Copyright deletes all video platforms"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Respect ownership of music, footage and other protected works.",
+              "incorrect": "Not quite. Copyright protects creators' work."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-vlog-apply",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Apply: a Pixel Forge vlog idea",
+        "status": "available",
+        "summary": "Propose a short vlog and one responsible publishing point.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-apply-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Apply: a Pixel Forge vlog idea",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-apply-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Suggest a tutorial, diary or promo video. Mention copyright, privacy or confidentiality."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-vlog-apply-q",
+          "version": "0.1.0",
+          "type": "short-response",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-vlog-apply-q",
+            "prompt": "Describe one vlog Pixel Forge could publish and one responsible publishing point.",
+            "guidance": "A satisfactory answer names a clear video idea (diary, tutorial or promo) and one point about copyright, privacy or not sharing confidential builds. Write at least 200 characters.",
+            "minChars": 200
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-match-uses",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Match drones, social media and vlogs",
+        "status": "available",
+        "summary": "Match each technology to a suitable use case.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-match-uses-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Match drones, social media and vlogs",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-match-uses-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Choose the best fit for each situation."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-match-uses-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-match-uses-q",
+            "prompt": "Match each need to the most suitable technology.",
+            "categories": [
+              {
+                "id": "drone",
+                "label": "Drone / UAV"
+              },
+              {
+                "id": "social",
+                "label": "Social media"
+              },
+              {
+                "id": "vlog",
+                "label": "Vlog"
+              }
+            ],
+            "items": [
+              {
+                "id": "u1",
+                "text": "Capture aerial footage of an outdoor Pixel Forge launch event",
+                "correctCategoryId": "drone"
+              },
+              {
+                "id": "u2",
+                "text": "Post a short trailer announcement and reply to player comments the same day",
+                "correctCategoryId": "social"
+              },
+              {
+                "id": "u3",
+                "text": "Publish a weekly video development diary episode",
+                "correctCategoryId": "vlog"
+              },
+              {
+                "id": "u4",
+                "text": "Inspect a tall outdoor sign safely from the air before an event",
+                "correctCategoryId": "drone"
+              },
+              {
+                "id": "u5",
+                "text": "Run a community poll about which character skin players prefer",
+                "correctCategoryId": "social"
+              }
+            ],
+            "feedback": {
+              "correct": "Well matched. Aerial jobs suit drones, fast community posts suit social media, and regular video diaries suit vlogs.",
+              "incorrect": "Not quite. Ask whether the need is aerial capture, quick community posting, or a regular video episode."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-pf-scenarios",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Pixel Forge scenarios",
+        "status": "available",
+        "summary": "Choose suitable tools for short studio scenarios.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-pf-scenarios-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Pixel Forge scenarios",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-pf-scenarios-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "More than one tool can appear in a real campaign. These questions highlight the best main fit."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-pf-scenarios-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-pf-scenarios-q1",
+            "prompt": "The marketing team needs a sweeping outdoor shot of the venue. Which tool fits best?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A drone used with permissions and safety planning"
+              },
+              {
+                "id": "b",
+                "label": "A text-only blog post with no visuals"
+              },
+              {
+                "id": "c",
+                "label": "IPv6 address planning alone"
+              },
+              {
+                "id": "d",
+                "label": "SD-WAN office routing alone"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Aerial venue shots point to a carefully planned drone flight.",
+              "incorrect": "Not quite. Look for aerial filming."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-pf-scenarios-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-pf-scenarios-q2",
+            "prompt": "Players ask questions under a trailer post. Which approach fits best?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Reply through the studio social media accounts"
+              },
+              {
+                "id": "b",
+                "label": "Fly a drone indoors over desks without a plan"
+              },
+              {
+                "id": "c",
+                "label": "Ignore all community channels"
+              },
+              {
+                "id": "d",
+                "label": "Publish staff private phone numbers in the trailer"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Social media supports fast community engagement.",
+              "incorrect": "Not quite. Focus on player communication on the platform."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-pf-scenarios-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-pf-scenarios-q3",
+            "prompt": "Designers want a weekly behind-the-scenes video series. Which format fits best?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A vlog-style development diary"
+              },
+              {
+                "id": "b",
+                "label": "A single unread email with no video"
+              },
+              {
+                "id": "c",
+                "label": "A blockchain ownership record for every brush stroke"
+              },
+              {
+                "id": "d",
+                "label": "A 5G mast installed under every desk"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Regular video diary episodes match a vlog format.",
+              "incorrect": "Not quite. Regular video updates point to a vlog."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-consolidate-map",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "AC1.1 consolidation: match technologies",
+        "status": "available",
+        "summary": "Match earlier emerging technologies to simple use cases.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 7,
+        "activityType": "Classification",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-map-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AC1.1 consolidation: match technologies",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-map-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Use Weeks 1 to 6 ideas. Pick the technology that best fits each short need."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-map-q",
+          "version": "0.1.0",
+          "type": "classification",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-map-q",
+            "prompt": "Match each situation to the most suitable technology group.",
+            "categories": [
+              {
+                "id": "iot",
+                "label": "IoT / RFID / NFC / wearables"
+              },
+              {
+                "id": "cloud",
+                "label": "Cloud (SaaS / IaaS / PaaS / DaaS)"
+              },
+              {
+                "id": "ai",
+                "label": "AI / smart devices / robots / neural networks"
+              },
+              {
+                "id": "immersive",
+                "label": "VR / AR / 3D / 4D printing"
+              },
+              {
+                "id": "net",
+                "label": "5G / IPv6 / blockchain / serverless / SD-WAN"
+              }
+            ],
+            "items": [
+              {
+                "id": "c1",
+                "text": "A warehouse tags stock so scanners can identify items wirelessly",
+                "correctCategoryId": "iot"
+              },
+              {
+                "id": "c2",
+                "text": "Staff use online apps and remote desktops hosted by a provider",
+                "correctCategoryId": "cloud"
+              },
+              {
+                "id": "c3",
+                "text": "A game NPC learns patterns from player behaviour to adapt challenges",
+                "correctCategoryId": "ai"
+              },
+              {
+                "id": "c4",
+                "text": "A headset surrounds a trainee in a computer-made practice world",
+                "correctCategoryId": "immersive"
+              },
+              {
+                "id": "c5",
+                "text": "A studio needs more IP addresses for thousands of new devices",
+                "correctCategoryId": "net"
+              }
+            ],
+            "feedback": {
+              "correct": "Well matched. Tags point to IoT-style tech, hosted apps to cloud, learning NPCs to AI, headsets to VR, and address growth to IPv6 within the networking set.",
+              "incorrect": "Not quite. Re-read each clue: tags, hosted apps, learning behaviour, surrounding headset, or many IP addresses."
+            }
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-consolidate-check",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "AC1.1 consolidation: quick outlines",
+        "status": "available",
+        "summary": "Check that learners can outline key technologies from earlier weeks.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-check-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AC1.1 consolidation: quick outlines",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-check-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-check-q1",
+            "prompt": "Which statement about the Internet of Things (IoT) is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "IoT means everyday objects connected to networks so they can share data"
+              },
+              {
+                "id": "b",
+                "label": "IoT means only paper forms"
+              },
+              {
+                "id": "c",
+                "label": "IoT means deleting all sensors"
+              },
+              {
+                "id": "d",
+                "label": "IoT is identical to a vlog"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Connected objects sharing data is the Level 2 outline.",
+              "incorrect": "Not quite. IoT is about connected devices and data."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-check-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-check-q2",
+            "prompt": "Which cloud model usually means ready-made software delivered online?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Software as a Service (SaaS)"
+              },
+              {
+                "id": "b",
+                "label": "Only 4D printing"
+              },
+              {
+                "id": "c",
+                "label": "Only RFID tags"
+              },
+              {
+                "id": "d",
+                "label": "Only SD-WAN cables"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. SaaS is software delivered as an online service.",
+              "incorrect": "Not quite. Expand SaaS: Software as a Service."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-check-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-check-q3",
+            "prompt": "How do Virtual Reality (VR) and Augmented Reality (AR) differ?",
+            "options": [
+              {
+                "id": "a",
+                "label": "VR surrounds you in a computer-made world; AR adds digital extras to the real world"
+              },
+              {
+                "id": "b",
+                "label": "VR and AR are always the same flat email"
+              },
+              {
+                "id": "c",
+                "label": "AR always hides the entire real world"
+              },
+              {
+                "id": "d",
+                "label": "VR means printing plastic only"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Surround versus overlay is the key difference.",
+              "incorrect": "Not quite. Keep VR (surround) and AR (overlay) separate."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-check-q4",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-check-q4",
+            "prompt": "Which technology helps manage network links between multiple offices?",
+            "options": [
+              {
+                "id": "a",
+                "label": "SD-WAN"
+              },
+              {
+                "id": "b",
+                "label": "A vlog microphone alone"
+              },
+              {
+                "id": "c",
+                "label": "A single social media hashtag alone"
+              },
+              {
+                "id": "d",
+                "label": "A paper map with no network"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. SD-WAN is about software-managed wide-area links.",
+              "incorrect": "Not quite. Multi-site networking points to SD-WAN."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-check-q5",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-check-q5",
+            "prompt": "Which new Week 7 technology is an unmanned aircraft?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A drone (UAV)"
+              },
+              {
+                "id": "b",
+                "label": "SaaS"
+              },
+              {
+                "id": "c",
+                "label": "NFC only"
+              },
+              {
+                "id": "d",
+                "label": "IPv6 only"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Drones are unmanned aircraft.",
+              "incorrect": "Not quite. Look for the UAV idea."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-consolidate-write",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "AC1.1 consolidation: short written outline",
+        "status": "available",
+        "summary": "Write a short outline of two technologies and one real-world use for each.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 7,
+        "activityType": "Application",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-write-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "AC1.1 consolidation: short written outline",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-write-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Pick any two technologies from Weeks 1 to 7. Keep explanations short and clear."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-consolidate-write-q",
+          "version": "0.1.0",
+          "type": "short-response",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-consolidate-write-q",
+            "prompt": "Choose two emerging technologies from this unit so far. For each one, say what it is and give one real-world use.",
+            "guidance": "A satisfactory answer names two technologies, gives a plain-English meaning for each, and one practical use for each. Write at least 200 characters.",
+            "minChars": 200
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-knowledge-check",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Knowledge check: drones, social media and vlogs",
+        "status": "available",
+        "summary": "Check definitions, uses and responsible practice.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 6,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kc-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Knowledge check: drones, social media and vlogs",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kc-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kc-q1",
+            "prompt": "Which expansion is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "UAV means Unmanned Aerial Vehicle"
+              },
+              {
+                "id": "b",
+                "label": "SaaS means Social Aerial Aircraft System"
+              },
+              {
+                "id": "c",
+                "label": "Vlog means Very Long Offline Game"
+              },
+              {
+                "id": "d",
+                "label": "IoT means Ink on Toast"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. UAV expands to Unmanned Aerial Vehicle.",
+              "incorrect": "Not quite. Check the drone acronym again."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kc-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kc-q2",
+            "prompt": "Which pair is most accurate?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Social media supports sharing and engagement; users must still watch privacy and misinformation risks"
+              },
+              {
+                "id": "b",
+                "label": "Social media never affects business communication"
+              },
+              {
+                "id": "c",
+                "label": "Vlogs cannot be recorded"
+              },
+              {
+                "id": "d",
+                "label": "Drones never use cameras"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Benefits come with responsibility.",
+              "incorrect": "Not quite. Keep a balanced outline."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kc-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kc-q3",
+            "prompt": "A studio wants live player Q&A on video. Which option fits best?",
+            "options": [
+              {
+                "id": "a",
+                "label": "A live stream, with a recorded vlog upload later if needed"
+              },
+              {
+                "id": "b",
+                "label": "Only a paper letter posted next year"
+              },
+              {
+                "id": "c",
+                "label": "Flying a drone with no camera indoors over staff silently"
+              },
+              {
+                "id": "d",
+                "label": "Changing every IP address for no reason"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Live Q&A suits streaming; a later upload can extend reach.",
+              "incorrect": "Not quite. Think about live video communication."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kc-q4",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kc-q4",
+            "prompt": "Which limitation can affect drone flights?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Weather, battery life, rules and privacy concerns"
+              },
+              {
+                "id": "b",
+                "label": "Drones always fly for unlimited hours in any storm"
+              },
+              {
+                "id": "c",
+                "label": "Privacy rules never apply to aerial cameras"
+              },
+              {
+                "id": "d",
+                "label": "Drones cannot capture any outdoor images"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Real-world limits and rules still apply.",
+              "incorrect": "Not quite. Remember practical limits and responsibilities."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kc-q5",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kc-q5",
+            "prompt": "Why might Pixel Forge publish a development diary vlog?",
+            "options": [
+              {
+                "id": "a",
+                "label": "To show progress, build interest and explain features responsibly"
+              },
+              {
+                "id": "b",
+                "label": "To share confidential passwords with the public"
+              },
+              {
+                "id": "c",
+                "label": "To avoid all player communication"
+              },
+              {
+                "id": "d",
+                "label": "To replace every playtest with silence"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Diaries support engagement when published carefully.",
+              "incorrect": "Not quite. Focus on responsible progress updates."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-knowledge-check-b",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Knowledge check: AC1.1 judgements",
+        "status": "available",
+        "summary": "Apply consolidation ideas to short cases without moving into AC2 depth.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 5,
+        "activityType": "Knowledge check",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kcb-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Knowledge check: AC1.1 judgements",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kcb-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kcb-q1",
+            "prompt": "A learner must outline a technology and give one use. Which answer is best quality for AC1.1 practice?",
+            "options": [
+              {
+                "id": "a",
+                "label": "RFID uses radio tags to identify items; warehouses can scan tagged stock"
+              },
+              {
+                "id": "b",
+                "label": "RFID is magic and needs no explanation"
+              },
+              {
+                "id": "c",
+                "label": "RFID is the same as VR headsets"
+              },
+              {
+                "id": "d",
+                "label": "RFID only means writing essays about brand values"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Clear outline plus a practical use matches AC1.1 practice.",
+              "incorrect": "Not quite. Keep meaning and use plain and specific."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kcb-q2",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kcb-q2",
+            "prompt": "Which statement stays within AC1.1-style outlining?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Cloud SaaS delivers software online; a studio can use it for email or design tools"
+              },
+              {
+                "id": "b",
+                "label": "A full financial investment case for every department with no technology definition"
+              },
+              {
+                "id": "c",
+                "label": "Only listing wages with no technology names"
+              },
+              {
+                "id": "d",
+                "label": "Ignoring what the technology does"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Definition plus use is the AC1.1 focus here.",
+              "incorrect": "Not quite. Avoid drifting into deep cost or investment analysis."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kcb-q3",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kcb-q3",
+            "prompt": "Which Pixel Forge example correctly pairs technology and use?",
+            "options": [
+              {
+                "id": "a",
+                "label": "AR overlay labels on a real demo booth; social media posts to announce the demo times"
+              },
+              {
+                "id": "b",
+                "label": "Blockchain as the only way to write a tutorial script"
+              },
+              {
+                "id": "c",
+                "label": "IPv6 as a replacement for all cameras"
+              },
+              {
+                "id": "d",
+                "label": "SD-WAN as a type of vlog microphone"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Each technology keeps a sensible use.",
+              "incorrect": "Not quite. Match each tool to a realistic job."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-kcb-q4",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-kcb-q4",
+            "prompt": "Before finishing AC1.1 practice, what should a learner be able to do?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Identify key emerging technologies, explain them simply, and give real-world uses"
+              },
+              {
+                "id": "b",
+                "label": "Memorise every chip voltage on a drone"
+              },
+              {
+                "id": "c",
+                "label": "Ignore social media safety completely"
+              },
+              {
+                "id": "d",
+                "label": "Skip all examples and only list brand slogans"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. Identify, explain simply, and give uses.",
+              "incorrect": "Not quite. Stay with clear outlines and applications."
+            },
+            "sourceType": "single"
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-reflection",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Extension: AC1.1 technology profile homework",
+        "status": "available",
+        "summary": "Optional homework: profile one Week 7 technology or compare two unit technologies.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 13,
+        "activityType": "Extension",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-ref-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Extension: AC1.1 technology profile homework",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-ref-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Optional homework: choose drones, social media or vlogs, or compare one of them with an earlier technology. This is formative, not Gateway assignment evidence."
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-ref-q",
+          "version": "0.1.0",
+          "type": "reflection",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-ref-q",
+            "prompt": "Choose drones, social media or vlogs. Explain what it is, give one Pixel Forge use, one benefit, one limitation, and say how it differs from one technology from Weeks 1 to 6.",
+            "minChars": 500,
+            "guidance": "Sentence starters: The technology I chose is... It means... Pixel Forge could use it for... One benefit is... One limitation is... It differs from ... because... Write at least 500 characters. Paste is disabled."
+          }
+        }
+      ]
+    },
+    {
+      "schema": "lp.content.activity",
+      "schemaVersion": "0.1.0",
+      "id": "week-7-exit",
+      "version": "0.1.0",
+      "metadata": {
+        "title": "Exit ticket",
+        "status": "available",
+        "summary": "Quick check on drones, social media, vlogs and AC1.1 consolidation confidence.",
+        "href": null,
+        "difficulty": "standard",
+        "estimatedDurationMinutes": 2,
+        "activityType": "Exit ticket",
+        "topics": []
+      },
+      "relationships": {
+        "learningOutcomes": [
+          "lo1"
+        ],
+        "assignment": "formative-practice",
+        "questions": [],
+        "assets": [],
+        "prerequisites": []
+      },
+      "blocks": [
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-exit-h",
+          "version": "0.1.0",
+          "type": "heading",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Exit ticket",
+            "level": 2
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-exit-q1",
+          "version": "0.1.0",
+          "type": "single-choice",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "formative": true,
+            "questionId": "week-7-exit-q1",
+            "prompt": "Which short summary is correct?",
+            "options": [
+              {
+                "id": "a",
+                "label": "Drones are unmanned aircraft; social media shares and engages online; vlogs are video blogs; AC1.1 needs clear outlines and real-world uses of emerging technologies"
+              },
+              {
+                "id": "b",
+                "label": "Drones, social media and vlogs are three names for IPv6 only"
+              },
+              {
+                "id": "c",
+                "label": "AC1.1 only means memorising chip voltages"
+              },
+              {
+                "id": "d",
+                "label": "Vlogs cannot be shared and drones never use cameras"
+              }
+            ],
+            "correctOptionId": "a",
+            "feedback": {
+              "correct": "Correct. That summary keeps this week's ideas and AC1.1 focus clear.",
+              "incorrect": "Not quite. Keep each idea separate and practical."
+            },
+            "sourceType": "single"
+          }
+        },
+        {
+          "schema": "lp.content.block",
+          "schemaVersion": "0.1.0",
+          "id": "week-7-exit-p",
+          "version": "0.1.0",
+          "type": "paragraph",
+          "metadata": {},
+          "relationships": {},
+          "content": {
+            "text": "Tell your tutor how confident you feel outlining drones, social media, vlogs and the earlier AC1.1 technologies."
           }
         }
       ]

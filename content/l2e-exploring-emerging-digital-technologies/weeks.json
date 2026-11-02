@@ -136,5 +136,28 @@
         "week-6-session"
       ]
     }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-7",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 7,
+      "title": "Drones, Social Media, Vlogs and Emerging Technologies Consolidation",
+      "status": "planned",
+      "professionalPractice": "LO1 / AC 1.1 - outline drones, social media, vlogs and consolidate emerging technologies",
+      "route": "week-7/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-7-session"
+      ]
+    }
   }
 ]
