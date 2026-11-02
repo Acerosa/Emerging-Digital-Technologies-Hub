@@ -185,5 +185,54 @@
         "week-5-exit"
       ]
     }
+  },
+  {
+    "schema": "lp.content.session",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-session",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Week 6 session",
+      "kind": "session",
+      "summary": "One 1.5-hour session: 5G, IPv6, blockchain, serverless computing, SD-WAN, uses, limitations and Pixel Forge Games scenarios (AC1.1).",
+      "sortOrder": 1,
+      "defaultOpen": true,
+      "status": "available"
+    },
+    "relationships": {
+      "week": "week-6",
+      "activities": [
+        "week-6-starter",
+        "week-6-recap-connect",
+        "week-6-5g-intro",
+        "week-6-5g-latency",
+        "week-6-5g-uses",
+        "week-6-5g-limits",
+        "week-6-5g-apply",
+        "week-6-ipv6-intro",
+        "week-6-ipv6-why",
+        "week-6-ipv6-clarify",
+        "week-6-ipv6-apply",
+        "week-6-blockchain-intro",
+        "week-6-blockchain-protect",
+        "week-6-blockchain-uses",
+        "week-6-blockchain-apply",
+        "week-6-serverless-intro",
+        "week-6-serverless-how",
+        "week-6-serverless-pf",
+        "week-6-serverless-apply",
+        "week-6-sdwan-intro",
+        "week-6-sdwan-how",
+        "week-6-sdwan-pf",
+        "week-6-sdwan-apply",
+        "week-6-match-uses",
+        "week-6-compare",
+        "week-6-compare-explain",
+        "week-6-knowledge-check",
+        "week-6-knowledge-check-b",
+        "week-6-reflection",
+        "week-6-exit"
+      ]
+    }
   }
 ]

@@ -113,5 +113,28 @@
         "week-5-session"
       ]
     }
+  },
+  {
+    "schema": "lp.content.week",
+    "schemaVersion": "0.1.0",
+    "id": "week-6",
+    "version": "0.1.0",
+    "metadata": {
+      "teachingWeek": 6,
+      "title": "5G, IPv6, Blockchain, Serverless Computing and SD-WAN",
+      "status": "planned",
+      "professionalPractice": "LO1 / AC 1.1 - outline 5G, IPv6, blockchain, serverless computing and SD-WAN",
+      "route": "week-6/"
+    },
+    "relationships": {
+      "curriculum": "l2e-exploring-emerging-digital-technologies-curriculum",
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "sessions": [
+        "week-6-session"
+      ]
+    }
   }
 ]

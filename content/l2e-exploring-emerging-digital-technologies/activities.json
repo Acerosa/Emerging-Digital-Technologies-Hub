@@ -13053,5 +13053,4008 @@
         }
       }
     ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-starter",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Welcome to Week 6",
+      "status": "available",
+      "summary": "Recap Week 5 ideas, then set the focus for 5G, IPv6, blockchain, serverless computing and SD-WAN (AC1.1).",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Starter",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-starter-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Welcome to Week 6",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-starter-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "This week you outline five more emerging technologies: 5G (fifth-generation mobile networks), IPv6 (Internet Protocol version 6), blockchain, serverless computing and SD-WAN (Software-Defined Wide Area Network) (AC1.1)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-starter-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "By the end of this week",
+          "text": "You will be able to describe what each technology is, give a practical use for each one, and explain how they differ. You will use Pixel Forge Games examples where they help you see real workplace uses."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-starter-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "First, a quick check from Week 5. Virtual reality (VR) surrounds you in a computer-made world. Augmented reality (AR) adds digital extras to the real world. 3D printing builds objects in layers. 4D printing adds planned change over time."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-starter-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-starter-q1",
+          "prompt": "Which statement from Week 5 is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "VR and AR are two names for the same flat phone video"
+            },
+            {
+              "id": "b",
+              "label": "VR surrounds you in a computer-made world; AR adds digital extras to the real world"
+            },
+            {
+              "id": "c",
+              "label": "3D printing means watching a tutorial video"
+            },
+            {
+              "id": "d",
+              "label": "4D printing always replaces email"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. VR surrounds you. AR overlays digital information on the real world. Keep those ideas separate.",
+            "incorrect": "Not quite. VR surrounds you in a virtual world. AR keeps the real world in view and adds digital extras."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-starter-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-starter-q2",
+          "prompt": "Which five technologies will you outline this week for AC1.1?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Email, printers, passwords, spreadsheets and calculators only"
+            },
+            {
+              "id": "b",
+              "label": "5G, IPv6, blockchain, serverless computing and SD-WAN"
+            },
+            {
+              "id": "c",
+              "label": "Only VR headsets and 3D printers"
+            },
+            {
+              "id": "d",
+              "label": "Only robots and RFID tags"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. This week focuses on 5G, IPv6, blockchain, serverless computing and SD-WAN so you can outline them for AC1.1.",
+            "incorrect": "Not quite. Read the welcome text again. This week covers five networking and computing technologies."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-recap-connect",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Linking earlier technologies",
+      "status": "available",
+      "summary": "Connect IoT, cloud and networks to this week's infrastructure technologies.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-recap-connect-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Linking earlier technologies",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-recap-connect-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "You have already met connected devices (the Internet of Things, or IoT), cloud services and wireless ideas. This week's technologies often support those systems behind the scenes."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-recap-connect-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "5G can carry mobile traffic for games and devices. IPv6 helps give more devices their own network addresses. Blockchain can record histories of digital items. Serverless computing can run small pieces of cloud code. SD-WAN can link company sites together."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-recap-connect-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-recap-connect-q1",
+          "prompt": "Which statement is most accurate?",
+          "options": [
+            {
+              "id": "a",
+              "label": "This week's technologies replace everything you learned in Weeks 1 to 5"
+            },
+            {
+              "id": "b",
+              "label": "This week's technologies often support networks, devices and cloud services you already know"
+            },
+            {
+              "id": "c",
+              "label": "Cloud computing only works with paper forms"
+            },
+            {
+              "id": "d",
+              "label": "IoT devices never need network addresses"
+            }
+          ],
+          "correctOptionId": "b",
+          "feedback": {
+            "correct": "Correct. New technologies usually build on networks, devices and cloud services rather than wiping them out.",
+            "incorrect": "Not quite. Think of this week as adding tools that help networks and applications work at scale."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-recap-connect-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-recap-connect-q2",
+          "prompt": "Pixel Forge Games wants smoother mobile play, more connected devices and linked offices. Why does that fit this week?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Because the topics cover mobile networks, IP addressing, cloud code and site-to-site networking"
+            },
+            {
+              "id": "b",
+              "label": "Because the only topic this week is 3D printing plastic cases"
+            },
+            {
+              "id": "c",
+              "label": "Because games never use networks"
+            },
+            {
+              "id": "d",
+              "label": "Because AC1.1 only covers paper-based technologies"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Mobile networks, addressing, cloud functions and wide-area links all appear in this week's five technologies.",
+            "incorrect": "Not quite. Pixel Forge's needs map to the networking and cloud ideas in this week's list."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-5g-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is 5G?",
+      "status": "available",
+      "summary": "Define 5G as fifth-generation mobile network technology in plain English.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is 5G?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "5G means fifth-generation mobile network technology. It is the next major step after earlier mobile generations such as 4G. Phones, tablets and some connected devices can use 5G where coverage is available."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "In suitable conditions, 5G can provide high-speed mobile connectivity. It can also support many connected devices in the same area. That matters for busy cities, stadiums and large events."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Key idea",
+          "text": "5G is about mobile networks. It is not a new games console, and it is not the same thing as home Wi-Fi, even though both can give wireless internet access."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-intro-q1",
+          "prompt": "What does 5G stand for in this unit?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Fifth-generation mobile network technology"
+            },
+            {
+              "id": "b",
+              "label": "Five free games online"
+            },
+            {
+              "id": "c",
+              "label": "A type of 3D printer filament"
+            },
+            {
+              "id": "d",
+              "label": "A blockchain wallet password"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. 5G means fifth-generation mobile network technology.",
+            "incorrect": "Not quite. Expand the acronym: fifth-generation mobile network technology."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-intro-q2",
+          "prompt": "Which statement about 5G is most accurate?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It can support high-speed mobile connections and many devices where the network is ready"
+            },
+            {
+              "id": "b",
+              "label": "It always works at full speed in every building worldwide"
+            },
+            {
+              "id": "c",
+              "label": "It only works on paper maps"
+            },
+            {
+              "id": "d",
+              "label": "It replaces the need for any IP addresses"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. 5G can offer high speed and support many devices, but only where the network and conditions allow it.",
+            "incorrect": "Not quite. Coverage and conditions still matter. 5G does not remove the need for IP addressing."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-5g-latency",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What does latency mean?",
+      "status": "available",
+      "summary": "Explain latency with a simple gaming example and link it to 5G claims.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-latency-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What does latency mean?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-latency-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Latency is the delay before a response arrives. In a game, high latency can mean you press jump and the character jumps a moment later. Low latency means the response feels quicker."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-latency-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "5G can offer lower latency in suitable conditions. That can help cloud games, live mobile apps and some connected-device control. It does not guarantee perfect response times everywhere."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-latency-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Simple example",
+          "text": "Imagine sending a message from your phone to a game server. Latency is the wait before the server's reply reaches you. Shorter waits feel more responsive."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-latency-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-latency-q1",
+          "prompt": "What does latency mean?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The delay before a response arrives"
+            },
+            {
+              "id": "b",
+              "label": "The colour of a headset cable"
+            },
+            {
+              "id": "c",
+              "label": "The number of 3D printer layers"
+            },
+            {
+              "id": "d",
+              "label": "The title of a spreadsheet"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Latency is delay. Lower latency usually feels more responsive.",
+            "incorrect": "Not quite. Latency is about waiting time for a response, not colour, printing or document titles."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-latency-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-latency-q2",
+          "prompt": "A Pixel Forge Games player taps fire on a mobile match. Which situation shows lower latency?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The shot appears almost straight away"
+            },
+            {
+              "id": "b",
+              "label": "The shot appears several seconds later every time"
+            },
+            {
+              "id": "c",
+              "label": "The phone refuses to connect to any network"
+            },
+            {
+              "id": "d",
+              "label": "The game deletes the player's account"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A quick on-screen response is what lower latency feels like to a player.",
+            "incorrect": "Not quite. Lower latency means less waiting between action and response."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-5g-uses",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Where 5G can be used",
+      "status": "available",
+      "summary": "Outline practical 5G uses in gaming, apps, devices and other industries.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-uses-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Where 5G can be used",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-uses-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Possible uses include mobile gaming with smoother downloads and play, apps that need quick responses, and connected devices that share data while people move around."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-uses-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Other industries can use 5G too. Examples include venues with thousands of phones online at once, remote support for technicians, and vehicles or sensors that need mobile connectivity."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-uses-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "At Pixel Forge Games, a demo team might stream a build preview to phones at a show, or test multiplayer play over a busy mobile network."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-uses-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-uses-q1",
+          "prompt": "Which is a practical use of 5G?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Supporting many phones and devices with high-speed mobile connectivity at a busy event"
+            },
+            {
+              "id": "b",
+              "label": "Printing plastic figures without any network"
+            },
+            {
+              "id": "c",
+              "label": "Writing on paper with no digital devices"
+            },
+            {
+              "id": "d",
+              "label": "Turning off all mobile networks forever"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Busy events and mobile applications are realistic places where 5G can help.",
+            "incorrect": "Not quite. Look for a mobile-network use, not an offline paper or printing task."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-uses-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-uses-q2",
+          "prompt": "Why might a mobile game benefit from 5G in suitable conditions?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Faster downloads and more responsive play can improve the player experience"
+            },
+            {
+              "id": "b",
+              "label": "5G deletes the need for game design"
+            },
+            {
+              "id": "c",
+              "label": "5G always removes every in-game delay worldwide"
+            },
+            {
+              "id": "d",
+              "label": "5G means the game must be played on paper"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Speed and responsiveness can help mobile games when coverage and conditions are good.",
+            "incorrect": "Not quite. 5G can improve mobile experiences, but it does not replace design or guarantee perfect play everywhere."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-5g-limits",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Why 5G performance still varies",
+      "status": "available",
+      "summary": "Explain that coverage, congestion, devices and services affect 5G results.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-limits-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Why 5G performance still varies",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-limits-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "5G performance still depends on coverage (whether a 5G signal is available), network congestion (how busy the network is), the device being used, and the service the person is trying to reach."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-limits-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A phone can show a 5G icon and still feel slow if the mast is busy, the building blocks the signal, or the game server is overloaded. Marketing claims are not the same as every real-world result."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-limits-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-limits-q1",
+          "prompt": "Which statement is most accurate?",
+          "options": [
+            {
+              "id": "a",
+              "label": "5G performance depends on coverage, congestion, devices and the service being used"
+            },
+            {
+              "id": "b",
+              "label": "Any phone with a 5G label always gets the same top speed everywhere"
+            },
+            {
+              "id": "c",
+              "label": "Buildings never affect mobile signals"
+            },
+            {
+              "id": "d",
+              "label": "Game servers never cause delay"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Real performance depends on several factors, not only the 5G name.",
+            "incorrect": "Not quite. Coverage, congestion, devices and distant services all affect what users feel."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-limits-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-limits-q2",
+          "prompt": "A learner has 5G on their phone but a cloud demo still stutters indoors. What is a sensible explanation?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Indoor coverage, congestion or the remote service may still limit performance"
+            },
+            {
+              "id": "b",
+              "label": "5G always overrides every other limit automatically"
+            },
+            {
+              "id": "c",
+              "label": "The phone must be broken because 5G never varies"
+            },
+            {
+              "id": "d",
+              "label": "Cloud demos never use networks"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Even with 5G available, buildings, busy networks and remote services can still cause problems.",
+            "incorrect": "Not quite. 5G helps, but it does not remove every other cause of delay."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-5g-apply",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Apply: when could 5G help?",
+      "status": "available",
+      "summary": "Identify a situation where 5G could be useful and explain why.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-apply-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Apply: when could 5G help?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-apply-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Think about mobile speed, many devices, or lower latency in suitable conditions. Pick a realistic situation and explain the benefit clearly."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-5g-apply-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-5g-apply-q",
+          "prompt": "Describe one situation where 5G could be useful and explain why. Mention speed, many devices, or latency in your answer.",
+          "guidance": "A satisfactory answer names a clear situation (for example a busy games event, mobile multiplayer play, or many phones online) and explains the 5G benefit in plain English. Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-ipv6-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is IPv6?",
+      "status": "available",
+      "summary": "Explain Internet Protocol version 6 and what an IP address does.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is IPv6?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "IPv6 means Internet Protocol version 6. An IP address is a numerical label that helps identify a device on a network so data can be sent to the right place, a bit like a postal address for a computer or phone."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Earlier networks often used IPv4 (Internet Protocol version 4). IPv4 still works widely, but it has a limited supply of addresses. IPv6 provides a much larger address space."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Key term: address space",
+          "text": "Address space means how many different IP addresses are available. A larger address space means more devices can have their own addresses."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-intro-q1",
+          "prompt": "What does an IP address mainly do?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It helps identify a device on a network so data can be delivered to the right place"
+            },
+            {
+              "id": "b",
+              "label": "It prints plastic models"
+            },
+            {
+              "id": "c",
+              "label": "It chooses the colour theme of a website only"
+            },
+            {
+              "id": "d",
+              "label": "It replaces the need for electricity"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. An IP address helps route data to the correct device on a network.",
+            "incorrect": "Not quite. Think of an IP address as a network label for finding a device."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-intro-q2",
+          "prompt": "What does IPv6 stand for?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Internet Protocol version 6"
+            },
+            {
+              "id": "b",
+              "label": "Instant Printer version 6"
+            },
+            {
+              "id": "c",
+              "label": "Indoor Painting varnish 6"
+            },
+            {
+              "id": "d",
+              "label": "In-game Points value 6"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. IPv6 expands to Internet Protocol version 6.",
+            "incorrect": "Not quite. Expand each letter: Internet Protocol version 6."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-ipv6-why",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Why the internet needs more addresses",
+      "status": "available",
+      "summary": "Explain why growing numbers of devices make IPv6 important.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-why-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Why the internet needs more addresses",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-why-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Phones, laptops, sensors, smart TVs and game consoles all need ways to join networks. As more devices come online, the internet needs more available IP addresses."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-why-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "IPv6 matters because it provides a much larger supply of addresses than IPv4. That helps organisations and services that connect huge numbers of devices."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-why-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Example: an online gaming service may have millions of players' devices connecting over time. A company site may also have many staff devices, consoles and sensors. More addresses make that growth easier to manage."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-why-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-why-q1",
+          "prompt": "Why does the internet need more available IP addresses?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Because the number of connected devices keeps growing"
+            },
+            {
+              "id": "b",
+              "label": "Because printers refuse to use paper"
+            },
+            {
+              "id": "c",
+              "label": "Because websites can only be blue"
+            },
+            {
+              "id": "d",
+              "label": "Because games cannot use controllers"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Growth in connected devices drives the need for more addresses.",
+            "incorrect": "Not quite. Focus on the rising number of devices that need network identities."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-why-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-why-q2",
+          "prompt": "How does IPv6 help compared with IPv4?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It provides a much larger address space"
+            },
+            {
+              "id": "b",
+              "label": "It deletes every older network forever"
+            },
+            {
+              "id": "c",
+              "label": "It means devices no longer need any identity"
+            },
+            {
+              "id": "d",
+              "label": "It only works for paper mail"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. The main practical advantage for learners to remember is the much larger address space.",
+            "incorrect": "Not quite. IPv6 expands available addresses; it does not remove the need for device identity."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-ipv6-clarify",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "IPv6 is not just a faster internet",
+      "status": "available",
+      "summary": "Make clear that IPv6's main advantage is address supply and IP design, not raw speed alone.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-clarify-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "IPv6 is not just a faster internet",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-clarify-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "It is easy to assume IPv6 simply means \"faster internet\". That is not the main point. Speed still depends on connections, devices and services."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-clarify-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "IPv6's main advantage is the much larger supply of IP addresses, plus improvements to the way IP networking is designed. Organisations adopt it so growth in devices does not run out of addresses."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-clarify-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-clarify-q1",
+          "prompt": "Which statement is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "IPv6 mainly provides a much larger address space; it is not simply a faster version of the internet"
+            },
+            {
+              "id": "b",
+              "label": "IPv6 always doubles every download speed worldwide with no other changes"
+            },
+            {
+              "id": "c",
+              "label": "IPv6 only changes the colour of status lights"
+            },
+            {
+              "id": "d",
+              "label": "IPv6 removes the need for any networks"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Remember address supply and networking design, not a magic speed boost.",
+            "incorrect": "Not quite. Do not treat IPv6 as only a speed upgrade."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-clarify-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-clarify-q2",
+          "prompt": "A classmate says, \"We need IPv6 so every page loads twice as fast.\" What should you reply?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Speed depends on many factors; the key IPv6 benefit is more IP addresses for more devices"
+            },
+            {
+              "id": "b",
+              "label": "Agree, because IPv6 always forces double speed"
+            },
+            {
+              "id": "c",
+              "label": "Agree, because IPv6 turns off every other protocol"
+            },
+            {
+              "id": "d",
+              "label": "Disagree, because IP addresses are never used online"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Challenge the speed-only claim and point back to address space.",
+            "incorrect": "Not quite. Help your classmate focus on available addresses rather than guaranteed speed."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-ipv6-apply",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Apply: why might an organisation need IPv6?",
+      "status": "available",
+      "summary": "Explain why a growing organisation may need IPv6.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-apply-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Apply: why might an organisation need IPv6?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-apply-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Think about growth: more staff devices, more sensors, more player connections. Explain the need for more addresses in plain English."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ipv6-apply-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ipv6-apply-q",
+          "prompt": "Explain why a growing organisation may need IPv6. Mention IP addresses and connected devices in your answer.",
+          "guidance": "A satisfactory answer says the organisation has more devices joining networks and needs a larger supply of IP addresses than older IPv4 addressing easily provides. Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-blockchain-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is a blockchain?",
+      "status": "available",
+      "summary": "Describe blockchain as linked records shared across participants.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is a blockchain?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A blockchain is a way of recording information in linked blocks. Each new block connects to earlier blocks, forming a chain of records."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Copies of a blockchain can be maintained across multiple computers or participants. That shared copy idea helps people check the same history rather than trusting only one private notebook."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Gaming example",
+          "text": "Pixel Forge Games could record the ownership history of a digital item, such as a rare skin. Players and the studio could look back at who owned it over time."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-intro-q1",
+          "prompt": "Which statement best describes a blockchain?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Information recorded in linked blocks that can be shared across multiple participants"
+            },
+            {
+              "id": "b",
+              "label": "A single paper invoice locked in one drawer only"
+            },
+            {
+              "id": "c",
+              "label": "A 5G phone mast"
+            },
+            {
+              "id": "d",
+              "label": "A type of HDMI cable"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Linked blocks plus shared copies are the core Level 2 idea.",
+            "incorrect": "Not quite. Focus on linked records that can be shared across participants."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-intro-q2",
+          "prompt": "Why might a game studio look at a blockchain record for a digital item?",
+          "options": [
+            {
+              "id": "a",
+              "label": "To check the ownership history of that item over time"
+            },
+            {
+              "id": "b",
+              "label": "To print the item as a physical chair automatically"
+            },
+            {
+              "id": "c",
+              "label": "To replace the need for any game art"
+            },
+            {
+              "id": "d",
+              "label": "To turn the item into a WAN cable"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Ownership history is a clear example of what a shared record can show.",
+            "incorrect": "Not quite. Think about verifying history, not printing furniture or changing cables."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-blockchain-protect",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "How blockchain records are protected",
+      "status": "available",
+      "summary": "Explain cryptographic protection and why changing past records can be difficult.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-protect-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "How blockchain records are protected",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-protect-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Cryptographic techniques help protect records from unauthorised alteration. Cryptography here means mathematical methods that make tampering detectable."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-protect-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Because blocks are linked, changing previously recorded information can be difficult. How difficult it is still depends on the blockchain's design and governance (the rules about who can approve changes)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-protect-p3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Different blockchains can use different methods to agree on new blocks. Do not assume every blockchain works the same way or uses the same amount of energy."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-protect-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-protect-q1",
+          "prompt": "How do cryptographic techniques help a blockchain?",
+          "options": [
+            {
+              "id": "a",
+              "label": "They help protect records from unauthorised alteration and make tampering easier to detect"
+            },
+            {
+              "id": "b",
+              "label": "They guarantee every blockchain uses the same energy-heavy method"
+            },
+            {
+              "id": "c",
+              "label": "They delete the need for any rules or governance"
+            },
+            {
+              "id": "d",
+              "label": "They turn every record into a paper letter"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Cryptography supports integrity. Designs and energy use still vary.",
+            "incorrect": "Not quite. Protection against unauthorised changes is the key point; methods are not all identical."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-protect-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-protect-q2",
+          "prompt": "Why can changing an old blockchain entry be difficult?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Because blocks are linked and the design may make unauthorised rewrites hard to accept"
+            },
+            {
+              "id": "b",
+              "label": "Because blockchains never store any information"
+            },
+            {
+              "id": "c",
+              "label": "Because every blockchain is printed on paper once"
+            },
+            {
+              "id": "d",
+              "label": "Because IP addresses cannot exist on the same planet"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Linked blocks and rules make quiet rewrites harder, depending on design and governance.",
+            "incorrect": "Not quite. Difficulty comes from linking and shared rules, not from having no data."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-blockchain-uses",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Blockchain uses and limitations",
+      "status": "available",
+      "summary": "Outline possible uses and balanced limitations without over-claiming.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-uses-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Blockchain uses and limitations",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-uses-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Possible uses include tracking transactions, verifying the history of digital items, and recording supply-chain information (for example where a component came from)."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-uses-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Limitations can include energy use for some blockchain systems, transaction costs, performance, and the difficulty of correcting mistakes once records are accepted. Blockchain is one possible approach. It is not automatically the best solution for every game."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-uses-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-uses-q1",
+          "prompt": "Which pair shows a possible use and a possible limitation?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Use: verify digital-item history; limitation: correcting mistakes can be difficult"
+            },
+            {
+              "id": "b",
+              "label": "Use: replace all electricity; limitation: blockchain never stores records"
+            },
+            {
+              "id": "c",
+              "label": "Use: print steel cars overnight; limitation: blockchains cannot use cryptography"
+            },
+            {
+              "id": "d",
+              "label": "Use: remove every network; limitation: games cannot have items"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. History checking is a use; hard corrections are a realistic limitation.",
+            "incorrect": "Not quite. Pick a genuine record-keeping use paired with a genuine drawback."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-uses-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-uses-q2",
+          "prompt": "Pixel Forge is deciding whether to put every cosmetic item on a blockchain. Which judgement is best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Blockchain is one option; the team should weigh benefits and limits rather than assume it is always best"
+            },
+            {
+              "id": "b",
+              "label": "Every game feature must use blockchain or it will fail"
+            },
+            {
+              "id": "c",
+              "label": "Blockchain never has any costs or limits"
+            },
+            {
+              "id": "d",
+              "label": "Blockchain always uses identical energy-heavy methods"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Treat blockchain as a choice to evaluate, not a default for every feature.",
+            "incorrect": "Not quite. Avoid all-or-nothing claims. Designs and trade-offs vary."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-blockchain-apply",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Apply: benefit and limitation of blockchain ownership records",
+      "status": "available",
+      "summary": "Identify one benefit and one limitation of using blockchain for digital item ownership.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-apply-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Apply: benefit and limitation",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-apply-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Use the Pixel Forge digital-item idea. Give one clear benefit and one clear limitation."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-blockchain-apply-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-blockchain-apply-q",
+          "prompt": "Identify one possible benefit and one limitation of using blockchain to record digital item ownership. Explain each briefly.",
+          "guidance": "A satisfactory answer gives one benefit (for example shared ownership history that is harder to alter without detection) and one limitation (for example cost, performance, energy use for some systems, or difficulty correcting mistakes). Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-serverless-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is serverless computing?",
+      "status": "available",
+      "summary": "Define serverless computing and stress that servers still exist.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is serverless computing?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Serverless computing means developers can run code or functions without managing individual servers themselves. The cloud provider manages much of the underlying server infrastructure."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Servers still exist. The word serverless does not mean an application has no servers. It means the team spends less time setting up and patching those servers day to day."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Remember",
+          "text": "Serverless computing does not mean \"no computers\". It means \"you do not manage the servers yourself\"."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-intro-q1",
+          "prompt": "Which statement about serverless computing is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Servers still exist, but the cloud provider manages much of the infrastructure while developers run code as functions"
+            },
+            {
+              "id": "b",
+              "label": "Serverless means the application truly uses zero computers anywhere"
+            },
+            {
+              "id": "c",
+              "label": "Serverless means every office must host its own physical rack"
+            },
+            {
+              "id": "d",
+              "label": "Serverless is another name for a paper form"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Servers remain; responsibility for much of the infrastructure shifts to the provider.",
+            "incorrect": "Not quite. Do not take the word serverless literally as \"no servers at all\"."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-intro-q2",
+          "prompt": "What can developers do in a serverless model?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Run code or functions without managing individual servers themselves"
+            },
+            {
+              "id": "b",
+              "label": "Avoid writing any application logic forever"
+            },
+            {
+              "id": "c",
+              "label": "Force every player to install a server under their desk"
+            },
+            {
+              "id": "d",
+              "label": "Delete the cloud provider's role completely"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Developers focus more on the code and less on day-to-day server care.",
+            "incorrect": "Not quite. Serverless changes who manages servers, not whether code is needed."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-serverless-how",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "How serverless responds to demand",
+      "status": "available",
+      "summary": "Explain scaling, benefits and limitations at Level 2.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-how-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "How serverless responds to demand",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-how-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Serverless computing can help applications respond to changing demand. When more events arrive, the provider can run more function instances. When demand drops, less capacity is needed."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-how-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Possible benefits include reduced infrastructure management and usage-based charging (paying for what runs). Limitations can include execution limits, costs that are hard to predict, and dependence on the cloud provider."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-how-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-how-q1",
+          "prompt": "How can serverless computing help when demand changes?",
+          "options": [
+            {
+              "id": "a",
+              "label": "The provider can run more or fewer function instances as events arrive"
+            },
+            {
+              "id": "b",
+              "label": "The application must stay at one fixed size forever"
+            },
+            {
+              "id": "c",
+              "label": "Demand changes are ignored by every cloud service"
+            },
+            {
+              "id": "d",
+              "label": "Players must reboot the whole internet manually"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Responding to changing demand is a core serverless benefit to outline.",
+            "incorrect": "Not quite. Think about automatic capacity for short pieces of code as demand rises and falls."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-how-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-how-q2",
+          "prompt": "Which pair correctly matches a benefit and a limitation?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Benefit: less day-to-day server management; limitation: dependence on the cloud provider"
+            },
+            {
+              "id": "b",
+              "label": "Benefit: zero computers exist; limitation: code never runs"
+            },
+            {
+              "id": "c",
+              "label": "Benefit: unlimited free execution forever; limitation: providers never matter"
+            },
+            {
+              "id": "d",
+              "label": "Benefit: no application logic needed; limitation: networks disappear"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Less management is a benefit; provider dependence is a real limitation.",
+            "incorrect": "Not quite. Keep benefits and limits realistic."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-serverless-pf",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Pixel Forge: a serverless reward function",
+      "status": "available",
+      "summary": "Use a game event example to show serverless code in practice.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-pf-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Pixel Forge: a serverless reward function",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-pf-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Example: when a player completes a challenge, Pixel Forge Games could trigger a serverless function to process a reward. The function runs, updates the reward, and stops. The studio does not babysit a dedicated server for that small job all day."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-pf-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "If thousands of players finish at once, the provider can run many copies of that function. Quiet hours need far less capacity."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-pf-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-pf-q1",
+          "prompt": "In the Pixel Forge example, what does the serverless function do?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It runs code to process a player reward when an event happens"
+            },
+            {
+              "id": "b",
+              "label": "It builds a physical prize machine in the office"
+            },
+            {
+              "id": "c",
+              "label": "It replaces the art team"
+            },
+            {
+              "id": "d",
+              "label": "It turns off all player accounts permanently"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. A short function responds to an event without the team managing a whole server for that task.",
+            "incorrect": "Not quite. Focus on event-driven code for a reward, not physical machines or staff replacement."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-pf-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-pf-q2",
+          "prompt": "Why might this approach fit a game studio?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Reward events can spike; serverless can scale those short jobs without constant server care"
+            },
+            {
+              "id": "b",
+              "label": "Games never create events"
+            },
+            {
+              "id": "c",
+              "label": "Cloud providers refuse to run any code"
+            },
+            {
+              "id": "d",
+              "label": "Rewards must be calculated on paper only"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Spiky, short tasks are a classic fit for serverless functions.",
+            "incorrect": "Not quite. Think about bursts of player events and reduced server management."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-serverless-apply",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Apply: when might serverless help a game developer?",
+      "status": "available",
+      "summary": "Explain when serverless computing might help a game developer.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-apply-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Apply: when might serverless help?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-apply-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Mention event-driven code, changing demand, or reduced server management. Keep the answer realistic."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-serverless-apply-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-serverless-apply-q",
+          "prompt": "Explain when serverless computing might help a game developer. Give a simple example of an event or task.",
+          "guidance": "A satisfactory answer mentions running short pieces of code for events (such as rewards or notifications), responding to changing demand, and not managing individual servers day to day. Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-sdwan-intro",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "What is SD-WAN?",
+      "status": "available",
+      "summary": "Define WAN and Software-Defined Wide Area Network in plain English.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-intro-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "What is SD-WAN?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-intro-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "A wide area network (WAN) connects locations that are far apart, such as offices in different towns. SD-WAN means Software-Defined Wide Area Network."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-intro-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "SD-WAN uses software-based control to manage connections between different sites. An organisation might use broadband, fibre, or other available connections to link offices or locations."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-intro-c",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "callout",
+        "content": {
+          "tone": "info",
+          "title": "Key idea",
+          "text": "SD-WAN is about managing site-to-site networking with software. It does not automatically make every connection faster, and it does not remove the need for network security."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-intro-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-intro-q1",
+          "prompt": "What does WAN stand for?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Wide area network"
+            },
+            {
+              "id": "b",
+              "label": "Weak app notebook"
+            },
+            {
+              "id": "c",
+              "label": "Wireless art number"
+            },
+            {
+              "id": "d",
+              "label": "Weekly activity note"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. WAN expands to wide area network.",
+            "incorrect": "Not quite. Wide area network is the expansion you need."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-intro-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-intro-q2",
+          "prompt": "What does SD-WAN mean?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Software-Defined Wide Area Network"
+            },
+            {
+              "id": "b",
+              "label": "Super Digital Wallpaper And Notebook"
+            },
+            {
+              "id": "c",
+              "label": "Single Desktop Without Any Network"
+            },
+            {
+              "id": "d",
+              "label": "Secure Drawing With Acrylic Nibs"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. SD-WAN expands to Software-Defined Wide Area Network.",
+            "incorrect": "Not quite. Expand each part: Software-Defined Wide Area Network."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-sdwan-how",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "How organisations use SD-WAN",
+      "status": "available",
+      "summary": "Explain traffic management, monitoring and route selection at Level 2.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-how-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "How organisations use SD-WAN",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-how-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "SD-WAN can help manage traffic, monitor connections, and select suitable routes between sites. Central software can apply policies instead of configuring every location by hand in the old way."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-how-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Possible benefits include centralised management and improved flexibility when choosing how sites connect. Limitations include setup costs, configuration complexity, dependence on available connections, and ongoing security requirements."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-how-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-how-q1",
+          "prompt": "How can SD-WAN help an organisation?",
+          "options": [
+            {
+              "id": "a",
+              "label": "By using software control to manage and monitor connections between sites and select suitable routes"
+            },
+            {
+              "id": "b",
+              "label": "By deleting the need for any network security"
+            },
+            {
+              "id": "c",
+              "label": "By guaranteeing every download is instant worldwide"
+            },
+            {
+              "id": "d",
+              "label": "By replacing every staff member with a cable"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Software-based control of site links is the core outline.",
+            "incorrect": "Not quite. SD-WAN helps manage connections; it does not remove security needs or create magic speed."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-how-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-how-q2",
+          "prompt": "Which limitation should learners remember?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Setup cost, configuration complexity, dependence on available links, and security requirements still matter"
+            },
+            {
+              "id": "b",
+              "label": "SD-WAN has no costs or configuration work"
+            },
+            {
+              "id": "c",
+              "label": "SD-WAN never needs monitoring"
+            },
+            {
+              "id": "d",
+              "label": "SD-WAN only works on paper maps"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Benefits come with real-world limits and security duties.",
+            "incorrect": "Not quite. Keep a balanced view of cost, complexity and security."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-sdwan-pf",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Pixel Forge: linking several locations",
+      "status": "available",
+      "summary": "Apply SD-WAN to a main office, studio and second business site.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 4,
+      "activityType": "Teaching",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-pf-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Pixel Forge: linking several locations",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-pf-p1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Imagine Pixel Forge Games with a main office, a development studio and another business location. Staff need to share files, join calls and reach internal systems securely and reliably."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-pf-p2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "SD-WAN could help the company manage the links between those sites, watch connection health, and choose suitable routes using the broadband or fibre available at each place. Security controls are still required."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-pf-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-pf-q1",
+          "prompt": "Why might Pixel Forge consider SD-WAN?",
+          "options": [
+            {
+              "id": "a",
+              "label": "To manage network connections between multiple company locations more flexibly"
+            },
+            {
+              "id": "b",
+              "label": "To avoid connecting the sites at all"
+            },
+            {
+              "id": "c",
+              "label": "To replace game design with network cables"
+            },
+            {
+              "id": "d",
+              "label": "To guarantee that security is never needed again"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Multi-site connectivity is the scenario SD-WAN is designed to help with.",
+            "incorrect": "Not quite. Focus on linking locations, not removing networks or security."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-pf-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-pf-q2",
+          "prompt": "Which statement is most accurate for this scenario?",
+          "options": [
+            {
+              "id": "a",
+              "label": "SD-WAN can help manage site links, but the company must still plan security and depend on available connections"
+            },
+            {
+              "id": "b",
+              "label": "SD-WAN automatically makes every connection the fastest possible with no planning"
+            },
+            {
+              "id": "c",
+              "label": "SD-WAN removes the studio from the network forever"
+            },
+            {
+              "id": "d",
+              "label": "SD-WAN only works if the company has a single laptop"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Flexibility helps, but security and real link quality still matter.",
+            "incorrect": "Not quite. Avoid over-claiming speed or removing security duties."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-sdwan-apply",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Apply: why use SD-WAN across locations?",
+      "status": "available",
+      "summary": "Explain why a company with several locations might use SD-WAN.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-apply-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Apply: why use SD-WAN across locations?",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-apply-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Mention multiple sites, software-based management of connections, and a realistic benefit such as flexibility or central control."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-sdwan-apply-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-sdwan-apply-q",
+          "prompt": "Explain why a company with several locations might use SD-WAN.",
+          "guidance": "A satisfactory answer mentions linking multiple sites, using software to manage or monitor connections, and a benefit such as centralised management or flexibility. It may also note that security is still needed. Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-match-uses",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Match each technology to a suitable use",
+      "status": "available",
+      "summary": "Match 5G, IPv6, blockchain, serverless computing and SD-WAN to use cases.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Classification",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-match-uses-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Match each technology to a suitable use",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-match-uses-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Read each need carefully. Choose the technology that fits best for AC1.1 outlining practice."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-match-uses-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "classification",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-match-uses-q",
+          "prompt": "Match each situation to the most suitable technology.",
+          "categories": [
+            {
+              "id": "fiveg",
+              "label": "5G"
+            },
+            {
+              "id": "ipv6",
+              "label": "IPv6"
+            },
+            {
+              "id": "chain",
+              "label": "Blockchain"
+            },
+            {
+              "id": "serverless",
+              "label": "Serverless computing"
+            },
+            {
+              "id": "sdwan",
+              "label": "SD-WAN"
+            }
+          ],
+          "items": [
+            {
+              "id": "m1",
+              "text": "A player needs a responsive mobile gaming experience on a busy network",
+              "correctCategoryId": "fiveg"
+            },
+            {
+              "id": "m2",
+              "text": "A company has a growing number of connected devices that need IP addresses",
+              "correctCategoryId": "ipv6"
+            },
+            {
+              "id": "m3",
+              "text": "A developer wants to record the ownership history of a digital item",
+              "correctCategoryId": "chain"
+            },
+            {
+              "id": "m4",
+              "text": "A game needs to run small pieces of code for events without managing the underlying servers",
+              "correctCategoryId": "serverless"
+            },
+            {
+              "id": "m5",
+              "text": "A company needs to manage network connections between multiple offices",
+              "correctCategoryId": "sdwan"
+            }
+          ],
+          "feedback": {
+            "correct": "Well matched. Mobile responsiveness points to 5G, address growth to IPv6, ownership history to blockchain, event code to serverless computing, and multi-site links to SD-WAN.",
+            "incorrect": "Not quite yet. Match the main need in each sentence: mobile network, IP addresses, shared history, event functions, or site-to-site networking."
+          }
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-compare",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Compare the five technologies",
+      "status": "available",
+      "summary": "Choose the most relevant technology for specific Pixel Forge situations.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 7,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Compare the five technologies",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "More than one technology can appear in a real project. These questions are written so one answer is the best fit for the main need."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-compare-q1",
+          "prompt": "Players at a show complain that mobile matches feel delayed when thousands of phones are online. Which technology is the best first focus?",
+          "options": [
+            {
+              "id": "a",
+              "label": "5G mobile connectivity in suitable conditions"
+            },
+            {
+              "id": "b",
+              "label": "IPv6 address space alone with no mobile network"
+            },
+            {
+              "id": "c",
+              "label": "Blockchain ownership records for every menu font"
+            },
+            {
+              "id": "d",
+              "label": "SD-WAN links between two quiet offices only"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Busy mobile play points first to 5G performance and capacity.",
+            "incorrect": "Not quite. The main pain is mobile responsiveness in a crowded place."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-compare-q2",
+          "prompt": "Pixel Forge adds thousands of new sensors and staff devices across sites. Which technology most directly addresses the need for many network identities?",
+          "options": [
+            {
+              "id": "a",
+              "label": "IPv6"
+            },
+            {
+              "id": "b",
+              "label": "Blockchain digital-item history"
+            },
+            {
+              "id": "c",
+              "label": "A single serverless reward function"
+            },
+            {
+              "id": "d",
+              "label": "A 5G marketing slogan with no addressing plan"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Growing device counts drive the need for a larger IP address space.",
+            "incorrect": "Not quite. Look for the technology about IP addresses."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-compare-q3",
+          "prompt": "The studio wants a shared history of who owned a rare digital cape. Which technology fits best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Blockchain"
+            },
+            {
+              "id": "b",
+              "label": "SD-WAN"
+            },
+            {
+              "id": "c",
+              "label": "5G alone"
+            },
+            {
+              "id": "d",
+              "label": "IPv6 alone"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Ownership history is a classic blockchain-style record use.",
+            "incorrect": "Not quite. Shared history of a digital item points to blockchain."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-q4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-compare-q4",
+          "prompt": "A seasonal event triggers millions of short reward calculations. Which technology fits best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Serverless computing"
+            },
+            {
+              "id": "b",
+              "label": "IPv6 address planning only"
+            },
+            {
+              "id": "c",
+              "label": "SD-WAN office routing only"
+            },
+            {
+              "id": "d",
+              "label": "Blockchain energy debates only"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Short event-driven code with changing demand suits serverless computing.",
+            "incorrect": "Not quite. Focus on running small pieces of code for spikes in events."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-q5",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-compare-q5",
+          "prompt": "The main office, studio and partner site need managed, monitored links. Which technology fits best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "SD-WAN"
+            },
+            {
+              "id": "b",
+              "label": "Blockchain cape history"
+            },
+            {
+              "id": "c",
+              "label": "IPv6 alone without any site links"
+            },
+            {
+              "id": "d",
+              "label": "A serverless function that never uses a network"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Multi-site connection management is the SD-WAN job.",
+            "incorrect": "Not quite. Several locations needing managed links point to SD-WAN."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-compare-explain",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Explain your comparison choices",
+      "status": "available",
+      "summary": "Justify how the five technologies differ using short written reasoning.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 7,
+      "activityType": "Application",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-explain-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Explain your comparison choices",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-explain-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Show that you can tell the technologies apart. You do not need deep engineering detail."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-compare-explain-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "short-response",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-compare-explain-q",
+          "prompt": "In your own words, explain how 5G, IPv6, blockchain, serverless computing and SD-WAN differ. Give one short phrase for what each one mainly helps with.",
+          "guidance": "A satisfactory answer gives a distinct role for each technology, for example: 5G = mobile connectivity; IPv6 = more IP addresses; blockchain = shared linked records; serverless = event code without managing servers; SD-WAN = software-managed links between sites. Write at least 200 characters.",
+          "minChars": 200
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-knowledge-check",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Knowledge check: definitions and differences",
+      "status": "available",
+      "summary": "Check definitions, acronyms and common misunderstandings.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 6,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kc-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Knowledge check: definitions and differences",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kc-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kc-q1",
+          "prompt": "Which expansion is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "SD-WAN means Software-Defined Wide Area Network"
+            },
+            {
+              "id": "b",
+              "label": "IPv6 means Instant Printer version 6"
+            },
+            {
+              "id": "c",
+              "label": "5G means five games only"
+            },
+            {
+              "id": "d",
+              "label": "WAN means weekly art notebook"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Keep the SD-WAN expansion accurate.",
+            "incorrect": "Not quite. Check the networking expansions again."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kc-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kc-q2",
+          "prompt": "Which statement about serverless computing is true?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Servers still exist; the provider manages much of the infrastructure"
+            },
+            {
+              "id": "b",
+              "label": "No computers are used anywhere in the world"
+            },
+            {
+              "id": "c",
+              "label": "Developers must rack every server themselves"
+            },
+            {
+              "id": "d",
+              "label": "Serverless means the same as blockchain"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. The name is misleading if taken literally.",
+            "incorrect": "Not quite. Remember that servers still exist under the provider's care."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kc-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kc-q3",
+          "prompt": "Which statement about IPv6 is true?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Its main advantage is a much larger address space, not simply being a faster internet"
+            },
+            {
+              "id": "b",
+              "label": "It always doubles speed with no other factors"
+            },
+            {
+              "id": "c",
+              "label": "It removes the need for IP addresses"
+            },
+            {
+              "id": "d",
+              "label": "It only works offline on paper"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Address space is the headline benefit for Level 2 outlining.",
+            "incorrect": "Not quite. Avoid the \"IPv6 equals speed\" shortcut."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kc-q4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kc-q4",
+          "prompt": "Which statement about blockchain is balanced?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It can help record shared histories, but designs vary and limits such as cost or hard corrections still matter"
+            },
+            {
+              "id": "b",
+              "label": "Every blockchain uses identical methods and is always the best choice for every game feature"
+            },
+            {
+              "id": "c",
+              "label": "Blockchain never stores information"
+            },
+            {
+              "id": "d",
+              "label": "Blockchain replaces 5G, IPv6, serverless computing and SD-WAN"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Outline uses without claiming one perfect design for everything.",
+            "incorrect": "Not quite. Keep a balanced AC1.1-style outline."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kc-q5",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kc-q5",
+          "prompt": "Which factor can still limit 5G performance?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Coverage, congestion, the device and the service being used"
+            },
+            {
+              "id": "b",
+              "label": "The colour of the phone case only"
+            },
+            {
+              "id": "c",
+              "label": "Whether the user likes the brand logo"
+            },
+            {
+              "id": "d",
+              "label": "Whether the SIM tray is blue or green"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Real-world conditions matter beyond the 5G label.",
+            "incorrect": "Not quite. Think about network and service conditions."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-knowledge-check-b",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Knowledge check: practical judgement",
+      "status": "available",
+      "summary": "Apply the five technologies to short workplace-style cases.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 5,
+      "activityType": "Knowledge check",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kcb-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Knowledge check: practical judgement",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kcb-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kcb-q1",
+          "prompt": "A studio wants less day-to-day server care for short reward jobs that spike during events. What should they consider first?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Serverless computing"
+            },
+            {
+              "id": "b",
+              "label": "IPv6 address labels alone"
+            },
+            {
+              "id": "c",
+              "label": "SD-WAN office routing alone"
+            },
+            {
+              "id": "d",
+              "label": "Blockchain cape history alone"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Spiky short jobs map to serverless functions.",
+            "incorrect": "Not quite. Look for event-driven cloud code."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kcb-q2",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kcb-q2",
+          "prompt": "Why might SD-WAN still need security planning?",
+          "options": [
+            {
+              "id": "a",
+              "label": "Linking sites does not remove the need to protect traffic and systems"
+            },
+            {
+              "id": "b",
+              "label": "SD-WAN deletes every security risk automatically"
+            },
+            {
+              "id": "c",
+              "label": "Security only matters for paper letters"
+            },
+            {
+              "id": "d",
+              "label": "Multi-site networks never carry useful data"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Connectivity tools still require security controls.",
+            "incorrect": "Not quite. Do not treat SD-WAN as a security replacement."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kcb-q3",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kcb-q3",
+          "prompt": "A growing esports venue adds hundreds of devices. Which technology most directly helps with address supply?",
+          "options": [
+            {
+              "id": "a",
+              "label": "IPv6"
+            },
+            {
+              "id": "b",
+              "label": "Blockchain only"
+            },
+            {
+              "id": "c",
+              "label": "Serverless reward code only"
+            },
+            {
+              "id": "d",
+              "label": "A poster about 5G with no addressing plan"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. More devices need more IP addresses.",
+            "incorrect": "Not quite. Address growth points to IPv6."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-kcb-q4",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-kcb-q4",
+          "prompt": "Which judgement about blockchain for a cosmetic item is best?",
+          "options": [
+            {
+              "id": "a",
+              "label": "It may help with ownership history, but the team should weigh limits before using it for everything"
+            },
+            {
+              "id": "b",
+              "label": "It must be used for every menu tooltip"
+            },
+            {
+              "id": "c",
+              "label": "It has no costs or design differences"
+            },
+            {
+              "id": "d",
+              "label": "It always consumes identical energy on every network"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. Balanced judgement beats automatic adoption.",
+            "incorrect": "Not quite. Treat blockchain as an option with trade-offs."
+          },
+          "sourceType": "single"
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-reflection",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Extension: technology profile homework",
+      "status": "available",
+      "summary": "Optional homework: build a short AC1.1-style profile of one Week 6 technology.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 13,
+      "activityType": "Extension",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ref-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Extension: technology profile homework",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ref-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Optional homework or research: choose 5G, IPv6, blockchain, serverless computing or SD-WAN and write a short profile you could reuse when outlining technologies for AC1.1 practice. This is formative, not Gateway assignment evidence."
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-ref-q",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "reflection",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-ref-q",
+          "prompt": "Choose one technology from this week (5G, IPv6, blockchain, serverless computing or SD-WAN). Explain what it is, give one practical example, one benefit, one limitation, and say how it differs from one other technology in this week.",
+          "minChars": 500,
+          "guidance": "Sentence starters: The technology I chose is... It means... One practical example is... One benefit is... One limitation is... It differs from ... because... Write at least 500 characters. Paste is disabled."
+        }
+      }
+    ]
+  },
+  {
+    "schema": "lp.content.activity",
+    "schemaVersion": "0.1.0",
+    "id": "week-6-exit",
+    "version": "0.1.0",
+    "metadata": {
+      "title": "Exit ticket",
+      "status": "available",
+      "summary": "Quick check that you can outline the five technologies and tell them apart.",
+      "href": null,
+      "difficulty": "standard",
+      "estimatedDurationMinutes": 2,
+      "activityType": "Exit ticket",
+      "topics": []
+    },
+    "relationships": {
+      "learningOutcomes": [
+        "lo1"
+      ],
+      "assignment": "formative-practice",
+      "questions": [],
+      "assets": [],
+      "prerequisites": []
+    },
+    "blocks": [
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-exit-h",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "heading",
+        "content": {
+          "text": "Exit ticket",
+          "level": 2
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-exit-q1",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "single-choice",
+        "content": {
+          "formative": true,
+          "questionId": "week-6-exit-q1",
+          "prompt": "Which short summary is correct?",
+          "options": [
+            {
+              "id": "a",
+              "label": "5G is mobile connectivity; IPv6 expands IP addresses; blockchain records linked shared history; serverless runs event code without you managing servers; SD-WAN manages links between sites"
+            },
+            {
+              "id": "b",
+              "label": "All five technologies are only about 3D printing plastic"
+            },
+            {
+              "id": "c",
+              "label": "IPv6 means faster VR headsets and SD-WAN means a blockchain wallet"
+            },
+            {
+              "id": "d",
+              "label": "Serverless computing means no computers exist anywhere"
+            }
+          ],
+          "correctOptionId": "a",
+          "feedback": {
+            "correct": "Correct. That short summary keeps the five ideas distinct for AC1.1.",
+            "incorrect": "Not quite. Keep each technology's main job separate in your outline."
+          },
+          "sourceType": "single"
+        }
+      },
+      {
+        "schema": "lp.content.block",
+        "schemaVersion": "0.1.0",
+        "id": "week-6-exit-p",
+        "version": "0.1.0",
+        "metadata": {},
+        "relationships": {},
+        "type": "paragraph",
+        "content": {
+          "text": "Before you finish, tell your tutor how confident you feel outlining 5G, IPv6, blockchain, serverless computing and SD-WAN."
+        }
+      }
+    ]
   }
 ]
