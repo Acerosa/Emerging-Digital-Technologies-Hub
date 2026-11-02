@@ -340,6 +340,59 @@ describe("L2E shared week visibility", () => {
     });
   });
 
+
+  it("H5 — Week 8 ships planned and stays locked until the publication makes it available", () => {
+    expect(bundled.weeks?.find((week) => week.id === "week-8")?.metadata?.status).toBe("planned");
+    const live = structuredClone(bundled);
+    live.weeks = (live.weeks || []).filter((week) => week.id !== "week-8");
+    applyLiveCurriculum(live);
+
+    render(<HomePage root="." livePackage={live} />);
+    expect(screen.queryByRole("link", { name: "Open Week 8" })).toBeNull();
+    expect(screen.getByText("Week 8")).toBeTruthy();
+    cleanup();
+
+    render(<L2eNavigation items={buildL2eNavigation(".", live)} brandTitle="L2E" />);
+    const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    expect(within(nav).queryByRole("link", { name: /Week 8/ })).toBeNull();
+    expect(within(nav).getByText(/Week 8/)).toBeTruthy();
+    cleanup();
+
+    render(<WeekPage weekId="week-8" root=".." pkg={runtimeContentPackage(live)} />);
+    expect(screen.getByRole("heading", { name: "Week not available yet" })).toBeTruthy();
+  });
+
+  it("I5 — published Week 8 follows Week 7, loads its activities and gives formative feedback", async () => {
+    const live = withWeekStatus(bundled, { "week-7": "available", "week-8": "available" });
+    applyLiveCurriculum(live);
+
+    render(<HomePage root="." livePackage={live} />);
+    expect(screen.getByRole("link", { name: "Open Week 8" }).getAttribute("href")).toBe("./week-8/");
+    cleanup();
+
+    render(<L2eNavigation items={buildL2eNavigation(".", live)} brandTitle="L2E" />);
+    const nav = screen.getByRole("navigation", { name: "Main navigation" });
+    const weekLinks = within(nav).getAllByRole("link").map((link) => link.textContent || "").filter((text) => /Week \d/.test(text));
+    expect(weekLinks.findIndex((text) => /Week 8/.test(text))).toBe(weekLinks.findIndex((text) => /Week 7/.test(text)) + 1);
+    cleanup();
+
+    const { container } = render(<WeekPage weekId="week-8" root=".." pkg={runtimeContentPackage(live)} />);
+    expect(screen.queryByRole("heading", { name: "Week not available yet" })).toBeNull();
+    expect(screen.getByRole("heading", { name: "Week 8 session" })).toBeTruthy();
+    expect(container.querySelectorAll("[data-lp-activity^='week-8-']").length).toBe(25);
+
+    const article = await waitFor(() => {
+      const node = container.querySelector('[data-lp-activity="week-8-personal-business"]');
+      expect(node?.getAttribute("data-lp-bound")).toBe("week-8-personal-business");
+      return node as HTMLElement;
+    });
+    fireEvent.click(within(article).getAllByRole("radio", { name: /A studio runs AI tools to analyse thousands of support tickets/ })[0]);
+    fireEvent.click(within(article).getAllByRole("button", { name: "Check answer" })[0]);
+    await waitFor(() => {
+      expect(within(article).getByText(/Personal use is for an individual's own life/)).toBeTruthy();
+    });
+  });
+
   it("G — hub isolation: L2E package does not expose Unit 3 week ids", () => {
     expect(bundled.hub?.id).toBe("l2e-exploring-emerging-digital-technologies");
     expect(bundled.weeks?.every((week) => week.id.startsWith("week-"))).toBe(true);

@@ -39,6 +39,7 @@ describe("L2E presentation", () => {
     expect(screen.queryByRole("link", { name: "Open Week 5" })).toBeNull();
     expect(screen.queryByRole("link", { name: "Open Week 6" })).toBeNull();
     expect(screen.queryByRole("link", { name: "Open Week 7" })).toBeNull();
+    expect(screen.queryByRole("link", { name: "Open Week 8" })).toBeNull();
     expect(screen.queryByRole("link", { name: /Task 1/i })).toBeNull();
     expect(screen.queryByRole("link", { name: /Foundations/i })).toBeNull();
     expect(screen.getAllByText(/Gateway/i).length).toBeGreaterThan(0);
