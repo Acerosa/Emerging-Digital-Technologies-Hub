@@ -13,6 +13,7 @@ const routes = [
   "week-5/index.html",
   "week-6/index.html",
   "week-7/index.html",
+  "week-8/index.html",
   "course-guide/index.html",
   "resources/index.html",
   "help/index.html",

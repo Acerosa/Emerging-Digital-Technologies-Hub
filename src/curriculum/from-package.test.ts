@@ -24,10 +24,10 @@ describe("L2E package hydration", () => {
     expect(result.valid).toBe(true);
   });
 
-  it("exposes Weeks 1 to 7 for the learner home and week pages", () => {
+  it("exposes Weeks 1 to 8 for the learner home and week pages", () => {
     const weeks = homeWeeksFromPackage(pkg);
-    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7"]);
-    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/", "week-5/", "week-6/", "week-7/"]);
+    expect(weeks.map((item) => item.label)).toEqual(["Week 1", "Week 2", "Week 3", "Week 4", "Week 5", "Week 6", "Week 7", "Week 8"]);
+    expect(weeks.map((item) => item.path)).toEqual(["week-1/", "week-2/", "week-3/", "week-4/", "week-5/", "week-6/", "week-7/", "week-8/"]);
     expect(weeks[0].title).toBe("Introduction to New and Emerging Digital Technologies");
     expect(weeks[1].title).toBe("Internet of Things, RFID, NFC and Wearables");
     expect(weeks[2].title).toBe("Cloud Technology, SaaS, IaaS, PaaS and DaaS");
@@ -35,6 +35,7 @@ describe("L2E package hydration", () => {
     expect(weeks[4].title).toBe("Virtual Reality, Augmented Reality, 3D Printing and 4D Printing");
     expect(weeks[5].title).toBe("5G, IPv6, Blockchain, Serverless Computing and SD-WAN");
     expect(weeks[6].title).toBe("Drones, Social Media, Vlogs and Emerging Technologies Consolidation");
+    expect(weeks[7].title).toBe("Personal and Business Uses of Emerging Technologies");
     expect(weeks[0].current).toBe(true);
     const week1 = weekPageFromPackage(pkg, "week-1");
     expect(week1?.sessions.map((item) => item.id)).toEqual(["week-1-session"]);
@@ -383,6 +384,72 @@ describe("L2E package hydration", () => {
       .map((block) => (block.content as { questionId?: string } | undefined)?.questionId)
       .filter(Boolean));
     expect(new Set(questionIds).size).toBe(questionIds.length);
+  });
+
+
+  it("wires the Week 8 personal/business uses session with unique ids and extension homework before the exit", () => {
+    const published = structuredClone(bundled);
+    const week8 = published.weeks?.find((item) => item.id === "week-8");
+    if (!week8?.metadata) throw new Error("missing week-8");
+    week8.metadata.status = "available";
+    const page = weekPageFromPackage(published, "week-8");
+    const ids = page?.sessions[0]?.activities.map((item) => item.id) || [];
+    expect(page?.sessions.map((item) => item.id)).toEqual(["week-8-session"]);
+    expect(ids).toEqual([
+      "week-8-starter",
+      "week-8-personal-business",
+      "week-8-recap-uses",
+      "week-8-personal-ai-iot",
+      "week-8-personal-cloud-vr-ar",
+      "week-8-personal-5g-media",
+      "week-8-personal-apply",
+      "week-8-business-ai-iot-cloud",
+      "week-8-business-immersive-drones",
+      "week-8-business-media-chain-serverless",
+      "week-8-business-apply",
+      "week-8-classify-context",
+      "week-8-match-apps",
+      "week-8-pf-dev-support",
+      "week-8-pf-multiplayer-marketing",
+      "week-8-pf-scenarios",
+      "week-8-remote-feedback",
+      "week-8-choose-fit",
+      "week-8-both-contexts",
+      "week-8-compare",
+      "week-8-compare-write",
+      "week-8-knowledge-check",
+      "week-8-knowledge-check-b",
+      "week-8-reflection",
+      "week-8-exit"
+    ]);
+    expect(week8.relationships?.learningOutcomes).toEqual(["lo2"]);
+
+    const activities = ids.map((id) => pkg.activities.find((item) => item.id === id));
+    expect(activities.every(Boolean)).toBe(true);
+    const extensions = activities.filter((activity) => activity?.metadata?.activityType === "Extension");
+    expect(extensions.map((activity) => activity?.id)).toEqual(["week-8-reflection"]);
+    const types = new Set(activities.flatMap((activity) => (activity?.blocks || []).map((block) => String(block.type))));
+    for (const type of ["single-choice", "classification", "short-response", "reflection"]) {
+      expect(types.has(type), type).toBe(true);
+    }
+    for (const activity of activities) {
+      expect(activity?.relationships?.learningOutcomes).toEqual(["lo2"]);
+      for (const block of activity?.blocks || []) {
+        const content = (block.content || {}) as {
+          correctOptionId?: string;
+          options?: Array<{ id: string }>;
+          items?: Array<{ correctCategoryId: string }>;
+          categories?: Array<{ id: string }>;
+        };
+        if (block.type === "single-choice") {
+          expect(content.options?.some((option) => option.id === content.correctOptionId), block.id).toBe(true);
+        }
+        if (block.type === "classification") {
+          const categoryIds = new Set((content.categories || []).map((category) => category.id));
+          expect(content.items?.every((item) => categoryIds.has(item.correctCategoryId)), block.id).toBe(true);
+        }
+      }
+    }
   });
 
   it("hides planned session content while keeping the session placeholder", () => {
