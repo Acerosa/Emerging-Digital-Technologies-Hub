@@ -1,0 +1,22 @@
+{
+  "name": "Emerging-Digital-Technologies-Hub",
+  "kind": "learner-hub",
+  "baseUrl": "https://acerosa.github.io/Emerging-Digital-Technologies-Hub/",
+  "repository": "Acerosa/Emerging-Digital-Technologies-Hub",
+  "pages": {
+    "expectedSource": "workflow",
+    "basePath": "/Emerging-Digital-Technologies-Hub/"
+  },
+  "curriculum": {
+    "hubCode": "l2e-exploring-emerging-digital-technologies",
+    "courseKey": "gateway-level-2-digital-it-skills",
+    "supabaseUrl": "https://hubwpkrqndorznwzvaer.supabase.co",
+    "expectedPackageVersionEnv": "EXPECTED_CURRICULUM_VERSION",
+    "minActivityCount": 100,
+    "requirePublishedSource": true
+  },
+  "retries": {
+    "attempts": 8,
+    "delayMs": 15000
+  }
+}
